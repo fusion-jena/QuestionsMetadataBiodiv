@@ -1,0 +1,13 @@
+Organism|<em>Organism </em>comprises all individual life forms, including plants, fungi, bacteria, animals and microorganisms, e.g., quercus, cyclothone, globigerina bulloides
+Environment|All species live in certain local and global <em>Environments</em> such as habitats, biome (e.g., below 4000m, ground water, city)
+Quality & Phenotype|Organisms have certain characteristics (traits, phenotypes) that are summarized with <em>Quality and Phenotype</em>, e.g., length, growth rate, reproduction rate, traits
+Material & Substances|Chemical compounds, rocks, sand and sediments can be grouped as <em>Materials and Substances</em>, e.g., sediment, rock, CO2
+Method|The term <em>Method</em> describes all operations and experiments that have to be conducted to lead to a certain result, e.g., lidar measurements, observation, remote sensing
+Data Type|Outcomes of research methods are delivered in <em>Data Types</em>, e.g., DNA data or sequence data is the result of genome sequencing, lidar data is the result of lidar measurements (active remote sensing)
+Process|Biological, chemical and physical <em>Processes</em> are re-occurring and transform materials or organisms due to chemical reactions or other influencing factors, e.g., climate change, nitrogen transformation
+Anatomy|<em>Anatomical Entities</em> comprise the structure of organisms, e.g., body or plant parts, organs, cells and genes, e.g., DNA, proteome, root
+Location|All kinds of geographic information is summarized with <em>Location</em>, e.g., Germany, Hainich, Atlantic Ocean
+Time|Time data including geological eras are described with <em>Time</em>, e.g., current, over time, triassic
+Event|<em>Events</em> are processes that appear only once at a specific time, such as environmental disasters, e.g., Deepwater Horizon oil spill, Tree of the Year 2016
+Person & Organization|<em>Person and Organization</em> are either projects or authors of data, e.g., Deep Sea Drilling Project, author’s or collector’s names
+Human Intervention|<em>Human Intervention</em> on landscape and environment, e.g., agriculture, land use, crop yield increase
