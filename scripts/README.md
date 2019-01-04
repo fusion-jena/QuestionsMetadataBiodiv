@@ -213,7 +213,7 @@ wasn't written in the 'categories' file. The descriptions will be ignored. For m
 ```shell
 #Go to the directoy where the analyze_results.py script is saved and type:
 
-python analyze_results.py -f first.csv second.csv third.csv -c 2 -ct evaluation_categories.txt
+py analyze_results.py -f first.csv second.csv third.csv -c 2 -ct evaluation_categories.txt
 ```
 
 
