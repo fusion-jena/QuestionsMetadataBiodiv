@@ -1,1 +1,0 @@
-from sumN import calculateSumN

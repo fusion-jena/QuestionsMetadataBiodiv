@@ -21,7 +21,9 @@ That will create a new folder 'lsg_files' which contains files that can be impor
 The exported result files are located in the subdirectory surveys/result. We generated three different surveys with the same questions but different orderings in order to increase the likelihood that every question gets a rating and to avoid any biases introduced by the question order. To retrieve the final result file with the statistics, copy the three individual result files into the scripts folder and run
 ```shell
 
-python analyze_result.py -f first.csv second.csv third.csv -c 1
+#python analyze_result.py -f first.csv second.csv third.csv -c 1
+
+python analyze_result.py -f first.csv second.csv third.csv -o out -c 9 -ct evaluation_categories.txt -cu custom.txt -thres 0.58
 
 ```
 

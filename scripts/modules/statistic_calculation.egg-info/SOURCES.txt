@@ -1,8 +1,0 @@
-fleisskappa
-setup.py
-fleisskappa/__init__.py
-fleisskappa/fleisskappa.py
-statistic_calculation.egg-info/PKG-INFO
-statistic_calculation.egg-info/SOURCES.txt
-statistic_calculation.egg-info/dependency_links.txt
-statistic_calculation.egg-info/top_level.txt
