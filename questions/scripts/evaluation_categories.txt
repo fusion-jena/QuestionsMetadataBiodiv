@@ -1,0 +1,13 @@
+Organism
+Environment
+Quality
+Mat & Subst
+Method
+Data Type
+Process
+Anatomy
+Location
+Time
+Event
+Person & Org
+Human Inter

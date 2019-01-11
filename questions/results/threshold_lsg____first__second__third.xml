@@ -1,0 +1,2268 @@
+<BIODIV-QUESTIONS>
+<BIODIV-QUESTION questionid="geochemicalPara">
+	<QUESTION> What geochemical parameters influence microbial diversity in the groundwater? </QUESTION>
+	<KEYWORDS></KEYWORDS>
+	<ARTIFACTS>
+		<ARTIFACT subqid="SQ4">
+			<PHRASE>groundwater</PHRASE>
+			<AGREEMENT>0.7777777777777777</AGREEMENT>
+			<CATEGORY>Environment</CATEGORY>
+		</ARTIFACT>
+	</ARTIFACTS>
+</BIODIV-QUESTION>
+<BIODIV-QUESTION questionid="tiliaCordata">
+	<QUESTION> What data is in the repository for the German Tree of the Year 2016 ''Tilia cordata''? </QUESTION>
+	<KEYWORDS></KEYWORDS>
+	<ARTIFACTS>
+		<ARTIFACT subqid="SQ3">
+			<PHRASE>Tilia cordata</PHRASE>
+			<AGREEMENT>1.0</AGREEMENT>
+			<CATEGORY>Organism</CATEGORY>
+		</ARTIFACT>
+	</ARTIFACTS>
+</BIODIV-QUESTION>
+<BIODIV-QUESTION questionid="yearChange">
+	<QUESTION> How changes DOC/DIC over the year? </QUESTION>
+	<KEYWORDS></KEYWORDS>
+	<ARTIFACTS>
+		<ARTIFACT subqid="SQ1">
+			<PHRASE>DOC</PHRASE>
+			<AGREEMENT>0.7777777777777777</AGREEMENT>
+			<CATEGORY>Mat & Subst</CATEGORY>
+		</ARTIFACT>
+		<ARTIFACT subqid="SQ2">
+			<PHRASE>DIC</PHRASE>
+			<AGREEMENT>0.7777777777777777</AGREEMENT>
+			<CATEGORY>Mat & Subst</CATEGORY>
+		</ARTIFACT>
+		<ARTIFACT subqid="SQ3">
+			<PHRASE>year</PHRASE>
+			<AGREEMENT>1.0</AGREEMENT>
+			<CATEGORY>Time</CATEGORY>
+		</ARTIFACT>
+	</ARTIFACTS>
+</BIODIV-QUESTION>
+<BIODIV-QUESTION questionid="dataNeo">
+	<QUESTION> What data exist for Neogloboquadrina pachyderma or Globigerina bulloides? </QUESTION>
+	<KEYWORDS></KEYWORDS>
+	<ARTIFACTS>
+		<ARTIFACT subqid="SQ1">
+			<PHRASE>Neogloboquadrina pachyderma</PHRASE>
+			<AGREEMENT>0.7777777777777777</AGREEMENT>
+			<CATEGORY>Organism</CATEGORY>
+		</ARTIFACT>
+		<ARTIFACT subqid="SQ2">
+			<PHRASE>Globigerina bulloides</PHRASE>
+			<AGREEMENT>0.7777777777777777</AGREEMENT>
+			<CATEGORY>Organism</CATEGORY>
+		</ARTIFACT>
+	</ARTIFACTS>
+</BIODIV-QUESTION>
+<BIODIV-QUESTION questionid="rootLength">
+	<QUESTION> What data is there for ''root length''? </QUESTION>
+	<KEYWORDS></KEYWORDS>
+	<ARTIFACTS>
+		<ARTIFACT subqid="SQ1">
+			<PHRASE>root length</PHRASE>
+			<AGREEMENT>0.7777777777777777</AGREEMENT>
+			<CATEGORY>Quality</CATEGORY>
+		</ARTIFACT>
+		<ARTIFACT subqid="SQ2">
+			<PHRASE>root</PHRASE>
+			<AGREEMENT>0.5833333333333333</AGREEMENT>
+			<CATEGORY>Anatomy</CATEGORY>
+		</ARTIFACT>
+	</ARTIFACTS>
+</BIODIV-QUESTION>
+<BIODIV-QUESTION questionid="temporalDynamics">
+	<QUESTION> Temporal dynamics of fungal communities in upper and lower aquifers</QUESTION>
+	<KEYWORDS></KEYWORDS>
+	<ARTIFACTS>
+		<ARTIFACT subqid="SQ1">
+			<PHRASE>temporal dynamics of fungal communities</PHRASE>
+			<AGREEMENT>0.7777777777777777</AGREEMENT>
+			<CATEGORY>Process</CATEGORY>
+		</ARTIFACT>
+		<ARTIFACT subqid="SQ3">
+			<PHRASE>upper aquifer</PHRASE>
+			<AGREEMENT>0.5833333333333333</AGREEMENT>
+			<CATEGORY>Environment</CATEGORY>
+		</ARTIFACT>
+		<ARTIFACT subqid="SQ4">
+			<PHRASE>lower aquifer</PHRASE>
+			<AGREEMENT>0.5833333333333333</AGREEMENT>
+			<CATEGORY>Environment</CATEGORY>
+		</ARTIFACT>
+	</ARTIFACTS>
+</BIODIV-QUESTION>
+<BIODIV-QUESTION questionid="bacteriumXY">
+	<QUESTION> Is Bacterium XY capable of metabolizing compound-class XYZ? </QUESTION>
+	<KEYWORDS></KEYWORDS>
+	<ARTIFACTS>
+		<ARTIFACT subqid="SQ1">
+			<PHRASE>Bacterium XY</PHRASE>
+			<AGREEMENT>1.0</AGREEMENT>
+			<CATEGORY>Organism</CATEGORY>
+		</ARTIFACT>
+		<ARTIFACT subqid="SQ3">
+			<PHRASE>metabolizing</PHRASE>
+			<AGREEMENT>0.611111111111111</AGREEMENT>
+			<CATEGORY>Process</CATEGORY>
+		</ARTIFACT>
+	</ARTIFACTS>
+</BIODIV-QUESTION>
+<BIODIV-QUESTION questionid="soilDepth">
+	<QUESTION> Why does carbon get older with soil depth? </QUESTION>
+	<KEYWORDS></KEYWORDS>
+	<ARTIFACTS>
+		<ARTIFACT subqid="SQ1">
+			<PHRASE>carbon</PHRASE>
+			<AGREEMENT>0.5833333333333333</AGREEMENT>
+			<CATEGORY>Mat & Subst</CATEGORY>
+		</ARTIFACT>
+	</ARTIFACTS>
+</BIODIV-QUESTION>
+<BIODIV-QUESTION questionid="kindOfPlant">
+	<QUESTION> On what kind of plants do Arthrocladiella mougeotii (Lév</QUESTION>
+	<KEYWORDS></KEYWORDS>
+	<ARTIFACTS>
+		<ARTIFACT subqid="SQ1">
+			<PHRASE>plants</PHRASE>
+			<AGREEMENT>0.7777777777777777</AGREEMENT>
+			<CATEGORY>Organism</CATEGORY>
+		</ARTIFACT>
+		<ARTIFACT subqid="SQ2">
+			<PHRASE>Arthrocladiella mougeotii (Lév.) Vassilkov</PHRASE>
+			<AGREEMENT>1.0</AGREEMENT>
+			<CATEGORY>Organism</CATEGORY>
+		</ARTIFACT>
+	</ARTIFACTS>
+</BIODIV-QUESTION>
+<BIODIV-QUESTION questionid="surfaceWater">
+	<QUESTION> What data contains samples from surface water? </QUESTION>
+	<KEYWORDS></KEYWORDS>
+	<ARTIFACTS>
+		<ARTIFACT subqid="SQ2">
+			<PHRASE>surface water</PHRASE>
+			<AGREEMENT>0.611111111111111</AGREEMENT>
+			<CATEGORY>Environment</CATEGORY>
+		</ARTIFACT>
+	</ARTIFACTS>
+</BIODIV-QUESTION>
+<BIODIV-QUESTION questionid="marinePhages">
+	<QUESTION> Can marine phages be used as effective tracers for particle transport in soil / subsurface? </QUESTION>
+	<KEYWORDS></KEYWORDS>
+	<ARTIFACTS>
+		<ARTIFACT subqid="SQ1">
+			<PHRASE>marine phages</PHRASE>
+			<AGREEMENT>1.0</AGREEMENT>
+			<CATEGORY>Organism</CATEGORY>
+		</ARTIFACT>
+		<ARTIFACT subqid="SQ3">
+			<PHRASE>particle transport</PHRASE>
+			<AGREEMENT>1.0</AGREEMENT>
+			<CATEGORY>Process</CATEGORY>
+		</ARTIFACT>
+	</ARTIFACTS>
+</BIODIV-QUESTION>
+<BIODIV-QUESTION questionid="phageTransport">
+	<QUESTION> What is the relevance of phage transport for ecosystem fractioning in soil? </QUESTION>
+	<KEYWORDS></KEYWORDS>
+	<ARTIFACTS>
+		<ARTIFACT subqid="SQ2">
+			<PHRASE>phage transport</PHRASE>
+			<AGREEMENT>1.0</AGREEMENT>
+			<CATEGORY>Process</CATEGORY>
+		</ARTIFACT>
+		<ARTIFACT subqid="SQ3">
+			<PHRASE>ecosystem fractioning</PHRASE>
+			<AGREEMENT>0.7777777777777777</AGREEMENT>
+			<CATEGORY>Process</CATEGORY>
+		</ARTIFACT>
+		<ARTIFACT subqid="SQ4">
+			<PHRASE>ecosystem</PHRASE>
+			<AGREEMENT>0.611111111111111</AGREEMENT>
+			<CATEGORY>Environment</CATEGORY>
+		</ARTIFACT>
+		<ARTIFACT subqid="SQ5">
+			<PHRASE>soil</PHRASE>
+			<AGREEMENT>0.611111111111111</AGREEMENT>
+			<CATEGORY>Environment</CATEGORY>
+		</ARTIFACT>
+	</ARTIFACTS>
+</BIODIV-QUESTION>
+<BIODIV-QUESTION questionid="soilSamples">
+	<QUESTION> Are there soil samples in Germany including measurements of pH and water content? </QUESTION>
+	<KEYWORDS></KEYWORDS>
+	<ARTIFACTS>
+		<ARTIFACT subqid="SQ2">
+			<PHRASE>Germany</PHRASE>
+			<AGREEMENT>1.0</AGREEMENT>
+			<CATEGORY>Location</CATEGORY>
+		</ARTIFACT>
+	</ARTIFACTS>
+</BIODIV-QUESTION>
+<BIODIV-QUESTION questionid="arcticSediments">
+	<QUESTION> How high is the organic carbon content in arctic sediments? </QUESTION>
+	<KEYWORDS></KEYWORDS>
+	<ARTIFACTS>
+		<ARTIFACT subqid="SQ4">
+			<PHRASE>arctic</PHRASE>
+			<AGREEMENT>0.7777777777777777</AGREEMENT>
+			<CATEGORY>Location</CATEGORY>
+		</ARTIFACT>
+	</ARTIFACTS>
+</BIODIV-QUESTION>
+<BIODIV-QUESTION questionid="molecularFormular">
+	<QUESTION> What substances are representing a specific molecular formula? </QUESTION>
+	<KEYWORDS></KEYWORDS>
+	<ARTIFACTS>
+		<ARTIFACT subqid="SQ1">
+			<PHRASE>substances</PHRASE>
+			<AGREEMENT>1.0</AGREEMENT>
+			<CATEGORY>Mat & Subst</CATEGORY>
+		</ARTIFACT>
+	</ARTIFACTS>
+</BIODIV-QUESTION>
+<BIODIV-QUESTION questionid="transportPatterns">
+	<QUESTION> seasonal transport patterns of microbes </QUESTION>
+	<KEYWORDS></KEYWORDS>
+	<ARTIFACTS>
+		<ARTIFACT subqid="SQ2">
+			<PHRASE>microbes</PHRASE>
+			<AGREEMENT>1.0</AGREEMENT>
+			<CATEGORY>Organism</CATEGORY>
+		</ARTIFACT>
+	</ARTIFACTS>
+</BIODIV-QUESTION>
+<BIODIV-QUESTION questionid="horizontalTran">
+	<QUESTION> horizontal transport of microbial communities </QUESTION>
+	<KEYWORDS></KEYWORDS>
+	<ARTIFACTS>
+		<ARTIFACT subqid="SQ1">
+			<PHRASE>horizontal transport of microbial communities</PHRASE>
+			<AGREEMENT>0.7777777777777777</AGREEMENT>
+			<CATEGORY>Process</CATEGORY>
+		</ARTIFACT>
+	</ARTIFACTS>
+</BIODIV-QUESTION>
+<BIODIV-QUESTION questionid="autotrophicMicro">
+	<QUESTION> How do autotrophic microorganisms influence carbon cycling in groundwater aquifers? </QUESTION>
+	<KEYWORDS></KEYWORDS>
+	<ARTIFACTS>
+		<ARTIFACT subqid="SQ1">
+			<PHRASE>autotrophic microorganisms</PHRASE>
+			<AGREEMENT>1.0</AGREEMENT>
+			<CATEGORY>Organism</CATEGORY>
+		</ARTIFACT>
+		<ARTIFACT subqid="SQ2">
+			<PHRASE>autotrophic</PHRASE>
+			<AGREEMENT>0.5833333333333333</AGREEMENT>
+			<CATEGORY>Environment</CATEGORY>
+		</ARTIFACT>
+		<ARTIFACT subqid="SQ3">
+			<PHRASE>carbon cycling</PHRASE>
+			<AGREEMENT>1.0</AGREEMENT>
+			<CATEGORY>Process</CATEGORY>
+		</ARTIFACT>
+		<ARTIFACT subqid="SQ4">
+			<PHRASE>groundwater aquifer</PHRASE>
+			<AGREEMENT>0.7777777777777777</AGREEMENT>
+			<CATEGORY>Environment</CATEGORY>
+		</ARTIFACT>
+		<ARTIFACT subqid="SQ5">
+			<PHRASE>aquifer</PHRASE>
+			<AGREEMENT>0.5833333333333333</AGREEMENT>
+			<CATEGORY>Environment</CATEGORY>
+		</ARTIFACT>
+	</ARTIFACTS>
+</BIODIV-QUESTION>
+<BIODIV-QUESTION questionid="conduceInfluences">
+	<QUESTION> Do we see conduce influences in soil & aquifer? </QUESTION>
+	<KEYWORDS></KEYWORDS>
+	<ARTIFACTS>
+		<ARTIFACT subqid="SQ2">
+			<PHRASE>soil</PHRASE>
+			<AGREEMENT>0.611111111111111</AGREEMENT>
+			<CATEGORY>Environment</CATEGORY>
+		</ARTIFACT>
+		<ARTIFACT subqid="SQ3">
+			<PHRASE>aquifer</PHRASE>
+			<AGREEMENT>0.7777777777777777</AGREEMENT>
+			<CATEGORY>Environment</CATEGORY>
+		</ARTIFACT>
+	</ARTIFACTS>
+</BIODIV-QUESTION>
+<BIODIV-QUESTION questionid="oxygen">
+	<QUESTION> How variable is the oxygen concentration (e</QUESTION>
+	<KEYWORDS></KEYWORDS>
+	<ARTIFACTS>
+		<ARTIFACT subqid="SQ2">
+			<PHRASE>oxygen</PHRASE>
+			<AGREEMENT>1.0</AGREEMENT>
+			<CATEGORY>Mat & Subst</CATEGORY>
+		</ARTIFACT>
+	</ARTIFACTS>
+</BIODIV-QUESTION>
+<BIODIV-QUESTION questionid="karstStructure">
+	<QUESTION> Can we model the Karst structure of the aquifer based on tectonics and climate alone? </QUESTION>
+	<KEYWORDS></KEYWORDS>
+	<ARTIFACTS>
+		<ARTIFACT subqid="SQ3">
+			<PHRASE>aquifer</PHRASE>
+			<AGREEMENT>0.7777777777777777</AGREEMENT>
+			<CATEGORY>Environment</CATEGORY>
+		</ARTIFACT>
+	</ARTIFACTS>
+</BIODIV-QUESTION>
+<BIODIV-QUESTION questionid="distributionStroks">
+	<QUESTION> What is the distribution of stroks in Europe? </QUESTION>
+	<KEYWORDS></KEYWORDS>
+	<ARTIFACTS>
+		<ARTIFACT subqid="SQ2">
+			<PHRASE>stroks</PHRASE>
+			<AGREEMENT>0.5833333333333333</AGREEMENT>
+			<CATEGORY>Organism</CATEGORY>
+		</ARTIFACT>
+		<ARTIFACT subqid="SQ3">
+			<PHRASE>Europe</PHRASE>
+			<AGREEMENT>1.0</AGREEMENT>
+			<CATEGORY>Location</CATEGORY>
+		</ARTIFACT>
+	</ARTIFACTS>
+</BIODIV-QUESTION>
+<BIODIV-QUESTION questionid="coralBleaching">
+	<QUESTION> What data is in the repository on ocean acidification and coral bleaching? </QUESTION>
+	<KEYWORDS></KEYWORDS>
+	<ARTIFACTS>
+		<ARTIFACT subqid="SQ1">
+			<PHRASE>ocean acidification</PHRASE>
+			<AGREEMENT>1.0</AGREEMENT>
+			<CATEGORY>Process</CATEGORY>
+		</ARTIFACT>
+		<ARTIFACT subqid="SQ2">
+			<PHRASE>coral bleaching</PHRASE>
+			<AGREEMENT>1.0</AGREEMENT>
+			<CATEGORY>Process</CATEGORY>
+		</ARTIFACT>
+	</ARTIFACTS>
+</BIODIV-QUESTION>
+<BIODIV-QUESTION questionid="plantagoLanc">
+	<QUESTION> How old does Plantago lanceolata get? </QUESTION>
+	<KEYWORDS></KEYWORDS>
+	<ARTIFACTS>
+		<ARTIFACT subqid="SQ1">
+			<PHRASE>Plantago lanceolata</PHRASE>
+			<AGREEMENT>1.0</AGREEMENT>
+			<CATEGORY>Organism</CATEGORY>
+		</ARTIFACT>
+	</ARTIFACTS>
+</BIODIV-QUESTION>
+<BIODIV-QUESTION questionid="somSoils">
+	<QUESTION> How important are autotrophic organisms for SOM in soils? </QUESTION>
+	<KEYWORDS></KEYWORDS>
+	<ARTIFACTS>
+		<ARTIFACT subqid="SQ1">
+			<PHRASE>autotrophic organisms</PHRASE>
+			<AGREEMENT>1.0</AGREEMENT>
+			<CATEGORY>Organism</CATEGORY>
+		</ARTIFACT>
+	</ARTIFACTS>
+</BIODIV-QUESTION>
+<BIODIV-QUESTION questionid="palustrisMaritima">
+	<QUESTION> Are Triglochin palustris and Triglochin maritima marine or terrestric? </QUESTION>
+	<KEYWORDS></KEYWORDS>
+	<ARTIFACTS>
+		<ARTIFACT subqid="SQ1">
+			<PHRASE>Triglochin palustris</PHRASE>
+			<AGREEMENT>1.0</AGREEMENT>
+			<CATEGORY>Organism</CATEGORY>
+		</ARTIFACT>
+		<ARTIFACT subqid="SQ2">
+			<PHRASE>Triglochin maritima</PHRASE>
+			<AGREEMENT>1.0</AGREEMENT>
+			<CATEGORY>Organism</CATEGORY>
+		</ARTIFACT>
+	</ARTIFACTS>
+</BIODIV-QUESTION>
+<BIODIV-QUESTION questionid="butterflyOak">
+	<QUESTION> What data exist for butterflies on oaks? </QUESTION>
+	<KEYWORDS></KEYWORDS>
+	<ARTIFACTS>
+		<ARTIFACT subqid="SQ1">
+			<PHRASE>butterflies</PHRASE>
+			<AGREEMENT>1.0</AGREEMENT>
+			<CATEGORY>Organism</CATEGORY>
+		</ARTIFACT>
+		<ARTIFACT subqid="SQ2">
+			<PHRASE>oaks</PHRASE>
+			<AGREEMENT>0.7777777777777777</AGREEMENT>
+			<CATEGORY>Organism</CATEGORY>
+		</ARTIFACT>
+	</ARTIFACTS>
+</BIODIV-QUESTION>
+<BIODIV-QUESTION questionid="waterCycle">
+	<QUESTION> How does the N cycle interact with the water (Throughfall, Stemflow and Groundwater) in a natural deciduous forest? </QUESTION>
+	<KEYWORDS></KEYWORDS>
+	<ARTIFACTS>
+		<ARTIFACT subqid="SQ1">
+			<PHRASE>N cycle</PHRASE>
+			<AGREEMENT>0.5833333333333333</AGREEMENT>
+			<CATEGORY>Process</CATEGORY>
+		</ARTIFACT>
+		<ARTIFACT subqid="SQ6">
+			<PHRASE>natural deciduous forest</PHRASE>
+			<AGREEMENT>0.5833333333333333</AGREEMENT>
+			<CATEGORY>Environment</CATEGORY>
+		</ARTIFACT>
+	</ARTIFACTS>
+</BIODIV-QUESTION>
+<BIODIV-QUESTION questionid="waspsOvipositor">
+	<QUESTION> Are there any detailed structural data on the ovipositor of wood wasps? May be some photographs or detailed drawings? </QUESTION>
+	<KEYWORDS></KEYWORDS>
+	<ARTIFACTS>
+		<ARTIFACT subqid="SQ2">
+			<PHRASE>wood wasps</PHRASE>
+			<AGREEMENT>1.0</AGREEMENT>
+			<CATEGORY>Organism</CATEGORY>
+		</ARTIFACT>
+		<ARTIFACT subqid="SQ3">
+			<PHRASE>photographs</PHRASE>
+			<AGREEMENT>1.0</AGREEMENT>
+			<CATEGORY>Data Type</CATEGORY>
+		</ARTIFACT>
+		<ARTIFACT subqid="SQ4">
+			<PHRASE>detailed drawings</PHRASE>
+			<AGREEMENT>0.7777777777777777</AGREEMENT>
+			<CATEGORY>Data Type</CATEGORY>
+		</ARTIFACT>
+	</ARTIFACTS>
+</BIODIV-QUESTION>
+<BIODIV-QUESTION questionid="mesopelagicFish">
+	<QUESTION> Where do I find mesopelagic fish of the genus Cyclothone? </QUESTION>
+	<KEYWORDS></KEYWORDS>
+	<ARTIFACTS>
+		<ARTIFACT subqid="SQ1">
+			<PHRASE>mesopelagic fish</PHRASE>
+			<AGREEMENT>1.0</AGREEMENT>
+			<CATEGORY>Organism</CATEGORY>
+		</ARTIFACT>
+		<ARTIFACT subqid="SQ3">
+			<PHRASE>genus Cyclothone</PHRASE>
+			<AGREEMENT>1.0</AGREEMENT>
+			<CATEGORY>Organism</CATEGORY>
+		</ARTIFACT>
+	</ARTIFACTS>
+</BIODIV-QUESTION>
+<BIODIV-QUESTION questionid="nutrientData">
+	<QUESTION> What data is there for nutrients in soil? </QUESTION>
+	<KEYWORDS></KEYWORDS>
+	<ARTIFACTS>
+		<ARTIFACT subqid="SQ1">
+			<PHRASE>nutrients</PHRASE>
+			<AGREEMENT>0.7777777777777777</AGREEMENT>
+			<CATEGORY>Mat & Subst</CATEGORY>
+		</ARTIFACT>
+		<ARTIFACT subqid="SQ2">
+			<PHRASE>soil</PHRASE>
+			<AGREEMENT>0.611111111111111</AGREEMENT>
+			<CATEGORY>Environment</CATEGORY>
+		</ARTIFACT>
+	</ARTIFACTS>
+</BIODIV-QUESTION>
+<BIODIV-QUESTION questionid="mineralComp">
+	<QUESTION> Does the mineral-composition of the mobile colloids in the groundwater reflect the mineralogy of the parlochs? </QUESTION>
+	<KEYWORDS></KEYWORDS>
+	<ARTIFACTS>
+		<ARTIFACT subqid="SQ3">
+			<PHRASE>groundwater</PHRASE>
+			<AGREEMENT>0.7777777777777777</AGREEMENT>
+			<CATEGORY>Environment</CATEGORY>
+		</ARTIFACT>
+	</ARTIFACTS>
+</BIODIV-QUESTION>
+<BIODIV-QUESTION questionid="biodiversityCha">
+	<QUESTION> Does the biodiversity change over time? </QUESTION>
+	<KEYWORDS></KEYWORDS>
+	<ARTIFACTS>
+		<ARTIFACT subqid="SQ2">
+			<PHRASE>time</PHRASE>
+			<AGREEMENT>0.7777777777777777</AGREEMENT>
+			<CATEGORY>Time</CATEGORY>
+		</ARTIFACT>
+	</ARTIFACTS>
+</BIODIV-QUESTION>
+<BIODIV-QUESTION questionid="aphidoidea">
+	<QUESTION> Which data exist for Aphidoidea? </QUESTION>
+	<KEYWORDS></KEYWORDS>
+	<ARTIFACTS>
+		<ARTIFACT subqid="SQ1">
+			<PHRASE>Aphidoidea</PHRASE>
+			<AGREEMENT>1.0</AGREEMENT>
+			<CATEGORY>Organism</CATEGORY>
+		</ARTIFACT>
+	</ARTIFACTS>
+</BIODIV-QUESTION>
+<BIODIV-QUESTION questionid="dataFB">
+	<QUESTION> What data is there for ''foraminifera'' and ''benthic''? </QUESTION>
+	<KEYWORDS></KEYWORDS>
+	<ARTIFACTS>
+		<ARTIFACT subqid="SQ1">
+			<PHRASE>foraminifera</PHRASE>
+			<AGREEMENT>0.5833333333333333</AGREEMENT>
+			<CATEGORY>None</CATEGORY>
+		</ARTIFACT>
+	</ARTIFACTS>
+</BIODIV-QUESTION>
+<BIODIV-QUESTION questionid="aquiferSurfaces">
+	<QUESTION> Which microbes settle on aquifer surfaces? </QUESTION>
+	<KEYWORDS></KEYWORDS>
+	<ARTIFACTS>
+		<ARTIFACT subqid="SQ1">
+			<PHRASE>microbes</PHRASE>
+			<AGREEMENT>1.0</AGREEMENT>
+			<CATEGORY>Organism</CATEGORY>
+		</ARTIFACT>
+		<ARTIFACT subqid="SQ2">
+			<PHRASE>aquifer surfaces</PHRASE>
+			<AGREEMENT>0.7777777777777777</AGREEMENT>
+			<CATEGORY>Environment</CATEGORY>
+		</ARTIFACT>
+	</ARTIFACTS>
+</BIODIV-QUESTION>
+<BIODIV-QUESTION questionid="geology">
+	<QUESTION> How do geology and soil geochemistry affect the bacterial and archaeal nitrogen-cycling communities in soil? </QUESTION>
+	<KEYWORDS></KEYWORDS>
+	<ARTIFACTS>
+		<ARTIFACT subqid="SQ5">
+			<PHRASE>bacterial</PHRASE>
+			<AGREEMENT>0.7777777777777777</AGREEMENT>
+			<CATEGORY>Organism</CATEGORY>
+		</ARTIFACT>
+		<ARTIFACT subqid="SQ6">
+			<PHRASE>archaeal</PHRASE>
+			<AGREEMENT>0.5833333333333333</AGREEMENT>
+			<CATEGORY>None</CATEGORY>
+		</ARTIFACT>
+		<ARTIFACT subqid="SQ7">
+			<PHRASE>nitrogen-cycling</PHRASE>
+			<AGREEMENT>1.0</AGREEMENT>
+			<CATEGORY>Process</CATEGORY>
+		</ARTIFACT>
+	</ARTIFACTS>
+</BIODIV-QUESTION>
+<BIODIV-QUESTION questionid="plantResidalCom">
+	<QUESTION> Do aquifer microbiomes have the potential to grow on plant residal compounds? </QUESTION>
+	<KEYWORDS></KEYWORDS>
+	<ARTIFACTS>
+		<ARTIFACT subqid="SQ2">
+			<PHRASE>aquifer</PHRASE>
+			<AGREEMENT>0.7777777777777777</AGREEMENT>
+			<CATEGORY>Environment</CATEGORY>
+		</ARTIFACT>
+		<ARTIFACT subqid="SQ5">
+			<PHRASE>plant</PHRASE>
+			<AGREEMENT>0.7777777777777777</AGREEMENT>
+			<CATEGORY>Organism</CATEGORY>
+		</ARTIFACT>
+	</ARTIFACTS>
+</BIODIV-QUESTION>
+<BIODIV-QUESTION questionid="paternalKin">
+	<QUESTION> Does species X recognize paternal kin? </QUESTION>
+	<KEYWORDS></KEYWORDS>
+	<ARTIFACTS>
+		<ARTIFACT subqid="SQ1">
+			<PHRASE>species X</PHRASE>
+			<AGREEMENT>1.0</AGREEMENT>
+			<CATEGORY>Organism</CATEGORY>
+		</ARTIFACT>
+	</ARTIFACTS>
+</BIODIV-QUESTION>
+<BIODIV-QUESTION questionid="neonicotinoidPol">
+	<QUESTION> What influence do neonicotinoids have on pollinators? </QUESTION>
+	<KEYWORDS></KEYWORDS>
+	<ARTIFACTS>
+		<ARTIFACT subqid="SQ1">
+			<PHRASE>neonicotinoids</PHRASE>
+			<AGREEMENT>0.7777777777777777</AGREEMENT>
+			<CATEGORY>Mat & Subst</CATEGORY>
+		</ARTIFACT>
+		<ARTIFACT subqid="SQ2">
+			<PHRASE>pollinators</PHRASE>
+			<AGREEMENT>1.0</AGREEMENT>
+			<CATEGORY>Organism</CATEGORY>
+		</ARTIFACT>
+	</ARTIFACTS>
+</BIODIV-QUESTION>
+<BIODIV-QUESTION questionid="co2Groundwater">
+	<QUESTION> How important is CO2 fixation in the groundwater? </QUESTION>
+	<KEYWORDS></KEYWORDS>
+	<ARTIFACTS>
+		<ARTIFACT subqid="SQ1">
+			<PHRASE>CO2 fixation</PHRASE>
+			<AGREEMENT>1.0</AGREEMENT>
+			<CATEGORY>Process</CATEGORY>
+		</ARTIFACT>
+		<ARTIFACT subqid="SQ2">
+			<PHRASE>CO2</PHRASE>
+			<AGREEMENT>1.0</AGREEMENT>
+			<CATEGORY>Mat & Subst</CATEGORY>
+		</ARTIFACT>
+		<ARTIFACT subqid="SQ3">
+			<PHRASE>groundwater</PHRASE>
+			<AGREEMENT>0.7777777777777777</AGREEMENT>
+			<CATEGORY>Environment</CATEGORY>
+		</ARTIFACT>
+	</ARTIFACTS>
+</BIODIV-QUESTION>
+<BIODIV-QUESTION questionid="uptakeRates">
+	<QUESTION> How high are benthic oxygen uptake rates in den Atlantic? </QUESTION>
+	<KEYWORDS></KEYWORDS>
+	<ARTIFACTS>
+		<ARTIFACT subqid="SQ4">
+			<PHRASE>oxygen</PHRASE>
+			<AGREEMENT>1.0</AGREEMENT>
+			<CATEGORY>Mat & Subst</CATEGORY>
+		</ARTIFACT>
+		<ARTIFACT subqid="SQ5">
+			<PHRASE>Atlantic</PHRASE>
+			<AGREEMENT>0.611111111111111</AGREEMENT>
+			<CATEGORY>Location</CATEGORY>
+		</ARTIFACT>
+	</ARTIFACTS>
+</BIODIV-QUESTION>
+<BIODIV-QUESTION questionid="workingArea">
+	<QUESTION> Where are the catchment / source / infiltration areas of rain water in the working area? </QUESTION>
+	<KEYWORDS></KEYWORDS>
+	<ARTIFACTS>
+		<ARTIFACT subqid="SQ4">
+			<PHRASE>rain water</PHRASE>
+			<AGREEMENT>0.5833333333333333</AGREEMENT>
+			<CATEGORY>Mat & Subst</CATEGORY>
+		</ARTIFACT>
+		<ARTIFACT subqid="SQ5">
+			<PHRASE>working area</PHRASE>
+			<AGREEMENT>0.5833333333333333</AGREEMENT>
+			<CATEGORY>Location</CATEGORY>
+		</ARTIFACT>
+	</ARTIFACTS>
+</BIODIV-QUESTION>
+<BIODIV-QUESTION questionid="InfluenceMicro">
+	<QUESTION> Influence of microorganism on CO2 isotopes </QUESTION>
+	<KEYWORDS></KEYWORDS>
+	<ARTIFACTS>
+		<ARTIFACT subqid="SQ1">
+			<PHRASE>microorganism</PHRASE>
+			<AGREEMENT>1.0</AGREEMENT>
+			<CATEGORY>Organism</CATEGORY>
+		</ARTIFACT>
+		<ARTIFACT subqid="SQ2">
+			<PHRASE>CO2 isotopes</PHRASE>
+			<AGREEMENT>1.0</AGREEMENT>
+			<CATEGORY>Mat & Subst</CATEGORY>
+		</ARTIFACT>
+		<ARTIFACT subqid="SQ3">
+			<PHRASE>CO2</PHRASE>
+			<AGREEMENT>1.0</AGREEMENT>
+			<CATEGORY>Mat & Subst</CATEGORY>
+		</ARTIFACT>
+	</ARTIFACTS>
+</BIODIV-QUESTION>
+<BIODIV-QUESTION questionid="vascularPlants">
+	<QUESTION> Is there data about the forest-specific diversity of vascular plants? </QUESTION>
+	<KEYWORDS></KEYWORDS>
+	<ARTIFACTS>
+		<ARTIFACT subqid="SQ3">
+			<PHRASE>vascular plants</PHRASE>
+			<AGREEMENT>1.0</AGREEMENT>
+			<CATEGORY>Organism</CATEGORY>
+		</ARTIFACT>
+	</ARTIFACTS>
+</BIODIV-QUESTION>
+<BIODIV-QUESTION questionid="pollinators">
+	<QUESTION> What data is there on the abundance of pollinators, e</QUESTION>
+	<KEYWORDS></KEYWORDS>
+	<ARTIFACTS>
+		<ARTIFACT subqid="SQ2">
+			<PHRASE>bees</PHRASE>
+			<AGREEMENT>1.0</AGREEMENT>
+			<CATEGORY>Organism</CATEGORY>
+		</ARTIFACT>
+	</ARTIFACTS>
+</BIODIV-QUESTION>
+<BIODIV-QUESTION questionid="seasonalDi">
+	<QUESTION> What are the seasonal differences of nitrogen dry & wet deposition in a template forest? </QUESTION>
+	<KEYWORDS></KEYWORDS>
+	<ARTIFACTS>
+		<ARTIFACT subqid="SQ3">
+			<PHRASE>nitrogen dry deposition</PHRASE>
+			<AGREEMENT>0.611111111111111</AGREEMENT>
+			<CATEGORY>Other</CATEGORY>
+		</ARTIFACT>
+		<ARTIFACT subqid="SQ4">
+			<PHRASE>nitrogen wet deposition</PHRASE>
+			<AGREEMENT>0.611111111111111</AGREEMENT>
+			<CATEGORY>Other</CATEGORY>
+		</ARTIFACT>
+		<ARTIFACT subqid="SQ5">
+			<PHRASE>nitrogen</PHRASE>
+			<AGREEMENT>1.0</AGREEMENT>
+			<CATEGORY>Mat & Subst</CATEGORY>
+		</ARTIFACT>
+	</ARTIFACTS>
+</BIODIV-QUESTION>
+<BIODIV-QUESTION questionid="socialSystem">
+	<QUESTION> What is the social system of species X? </QUESTION>
+	<KEYWORDS></KEYWORDS>
+	<ARTIFACTS>
+		<ARTIFACT subqid="SQ2">
+			<PHRASE>species X</PHRASE>
+			<AGREEMENT>1.0</AGREEMENT>
+			<CATEGORY>Organism</CATEGORY>
+		</ARTIFACT>
+	</ARTIFACTS>
+</BIODIV-QUESTION>
+<BIODIV-QUESTION questionid="invasiveGrasses">
+	<QUESTION> What data exist for invasive grasses, e</QUESTION>
+	<KEYWORDS></KEYWORDS>
+	<ARTIFACTS>
+		<ARTIFACT subqid="SQ1">
+			<PHRASE>invasive grasses</PHRASE>
+			<AGREEMENT>0.7777777777777777</AGREEMENT>
+			<CATEGORY>Organism</CATEGORY>
+		</ARTIFACT>
+		<ARTIFACT subqid="SQ2">
+			<PHRASE>invasive</PHRASE>
+			<AGREEMENT>0.5833333333333333</AGREEMENT>
+			<CATEGORY>Quality</CATEGORY>
+		</ARTIFACT>
+		<ARTIFACT subqid="SQ3">
+			<PHRASE>Poaceae</PHRASE>
+			<AGREEMENT>1.0</AGREEMENT>
+			<CATEGORY>Organism</CATEGORY>
+		</ARTIFACT>
+	</ARTIFACTS>
+</BIODIV-QUESTION>
+<BIODIV-QUESTION questionid="millipedes">
+	<QUESTION> What data is there on the population abundance of millipedes? </QUESTION>
+	<KEYWORDS></KEYWORDS>
+	<ARTIFACTS>
+		<ARTIFACT subqid="SQ3">
+			<PHRASE>millipedes</PHRASE>
+			<AGREEMENT>0.7777777777777777</AGREEMENT>
+			<CATEGORY>Organism</CATEGORY>
+		</ARTIFACT>
+	</ARTIFACTS>
+</BIODIV-QUESTION>
+<BIODIV-QUESTION questionid="orgInorg">
+	<QUESTION> Do water and dissolved organic and inorganic change during the year? </QUESTION>
+	<KEYWORDS></KEYWORDS>
+	<ARTIFACTS>
+		<ARTIFACT subqid="SQ1">
+			<PHRASE>water</PHRASE>
+			<AGREEMENT>0.611111111111111</AGREEMENT>
+			<CATEGORY>Mat & Subst</CATEGORY>
+		</ARTIFACT>
+		<ARTIFACT subqid="SQ2">
+			<PHRASE>dissolved organic and inorganic</PHRASE>
+			<AGREEMENT>0.7777777777777777</AGREEMENT>
+			<CATEGORY>Mat & Subst</CATEGORY>
+		</ARTIFACT>
+		<ARTIFACT subqid="SQ3">
+			<PHRASE>year</PHRASE>
+			<AGREEMENT>1.0</AGREEMENT>
+			<CATEGORY>Time</CATEGORY>
+		</ARTIFACT>
+	</ARTIFACTS>
+</BIODIV-QUESTION>
+<BIODIV-QUESTION questionid="calcareousGrass">
+	<QUESTION> What butterfly species occur on calcareous grassland? </QUESTION>
+	<KEYWORDS></KEYWORDS>
+	<ARTIFACTS>
+		<ARTIFACT subqid="SQ1">
+			<PHRASE>butterfly species</PHRASE>
+			<AGREEMENT>1.0</AGREEMENT>
+			<CATEGORY>Organism</CATEGORY>
+		</ARTIFACT>
+		<ARTIFACT subqid="SQ2">
+			<PHRASE>calcareous grassland</PHRASE>
+			<AGREEMENT>0.5833333333333333</AGREEMENT>
+			<CATEGORY>Environment</CATEGORY>
+		</ARTIFACT>
+	</ARTIFACTS>
+</BIODIV-QUESTION>
+<BIODIV-QUESTION questionid="secondaryMinerals">
+	<QUESTION> Are secondary minerals on pores and fractures comparable to the groundwater chemistry? </QUESTION>
+	<KEYWORDS></KEYWORDS>
+	<ARTIFACTS>
+		<ARTIFACT subqid="SQ1">
+			<PHRASE>secondary minerals</PHRASE>
+			<AGREEMENT>0.7777777777777777</AGREEMENT>
+			<CATEGORY>Mat & Subst</CATEGORY>
+		</ARTIFACT>
+	</ARTIFACTS>
+</BIODIV-QUESTION>
+<BIODIV-QUESTION questionid="specififcInputs">
+	<QUESTION> Are some molecules related to specific inputs from surface (nitrogen) or physico-chemical compositions of the groundwater? </QUESTION>
+	<KEYWORDS></KEYWORDS>
+	<ARTIFACTS>
+		<ARTIFACT subqid="SQ3">
+			<PHRASE>nitrogen</PHRASE>
+			<AGREEMENT>1.0</AGREEMENT>
+			<CATEGORY>Mat & Subst</CATEGORY>
+		</ARTIFACT>
+		<ARTIFACT subqid="SQ5">
+			<PHRASE>groundwater</PHRASE>
+			<AGREEMENT>0.611111111111111</AGREEMENT>
+			<CATEGORY>Mat & Subst</CATEGORY>
+		</ARTIFACT>
+	</ARTIFACTS>
+</BIODIV-QUESTION>
+<BIODIV-QUESTION questionid="downstreamCom">
+	<QUESTION> Are there connections between soil born mobile (organic) matters from topsoil and the groundwater in downstream compartments (aquifer)? </QUESTION>
+	<KEYWORDS></KEYWORDS>
+	<ARTIFACTS>
+		<ARTIFACT subqid="SQ4">
+			<PHRASE>soil</PHRASE>
+			<AGREEMENT>0.611111111111111</AGREEMENT>
+			<CATEGORY>Environment</CATEGORY>
+		</ARTIFACT>
+	</ARTIFACTS>
+</BIODIV-QUESTION>
+<BIODIV-QUESTION questionid="microbialGuilds">
+	<QUESTION> Are patterns in trace gas release able to be used for identifying the activity of microbial guilds? </QUESTION>
+	<KEYWORDS></KEYWORDS>
+	<ARTIFACTS>
+		<ARTIFACT subqid="SQ2">
+			<PHRASE>trace gas release</PHRASE>
+			<AGREEMENT>1.0</AGREEMENT>
+			<CATEGORY>Process</CATEGORY>
+		</ARTIFACT>
+		<ARTIFACT subqid="SQ3">
+			<PHRASE>trace gas</PHRASE>
+			<AGREEMENT>1.0</AGREEMENT>
+			<CATEGORY>Mat & Subst</CATEGORY>
+		</ARTIFACT>
+		<ARTIFACT subqid="SQ5">
+			<PHRASE>microbial guilds</PHRASE>
+			<AGREEMENT>0.7777777777777777</AGREEMENT>
+			<CATEGORY>Organism</CATEGORY>
+		</ARTIFACT>
+	</ARTIFACTS>
+</BIODIV-QUESTION>
+<BIODIV-QUESTION questionid="distributionHolo">
+	<QUESTION> How is the distribution of Holothuroidea in the Atlantic Ocean? </QUESTION>
+	<KEYWORDS></KEYWORDS>
+	<ARTIFACTS>
+		<ARTIFACT subqid="SQ2">
+			<PHRASE>Holothuroidea</PHRASE>
+			<AGREEMENT>1.0</AGREEMENT>
+			<CATEGORY>Organism</CATEGORY>
+		</ARTIFACT>
+	</ARTIFACTS>
+</BIODIV-QUESTION>
+<BIODIV-QUESTION questionid="grassCut">
+	<QUESTION> Do regularly occurring grass cut events alter the capability of soils to precipitate water? </QUESTION>
+	<KEYWORDS></KEYWORDS>
+	<ARTIFACTS>
+		<ARTIFACT subqid="SQ3">
+			<PHRASE>grass</PHRASE>
+			<AGREEMENT>0.7777777777777777</AGREEMENT>
+			<CATEGORY>Organism</CATEGORY>
+		</ARTIFACT>
+		<ARTIFACT subqid="SQ4">
+			<PHRASE>soils</PHRASE>
+			<AGREEMENT>0.611111111111111</AGREEMENT>
+			<CATEGORY>Environment</CATEGORY>
+		</ARTIFACT>
+	</ARTIFACTS>
+</BIODIV-QUESTION>
+<BIODIV-QUESTION questionid="globalOccurrence">
+	<QUESTION> Do Triglochin palustris (Sumpf-Dreizack) und Triglochin maritima (Strand Dreizack) (or at least one of them) occur in Brandenburg/ in Germany/ in middle Europe/ in Europe/ in tropical areas/ in South America/ globally? </QUESTION>
+	<KEYWORDS></KEYWORDS>
+	<ARTIFACTS>
+		<ARTIFACT subqid="SQ1">
+			<PHRASE>Triglochin palustris (Sumpf-Dreizack)</PHRASE>
+			<AGREEMENT>1.0</AGREEMENT>
+			<CATEGORY>Organism</CATEGORY>
+		</ARTIFACT>
+		<ARTIFACT subqid="SQ2">
+			<PHRASE>Triglochin maritima (Strand Dreizack)</PHRASE>
+			<AGREEMENT>1.0</AGREEMENT>
+			<CATEGORY>Organism</CATEGORY>
+		</ARTIFACT>
+		<ARTIFACT subqid="SQ3">
+			<PHRASE>Brandenburg</PHRASE>
+			<AGREEMENT>1.0</AGREEMENT>
+			<CATEGORY>Location</CATEGORY>
+		</ARTIFACT>
+		<ARTIFACT subqid="SQ4">
+			<PHRASE>Germany</PHRASE>
+			<AGREEMENT>1.0</AGREEMENT>
+			<CATEGORY>Location</CATEGORY>
+		</ARTIFACT>
+		<ARTIFACT subqid="SQ5">
+			<PHRASE>middle Europe</PHRASE>
+			<AGREEMENT>1.0</AGREEMENT>
+			<CATEGORY>Location</CATEGORY>
+		</ARTIFACT>
+		<ARTIFACT subqid="SQ6">
+			<PHRASE>Europe</PHRASE>
+			<AGREEMENT>1.0</AGREEMENT>
+			<CATEGORY>Location</CATEGORY>
+		</ARTIFACT>
+		<ARTIFACT subqid="SQ8">
+			<PHRASE>South America</PHRASE>
+			<AGREEMENT>1.0</AGREEMENT>
+			<CATEGORY>Location</CATEGORY>
+		</ARTIFACT>
+	</ARTIFACTS>
+</BIODIV-QUESTION>
+<BIODIV-QUESTION questionid="c_n_isotopes">
+	<QUESTION> Are patterns in C-/N-isotopes of CH4, N2O, CO2 (GHG's) existing for drying out soil? </QUESTION>
+	<KEYWORDS></KEYWORDS>
+	<ARTIFACTS>
+		<ARTIFACT subqid="SQ2">
+			<PHRASE>C-/N-isotopes of CH4; N2O; CO2 (GHG's)</PHRASE>
+			<AGREEMENT>0.7777777777777777</AGREEMENT>
+			<CATEGORY>Mat & Subst</CATEGORY>
+		</ARTIFACT>
+		<ARTIFACT subqid="SQ3">
+			<PHRASE>C-/N-isotopes</PHRASE>
+			<AGREEMENT>0.7777777777777777</AGREEMENT>
+			<CATEGORY>Mat & Subst</CATEGORY>
+		</ARTIFACT>
+		<ARTIFACT subqid="SQ4">
+			<PHRASE>CH4</PHRASE>
+			<AGREEMENT>0.7777777777777777</AGREEMENT>
+			<CATEGORY>Mat & Subst</CATEGORY>
+		</ARTIFACT>
+		<ARTIFACT subqid="SQ5">
+			<PHRASE>N2O</PHRASE>
+			<AGREEMENT>0.7777777777777777</AGREEMENT>
+			<CATEGORY>Mat & Subst</CATEGORY>
+		</ARTIFACT>
+		<ARTIFACT subqid="SQ6">
+			<PHRASE>CO2</PHRASE>
+			<AGREEMENT>0.7777777777777777</AGREEMENT>
+			<CATEGORY>Mat & Subst</CATEGORY>
+		</ARTIFACT>
+		<ARTIFACT subqid="SQ7">
+			<PHRASE>GHG</PHRASE>
+			<AGREEMENT>0.7777777777777777</AGREEMENT>
+			<CATEGORY>Mat & Subst</CATEGORY>
+		</ARTIFACT>
+	</ARTIFACTS>
+</BIODIV-QUESTION>
+<BIODIV-QUESTION questionid="vlpData">
+	<QUESTION> What is the influence of rainfall events on VLP-data? </QUESTION>
+	<KEYWORDS></KEYWORDS>
+	<ARTIFACTS>
+		<ARTIFACT subqid="SQ2">
+			<PHRASE>rainfall events</PHRASE>
+			<AGREEMENT>1.0</AGREEMENT>
+			<CATEGORY>Event</CATEGORY>
+		</ARTIFACT>
+		<ARTIFACT subqid="SQ3">
+			<PHRASE>VLP-data</PHRASE>
+			<AGREEMENT>0.7777777777777777</AGREEMENT>
+			<CATEGORY>Data Type</CATEGORY>
+		</ARTIFACT>
+	</ARTIFACTS>
+</BIODIV-QUESTION>
+<BIODIV-QUESTION questionid="birdDistribution">
+	<QUESTION> What information is there on bird distribution in Germany? </QUESTION>
+	<KEYWORDS></KEYWORDS>
+	<ARTIFACTS>
+		<ARTIFACT subqid="SQ2">
+			<PHRASE>Germany</PHRASE>
+			<AGREEMENT>1.0</AGREEMENT>
+			<CATEGORY>Location</CATEGORY>
+		</ARTIFACT>
+	</ARTIFACTS>
+</BIODIV-QUESTION>
+<BIODIV-QUESTION questionid="meanValue">
+	<QUESTION> What is the mean value of hydrochemical parameters at each site? </QUESTION>
+	<KEYWORDS></KEYWORDS>
+	<ARTIFACTS>
+		<ARTIFACT subqid="SQ2">
+			<PHRASE>hydrochemical parameters</PHRASE>
+			<AGREEMENT>0.611111111111111</AGREEMENT>
+			<CATEGORY>Other</CATEGORY>
+		</ARTIFACT>
+		<ARTIFACT subqid="SQ3">
+			<PHRASE>site</PHRASE>
+			<AGREEMENT>0.611111111111111</AGREEMENT>
+			<CATEGORY>Location</CATEGORY>
+		</ARTIFACT>
+	</ARTIFACTS>
+</BIODIV-QUESTION>
+<BIODIV-QUESTION questionid="crossKingdom">
+	<QUESTION> Do the aquifer co-occurence patterns of microorganisms (at cross kingdom level) differ from those of soil? </QUESTION>
+	<KEYWORDS></KEYWORDS>
+	<ARTIFACTS>
+		<ARTIFACT subqid="SQ3">
+			<PHRASE>aquifer</PHRASE>
+			<AGREEMENT>0.7777777777777777</AGREEMENT>
+			<CATEGORY>Environment</CATEGORY>
+		</ARTIFACT>
+		<ARTIFACT subqid="SQ4">
+			<PHRASE>microorganism</PHRASE>
+			<AGREEMENT>1.0</AGREEMENT>
+			<CATEGORY>Organism</CATEGORY>
+		</ARTIFACT>
+		<ARTIFACT subqid="SQ6">
+			<PHRASE>soil</PHRASE>
+			<AGREEMENT>0.611111111111111</AGREEMENT>
+			<CATEGORY>Environment</CATEGORY>
+		</ARTIFACT>
+	</ARTIFACTS>
+</BIODIV-QUESTION>
+<BIODIV-QUESTION questionid="paridae">
+	<QUESTION> Which species of the family Paridae coexist in Europe? </QUESTION>
+	<KEYWORDS></KEYWORDS>
+	<ARTIFACTS>
+		<ARTIFACT subqid="SQ1">
+			<PHRASE>species of the family Paridae</PHRASE>
+			<AGREEMENT>0.7777777777777777</AGREEMENT>
+			<CATEGORY>Organism</CATEGORY>
+		</ARTIFACT>
+		<ARTIFACT subqid="SQ2">
+			<PHRASE>Paridae</PHRASE>
+			<AGREEMENT>1.0</AGREEMENT>
+			<CATEGORY>Organism</CATEGORY>
+		</ARTIFACT>
+		<ARTIFACT subqid="SQ3">
+			<PHRASE>Europe</PHRASE>
+			<AGREEMENT>1.0</AGREEMENT>
+			<CATEGORY>Location</CATEGORY>
+		</ARTIFACT>
+	</ARTIFACTS>
+</BIODIV-QUESTION>
+<BIODIV-QUESTION questionid="coffeaArabica">
+	<QUESTION> Does Coffea arabica occur in subtropical areas/ in Europe? </QUESTION>
+	<KEYWORDS></KEYWORDS>
+	<ARTIFACTS>
+		<ARTIFACT subqid="SQ1">
+			<PHRASE>Coffea arabica</PHRASE>
+			<AGREEMENT>1.0</AGREEMENT>
+			<CATEGORY>Organism</CATEGORY>
+		</ARTIFACT>
+		<ARTIFACT subqid="SQ3">
+			<PHRASE>Europe</PHRASE>
+			<AGREEMENT>1.0</AGREEMENT>
+			<CATEGORY>Location</CATEGORY>
+		</ARTIFACT>
+	</ARTIFACTS>
+</BIODIV-QUESTION>
+<BIODIV-QUESTION questionid="waterFlow">
+	<QUESTION> How does landsurface heterogenity influence patterns of water flow / flux? </QUESTION>
+	<KEYWORDS></KEYWORDS>
+	<ARTIFACTS>
+		<ARTIFACT subqid="SQ4">
+			<PHRASE>water flow</PHRASE>
+			<AGREEMENT>0.7777777777777777</AGREEMENT>
+			<CATEGORY>Process</CATEGORY>
+		</ARTIFACT>
+		<ARTIFACT subqid="SQ5">
+			<PHRASE>water flux</PHRASE>
+			<AGREEMENT>0.5833333333333333</AGREEMENT>
+			<CATEGORY>Process</CATEGORY>
+		</ARTIFACT>
+	</ARTIFACTS>
+</BIODIV-QUESTION>
+<BIODIV-QUESTION questionid="verticalCanopy">
+	<QUESTION> Are there vertical canopy measurements of beeches and spruces (e</QUESTION>
+	<KEYWORDS></KEYWORDS>
+	<ARTIFACTS>
+		<ARTIFACT subqid="SQ3">
+			<PHRASE>beeches</PHRASE>
+			<AGREEMENT>1.0</AGREEMENT>
+			<CATEGORY>Organism</CATEGORY>
+		</ARTIFACT>
+		<ARTIFACT subqid="SQ4">
+			<PHRASE>spruces</PHRASE>
+			<AGREEMENT>1.0</AGREEMENT>
+			<CATEGORY>Organism</CATEGORY>
+		</ARTIFACT>
+	</ARTIFACTS>
+</BIODIV-QUESTION>
+<BIODIV-QUESTION questionid="datasetSunflowers">
+	<QUESTION> Please show me all datasets about ''sunflowers''! </QUESTION>
+	<KEYWORDS></KEYWORDS>
+	<ARTIFACTS>
+		<ARTIFACT subqid="SQ1">
+			<PHRASE>sunflowers</PHRASE>
+			<AGREEMENT>1.0</AGREEMENT>
+			<CATEGORY>Organism</CATEGORY>
+		</ARTIFACT>
+	</ARTIFACTS>
+</BIODIV-QUESTION>
+<BIODIV-QUESTION questionid="heracleumMant">
+	<QUESTION> Show me all datasets where Heracleum mantegazzianum has been found in Berlin, Berlin and Brandenburg, Germany, Europe? </QUESTION>
+	<KEYWORDS></KEYWORDS>
+	<ARTIFACTS>
+		<ARTIFACT subqid="SQ1">
+			<PHRASE>Heracleum mantegazzianum</PHRASE>
+			<AGREEMENT>1.0</AGREEMENT>
+			<CATEGORY>Organism</CATEGORY>
+		</ARTIFACT>
+		<ARTIFACT subqid="SQ2">
+			<PHRASE>Berlin</PHRASE>
+			<AGREEMENT>1.0</AGREEMENT>
+			<CATEGORY>Location</CATEGORY>
+		</ARTIFACT>
+		<ARTIFACT subqid="SQ3">
+			<PHRASE>Berlin</PHRASE>
+			<AGREEMENT>1.0</AGREEMENT>
+			<CATEGORY>Location</CATEGORY>
+		</ARTIFACT>
+		<ARTIFACT subqid="SQ4">
+			<PHRASE>Brandenburg</PHRASE>
+			<AGREEMENT>1.0</AGREEMENT>
+			<CATEGORY>Location</CATEGORY>
+		</ARTIFACT>
+		<ARTIFACT subqid="SQ5">
+			<PHRASE>Germany</PHRASE>
+			<AGREEMENT>1.0</AGREEMENT>
+			<CATEGORY>Location</CATEGORY>
+		</ARTIFACT>
+		<ARTIFACT subqid="SQ6">
+			<PHRASE>Europe</PHRASE>
+			<AGREEMENT>1.0</AGREEMENT>
+			<CATEGORY>Location</CATEGORY>
+		</ARTIFACT>
+	</ARTIFACTS>
+</BIODIV-QUESTION>
+<BIODIV-QUESTION questionid="preferentialFlow">
+	<QUESTION> Do trees enhance preferential flow? </QUESTION>
+	<KEYWORDS></KEYWORDS>
+	<ARTIFACTS>
+		<ARTIFACT subqid="SQ1">
+			<PHRASE>trees</PHRASE>
+			<AGREEMENT>1.0</AGREEMENT>
+			<CATEGORY>Organism</CATEGORY>
+		</ARTIFACT>
+		<ARTIFACT subqid="SQ2">
+			<PHRASE>preferential flow</PHRASE>
+			<AGREEMENT>1.0</AGREEMENT>
+			<CATEGORY>Process</CATEGORY>
+		</ARTIFACT>
+	</ARTIFACTS>
+</BIODIV-QUESTION>
+<BIODIV-QUESTION questionid="kammerFrost">
+	<QUESTION> How was the weather in the last 4 weeks in Kammerforst? Especially the amount of rain / precipitation</QUESTION>
+	<KEYWORDS></KEYWORDS>
+	<ARTIFACTS>
+		<ARTIFACT subqid="SQ2">
+			<PHRASE>last 4 weeks</PHRASE>
+			<AGREEMENT>1.0</AGREEMENT>
+			<CATEGORY>Time</CATEGORY>
+		</ARTIFACT>
+		<ARTIFACT subqid="SQ3">
+			<PHRASE>Kammerforst</PHRASE>
+			<AGREEMENT>1.0</AGREEMENT>
+			<CATEGORY>Location</CATEGORY>
+		</ARTIFACT>
+	</ARTIFACTS>
+</BIODIV-QUESTION>
+<BIODIV-QUESTION questionid="coldSeeps">
+	<QUESTION> How high are sulfate reduction rates at cold seeps? </QUESTION>
+	<KEYWORDS></KEYWORDS>
+	<ARTIFACTS>
+		<ARTIFACT subqid="SQ2">
+			<PHRASE>sulfate reduction</PHRASE>
+			<AGREEMENT>0.5833333333333333</AGREEMENT>
+			<CATEGORY>Process</CATEGORY>
+		</ARTIFACT>
+		<ARTIFACT subqid="SQ3">
+			<PHRASE>sulfate</PHRASE>
+			<AGREEMENT>1.0</AGREEMENT>
+			<CATEGORY>Mat & Subst</CATEGORY>
+		</ARTIFACT>
+	</ARTIFACTS>
+</BIODIV-QUESTION>
+<BIODIV-QUESTION questionid="surfaceProperties">
+	<QUESTION> Are the surface properties influencing those processes? </QUESTION>
+	<KEYWORDS></KEYWORDS>
+	<ARTIFACTS>
+		<ARTIFACT subqid="SQ2">
+			<PHRASE>processes</PHRASE>
+			<AGREEMENT>1.0</AGREEMENT>
+			<CATEGORY>Process</CATEGORY>
+		</ARTIFACT>
+	</ARTIFACTS>
+</BIODIV-QUESTION>
+<BIODIV-QUESTION questionid="frogData">
+	<QUESTION> Where are the data gaps in frog data worldwide? </QUESTION>
+	<KEYWORDS></KEYWORDS>
+	<ARTIFACTS>
+		<ARTIFACT subqid="SQ1">
+			<PHRASE>frog</PHRASE>
+			<AGREEMENT>1.0</AGREEMENT>
+			<CATEGORY>Organism</CATEGORY>
+		</ARTIFACT>
+	</ARTIFACTS>
+</BIODIV-QUESTION>
+<BIODIV-QUESTION questionid="primulaVeris">
+	<QUESTION> What data exist for ''primula veris'' in Germany? </QUESTION>
+	<KEYWORDS></KEYWORDS>
+	<ARTIFACTS>
+		<ARTIFACT subqid="SQ1">
+			<PHRASE>Primula veris</PHRASE>
+			<AGREEMENT>1.0</AGREEMENT>
+			<CATEGORY>Organism</CATEGORY>
+		</ARTIFACT>
+		<ARTIFACT subqid="SQ2">
+			<PHRASE>Germany</PHRASE>
+			<AGREEMENT>1.0</AGREEMENT>
+			<CATEGORY>Location</CATEGORY>
+		</ARTIFACT>
+	</ARTIFACTS>
+</BIODIV-QUESTION>
+<BIODIV-QUESTION questionid="nitrateLeaching">
+	<QUESTION> Could template forests be considered as sources of nitrate leaching to the groundwater? </QUESTION>
+	<KEYWORDS></KEYWORDS>
+	<ARTIFACTS>
+		<ARTIFACT subqid="SQ3">
+			<PHRASE>nitrate leaching</PHRASE>
+			<AGREEMENT>1.0</AGREEMENT>
+			<CATEGORY>Process</CATEGORY>
+		</ARTIFACT>
+		<ARTIFACT subqid="SQ4">
+			<PHRASE>groundwater</PHRASE>
+			<AGREEMENT>0.611111111111111</AGREEMENT>
+			<CATEGORY>Environment</CATEGORY>
+		</ARTIFACT>
+	</ARTIFACTS>
+</BIODIV-QUESTION>
+<BIODIV-QUESTION questionid="rareSpecies">
+	<QUESTION> How important are rare species for activities in the groundwater? </QUESTION>
+	<KEYWORDS></KEYWORDS>
+	<ARTIFACTS>
+		<ARTIFACT subqid="SQ1">
+			<PHRASE>rare species</PHRASE>
+			<AGREEMENT>0.7777777777777777</AGREEMENT>
+			<CATEGORY>Organism</CATEGORY>
+		</ARTIFACT>
+		<ARTIFACT subqid="SQ3">
+			<PHRASE>groundwater</PHRASE>
+			<AGREEMENT>0.7777777777777777</AGREEMENT>
+			<CATEGORY>Environment</CATEGORY>
+		</ARTIFACT>
+	</ARTIFACTS>
+</BIODIV-QUESTION>
+<BIODIV-QUESTION questionid="iucnStatus">
+	<QUESTION> What is the frog IUCN red list status? </QUESTION>
+	<KEYWORDS></KEYWORDS>
+	<ARTIFACTS>
+		<ARTIFACT subqid="SQ1">
+			<PHRASE>frog</PHRASE>
+			<AGREEMENT>1.0</AGREEMENT>
+			<CATEGORY>Organism</CATEGORY>
+		</ARTIFACT>
+	</ARTIFACTS>
+</BIODIV-QUESTION>
+<BIODIV-QUESTION questionid="landManagement">
+	<QUESTION> Can historic land-management be infered from current vegetation structural signatures? </QUESTION>
+	<KEYWORDS></KEYWORDS>
+	<ARTIFACTS>
+		<ARTIFACT subqid="SQ1">
+			<PHRASE>historic land-management</PHRASE>
+			<AGREEMENT>0.7777777777777777</AGREEMENT>
+			<CATEGORY>Human Inter</CATEGORY>
+		</ARTIFACT>
+		<ARTIFACT subqid="SQ4">
+			<PHRASE>current</PHRASE>
+			<AGREEMENT>0.7777777777777777</AGREEMENT>
+			<CATEGORY>Time</CATEGORY>
+		</ARTIFACT>
+		<ARTIFACT subqid="SQ6">
+			<PHRASE>structural signatures</PHRASE>
+			<AGREEMENT>0.5833333333333333</AGREEMENT>
+			<CATEGORY>Other</CATEGORY>
+		</ARTIFACT>
+	</ARTIFACTS>
+</BIODIV-QUESTION>
+<BIODIV-QUESTION questionid="bee">
+	<QUESTION> What can I find about bees? </QUESTION>
+	<KEYWORDS></KEYWORDS>
+	<ARTIFACTS>
+		<ARTIFACT subqid="SQ1">
+			<PHRASE>bees</PHRASE>
+			<AGREEMENT>1.0</AGREEMENT>
+			<CATEGORY>Organism</CATEGORY>
+		</ARTIFACT>
+	</ARTIFACTS>
+</BIODIV-QUESTION>
+<BIODIV-QUESTION questionid="spatialRedistrib">
+	<QUESTION> Does the spatial re-distribution of precipitation by tree coupies influence vertical transport of organic through the soil? </QUESTION>
+	<KEYWORDS></KEYWORDS>
+	<ARTIFACTS>
+		<ARTIFACT subqid="SQ4">
+			<PHRASE>vertical transport of organic</PHRASE>
+			<AGREEMENT>1.0</AGREEMENT>
+			<CATEGORY>Process</CATEGORY>
+		</ARTIFACT>
+	</ARTIFACTS>
+</BIODIV-QUESTION>
+<BIODIV-QUESTION questionid="stylopsMelittae">
+	<QUESTION> Is there a collection in Germany where I can lend a specimen of Stylops melittae to do Scanning electron microscopical investigations for my PhD thesis? </QUESTION>
+	<KEYWORDS></KEYWORDS>
+	<ARTIFACTS>
+		<ARTIFACT subqid="SQ1">
+			<PHRASE>Germany</PHRASE>
+			<AGREEMENT>1.0</AGREEMENT>
+			<CATEGORY>Location</CATEGORY>
+		</ARTIFACT>
+		<ARTIFACT subqid="SQ3">
+			<PHRASE>Stylops melittae</PHRASE>
+			<AGREEMENT>1.0</AGREEMENT>
+			<CATEGORY>Organism</CATEGORY>
+		</ARTIFACT>
+	</ARTIFACTS>
+</BIODIV-QUESTION>
+<BIODIV-QUESTION questionid="gasAnalyticalTec">
+	<QUESTION> What are suitable methods to characterize microbial soil processes by gas analytical techniques? </QUESTION>
+	<KEYWORDS></KEYWORDS>
+	<ARTIFACTS>
+		<ARTIFACT subqid="SQ1">
+			<PHRASE>suitable methods</PHRASE>
+			<AGREEMENT>0.7777777777777777</AGREEMENT>
+			<CATEGORY>Method</CATEGORY>
+		</ARTIFACT>
+		<ARTIFACT subqid="SQ2">
+			<PHRASE>microbial soil processes</PHRASE>
+			<AGREEMENT>1.0</AGREEMENT>
+			<CATEGORY>Process</CATEGORY>
+		</ARTIFACT>
+		<ARTIFACT subqid="SQ5">
+			<PHRASE>gas analytical techniques</PHRASE>
+			<AGREEMENT>1.0</AGREEMENT>
+			<CATEGORY>Method</CATEGORY>
+		</ARTIFACT>
+		<ARTIFACT subqid="SQ6">
+			<PHRASE>gas</PHRASE>
+			<AGREEMENT>1.0</AGREEMENT>
+			<CATEGORY>Mat & Subst</CATEGORY>
+		</ARTIFACT>
+	</ARTIFACTS>
+</BIODIV-QUESTION>
+<BIODIV-QUESTION questionid="plantTraits">
+	<QUESTION> Is there data about plant traits influenced by precipitation and grazing? </QUESTION>
+	<KEYWORDS></KEYWORDS>
+	<ARTIFACTS>
+		<ARTIFACT subqid="SQ1">
+			<PHRASE>plant traits</PHRASE>
+			<AGREEMENT>0.611111111111111</AGREEMENT>
+			<CATEGORY>Quality</CATEGORY>
+		</ARTIFACT>
+		<ARTIFACT subqid="SQ2">
+			<PHRASE>plant</PHRASE>
+			<AGREEMENT>0.7777777777777777</AGREEMENT>
+			<CATEGORY>Organism</CATEGORY>
+		</ARTIFACT>
+	</ARTIFACTS>
+</BIODIV-QUESTION>
+<BIODIV-QUESTION questionid="plantPathogens">
+	<QUESTION> Is the diversity of hosts influencing the diversity of plant pathogens? </QUESTION>
+	<KEYWORDS></KEYWORDS>
+	<ARTIFACTS>
+		<ARTIFACT subqid="SQ4">
+			<PHRASE>plant pathogens</PHRASE>
+			<AGREEMENT>0.6388888888888888</AGREEMENT>
+			<CATEGORY>Organism</CATEGORY>
+		</ARTIFACT>
+		<ARTIFACT subqid="SQ5">
+			<PHRASE>plant</PHRASE>
+			<AGREEMENT>1.0</AGREEMENT>
+			<CATEGORY>Organism</CATEGORY>
+		</ARTIFACT>
+	</ARTIFACTS>
+</BIODIV-QUESTION>
+<BIODIV-QUESTION questionid="heterotropicMicro">
+	<QUESTION> Is heterotropic microbial activity present in aquifers? </QUESTION>
+	<KEYWORDS></KEYWORDS>
+	<ARTIFACTS>
+		<ARTIFACT subqid="SQ2">
+			<PHRASE>heterotropic</PHRASE>
+			<AGREEMENT>0.611111111111111</AGREEMENT>
+			<CATEGORY>Process</CATEGORY>
+		</ARTIFACT>
+		<ARTIFACT subqid="SQ3">
+			<PHRASE>microbial</PHRASE>
+			<AGREEMENT>1.0</AGREEMENT>
+			<CATEGORY>Organism</CATEGORY>
+		</ARTIFACT>
+		<ARTIFACT subqid="SQ4">
+			<PHRASE>aquifer</PHRASE>
+			<AGREEMENT>0.7777777777777777</AGREEMENT>
+			<CATEGORY>Environment</CATEGORY>
+		</ARTIFACT>
+	</ARTIFACTS>
+</BIODIV-QUESTION>
+<BIODIV-QUESTION questionid="metaboliteProcess">
+	<QUESTION> Which organism processes the metabolite and what is the origin of this structure? </QUESTION>
+	<KEYWORDS></KEYWORDS>
+	<ARTIFACTS>
+		<ARTIFACT subqid="SQ1">
+			<PHRASE>organism</PHRASE>
+			<AGREEMENT>0.7777777777777777</AGREEMENT>
+			<CATEGORY>Organism</CATEGORY>
+		</ARTIFACT>
+		<ARTIFACT subqid="SQ2">
+			<PHRASE>metabolite</PHRASE>
+			<AGREEMENT>0.5833333333333333</AGREEMENT>
+			<CATEGORY>Mat & Subst</CATEGORY>
+		</ARTIFACT>
+	</ARTIFACTS>
+</BIODIV-QUESTION>
+<BIODIV-QUESTION questionid="aricideaAntarctica">
+	<QUESTION> Where does Aricidea antarctica (Paranonidae) occurs? </QUESTION>
+	<KEYWORDS></KEYWORDS>
+	<ARTIFACTS>
+		<ARTIFACT subqid="SQ1">
+			<PHRASE>Aricidea antarctica (Paranonidae)</PHRASE>
+			<AGREEMENT>1.0</AGREEMENT>
+			<CATEGORY>Organism</CATEGORY>
+		</ARTIFACT>
+	</ARTIFACTS>
+</BIODIV-QUESTION>
+<BIODIV-QUESTION questionid="speciesHungary">
+	<QUESTION> What species did Bäumler, J</QUESTION>
+	<KEYWORDS></KEYWORDS>
+	<ARTIFACTS>
+		<ARTIFACT subqid="SQ1">
+			<PHRASE>species</PHRASE>
+			<AGREEMENT>0.5833333333333333</AGREEMENT>
+			<CATEGORY>Organism</CATEGORY>
+		</ARTIFACT>
+		<ARTIFACT subqid="SQ2">
+			<PHRASE>Bäumler; J.A.</PHRASE>
+			<AGREEMENT>1.0</AGREEMENT>
+			<CATEGORY>Person & Org</CATEGORY>
+		</ARTIFACT>
+		<ARTIFACT subqid="SQ3">
+			<PHRASE>Hungary</PHRASE>
+			<AGREEMENT>1.0</AGREEMENT>
+			<CATEGORY>Location</CATEGORY>
+		</ARTIFACT>
+	</ARTIFACTS>
+</BIODIV-QUESTION>
+<BIODIV-QUESTION questionid="dnaData">
+	<QUESTION> Is there DNA data about Amphimonhystrella sp</QUESTION>
+	<KEYWORDS></KEYWORDS>
+	<ARTIFACTS>
+		<ARTIFACT subqid="SQ2">
+			<PHRASE>Amphimonhystrella sp. (Nematoda)</PHRASE>
+			<AGREEMENT>1.0</AGREEMENT>
+			<CATEGORY>Organism</CATEGORY>
+		</ARTIFACT>
+	</ARTIFACTS>
+</BIODIV-QUESTION>
+<BIODIV-QUESTION questionid="polychaete">
+	<QUESTION> Where can I find types of specimen of deep-sea polychaete? </QUESTION>
+	<KEYWORDS></KEYWORDS>
+	<ARTIFACTS>
+		<ARTIFACT subqid="SQ2">
+			<PHRASE>deep-sea polychaete</PHRASE>
+			<AGREEMENT>1.0</AGREEMENT>
+			<CATEGORY>Organism</CATEGORY>
+		</ARTIFACT>
+		<ARTIFACT subqid="SQ3">
+			<PHRASE>deep-sea</PHRASE>
+			<AGREEMENT>0.5833333333333333</AGREEMENT>
+			<CATEGORY>Environment</CATEGORY>
+		</ARTIFACT>
+	</ARTIFACTS>
+</BIODIV-QUESTION>
+<BIODIV-QUESTION questionid="westAfrica">
+	<QUESTION> What data is there for vegetation data from West Africa? </QUESTION>
+	<KEYWORDS></KEYWORDS>
+	<ARTIFACTS>
+		<ARTIFACT subqid="SQ1">
+			<PHRASE>vegetation data</PHRASE>
+			<AGREEMENT>0.5833333333333333</AGREEMENT>
+			<CATEGORY>Other</CATEGORY>
+		</ARTIFACT>
+		<ARTIFACT subqid="SQ2">
+			<PHRASE>West Africa</PHRASE>
+			<AGREEMENT>1.0</AGREEMENT>
+			<CATEGORY>Location</CATEGORY>
+		</ARTIFACT>
+	</ARTIFACTS>
+</BIODIV-QUESTION>
+<BIODIV-QUESTION questionid="omCycle">
+	<QUESTION> Do disturbances like insect mass infestation or fire alter OM cycle and its distribution in the soil system of different land use types? </QUESTION>
+	<KEYWORDS></KEYWORDS>
+	<ARTIFACTS>
+		<ARTIFACT subqid="SQ3">
+			<PHRASE>OM cycle</PHRASE>
+			<AGREEMENT>0.7777777777777777</AGREEMENT>
+			<CATEGORY>Process</CATEGORY>
+		</ARTIFACT>
+		<ARTIFACT subqid="SQ5">
+			<PHRASE>soil system</PHRASE>
+			<AGREEMENT>0.5833333333333333</AGREEMENT>
+			<CATEGORY>Environment</CATEGORY>
+		</ARTIFACT>
+	</ARTIFACTS>
+</BIODIV-QUESTION>
+<BIODIV-QUESTION questionid="agriculture">
+	<QUESTION> How does agriculture affect the groundwater composition? </QUESTION>
+	<KEYWORDS></KEYWORDS>
+	<ARTIFACTS>
+		<ARTIFACT subqid="SQ2">
+			<PHRASE>groundwater composition</PHRASE>
+			<AGREEMENT>0.5833333333333333</AGREEMENT>
+			<CATEGORY>Other</CATEGORY>
+		</ARTIFACT>
+	</ARTIFACTS>
+</BIODIV-QUESTION>
+<BIODIV-QUESTION questionid="co2Fixation">
+	<QUESTION> Which pathways for CO2 fixation are the most important in anoxic aquifers? </QUESTION>
+	<KEYWORDS></KEYWORDS>
+	<ARTIFACTS>
+		<ARTIFACT subqid="SQ2">
+			<PHRASE>CO2 fixation</PHRASE>
+			<AGREEMENT>0.7777777777777777</AGREEMENT>
+			<CATEGORY>Process</CATEGORY>
+		</ARTIFACT>
+		<ARTIFACT subqid="SQ3">
+			<PHRASE>CO2</PHRASE>
+			<AGREEMENT>0.7777777777777777</AGREEMENT>
+			<CATEGORY>Mat & Subst</CATEGORY>
+		</ARTIFACT>
+		<ARTIFACT subqid="SQ4">
+			<PHRASE>anoxic aquifers</PHRASE>
+			<AGREEMENT>0.7777777777777777</AGREEMENT>
+			<CATEGORY>Environment</CATEGORY>
+		</ARTIFACT>
+	</ARTIFACTS>
+</BIODIV-QUESTION>
+<BIODIV-QUESTION questionid="forestCover">
+	<QUESTION> What data is in the repository on forest cover change in Africa? </QUESTION>
+	<KEYWORDS></KEYWORDS>
+	<ARTIFACTS>
+		<ARTIFACT subqid="SQ1">
+			<PHRASE>forest cover change</PHRASE>
+			<AGREEMENT>0.7777777777777777</AGREEMENT>
+			<CATEGORY>Process</CATEGORY>
+		</ARTIFACT>
+		<ARTIFACT subqid="SQ3">
+			<PHRASE>Africa</PHRASE>
+			<AGREEMENT>1.0</AGREEMENT>
+			<CATEGORY>Location</CATEGORY>
+		</ARTIFACT>
+	</ARTIFACTS>
+</BIODIV-QUESTION>
+<BIODIV-QUESTION questionid="Goldenrod">
+	<QUESTION> How has 'Goldenrod' spread over Europe? </QUESTION>
+	<KEYWORDS></KEYWORDS>
+	<ARTIFACTS>
+		<ARTIFACT subqid="SQ1">
+			<PHRASE>Goldenrod</PHRASE>
+			<AGREEMENT>1.0</AGREEMENT>
+			<CATEGORY>Organism</CATEGORY>
+		</ARTIFACT>
+		<ARTIFACT subqid="SQ2">
+			<PHRASE>Europe</PHRASE>
+			<AGREEMENT>1.0</AGREEMENT>
+			<CATEGORY>Location</CATEGORY>
+		</ARTIFACT>
+	</ARTIFACTS>
+</BIODIV-QUESTION>
+<BIODIV-QUESTION questionid="phageTracers">
+	<QUESTION> Are marine phages suitable tracers for colloid and water transport in subsurface ecosystems? </QUESTION>
+	<KEYWORDS></KEYWORDS>
+	<ARTIFACTS>
+		<ARTIFACT subqid="SQ1">
+			<PHRASE>marine phages</PHRASE>
+			<AGREEMENT>1.0</AGREEMENT>
+			<CATEGORY>Organism</CATEGORY>
+		</ARTIFACT>
+		<ARTIFACT subqid="SQ4">
+			<PHRASE>water transport</PHRASE>
+			<AGREEMENT>1.0</AGREEMENT>
+			<CATEGORY>Process</CATEGORY>
+		</ARTIFACT>
+		<ARTIFACT subqid="SQ6">
+			<PHRASE>subsurface ecosystems</PHRASE>
+			<AGREEMENT>0.7777777777777777</AGREEMENT>
+			<CATEGORY>Environment</CATEGORY>
+		</ARTIFACT>
+	</ARTIFACTS>
+</BIODIV-QUESTION>
+<BIODIV-QUESTION questionid="dataDnaRna">
+	<QUESTION> Are some molecules related to DNA, RNA data? </QUESTION>
+	<KEYWORDS></KEYWORDS>
+	<ARTIFACTS>
+		<ARTIFACT subqid="SQ3">
+			<PHRASE>RNA data</PHRASE>
+			<AGREEMENT>0.7777777777777777</AGREEMENT>
+			<CATEGORY>Anatomy</CATEGORY>
+		</ARTIFACT>
+	</ARTIFACTS>
+</BIODIV-QUESTION>
+<BIODIV-QUESTION questionid="climaticPara">
+	<QUESTION> Which climatic parameters control the groundwater discharge and seepage water amounts? </QUESTION>
+	<KEYWORDS></KEYWORDS>
+	<ARTIFACTS>
+		<ARTIFACT subqid="SQ5">
+			<PHRASE>seepage water</PHRASE>
+			<AGREEMENT>0.611111111111111</AGREEMENT>
+			<CATEGORY>Mat & Subst</CATEGORY>
+		</ARTIFACT>
+	</ARTIFACTS>
+</BIODIV-QUESTION>
+<BIODIV-QUESTION questionid="acquifersHydrogeo">
+	<QUESTION> Are some aquifers isolated from others or show all similar hydrogeochemical properties? </QUESTION>
+	<KEYWORDS></KEYWORDS>
+	<ARTIFACTS>
+		<ARTIFACT subqid="SQ1">
+			<PHRASE>aquifers</PHRASE>
+			<AGREEMENT>0.7777777777777777</AGREEMENT>
+			<CATEGORY>Environment</CATEGORY>
+		</ARTIFACT>
+	</ARTIFACTS>
+</BIODIV-QUESTION>
+<BIODIV-QUESTION questionid="hainichGround">
+	<QUESTION> Are there sulfate reducing bacteria in the Hainich groundwater? </QUESTION>
+	<KEYWORDS></KEYWORDS>
+	<ARTIFACTS>
+		<ARTIFACT subqid="SQ1">
+			<PHRASE>sulfate reducing bacteria</PHRASE>
+			<AGREEMENT>1.0</AGREEMENT>
+			<CATEGORY>Organism</CATEGORY>
+		</ARTIFACT>
+		<ARTIFACT subqid="SQ3">
+			<PHRASE>sulfate</PHRASE>
+			<AGREEMENT>0.7777777777777777</AGREEMENT>
+			<CATEGORY>Mat & Subst</CATEGORY>
+		</ARTIFACT>
+		<ARTIFACT subqid="SQ4">
+			<PHRASE>Hainich groundwater</PHRASE>
+			<AGREEMENT>0.611111111111111</AGREEMENT>
+			<CATEGORY>Environment</CATEGORY>
+		</ARTIFACT>
+		<ARTIFACT subqid="SQ5">
+			<PHRASE>Hainich</PHRASE>
+			<AGREEMENT>1.0</AGREEMENT>
+			<CATEGORY>Location</CATEGORY>
+		</ARTIFACT>
+	</ARTIFACTS>
+</BIODIV-QUESTION>
+<BIODIV-QUESTION questionid="autotrophicOrg">
+	<QUESTION> How do autotrophic organisms influence isotopes of carbon by fractimation? </QUESTION>
+	<KEYWORDS></KEYWORDS>
+	<ARTIFACTS>
+		<ARTIFACT subqid="SQ1">
+			<PHRASE>autotrophic organisms</PHRASE>
+			<AGREEMENT>1.0</AGREEMENT>
+			<CATEGORY>Organism</CATEGORY>
+		</ARTIFACT>
+		<ARTIFACT subqid="SQ2">
+			<PHRASE>autotrophic</PHRASE>
+			<AGREEMENT>0.5833333333333333</AGREEMENT>
+			<CATEGORY>Environment</CATEGORY>
+		</ARTIFACT>
+		<ARTIFACT subqid="SQ3">
+			<PHRASE>isotopes of carbon</PHRASE>
+			<AGREEMENT>1.0</AGREEMENT>
+			<CATEGORY>Mat & Subst</CATEGORY>
+		</ARTIFACT>
+		<ARTIFACT subqid="SQ4">
+			<PHRASE>carbon</PHRASE>
+			<AGREEMENT>1.0</AGREEMENT>
+			<CATEGORY>Mat & Subst</CATEGORY>
+		</ARTIFACT>
+		<ARTIFACT subqid="SQ5">
+			<PHRASE>fractimation</PHRASE>
+			<AGREEMENT>0.5833333333333333</AGREEMENT>
+			<CATEGORY>Process</CATEGORY>
+		</ARTIFACT>
+	</ARTIFACTS>
+</BIODIV-QUESTION>
+<BIODIV-QUESTION questionid="habitatData">
+	<QUESTION> Which are the habitat data for specific taxa? </QUESTION>
+	<KEYWORDS></KEYWORDS>
+	<ARTIFACTS>
+		<ARTIFACT subqid="SQ1">
+			<PHRASE>habitat data</PHRASE>
+			<AGREEMENT>0.611111111111111</AGREEMENT>
+			<CATEGORY>Data Type</CATEGORY>
+		</ARTIFACT>
+		<ARTIFACT subqid="SQ2">
+			<PHRASE>specific taxa</PHRASE>
+			<AGREEMENT>0.7777777777777777</AGREEMENT>
+			<CATEGORY>Organism</CATEGORY>
+		</ARTIFACT>
+	</ARTIFACTS>
+</BIODIV-QUESTION>
+<BIODIV-QUESTION questionid="srbCommunity">
+	<QUESTION> What parameters drive the SRB community and does that effect the sulfate reduction rates? </QUESTION>
+	<KEYWORDS></KEYWORDS>
+	<ARTIFACTS>
+		<ARTIFACT subqid="SQ4">
+			<PHRASE>sulfate reduction</PHRASE>
+			<AGREEMENT>1.0</AGREEMENT>
+			<CATEGORY>Process</CATEGORY>
+		</ARTIFACT>
+		<ARTIFACT subqid="SQ5">
+			<PHRASE>sulfate</PHRASE>
+			<AGREEMENT>1.0</AGREEMENT>
+			<CATEGORY>Mat & Subst</CATEGORY>
+		</ARTIFACT>
+	</ARTIFACTS>
+</BIODIV-QUESTION>
+<BIODIV-QUESTION questionid="biotopeRegion">
+	<QUESTION> Which taxa are occurring in a specific location (which can range from a biotope to a region) often also country checklists? </QUESTION>
+	<KEYWORDS></KEYWORDS>
+	<ARTIFACTS>
+		<ARTIFACT subqid="SQ1">
+			<PHRASE>taxa</PHRASE>
+			<AGREEMENT>0.7777777777777777</AGREEMENT>
+			<CATEGORY>Organism</CATEGORY>
+		</ARTIFACT>
+		<ARTIFACT subqid="SQ2">
+			<PHRASE>specific location</PHRASE>
+			<AGREEMENT>0.7777777777777777</AGREEMENT>
+			<CATEGORY>Location</CATEGORY>
+		</ARTIFACT>
+		<ARTIFACT subqid="SQ4">
+			<PHRASE>region</PHRASE>
+			<AGREEMENT>0.611111111111111</AGREEMENT>
+			<CATEGORY>Location</CATEGORY>
+		</ARTIFACT>
+	</ARTIFACTS>
+</BIODIV-QUESTION>
+<BIODIV-QUESTION questionid="insectTaxa">
+	<QUESTION> What are associated taxa, for example an insect and its host plant? </QUESTION>
+	<KEYWORDS></KEYWORDS>
+	<ARTIFACTS>
+		<ARTIFACT subqid="SQ2">
+			<PHRASE>insect</PHRASE>
+			<AGREEMENT>1.0</AGREEMENT>
+			<CATEGORY>Organism</CATEGORY>
+		</ARTIFACT>
+		<ARTIFACT subqid="SQ3">
+			<PHRASE>host plant</PHRASE>
+			<AGREEMENT>0.7777777777777777</AGREEMENT>
+			<CATEGORY>Organism</CATEGORY>
+		</ARTIFACT>
+	</ARTIFACTS>
+</BIODIV-QUESTION>
+<BIODIV-QUESTION questionid="seepageWater">
+	<QUESTION> Is the water chemistry of the seepage water connected with the chemistry of the groundwater? </QUESTION>
+	<KEYWORDS></KEYWORDS>
+	<ARTIFACTS>
+		<ARTIFACT subqid="SQ3">
+			<PHRASE>water</PHRASE>
+			<AGREEMENT>0.611111111111111</AGREEMENT>
+			<CATEGORY>Environment</CATEGORY>
+		</ARTIFACT>
+	</ARTIFACTS>
+</BIODIV-QUESTION>
+<BIODIV-QUESTION questionid="molecularMarkers">
+	<QUESTION> Do the molecular markers could reveal the processes of Nitrogen transformation in pristine aquifers? </QUESTION>
+	<KEYWORDS></KEYWORDS>
+	<ARTIFACTS>
+		<ARTIFACT subqid="SQ2">
+			<PHRASE>processes of nitrogen transformation</PHRASE>
+			<AGREEMENT>1.0</AGREEMENT>
+			<CATEGORY>Process</CATEGORY>
+		</ARTIFACT>
+		<ARTIFACT subqid="SQ3">
+			<PHRASE>nitrogen transformation</PHRASE>
+			<AGREEMENT>1.0</AGREEMENT>
+			<CATEGORY>Process</CATEGORY>
+		</ARTIFACT>
+		<ARTIFACT subqid="SQ4">
+			<PHRASE>pristine aquifer</PHRASE>
+			<AGREEMENT>0.7777777777777777</AGREEMENT>
+			<CATEGORY>Environment</CATEGORY>
+		</ARTIFACT>
+	</ARTIFACTS>
+</BIODIV-QUESTION>
+<BIODIV-QUESTION questionid="depwaterHorizon">
+	<QUESTION> Has the Deepwater Horizon oil spill long term effects on the Gulf of Mexico fauna? </QUESTION>
+	<KEYWORDS></KEYWORDS>
+	<ARTIFACTS>
+		<ARTIFACT subqid="SQ4">
+			<PHRASE>Gulf of Mexico</PHRASE>
+			<AGREEMENT>1.0</AGREEMENT>
+			<CATEGORY>Location</CATEGORY>
+		</ARTIFACT>
+	</ARTIFACTS>
+</BIODIV-QUESTION>
+<BIODIV-QUESTION questionid="zeaMays">
+	<QUESTION> Are there data available on the influence of geographic elevation on the growth rate and plant development of Zea mays? </QUESTION>
+	<KEYWORDS></KEYWORDS>
+	<ARTIFACTS>
+		<ARTIFACT subqid="SQ2">
+			<PHRASE>growth rate of Zea mays</PHRASE>
+			<AGREEMENT>0.7777777777777777</AGREEMENT>
+			<CATEGORY>Quality</CATEGORY>
+		</ARTIFACT>
+		<ARTIFACT subqid="SQ4">
+			<PHRASE>Zea mays</PHRASE>
+			<AGREEMENT>1.0</AGREEMENT>
+			<CATEGORY>Organism</CATEGORY>
+		</ARTIFACT>
+	</ARTIFACTS>
+</BIODIV-QUESTION>
+<BIODIV-QUESTION questionid="sphaerothecaAp">
+	<QUESTION> Do Sphaerotheca aphanis occur in Macedonia? </QUESTION>
+	<KEYWORDS></KEYWORDS>
+	<ARTIFACTS>
+		<ARTIFACT subqid="SQ1">
+			<PHRASE>Sphaerotheca aphanis</PHRASE>
+			<AGREEMENT>1.0</AGREEMENT>
+			<CATEGORY>Organism</CATEGORY>
+		</ARTIFACT>
+		<ARTIFACT subqid="SQ2">
+			<PHRASE>Macedonia</PHRASE>
+			<AGREEMENT>1.0</AGREEMENT>
+			<CATEGORY>Location</CATEGORY>
+		</ARTIFACT>
+	</ARTIFACTS>
+</BIODIV-QUESTION>
+<BIODIV-QUESTION questionid="microActivity">
+	<QUESTION> What data exist for microbial activities in groundwater? </QUESTION>
+	<KEYWORDS></KEYWORDS>
+	<ARTIFACTS>
+		<ARTIFACT subqid="SQ1">
+			<PHRASE>microbial activities</PHRASE>
+			<AGREEMENT>0.611111111111111</AGREEMENT>
+			<CATEGORY>Process</CATEGORY>
+		</ARTIFACT>
+		<ARTIFACT subqid="SQ2">
+			<PHRASE>microbial</PHRASE>
+			<AGREEMENT>1.0</AGREEMENT>
+			<CATEGORY>Organism</CATEGORY>
+		</ARTIFACT>
+		<ARTIFACT subqid="SQ3">
+			<PHRASE>groundwater</PHRASE>
+			<AGREEMENT>0.7777777777777777</AGREEMENT>
+			<CATEGORY>Environment</CATEGORY>
+		</ARTIFACT>
+	</ARTIFACTS>
+</BIODIV-QUESTION>
+<BIODIV-QUESTION questionid="substancesX">
+	<QUESTION> Is substances X endogenous for mammals? </QUESTION>
+	<KEYWORDS></KEYWORDS>
+	<ARTIFACTS>
+		<ARTIFACT subqid="SQ1">
+			<PHRASE>substances X</PHRASE>
+			<AGREEMENT>0.7777777777777777</AGREEMENT>
+			<CATEGORY>Mat & Subst</CATEGORY>
+		</ARTIFACT>
+		<ARTIFACT subqid="SQ2">
+			<PHRASE>mammals</PHRASE>
+			<AGREEMENT>0.7777777777777777</AGREEMENT>
+			<CATEGORY>Organism</CATEGORY>
+		</ARTIFACT>
+	</ARTIFACTS>
+</BIODIV-QUESTION>
+<BIODIV-QUESTION questionid="treeSpeciesDiv">
+	<QUESTION> Is there a global map and dataset of tree species diversity? </QUESTION>
+	<KEYWORDS></KEYWORDS>
+	<ARTIFACTS>
+		<ARTIFACT subqid="SQ3">
+			<PHRASE>tree species</PHRASE>
+			<AGREEMENT>1.0</AGREEMENT>
+			<CATEGORY>Organism</CATEGORY>
+		</ARTIFACT>
+	</ARTIFACTS>
+</BIODIV-QUESTION>
+<BIODIV-QUESTION questionid="factor">
+	<QUESTION> What factors enhance the crop yield increase of cacoa? </QUESTION>
+	<KEYWORDS></KEYWORDS>
+	<ARTIFACTS>
+		<ARTIFACT subqid="SQ3">
+			<PHRASE>cacoa</PHRASE>
+			<AGREEMENT>0.7777777777777777</AGREEMENT>
+			<CATEGORY>Organism</CATEGORY>
+		</ARTIFACT>
+	</ARTIFACTS>
+</BIODIV-QUESTION>
+<BIODIV-QUESTION questionid="holothuriansM">
+	<QUESTION> What holothurians exist below 4000m? </QUESTION>
+	<KEYWORDS></KEYWORDS>
+	<ARTIFACTS>
+		<ARTIFACT subqid="SQ1">
+			<PHRASE>holothurians</PHRASE>
+			<AGREEMENT>0.7777777777777777</AGREEMENT>
+			<CATEGORY>Organism</CATEGORY>
+		</ARTIFACT>
+	</ARTIFACTS>
+</BIODIV-QUESTION>
+<BIODIV-QUESTION questionid="sedimentSamples">
+	<QUESTION> List all species that occur in water or sediment samples? </QUESTION>
+	<KEYWORDS></KEYWORDS>
+	<ARTIFACTS>
+		<ARTIFACT subqid="SQ1">
+			<PHRASE>species</PHRASE>
+			<AGREEMENT>1.0</AGREEMENT>
+			<CATEGORY>Organism</CATEGORY>
+		</ARTIFACT>
+	</ARTIFACTS>
+</BIODIV-QUESTION>
+<BIODIV-QUESTION questionid="paridaeLandUse">
+	<QUESTION> Is species richness of Paridae correlated with land-use type? </QUESTION>
+	<KEYWORDS></KEYWORDS>
+	<ARTIFACTS>
+		<ARTIFACT subqid="SQ2">
+			<PHRASE>Paridae</PHRASE>
+			<AGREEMENT>1.0</AGREEMENT>
+			<CATEGORY>Organism</CATEGORY>
+		</ARTIFACT>
+		<ARTIFACT subqid="SQ3">
+			<PHRASE>land-use type</PHRASE>
+			<AGREEMENT>0.5833333333333333</AGREEMENT>
+			<CATEGORY>Human Inter</CATEGORY>
+		</ARTIFACT>
+	</ARTIFACTS>
+</BIODIV-QUESTION>
+<BIODIV-QUESTION questionid="molecularComp">
+	<QUESTION> How does the organic matter context affects the molecular composition of the groundwater? </QUESTION>
+	<KEYWORDS></KEYWORDS>
+	<ARTIFACTS>
+		<ARTIFACT subqid="SQ2">
+			<PHRASE>organic matter</PHRASE>
+			<AGREEMENT>1.0</AGREEMENT>
+			<CATEGORY>Mat & Subst</CATEGORY>
+		</ARTIFACT>
+	</ARTIFACTS>
+</BIODIV-QUESTION>
+<BIODIV-QUESTION questionid="foodWebs">
+	<QUESTION> Which data exist for 'food webs' in the north sea? </QUESTION>
+	<KEYWORDS></KEYWORDS>
+	<ARTIFACTS>
+		<ARTIFACT subqid="SQ2">
+			<PHRASE>north sea</PHRASE>
+			<AGREEMENT>0.611111111111111</AGREEMENT>
+			<CATEGORY>Location</CATEGORY>
+		</ARTIFACT>
+	</ARTIFACTS>
+</BIODIV-QUESTION>
+<BIODIV-QUESTION questionid="archaeaSpecies">
+	<QUESTION> Are there archaea species in the upper soil that are also found in the groundwater? </QUESTION>
+	<KEYWORDS></KEYWORDS>
+	<ARTIFACTS>
+		<ARTIFACT subqid="SQ1">
+			<PHRASE>archaea species</PHRASE>
+			<AGREEMENT>1.0</AGREEMENT>
+			<CATEGORY>Organism</CATEGORY>
+		</ARTIFACT>
+		<ARTIFACT subqid="SQ3">
+			<PHRASE>groundwater</PHRASE>
+			<AGREEMENT>0.7777777777777777</AGREEMENT>
+			<CATEGORY>Environment</CATEGORY>
+		</ARTIFACT>
+	</ARTIFACTS>
+</BIODIV-QUESTION>
+<BIODIV-QUESTION questionid="monoCulture">
+	<QUESTION> What is the effect of changes in the feed of grasshopper between natural habitats and mono-culture to the gut microbiome? </QUESTION>
+	<KEYWORDS></KEYWORDS>
+	<ARTIFACTS>
+		<ARTIFACT subqid="SQ2">
+			<PHRASE>grasshopper</PHRASE>
+			<AGREEMENT>1.0</AGREEMENT>
+			<CATEGORY>Organism</CATEGORY>
+		</ARTIFACT>
+		<ARTIFACT subqid="SQ3">
+			<PHRASE>natural habitat</PHRASE>
+			<AGREEMENT>0.5833333333333333</AGREEMENT>
+			<CATEGORY>Environment</CATEGORY>
+		</ARTIFACT>
+	</ARTIFACTS>
+</BIODIV-QUESTION>
+<BIODIV-QUESTION questionid="varietiesLatvia">
+	<QUESTION> Do varieties of Erysiphe aquilegiae occur in Latvia? </QUESTION>
+	<KEYWORDS></KEYWORDS>
+	<ARTIFACTS>
+		<ARTIFACT subqid="SQ2">
+			<PHRASE>Erysiphe aquilegiae</PHRASE>
+			<AGREEMENT>1.0</AGREEMENT>
+			<CATEGORY>Organism</CATEGORY>
+		</ARTIFACT>
+		<ARTIFACT subqid="SQ3">
+			<PHRASE>Latvia</PHRASE>
+			<AGREEMENT>1.0</AGREEMENT>
+			<CATEGORY>Location</CATEGORY>
+		</ARTIFACT>
+	</ARTIFACTS>
+</BIODIV-QUESTION>
+<BIODIV-QUESTION questionid="treeInsect">
+	<QUESTION> Are there data for trees and insects from the same location? </QUESTION>
+	<KEYWORDS></KEYWORDS>
+	<ARTIFACTS>
+		<ARTIFACT subqid="SQ1">
+			<PHRASE>trees</PHRASE>
+			<AGREEMENT>1.0</AGREEMENT>
+			<CATEGORY>Organism</CATEGORY>
+		</ARTIFACT>
+		<ARTIFACT subqid="SQ2">
+			<PHRASE>insects</PHRASE>
+			<AGREEMENT>1.0</AGREEMENT>
+			<CATEGORY>Organism</CATEGORY>
+		</ARTIFACT>
+		<ARTIFACT subqid="SQ3">
+			<PHRASE>location</PHRASE>
+			<AGREEMENT>0.7777777777777777</AGREEMENT>
+			<CATEGORY>Location</CATEGORY>
+		</ARTIFACT>
+	</ARTIFACTS>
+</BIODIV-QUESTION>
+<BIODIV-QUESTION questionid="microbialCom">
+	<QUESTION> vertical transport of microbial communities </QUESTION>
+	<KEYWORDS></KEYWORDS>
+	<ARTIFACTS>
+		<ARTIFACT subqid="SQ1">
+			<PHRASE>vertical transport of microbial communities</PHRASE>
+			<AGREEMENT>1.0</AGREEMENT>
+			<CATEGORY>Process</CATEGORY>
+		</ARTIFACT>
+	</ARTIFACTS>
+</BIODIV-QUESTION>
+<BIODIV-QUESTION questionid="microbs">
+	<QUESTION> At which rate do microbes (settled on aquifer surfaces) attach and grow? </QUESTION>
+	<KEYWORDS></KEYWORDS>
+	<ARTIFACTS>
+		<ARTIFACT subqid="SQ1">
+			<PHRASE>microbes</PHRASE>
+			<AGREEMENT>1.0</AGREEMENT>
+			<CATEGORY>Organism</CATEGORY>
+		</ARTIFACT>
+		<ARTIFACT subqid="SQ3">
+			<PHRASE>aquifer</PHRASE>
+			<AGREEMENT>0.5833333333333333</AGREEMENT>
+			<CATEGORY>Location</CATEGORY>
+		</ARTIFACT>
+	</ARTIFACTS>
+</BIODIV-QUESTION>
+<BIODIV-QUESTION questionid="wellHYZ">
+	<QUESTION> What types of bacteria live in well H</QUESTION>
+	<KEYWORDS></KEYWORDS>
+	<ARTIFACTS>
+		<ARTIFACT subqid="SQ1">
+			<PHRASE>types of bacteria</PHRASE>
+			<AGREEMENT>0.7777777777777777</AGREEMENT>
+			<CATEGORY>Organism</CATEGORY>
+		</ARTIFACT>
+	</ARTIFACTS>
+</BIODIV-QUESTION>
+<BIODIV-QUESTION questionid="copepodEggs">
+	<QUESTION> How many eggs do copepods produce per day? </QUESTION>
+	<KEYWORDS></KEYWORDS>
+	<ARTIFACTS>
+		<ARTIFACT subqid="SQ3">
+			<PHRASE>copepods</PHRASE>
+			<AGREEMENT>1.0</AGREEMENT>
+			<CATEGORY>Organism</CATEGORY>
+		</ARTIFACT>
+	</ARTIFACTS>
+</BIODIV-QUESTION>
+<BIODIV-QUESTION questionid="megafauna">
+	<QUESTION> What megafauna, echinoderms do we have abundance data for using, trawls or images? </QUESTION>
+	<KEYWORDS></KEYWORDS>
+	<ARTIFACTS>
+		<ARTIFACT subqid="SQ1">
+			<PHRASE>megafauna</PHRASE>
+			<AGREEMENT>1.0</AGREEMENT>
+			<CATEGORY>Organism</CATEGORY>
+		</ARTIFACT>
+		<ARTIFACT subqid="SQ2">
+			<PHRASE>echinoderms</PHRASE>
+			<AGREEMENT>0.7777777777777777</AGREEMENT>
+			<CATEGORY>Organism</CATEGORY>
+		</ARTIFACT>
+	</ARTIFACTS>
+</BIODIV-QUESTION>
+<BIODIV-QUESTION questionid="insectAbundances">
+	<QUESTION> Where did you measure abundances of insects in canopies of beeches and spruces? </QUESTION>
+	<KEYWORDS></KEYWORDS>
+	<ARTIFACTS>
+		<ARTIFACT subqid="SQ2">
+			<PHRASE>insects</PHRASE>
+			<AGREEMENT>1.0</AGREEMENT>
+			<CATEGORY>Organism</CATEGORY>
+		</ARTIFACT>
+		<ARTIFACT subqid="SQ4">
+			<PHRASE>beeches</PHRASE>
+			<AGREEMENT>0.7777777777777777</AGREEMENT>
+			<CATEGORY>Organism</CATEGORY>
+		</ARTIFACT>
+		<ARTIFACT subqid="SQ5">
+			<PHRASE>spruces</PHRASE>
+			<AGREEMENT>0.7777777777777777</AGREEMENT>
+			<CATEGORY>Organism</CATEGORY>
+		</ARTIFACT>
+	</ARTIFACTS>
+</BIODIV-QUESTION>
+<BIODIV-QUESTION questionid="aquiferRocks">
+	<QUESTION> Are the aquifer rocks continuous laterally? </QUESTION>
+	<KEYWORDS></KEYWORDS>
+	<ARTIFACTS>
+		<ARTIFACT subqid="SQ2">
+			<PHRASE>aquifer</PHRASE>
+			<AGREEMENT>0.5833333333333333</AGREEMENT>
+			<CATEGORY>Location</CATEGORY>
+		</ARTIFACT>
+	</ARTIFACTS>
+</BIODIV-QUESTION>
+<BIODIV-QUESTION questionid="bioPores">
+	<QUESTION> Do have earthworm burrows(biopores) an impact on infiltration and transport processes during rainfall events? </QUESTION>
+	<KEYWORDS></KEYWORDS>
+	<ARTIFACTS>
+		<ARTIFACT subqid="SQ2">
+			<PHRASE>earthworm</PHRASE>
+			<AGREEMENT>1.0</AGREEMENT>
+			<CATEGORY>Organism</CATEGORY>
+		</ARTIFACT>
+		<ARTIFACT subqid="SQ3">
+			<PHRASE>infiltration processes</PHRASE>
+			<AGREEMENT>1.0</AGREEMENT>
+			<CATEGORY>Process</CATEGORY>
+		</ARTIFACT>
+		<ARTIFACT subqid="SQ4">
+			<PHRASE>transport processes</PHRASE>
+			<AGREEMENT>1.0</AGREEMENT>
+			<CATEGORY>Process</CATEGORY>
+		</ARTIFACT>
+		<ARTIFACT subqid="SQ5">
+			<PHRASE>rainfall events</PHRASE>
+			<AGREEMENT>0.5833333333333333</AGREEMENT>
+			<CATEGORY>Event</CATEGORY>
+		</ARTIFACT>
+	</ARTIFACTS>
+</BIODIV-QUESTION>
+<BIODIV-QUESTION questionid="oxicAquifer">
+	<QUESTION> Who are the microbial key-players within an oxic aquifer? </QUESTION>
+	<KEYWORDS></KEYWORDS>
+	<ARTIFACTS>
+		<ARTIFACT subqid="SQ1">
+			<PHRASE>microbial key-players</PHRASE>
+			<AGREEMENT>0.7777777777777777</AGREEMENT>
+			<CATEGORY>Organism</CATEGORY>
+		</ARTIFACT>
+		<ARTIFACT subqid="SQ3">
+			<PHRASE>oxic acquifer</PHRASE>
+			<AGREEMENT>0.7777777777777777</AGREEMENT>
+			<CATEGORY>Environment</CATEGORY>
+		</ARTIFACT>
+	</ARTIFACTS>
+</BIODIV-QUESTION>
+<BIODIV-QUESTION questionid="driverTransport">
+	<QUESTION> Which are the drivers for deposition and transport of marine / terrestrial phages in the subsurface? </QUESTION>
+	<KEYWORDS></KEYWORDS>
+	<ARTIFACTS>
+		<ARTIFACT subqid="SQ2">
+			<PHRASE>deposition</PHRASE>
+			<AGREEMENT>1.0</AGREEMENT>
+			<CATEGORY>Process</CATEGORY>
+		</ARTIFACT>
+		<ARTIFACT subqid="SQ3">
+			<PHRASE>transport of marine phages</PHRASE>
+			<AGREEMENT>1.0</AGREEMENT>
+			<CATEGORY>Process</CATEGORY>
+		</ARTIFACT>
+		<ARTIFACT subqid="SQ4">
+			<PHRASE>marine phage</PHRASE>
+			<AGREEMENT>0.7777777777777777</AGREEMENT>
+			<CATEGORY>Organism</CATEGORY>
+		</ARTIFACT>
+		<ARTIFACT subqid="SQ5">
+			<PHRASE>transport of terrestrial phages</PHRASE>
+			<AGREEMENT>1.0</AGREEMENT>
+			<CATEGORY>Process</CATEGORY>
+		</ARTIFACT>
+		<ARTIFACT subqid="SQ6">
+			<PHRASE>terrestrial phages</PHRASE>
+			<AGREEMENT>0.7777777777777777</AGREEMENT>
+			<CATEGORY>Organism</CATEGORY>
+		</ARTIFACT>
+	</ARTIFACTS>
+</BIODIV-QUESTION>
+<BIODIV-QUESTION questionid="globalFrog">
+	<QUESTION> Please display data about global frog distribution! </QUESTION>
+	<KEYWORDS></KEYWORDS>
+	<ARTIFACTS>
+		<ARTIFACT subqid="SQ2">
+			<PHRASE>global</PHRASE>
+			<AGREEMENT>1.0</AGREEMENT>
+			<CATEGORY>Location</CATEGORY>
+		</ARTIFACT>
+		<ARTIFACT subqid="SQ3">
+			<PHRASE>frog</PHRASE>
+			<AGREEMENT>1.0</AGREEMENT>
+			<CATEGORY>Organism</CATEGORY>
+		</ARTIFACT>
+	</ARTIFACTS>
+</BIODIV-QUESTION>
+<BIODIV-QUESTION questionid="plantDiversity">
+	<QUESTION> Whether and how does plant diversity  (species richness, functional group composition) affects root decomposition (grassland)? </QUESTION>
+	<KEYWORDS></KEYWORDS>
+	<ARTIFACTS>
+		<ARTIFACT subqid="SQ2">
+			<PHRASE>plant</PHRASE>
+			<AGREEMENT>0.7777777777777777</AGREEMENT>
+			<CATEGORY>Organism</CATEGORY>
+		</ARTIFACT>
+		<ARTIFACT subqid="SQ6">
+			<PHRASE>root decomposition</PHRASE>
+			<AGREEMENT>0.5833333333333333</AGREEMENT>
+			<CATEGORY>Process</CATEGORY>
+		</ARTIFACT>
+		<ARTIFACT subqid="SQ8">
+			<PHRASE>grassland</PHRASE>
+			<AGREEMENT>0.7777777777777777</AGREEMENT>
+			<CATEGORY>Environment</CATEGORY>
+		</ARTIFACT>
+	</ARTIFACTS>
+</BIODIV-QUESTION>
+<BIODIV-QUESTION questionid="groundwaterSig">
+	<QUESTION> Are there surface signals that appear in the groundwater? </QUESTION>
+	<KEYWORDS></KEYWORDS>
+	<ARTIFACTS>
+		<ARTIFACT subqid="SQ3">
+			<PHRASE>groundwater</PHRASE>
+			<AGREEMENT>0.611111111111111</AGREEMENT>
+			<CATEGORY>Mat & Subst</CATEGORY>
+		</ARTIFACT>
+	</ARTIFACTS>
+</BIODIV-QUESTION>
+<BIODIV-QUESTION questionid="thalassemaThala">
+	<QUESTION> Where do I find populations of Thalassema thalassemum and do they have a restricted reproductive period over the year? </QUESTION>
+	<KEYWORDS></KEYWORDS>
+	<ARTIFACTS>
+		<ARTIFACT subqid="SQ2">
+			<PHRASE>Thalassema thalassemum</PHRASE>
+			<AGREEMENT>1.0</AGREEMENT>
+			<CATEGORY>Organism</CATEGORY>
+		</ARTIFACT>
+		<ARTIFACT subqid="SQ4">
+			<PHRASE>year</PHRASE>
+			<AGREEMENT>1.0</AGREEMENT>
+			<CATEGORY>Time</CATEGORY>
+		</ARTIFACT>
+	</ARTIFACTS>
+</BIODIV-QUESTION>
+<BIODIV-QUESTION questionid="treePopulation">
+	<QUESTION> Where do simultaneous lidar data of air and soil exist for the same tree population? </QUESTION>
+	<KEYWORDS></KEYWORDS>
+	<ARTIFACTS>
+		<ARTIFACT subqid="SQ1">
+			<PHRASE>lidar data</PHRASE>
+			<AGREEMENT>0.7777777777777777</AGREEMENT>
+			<CATEGORY>Method</CATEGORY>
+		</ARTIFACT>
+		<ARTIFACT subqid="SQ4">
+			<PHRASE>tree population</PHRASE>
+			<AGREEMENT>0.5833333333333333</AGREEMENT>
+			<CATEGORY>Organism</CATEGORY>
+		</ARTIFACT>
+	</ARTIFACTS>
+</BIODIV-QUESTION>
+</BIODIV-QUESTIONS>
