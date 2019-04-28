@@ -1,50 +1,100 @@
-# Supplementary Material for XXX
+# Download metadata information of digital dataportals
 
-## Overview
-This repository contains scripts and example files for setting up an online survey where annotators assign textual phrases in a corpus of questions to information categories. This will result in an annotated question corpus that can be used as training data in research fields such as question answering or semantic search.  
-We conducted our research in the biodiversity domain, a research field where (to the best of our knowledge) no question corpus has been established yet. The original question corpus collected by us and the identified phrases to label are provided in the csv-file 'biodiv_questions.csv'. 
-We also provide supplementary material to the annotation guidelines outlined in the accompanying paper, template files that have been generated with scripts to set up the online survey and scripts to analyze the exported survey results.
-
-For further information, in particular the annotation guidelines, please have a look at our publication.
+Python scripts for downloading metadata information of digital dataportals. Works on [Python3+].
 
 
-## How to reproduce the result?
- 
-Go to the scripts folder and install python and the necessary modules as stated. Copy the 'biodiv_questions.csv' file to the scripts folder and run
+
+
+# Prerequisites
+
+To start each script in this package successfully, you need a [Python3+] distribution and some other third-party tools.
+How to install these tools, will be explained in the following lines:
+
+## Instructions for Windows and Linux
+
+### Python
+
+To install [Python3+], go to the [Python website](https://www.python.org/), go to the "Downloads" button and install
+the current [Python] version.
+To check if [Python] was successfully installed, open your Command Prompt (called "shell" from now on) and type:
 
 ```shell
 
-python create_survey.py -f biodiv_questions.csv
-
+python
 ```
-That will create a new folder 'lsg_files' which contains files that can be imported into the online surveying tool *Limesurvey* (https://www.limesurvey.org/) as question groups. Further information can be found in the scripts folder.
-The exported result files are located in the subdirectory surveys/result. We generated three different surveys with the same questions but different orderings in order to increase the likelihood that every question gets a rating and to avoid any biases introduced by the question order. To retrieve the final result file with the statistics, copy the three individual result files into the scripts folder and run
+
+or
+
 ```shell
 
-#python analyze_result.py -f first.csv second.csv third.csv -c 1
-
-python analyze_result.py -f first.csv second.csv third.csv -o out -c 9 -ct evaluation_categories.txt -cu custom.txt -thres 0.58
-
+py
 ```
 
-The result file lsg____first__second__third.csv will contain the statistics including the overall inter-rater-agreement determined with Fleiss-Kappa and GWET's AC.
+and check the displayed version in the [Python] shell. Type:
 
-## How to use it for a new domain?
+```shell
 
-In order to use these scripts for a new domain, you would need to
+exit()
+```
 
-1. collect questions in your domain and store it in a csv file
-2. inspect the questions concerning suitable categories
-3. develop annotation guidelines (What to label? What are relevant terms and phrases?) in close collaboration with domain experts
-4. identify terms and phrases (artifacts) in the questions according to the guidelines and write the artifacts into the row of the related question
-5. adapt the create_survey.py script to your needs (e.g., change the categories)
-6. run the create_survey.py script to generate Limesurvey structure files
-7. setup Limesurvey and import the lsg files into a new survey
-8. send the survey to domain experts (including a short description of the categories and what to do in this evaluation!) who will assign categories to the given terms and phrases
-9. export the survey results from Limesurvey into a csv file
-10. run the analyze_result.py script to generate the statistics and the inter-rater-agreement
+to exit the [Python] shell.
 
-## How to further use these results?
-As you can see from our 'lsg____first__second__third.csv' file, the artifacts have different *P(i)* values, which is the observed agreement over all raters. It is up to you to define a threshold at which agreement you consider a rating as a valid category assignment. Usually, a *P(i)* > 0,6 can be considered as a good agreement.
+[Pip] - a package management system used to install [Python] software packages - is already installed in all [Python] versions >= 3.4.
+[Pip] is used in this instruction to install the [Pandas] package.ons/data_repositories/README.md
 
-## Citation
+
+### Requests: HTTP for Humans™
+
+[Requests: HTTP for Humans™] is a third party [Python] tool with which you can easily POST and GET data of HTTP connections without the need for manual labor. To install the [Requests] module, simple type:
+
+```shell
+
+python -m pip install requests
+```
+
+or
+
+```shell
+
+python -m pip install requests
+```
+
+(whichever uses the correct [Python] version).
+
+
+### XmlToDict
+
+[XmlToDict] is a third party [Python] tool that is able to transform XML trees into dictionary for a easier parsing. To install the [XmlToDict] module, simple type:
+
+```shell
+
+python -m pip install xmltodict
+```
+
+or
+
+```shell
+
+python -m pip install xmltodict
+```
+
+(again, whichever uses the correct [Python] version).
+
+
+
+
+# Script
+
+## download_metadata.py
+
+[download_metadata.py] is a simple to use Command Line Interface (CLI) tool to download and extract metadata information from the five digital dataportals Dryad, GBIF, Pangaea, Zenodo and Figshare. By default the script returns a CSV that shows which record (one line) used which metadata information (marked by '1' (used) or '0' (not used)) and their corresponding dates. The script has six options as input, '-dp', '-mf', '-fs', '-lm', '-fl' and '-sf'. '-dp' specifies from which dataportal the metadata should be downloaded. If a dataportal is specified that isn't part of the list of dataportals, an error is thrown. '-mf' specifies from which metadata format of the corresponding dataportal the metadata information will be downloaded. If a metadata format is specified that isn't part of the specified dataportal, an error is thrown. If no metadata format is specified, the metadata information of all metadata formats of the corresponding dataportal will be downloaded. '-fs' specifies whether the content of specific fields should be saved in an extra CSV file or not. Multiple fields are separated by commas. See the website of the corresponding dataportal for information about avaiable fields. Every field that was specified but did not appear in at least one record is printed at the end of the download. '-lm' specifies the maximum number of downloaded records. For example if set to 200, only the metadata information of the first 200 records are downloaded. '-fl' specifies if the full path to each metadata field should be saved instead of just the field itself. And '-sf' prints the avaiable metadata formats for the specified dataportal. The results are saved in a directory called 'metadata' that is automaticilly created in the directory from which the script is called. The name of the result CSV files are the date the download finished. An example of the first 550 records for each dataportal and metadata format can be found in the 'examples' directory.
+Note: All five dataportals use the [Open Archives Initiative Protocol for Metadata Harvesting] ([OAI-PMH]) service to manage their metadata information. Records can't be downloaded all at once but are structured in pages. Each page contains 100 records and an index, called a resumption token, that is used to access the next page. Therefore, it is to note that each page has to be accessed individually which can take a long time if no or a high limit for the number of records is specified. The script also waits 60 seconds between each download of a metadata format to prevent connection issues. Furthermore, if a connection issue (or similiar) happens during the download, the script will wait for 30 seconds and resume from the last resumption token.
+
+
+### Example usage:
+
+```shell
+#Go to the directoy where the python download_metadata.py script is saved and type:
+
+python download_metadata.py -dp dryad -lm 550 -fl
+```

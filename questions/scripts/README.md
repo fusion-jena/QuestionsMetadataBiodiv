@@ -10,7 +10,7 @@ Python scripts for creating and evaluating [LimeSurvey surveys](https://www.lime
 To start each script in this package successfully, you need a [Python3+] distribution and some other third-party tools.
 How to install these tools, will be explained in the following lines:
 
-## Instructions for Windows
+## Instructions for Windows and Linux
 
 ### Python
 
@@ -82,73 +82,6 @@ py -m pip install pandas
 
 
 
-## Instructions for Linux
-
-### Python
-
-To install [Python3+], open your Command Prompt (called "shell" from now on) and type:
-
-```shell
-
-sudo apt-get install python3
-```
-
-To check if [Python] was successfully installed, type:
-
-```shell
-
-python
-```
-
-or
-
-```shell
-
-py
-```
-
-[Pip] - a package management system used to install [Python] software packages - is already installed in all [Python] versions >= 3.4.
-[Pip] is used in this instruction to install the [Pandas] package.
-
-
-### FleissKappa
-
-To install the [Fleisskappa] module - that is delivered with the main scripts - go to the "modules" folder (shell) and type:
-
-```shell
-
-python setup.py install
-```
-
-or
-
-```shell
-
-py setup.py install
-```
-
-(whichever uses the correct [Python] version). For further information, look at the [README.md] file in the "modules" folder.
-
-
-### Pandas
-
-[Pandas] is a third-party [Python] tool for efficiently reading CSV files column by column. To install the [Pandas] module, simple type:
-
-```shell
-
-python -m pip install pandas
-```
-
-or
-
-```shell
-
-py -m pip install pandas
-```
-
-(again, whichever uses the correct [Python] version).
-
-
 
 
 # Scripts
@@ -182,7 +115,7 @@ The CSV file should be semicolon-separated and have the following format:
 - 1st column: Title
     -> each question has to have an unique title
     -> each title longer than 18 characters will be trimmed to 18 characters
-    
+
 - 2nd column: Question/statement
 
 - 3rd column: custom usage
@@ -197,14 +130,13 @@ The CSV file should be semicolon-separated and have the following format:
 analyze_results.py is a simple CLI tool to read and extract data from a [LimeSurvey-Result]-CSV file and to write and evaluate its
 results into a new CSV file, called 'lsg__/survey_names/.csv'. The script has three options as input, '-f', '-c' and '-ct'. The '-f' option
 can take the paths of multiple [LimeSurvey-Result]-CSV files and combine the results into a single CSV file. However, each of these
-files have to have the same questions and nouns, i.e. have to be identical except for their question order. Most likely won't most
-participants answer each question and noun (especially in particulary long surveys). Therefore, it can be useful to let each participant
+files have to have the same questions and nouns, i.e. have to be identical except for their question order. Most participants won't, most likely, answer each question and noun (especially in particulary long surveys). Therefore, it can be useful to let each participant
 run through one survey multiple times - each time with a different question order -, to make sure that each noun is actually annotated
 at least once. The '-c' option let's you choose at which column in the [LimeSurvey-Result]-CSV file the actually data starts, so at which
 column the first question (and noun) and answer is. Only the start column of the first input [LimeSurvey-Result]-CSV file is needed since
 the data of all following [LimeSurvey-Result]-CSV files is extracted by using the question titles and nouns of the first
 [LimeSurvey-Result]-CSV file. The '-ct' option takes the path to a simple text file containing the categories. The categories should be
-identical to the categories used in the survey/surveys or else the program will throw an error if a category was chosen as answer but
+identical to the categories used in the survey/surveys or else the program will throw an error if a category was chosen as an answer but
 wasn't written in the 'categories' file. The descriptions will be ignored. For more information see the 'Example categories file' section.
 
 
