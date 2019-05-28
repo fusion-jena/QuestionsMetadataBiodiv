@@ -23,11 +23,11 @@ showformats = None
 metadataDic = {}
 #dictionary containing the contents of the fields of the given metadata format
 fieldsDic = {}
-#dictionary containing the used dates for the given dataportal and metadata format
+#dictionary containing the metadata format for the given dataportal
 prefixDic = {}
-#variable counting the number of the parsed resumption tokens for console output
+#dictionary containing the used dates for the given dataportal and metadata format
 dateDic = {}
-#variable counting the number of the parsed resumption tokens for console output
+#variable specifying if a metadata date for the record was found
 dateFound = None
 #variable counting the number of parsed records for the 'limit' option
 limit_counter = None
@@ -46,7 +46,7 @@ def commandLine():
     global limit
     #variable specifying if the full path to the field should be saved
     global full
-    #variable specifying the if the metadata formats for the given data portal should be printed
+    #variable specifying if the metadata formats for the given data portal should be printed
     global showformats
 
     #command line arguments
@@ -89,19 +89,47 @@ def downloadMetadata():
     #variable counting the number of parsed records for the 'limit' option
     global limit_counter
 
+    #metadata formats
     #dictionary of the avaiable metadata formats of each dataportal
-    prefixDic["dryad"] = ("oai_dc", "rdf", "ore", "mets")
+    prefixDic["dryad"] = ("oai_dc", "rdf", "ore")
     prefixDic["gbif"] = ("oai_dc", "eml")
     prefixDic["pangaea"] = ("oai_dc", "pan_md", "dif", "iso19139", "iso19139.iodp", "datacite3")
-    prefixDic["zenodo"] = ("marcxml", "oai_dc", "oai_datacite", "marc21", "datacite", "datacite3", "datacite4", "oai_datacite3")
-    prefixDic["figshare"] = ("oai_dc", "oai_datacite", "rdf", "cerif", "qdc", "mets")
+    prefixDic["zenodo"] = ("oai_dc", "oai_datacite", "datacite", "datacite3", "datacite4", "oai_datacite3")
+    prefixDic["figshare"] = ("oai_dc", "oai_datacite", "rdf", "qdc")
 
+    #date fields
     #dictionary of the used dates for each dataportal
-    dateDic["dryad"] = ("dateAvailable", "dc:date", "atom:published")
-    dateDic["gbif"] = ("pubDate", "dc:date" )
-    dateDic["pangaea"] = ("publicationYear", "DIF_Creation_Date", "gco:Date", "dc:date", "md:dateTime")
-    dateDic["zenodo"] = ("publicationYear", "dc:date")
-    dateDic["figshare"] = ("dc:date", "publicationYear")
+    #dryad
+    dateDic["dryad"] = dict()
+    dateDic["dryad"]["oai_dc"] = "dc:date"
+    dateDic["dryad"]["rdf"] = "dc:date"
+    dateDic["dryad"]["ore"] = "atom:published"
+    #gbif
+    dateDic["gbif"] = dict()
+    dateDic["gbif"]["oai_dc"] = "dc:date"
+    dateDic["gbif"]["eml"] = "pubDate"
+    #pangaea
+    dateDic["pangaea"] = dict()
+    dateDic["pangaea"]["oai_dc"] = "dc:date"
+    dateDic["pangaea"]["pan_md"] = "md:dateTime"
+    dateDic["pangaea"]["dif"] = "DIF_Creation_Date"
+    dateDic["pangaea"]["iso19139"] = "gco:DateTime"
+    dateDic["pangaea"]["iso19139.iodp"] = "gco:DateTime"
+    dateDic["pangaea"]["datacite3"] = "publicationYear"
+    #zenodo
+    dateDic["zenodo"] = dict()
+    dateDic["zenodo"]["oai_dc"] = "dc:date"
+    dateDic["zenodo"]["oai_datacite"] = "publicationYear"
+    dateDic["zenodo"]["oai_datacite3"] = "publicationYear"
+    dateDic["zenodo"]["datacite"] = "publicationYear"
+    dateDic["zenodo"]["datacite3"] = "publicationYear"
+    dateDic["zenodo"]["datacite4"] = "publicationYear"
+    #figshare
+    dateDic["figshare"] = dict()
+    dateDic["figshare"]["oai_dc"] = "dc:date"
+    dateDic["figshare"]["oai_datacite"] = "publicationYear"
+    dateDic["figshare"]["rdf"] = "vivo:datePublished"
+    dateDic["figshare"]["qdc"] = "dc:date"
 
     #check if the given dataportal is avaiable
     if(not dataportal in prefixDic):
@@ -111,12 +139,11 @@ def downloadMetadata():
     #print all metadata formats of the given dataportal
     if(showformats):
         for mformat in prefixDic[dataportal]:
-
             print(" -- " + mformat)
 
         return
 
-    #check if the given metadata format is avaiabke
+    #check if the given metadata format is avaiable
     if(metadataformat != None and not metadataformat in prefixDic[dataportal]):
         print(" -> Unknown metadata format '" + metadataformat + "' of dataportal: " + dataportal)
         return
@@ -135,7 +162,6 @@ def downloadMetadata():
 
     #loop over each metadata format of the given dataportal
     for prefix in prefixDic[dataportal]:
-
         #set index for counting resumption token to 0
         tokenIndex = 0
         #set count for 'limit' option to 0
@@ -159,7 +185,6 @@ def downloadMetadata():
 
             #wait 60 seconds between each download of a metadata format to prevent connection issues
             for timer in range(60, 0, -1):
-
                 time.sleep(1)
                 print("\033[K -- Sleep for " + str(timer) + " second(s)", end="\r")
 
@@ -177,16 +202,17 @@ def downloadMetadata():
                     #download the following pages and get the following resumption tokens
                     resumptionToken = requestMetadata(prefix, resumptionToken)
                 except SystemError:
-                    #if an error is thrown (error page, connection lost, etc.), wait 30 seconds
+                    #if an error is thrown (error page, connection lost, etc.), wait 10 seconds
                     #and then resume from the last resumption token and try again
+                    print()
                     print(" -> Exception was thrown. <-")
                     for timer in range(30, 0, -1):
-
                         time.sleep(1)
                         print("\033[K  --- Restarting in " + str(timer) + " second(s)", end="\r")
 
                     print("\033[K  --- Restarted")
-                    pass
+                except:
+                    print(traceback.format_exc())
 
             #save the metadata fields of the metadata format
             print()
@@ -219,6 +245,7 @@ def requestMetadata(prefix, resumptionToken, firstPage=False):
     try:
         #variable specifying the metadata url that will be requested
         metadata_url = None
+        #dataportal urls
         #get the metadata url of the first page
         if(firstPage):
             #dryad url
@@ -275,14 +302,12 @@ def requestMetadata(prefix, resumptionToken, firstPage=False):
             os.system("echo \" -- resumptionToken " + str(resumptionToken) + "\" >> metadata/" + dataportal + "/" + dataportal + ".log")
             #loop over each record of the current page
             for record in metadata_content["OAI-PMH"]["ListRecords"]["record"]:
-
                 identifier = None
                 try:
                     #check if the limit counter is reached
                     #if yes, save the metadata (and, optionally, the fields) and go to next metadata format or quit
                     if(limit != 0 and limit_counter >= limit):
                         return None
-
                     #only check the current record if it isn't deleted
                     if(isinstance(record, dict) and not ("@status" in record.keys() and record["@status"] == "deleted")):
                         #only check the metadata fields if the current record contains a metadata section
@@ -291,34 +316,45 @@ def requestMetadata(prefix, resumptionToken, firstPage=False):
                             identifier = record["header"]["identifier"]
                             #save the header date stamp of the current record
                             headerDate = record["header"]["datestamp"]
+                            metadataDic[prefix]["date"][identifier] = None
                             #add the current record ID to the sub-dicitionary of the metadata dictionary
                             metadataDic[prefix]["metadata"][identifier] = list()
                             #set the date found variable to False
                             dateFound = False
-
                             metadata_format = record["metadata"]
                             #loop over each fields of the metadata section
                             for metadata in metadata_format:
-
                                 #check if the field contains further metadata fields
                                 #if yes, check if the next field contains further metadata fields (get to last field of the 'branch')
                                 #if no, save the field (and, optionally, the full path to the field)
                                 if(isinstance(metadata_format[metadata], dict)):
                                     if(full):
                                         checkKey(metadata_format[metadata], identifier, prefix, metadata)
-                                    else:
-                                        checkKey(metadata_format[metadata], identifier, prefix)
                                 else:
-                                    #get the metadata date stamp for the given metadata format (in case of dryad the first one)
-                                    if(not dateFound and metadata in dateDic[dataportal]):
+                                    #get the metadata date stamp for the given metadata format
+                                    #in case of Dryad, the first one
+                                    #in case of Pangaea ISO19139 and ISO19139.iodp, the date that contains the path
+                                    ##'identificationInfo/MD_DataIdentification/citation/CI_Citation/date/CI_Date/date'
+                                    #in case of Figshare RDF, the attribute with the key 'vivo:datePublished'
+                                    if(not dateFound and metadata == dateDic[dataportal][prefix]):
                                         if(isinstance(metadata_format[metadata], list)):
                                             metadataDic[prefix]["date"][identifier] = metadata_format[metadata][0]
                                             #set that the metadata date was found
                                             dateFound = True
                                         else:
-                                            metadataDic[prefix]["date"][identifier] = metadata_format[metadata]
-                                            #set that the metadata date was found
-                                            dateFound = True
+                                            if(prefix == "iso19139" or prefix == "iso19139.iodp"):
+                                                if("identificationInfo/MD_DataIdentification/citation/CI_Citation/date/CI_Date/date" in path):
+                                                    metadataDic[prefix]["date"][identifier] = value
+                                                    #set that the metadata date was found
+                                                dateFound = True
+                                            elif(dataportal == "figshare" and prefix == "rdf"):
+                                                metadataDic[prefix]["date"][identifier] = value.split("date")[-1]
+                                                #set that the metadata date was found
+                                                dateFound = True
+                                            else:
+                                                metadataDic[prefix]["date"][identifier] = value
+                                                #set that the metadata date was found
+                                                dateFound = True
 
                                     #only save the metadata field if it doesn't start with the attribute smybols '@' or '#'
                                     #and if it isn't already in the metadata dictionary
@@ -339,11 +375,11 @@ def requestMetadata(prefix, resumptionToken, firstPage=False):
                                             fieldsDic[prefix][identifier][metadata] = list()
 
                                         fieldsDic[prefix][identifier][metadata].append(metadata_format[metadata].replace(",", ";").replace("\n", " "))
-
-                            #if no date stamp was found in the metadata section, save the header date stamp instead
+                            
+                            #if no date stamp was found in the metadata section, set the Date to None
                             if(not dateFound or metadataDic[prefix]["date"][identifier] == None):
                                 metadataDic[prefix]["date"][identifier] = headerDate + "_header"
-
+                            
                             #increase the limit counter for the 'limit' option by one
                             limit_counter += 1
 
@@ -366,7 +402,7 @@ def requestMetadata(prefix, resumptionToken, firstPage=False):
 
 
 #method to get to the bottom/last field of a dictionary
-def checkKey(dictionary, identifier, prefix, path=""):
+def checkKey(dictionary, identifier, prefix, path):
 
     #dictionary containing the fields of the given metadata format
     global metadataDic
@@ -377,7 +413,6 @@ def checkKey(dictionary, identifier, prefix, path=""):
 
     #loop over the keys and values of the given dictionary
     for key, value in dictionary.items():
-
         #check if the value is a dictionary
         #if yes, check again if the values of the this value are dictionaries or not
         #if no, check if the value is a list of fields
@@ -385,8 +420,6 @@ def checkKey(dictionary, identifier, prefix, path=""):
         if(isinstance(value, dict)):
             if(full):
                 checkKey(value, identifier, prefix, path + "/" + key)
-            else:
-                checkKey(value, identifier, prefix)
         elif(isinstance(value, list)):
             #loop over each elements of the value list
             for element in value:
@@ -396,23 +429,39 @@ def checkKey(dictionary, identifier, prefix, path=""):
                 if(isinstance(element, dict)):
                     if(full):
                         checkKey(element, identifier, prefix, path + "/" + key)
-                    else:
-                        checkKey(element, identifier, prefix)
                 else:
-                    #get the metadata date stamp for the given metadata format (in case of Dryad the first one)
-                    if(not dateFound and key in dateDic[dataportal]):
+                    #get the metadata date stamp for the given metadata format
+                    #in case of Dryad, the first one
+                    #in case of Pangaea ISO19139 and ISO19139.iodp, the date that contains the path
+                    ##'identificationInfo/MD_DataIdentification/citation/CI_Citation/date/CI_Date/date'
+                    #in case of Figshare RDF, the attribute with the key 'vivo:datePublished'
+                    previousKey = path.split("/")[-1]
+                    if(not dateFound and (key == dateDic[dataportal][prefix] or previousKey == dateDic[dataportal][prefix])):
                         if(isinstance(value, list)):
                             metadataDic[prefix]["date"][identifier] = value[0]
                             #set that the metadata date was found
                             dateFound = True
                         else:
-                            metadataDic[prefix]["date"][identifier] = value
-                            #set that the metadata date was found
-                            dateFound = True
+                            if(prefix == "iso19139" or prefix == "iso19139.iodp"):
+                                if("identificationInfo/MD_DataIdentification/citation/CI_Citation/date/CI_Date/date" in path):
+                                    metadataDic[prefix]["date"][identifier] = value
+                                    #set that the metadata date was found
+                                dateFound = True
+                            elif(dataportal == "figshare" and prefix == "rdf"):
+                                metadataDic[prefix]["date"][identifier] = value.split("date")[-1]
+                                #set that the metadata date was found
+                                dateFound = True
+                            else:
+                                metadataDic[prefix]["date"][identifier] = value
+                                #set that the metadata date was found
+                                dateFound = True
+                            
+                        #set that the metadata date was found
+                        dateFound = True
 
-                    #only save the metadata element if it doesn't start with the attribute smybols '@' or '#'
-                    #and if it isn't already in the metadata dictionary
-                    #optionally, save the full path to this element
+                    #save the current key, if it doesn't start with the attribute symbols '@' or '#'\
+                    #else, save the previous key
+                    #optionally, save the path to the (previous) key
                     if(not (key.startswith("@") or key.startswith("#"))):
                         if(full):
                             if(not path + "/" + key in metadataDic[prefix]["metadata"][identifier]):
@@ -424,6 +473,18 @@ def checkKey(dictionary, identifier, prefix, path=""):
                                 metadataDic[prefix]["metadata"][identifier].append(key)
                                 if(not key in metadataDic[prefix]["metadataList"]):
                                     metadataDic[prefix]["metadataList"].append(key)
+                    else:
+                        if(full):
+                            if(not path in metadataDic[prefix]["metadata"][identifier]):
+                                metadataDic[prefix]["metadata"][identifier].append(path)
+                                if(not path in metadataDic[prefix]["metadataList"]):
+                                    metadataDic[prefix]["metadataList"].append(path)
+                        else:
+                            previousKey = path.split("/")[-1]
+                            if(not previousKey in metadataDic[prefix]["metadata"][identifier]):
+                                metadataDic[prefix]["metadata"][identifier].append(previousKey)
+                                if(not previousKey in metadataDic[prefix]["metadataList"]):
+                                    metadataDic[prefix]["metadataList"].append(previousKey)
 
                     #optionally, save the content of the metadata element if it it isn't already saved
                     if(fields_list != None and key in fields_list):
@@ -442,20 +503,33 @@ def checkKey(dictionary, identifier, prefix, path=""):
                             fieldsDic[prefix][identifier][key].append(value.replace(",", ";").replace("\n", " "))
 
         else:
-            #get the metadata date stamp for the given metadata format (in case of Dryad the first one)
-            if(not dateFound and key in dateDic[dataportal]):
+            #get the metadata date stamp for the given metadata format
+            #in case of Dryad, the first one
+            #in case of Pangaea ISO19139 and ISO19139.iodp, the date that contains the path
+            ##'identificationInfo/MD_DataIdentification/citation/CI_Citation/date/CI_Date/date'
+            #in case of Figshare RDF, the attribute with the key 'vivo:datePublished'
+            previousKey = path.split("/")[-1]
+            if(not dateFound and (key == dateDic[dataportal][prefix] or previousKey == dateDic[dataportal][prefix])):
                 if(isinstance(value, list)):
                     metadataDic[prefix]["date"][identifier] = value[0]
-                    #set that the metadata date was found
-                    dateFound = True
                 else:
-                    metadataDic[prefix]["date"][identifier] = value
-                    #set that the metadata date was found
-                    dateFound = True
+                    if(prefix == "iso19139" or prefix == "iso19139.iodp"):
+                        if("identificationInfo/MD_DataIdentification/citation/CI_Citation/date/CI_Date/date" in path):
+                            metadataDic[prefix]["date"][identifier] = value
+                            #set that the metadata date was found
+                            dateFound = True
+                    elif(dataportal == "figshare" and prefix == "rdf"):
+                        metadataDic[prefix]["date"][identifier] = value.split("date")[-1]
+                        #set that the metadata date was found
+                        dateFound = True
+                    else:
+                        metadataDic[prefix]["date"][identifier] = value
+                        #set that the metadata date was found
+                        dateFound = True
 
-            #only save the metadata value if it doesn't start with the attribute smybols '@' or '#'
-            #and if it isn't already in the metadata dictionary
-            #optionally, save the full path to this value
+            #save the current key, if it doesn't start with the attribute symbols '@' or '#'\
+            #else, save the previous key
+            #optionally, save the path to the (previous) key
             if(not (key.startswith("@") or key.startswith("#"))):
                 if(full):
                     if(not path + "/" + key in metadataDic[prefix]["metadata"][identifier]):
@@ -467,6 +541,17 @@ def checkKey(dictionary, identifier, prefix, path=""):
                         metadataDic[prefix]["metadata"][identifier].append(key)
                         if(not key in metadataDic[prefix]["metadataList"]):
                             metadataDic[prefix]["metadataList"].append(key)
+            else:
+                if(full):
+                    if(not path in metadataDic[prefix]["metadata"][identifier]):
+                        metadataDic[prefix]["metadata"][identifier].append(path)
+                        if(not path in metadataDic[prefix]["metadataList"]):
+                            metadataDic[prefix]["metadataList"].append(path)
+                else:
+                    if(not previousKey in metadataDic[prefix]["metadata"][identifier]):
+                        metadataDic[prefix]["metadata"][identifier].append(previousKey)
+                        if(not previousKey in metadataDic[prefix]["metadataList"]):
+                            metadataDic[prefix]["metadataList"].append(previousKey)
 
             #optionally, save the content of the metadata value if it it isn't already saved
             if(fields_list != None and key in fields_list):
@@ -507,13 +592,11 @@ def saveMetadata(prefix):
     metadata_str_list.append(metadata_str)
     #loop over each ID in the metadata dictionary
     for identifier in metadataDic[prefix]["metadata"]:
-
         #set the ID of the record
         metadata_str = identifier
         #loop over each metadata field in the metadata fields list
         for key in metadataDic[prefix]["metadataList"]:
-
-            #check if the current record contains the metadata field and was,therefore, set
+            #check if the current record contains the metadata field and was, therefore, set
             #if yes, add a 1 to the metadata string
             #if no, add a 0 to the metadata string
             found = "0"
@@ -523,7 +606,7 @@ def saveMetadata(prefix):
             metadata_str += "," + found
 
         #add the date of the record to the metadata string
-        metadata_str += "," + metadataDic[prefix]["date"][identifier]
+        metadata_str += "," + str(metadataDic[prefix]["date"][identifier])
         #add the metadata string (one line in the CSV file) to the metadata string list
         metadata_str_list.append(metadata_str)
 
@@ -537,7 +620,6 @@ def saveMetadata(prefix):
 
 #method for saving the content of each metadata field in a CSV file
 def saveFields(prefix):
-
     #list containing each line of the metadata CSV file
     fields_str_list = list()
 
@@ -563,7 +645,6 @@ def saveFields(prefix):
     #loop over each metadata field in the metadata fields list
     #and add it to the fields string if the fields list contains it
     for field in metadataDic[prefix]["metadataList"]:
-
         if(field in fields_list):
             fields_str += "," + field
 
@@ -571,12 +652,10 @@ def saveFields(prefix):
     fields_str_list.append(fields_str)
     #loop over each ID in the fields dictionary
     for identifier in fieldsDic[prefix]:
-
         #set the ID of the record
         fields_str = identifier
         #loop over each field in the fields list
         for field in fields_list:
-
             #add the contents of the field to the fields string if the current record contains the field
             #else, add an empty string
             try:
@@ -599,7 +678,6 @@ def saveFields(prefix):
     #loop over all fields in the fields list and print every field that didn't appear in at least one record
     notFound = False
     for field in fields_list:
-
         if(not field in metadataDic[prefix]["metadataList"]):
             if(not notFound):
                 print(" -- the following fields are not in the metadata format: '" + prefix + "':")
@@ -610,12 +688,13 @@ def saveFields(prefix):
 
 
 #main method
-try:
-    now = datetime.datetime.now()
-    print("\nProgram started " + str(now) + ".\n")
-    commandLine()
-    print("- download metadata from dataportal '" + dataportal + "'")
-    downloadMetadata()
-    print("- download metadata from dataportal '" + dataportal + "' finished\n")
-except requests.exceptions.ConnectionError:
-    print("Unable to connect to the '" + dataportal + "' portal.")
+if __name__ == '__main__':
+    try:
+        now = datetime.datetime.now()
+        print("\nProgram started " + str(now) + ".\n")
+        commandLine()
+        print("- download metadata from dataportal '" + dataportal + "'")
+        downloadMetadata()
+        print("- download metadata from dataportal '" + dataportal + "' finished\n")
+    except requests.exceptions.ConnectionError:
+        print("Unable to connect to the '" + dataportal + "' portal.")
