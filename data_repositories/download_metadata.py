@@ -4,7 +4,6 @@ import xmltodict
 import datetime
 import time
 import os
-import traceback
 
 
 #variable specifying the dataportal
@@ -211,8 +210,8 @@ def downloadMetadata():
                         print("\033[K  --- Restarting in " + str(timer) + " second(s)", end="\r")
 
                     print("\033[K  --- Restarted")
-                except:
-                    print(traceback.format_exc())
+                except Exception as ex:
+                    print(ex)
 
             #save the metadata fields of the metadata format
             print()
@@ -244,25 +243,33 @@ def requestMetadata(prefix, resumptionToken, firstPage=False):
 
     try:
         #variable specifying the metadata url that will be requested
-        metadata_url = None
+        metadata_content = None
         #dataportal urls
         #get the metadata url of the first page
         if(firstPage):
-            #dryad url
-            if(dataportal == "dryad"):
-                metadata_url = "http://api.datadryad.org/oai/request?verb=ListRecords&metadataPrefix=" + prefix
-            #gbif url
-            elif(dataportal == "gbif"):
-                metadata_url = "http://api.gbif.org/v1/oai-pmh/registry?verb=ListRecords&metadataPrefix=" + prefix
-            #pangaea url
-            elif(dataportal == "pangaea"):
-                metadata_url = "http://ws.pangaea.de/oai/provider?verb=ListRecords&metadataPrefix=" + prefix
-            #zenodo url
-            elif(dataportal == "zenodo"):
-                metadata_url = "https://zenodo.org/oai2d?verb=ListRecords&metadataPrefix=" + prefix
-            #figshare url
-            elif(dataportal == "figshare"):
-                metadata_url = "https://api.figshare.com/v2/oai?verb=ListRecords&metadataPrefix=" + prefix
+            try:
+                #dryad url
+                if(dataportal == "dryad"):
+                    metadata_url = "http://api.datadryad.org/oai/request?verb=ListRecords&metadataPrefix=" + prefix
+                #gbif url
+                elif(dataportal == "gbif"):
+                    metadata_url = "http://api.gbif.org/v1/oai-pmh/registry?verb=ListRecords&metadataPrefix=" + prefix
+                #pangaea url
+                elif(dataportal == "pangaea"):
+                    metadata_url = "http://ws.pangaea.de/oai/provider?verb=ListRecords&metadataPrefix=" + prefix
+                #zenodo url
+                elif(dataportal == "zenodo"):
+                    metadata_url = "https://zenodo.org/oai2d?verb=ListRecords&metadataPrefix=" + prefix
+                #figshare url
+                elif(dataportal == "figshare"):
+                    metadata_url = "https://api.figshare.com/v2/oai?verb=ListRecords&metadataPrefix=" + prefix
+
+                #request the records of the first page (contains 100 records)
+                metadata_request = requests.get(metadata_url).text
+                #transform the requested xml tree to a dictionary
+                metadata_content = xmltodict.parse(metadata_request.encode("utf-8"))
+            except:
+                raise Exception("Unexpected error for the first page request! See message below:\n\n" + metadata_request)
         #get the metadata url of all following pages with the resumption token
         else:
             #dryad url
@@ -281,10 +288,11 @@ def requestMetadata(prefix, resumptionToken, firstPage=False):
             elif(dataportal == "figshare"):
                 metadata_url = "https://api.figshare.com/v2/oai?verb=ListRecords&resumptionToken=" + resumptionToken
 
-        #request the records of a page (each page contains 100 records)
-        metadata_request = requests.get(metadata_url).text
-        #transform the requested xml tree to a dictionary
-        metadata_content = xmltodict.parse(metadata_request.encode("utf-8"))
+            #request the records of each following page (each page contains 100 records)
+            metadata_request = requests.get(metadata_url).text
+            #transform the requested xml tree to a dictionary
+            metadata_content = xmltodict.parse(metadata_request.encode("utf-8"))
+
         #set the resumption token to None
         resumptionToken = None
         if("ListRecords" in metadata_content["OAI-PMH"].keys()):
@@ -375,11 +383,11 @@ def requestMetadata(prefix, resumptionToken, firstPage=False):
                                             fieldsDic[prefix][identifier][metadata] = list()
 
                                         fieldsDic[prefix][identifier][metadata].append(metadata_format[metadata].replace(",", ";").replace("\n", " "))
-                            
+
                             #if no date stamp was found in the metadata section, set the Date to None
                             if(not dateFound or metadataDic[prefix]["date"][identifier] == None):
                                 metadataDic[prefix]["date"][identifier] = headerDate + "_header"
-                            
+
                             #increase the limit counter for the 'limit' option by one
                             limit_counter += 1
 
@@ -455,7 +463,7 @@ def checkKey(dictionary, identifier, prefix, path):
                                 metadataDic[prefix]["date"][identifier] = value
                                 #set that the metadata date was found
                                 dateFound = True
-                            
+
                         #set that the metadata date was found
                         dateFound = True
 
