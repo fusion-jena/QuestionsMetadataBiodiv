@@ -1,0 +1,18 @@
+package data;
+
+public enum Category {
+	ORGANISM,
+	ENVIRONMENT,
+	QUALITY,
+	MATERIAL,
+	PROCESS,
+	METHOD,
+	TYPE,
+	ANATOMY,
+	LOCATION,
+	TIME,
+	EVENT,
+	PERSON,
+	HUMAN_INTERVENTION,
+	NONE
+}
