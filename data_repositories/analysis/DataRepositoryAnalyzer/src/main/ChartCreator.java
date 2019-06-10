@@ -30,14 +30,15 @@ import data.TermToCategoryMap;
 
 public class ChartCreator {
 
-	//public static String path="C:\\Users\\klan_fi\\Documents\\Publikationen\\2019-PlosONE\\metadata-test";
-	public static String path = "/home/vw/git/questions/datarepositories/examples";
-	
+	//set path to metadata directory
+	public static String metadataPath = "/home/vw/git/biodiv-questions/data_repositories/examples";
+	//set path to output directory
+	public static String outputPath = "/home/vw/git/biodiv-questions/data_repositories/charts";
 	
 	public static void main(String[] args) {
 		
 		//read repository statistics from CSV-file
-		ArrayList<RepositorySummary> repositorySummaries = RepositorySummaryReader.readRepositorySummaries(path);
+		ArrayList<RepositorySummary> repositorySummaries = RepositorySummaryReader.readRepositorySummaries(metadataPath);
 		System.out.println("REPOSITORIES RED ...");
 		
 		/**
@@ -151,8 +152,8 @@ public class ChartCreator {
 //		    BitmapEncoder.saveBitmapWithDPI(chart, "./Sample_Chart_300_DPI", BitmapFormat.PNG, 300);
 //	    	VectorGraphicsEncoder.saveVectorGraphic(chart, "./Sample_Chart", VectorGraphicsFormat.SVG);
 			System.out.println("plotting ...");
-			VectorGraphicsEncoder.saveVectorGraphic(chart, "./charts/DatasetsPerYear", VectorGraphicsFormat.EPS);
-		    BitmapEncoder.saveBitmapWithDPI(chart, "./charts/" + firstRepositoryName + "-datasets-per-year", BitmapFormat.PNG, 300);
+			VectorGraphicsEncoder.saveVectorGraphic(chart, outputPath + "/DatasetsPerYear", VectorGraphicsFormat.EPS);
+		    BitmapEncoder.saveBitmapWithDPI(chart, outputPath + "/" + firstRepositoryName + "-datasets-per-year", BitmapFormat.PNG, 300);
 		} catch (IOException e) {
 			e.printStackTrace();
 		}
@@ -268,8 +269,8 @@ public class ChartCreator {
 					if(datasetSummary.getCreationDates().size()==0) {
 						System.out.println("NO (ACCURATE) DATASETS IN REPOSITORY LEFT. WILL NOT CREATE PLOT!");
 					} else {
-						VectorGraphicsEncoder.saveVectorGraphic(chart, "./charts/" + repositoryName + "-" + standard + "-attributes-set", VectorGraphicsFormat.EPS);
-					    BitmapEncoder.saveBitmapWithDPI(chart, "./charts/" + repositoryName + "-" + standard + "-attributes-set", BitmapFormat.PNG, 300);						
+						VectorGraphicsEncoder.saveVectorGraphic(chart, outputPath + "/" + repositoryName + "-" + standard + "-attributes-set", VectorGraphicsFormat.EPS);
+					    BitmapEncoder.saveBitmapWithDPI(chart, outputPath + "/" + repositoryName + "-" + standard + "-attributes-set", BitmapFormat.PNG, 300);						
 					}
 
 				} catch (IOException e) {
@@ -348,8 +349,8 @@ public class ChartCreator {
 				CategoryChart chart = exampleChart.getChart();
 				try {
 					System.out.println("plotting ...");
-//					VectorGraphicsEncoder.saveVectorGraphic(chart, "./charts/" + repositoryName + "-" + standard + "-attributes-set-by-year", VectorGraphicsFormat.PDF);
-				    BitmapEncoder.saveBitmapWithDPI(chart, "./charts/" + repositoryName + "-" + standard + "-attributes-set-by-year", BitmapFormat.PNG, 300);
+//					VectorGraphicsEncoder.saveVectorGraphic(chart, outputPath + "/" + repositoryName + "-" + standard + "-attributes-set-by-year", VectorGraphicsFormat.PDF);
+				    BitmapEncoder.saveBitmapWithDPI(chart, outputPath + "/" + repositoryName + "-" + standard + "-attributes-set-by-year", BitmapFormat.PNG, 300);
 				} catch (IOException e) {
 					e.printStackTrace();
 				}
