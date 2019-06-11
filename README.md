@@ -4,9 +4,11 @@ This repository contains all source code and supplementary material for publicat
 
 ## Repository Structure
 
-* [Questions] <https://github.com/fusion-jena/QuestionsMetadataBiodiv/tree/master/questions>
-* Data_Repositories <https://github.com/fusion-jena/QuestionsMetadataBiodiv/tree/master/data_repositories>
+* [Questions] 
+* [Data_Repositories] 
 
+[Questions]: https://github.com/fusion-jena/QuestionsMetadataBiodiv/tree/master/questions
+[Data_Repositories]: https://github.com/fusion-jena/QuestionsMetadataBiodiv/tree/master/data_repositories
 
 
 ##License
