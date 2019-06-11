@@ -41,4 +41,4 @@ set the path to the csv files
 public static String path = "C:\\Daten\\data_repositories\\metadata";
 ```
 
-then run the main method of ChartCreator.java
+then run the main method of ChartCreator.java, a new folder 'charts' is created in the same level where the pom.xml file is located
