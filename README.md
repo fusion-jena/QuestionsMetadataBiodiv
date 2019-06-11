@@ -4,8 +4,8 @@ This repository contains all source code and supplementary material for publicat
 
 ## Repository Structure
 
-* [Questions]: ../blob/master/questions
-* [Data_Repositories]: ../blob/master/data_repositories
+* [Questions] (../blob/master/questions)
+* [Data_Repositories] (../blob/master/data_repositories)
 
 
 
