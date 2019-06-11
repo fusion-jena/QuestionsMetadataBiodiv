@@ -1,6 +1,8 @@
 # Metadata Analysis of Data Repositories with OAI-PMH interfaces
 
-This folder provides the source code to download metadata from OAI-PMHs interfaces of data repositories and additional material. Works on [Python3+].
+This folder provides the source code to download metadata from OAI-PMHs interfaces of data repositories and additional material. The script 'download_metadata.py' connects to an OAI-PMH interface and harvests all available metadata. Per metadata file we inspect what elements from the metadata standards are used and save its occurence (1) or non-occurence (0). The result is a csv file per metadata schema that contains dataset IDs and their available and used metadata elements.
+
+Works on [Python3+].
 
 # Structure
 
