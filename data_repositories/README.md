@@ -1,9 +1,13 @@
-# Download metadata information of digital dataportals
+# Metadata Analysis of Data Repositories with OAI-PMH interfaces
 
-Python scripts for downloading metadata information of digital dataportals. Works on [Python3+].
+This folder provides the source code to download metadata from OAI-PMHs interfaces of data repositories and additional material. Works on [Python3+].
 
+# Structure
 
-
+* examples (contains example files)
+* analysis (Java code to count the metadata data fields used and to generate charts)
+* charts (contains the generated charts per repository and metadata schema)
+* ToDo: list of terminology or annotation service for biodiversity
 
 # Prerequisites
 
