@@ -4,14 +4,14 @@ This folder provides the source code to download metadata from OAI-PMHs interfac
 
 # Structure
 
-* [Examples] (contains example files, full metadata fiöes available at iDiv data portal (ToDo: add URL))
+* [Examples] (contains example files, full metadata files available at iDiv data portal (ToDo: add URL))
 * [Analysis] (Java code to count the metadata data fields used and to generate charts)
 * [Charts] (contains the generated charts per repository and metadata schema)
 * ToDo: list of terminology or annotation service for biodiversity
 
 [Examples]: https://github.com/fusion-jena/QuestionsMetadataBiodiv/tree/master/data_repositories/examples
 [Analysis]: https://github.com/fusion-jena/QuestionsMetadataBiodiv/tree/master/data_repositories/analysis
-[Analysis]: https://github.com/fusion-jena/QuestionsMetadataBiodiv/tree/master/data_repositories/charts
+[Charts]: https://github.com/fusion-jena/QuestionsMetadataBiodiv/tree/master/data_repositories/charts
 
 # Prerequisites
 
