@@ -1,4 +1,4 @@
-# Supplementary Material for XXX
+# Supplementary Material for the Creation of the Biodiversity Question Corpus
 
 ## Overview
 This repository contains scripts and example files for setting up an online survey where annotators assign textual phrases in a corpus of questions to information categories. This will result in an annotated question corpus that can be used as training data in research fields such as question answering or semantic search.  
@@ -46,6 +46,3 @@ In order to use these scripts for a new domain, you would need to
 
 ## How to further use these results?
 As you can see from our 'lsg____first__second__third.csv' file, the artifacts have different *P(i)* values, which is the observed agreement over all raters. It is up to you to define a threshold at which agreement you consider a rating as a valid category assignment. Usually, a *P(i)* > 0,6 can be considered as a good agreement. Our analysis script produces an xml file with all questions and annotations above a certain agreement threshold. By default, all annotations per question with an agreement above 0.6 will be returned.
-
-
-## Citation
