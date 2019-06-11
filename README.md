@@ -11,7 +11,7 @@ This repository contains all source code and supplementary material for publicat
 [Data_Repositories]: https://github.com/fusion-jena/QuestionsMetadataBiodiv/tree/master/data_repositories
 
 
-##License
+## License
 All source code files are distributed under the terms of the XXX.
 
 ## Citation
