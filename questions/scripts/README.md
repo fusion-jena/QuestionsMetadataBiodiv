@@ -122,7 +122,7 @@ at least once.
  * The ```-c``` option let's you choose at which column in the ```LimeSurvey-Result```-CSV file the actually data starts, so at which column the first question (and noun) and answer is. Only the start column of the first input ```LimeSurvey-Result```-CSV file is needed since the data of all following ```LimeSurvey-Result```-CSV files is extracted by using the question titles and nouns of the first ```LimeSurvey-Result```-CSV file.
  * The ```-ct``` option takes the path to a simple text file containing the categories. The categories should be identical to the categories used in the survey/surveys or else the program will throw an error if a category was chosen as an answer but wasn't written in the ```categories``` file. The descriptions will be ignored. For more information see the ```Example categories file``` section.
  * The ```-cu``` option takes the path to a simple text file containing custom counts for the ```other``` category. If a user chose the ```other``` category and added a description, key words can be specified that will not be counted as ```other``` but as an category you specified. For example, if one of the categories is ```Quality``` and a user chose the ```other``` category with the description ```parameter```, this can be counted as ```Quality``` and not as ```other```. Multiple keywords for one category are seprated by commas. For more information see the ```Example custom file``` section.
- * And the ```-thres``` option sets what rows with a higher P(i) value then specified will be saved in an extra XML file.
+ * And the ```-thres``` option sets what rows with a P(i) value higher then specified will be saved in an extra XML file.
 
 
 ### Example usage:
