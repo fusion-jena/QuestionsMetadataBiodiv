@@ -135,27 +135,30 @@ py analyze_result.py -f first.csv second.csv third.csv -o result_folder -c 9 -ct
 
 # Example 'categories' files
 
-```creation_categories.txt```
-\|-----------------------------|
-\|category1\|description1      |
-\|category2\|description2      |
-\|category3\|description3      |
-\|category4\|description4      |
-\|category5\|description5      |
-\|category6\|description6      |
-\|category7\|description7      |
-\|category8\|description8      |
-\|category9\|description9      |
-\|category10\|description10    |
-\|                             |
-\|                             |
-\|                             |
-\|                             |
-\|-----------------------------|
+```creation_categories.txt```  
+<pre>
+\|-----------------------------|  
+\|category1\|description1      |  
+\|category2\|description2      |  
+\|category3\|description3      |  
+\|category4\|description4      |  
+\|category5\|description5      |  
+\|category6\|description6      |  
+\|category7\|description7      |  
+\|category8\|description8      |  
+\|category9\|description9      |  
+\|category10\|description10    |  
+\|                             |  
+\|                             |  
+\|                             |  
+\|                             |  
+\|-----------------------------|  
+</pre>
 
 or for the analyze_result.py specificially
 
 ```evaluation_categories.txt```  
+<pre>
 \|-----------------------------|  
 \|category1                    |  
 \|category2                    |  
@@ -172,12 +175,14 @@ or for the analyze_result.py specificially
 \|                             |  
 \|                             |  
 \|-----------------------------|  
+</pre>
 
 
 
 # Example 'custom' file
 
-```custom.txt```
+```custom.txt```  
+<pre>
 \|--------------------------------------------|  
 \|category1=keyword1_1,keyword1_2             |  
 \|category2=keyword2_1,keyword2_2,keyword2_3  |  
@@ -194,6 +199,7 @@ or for the analyze_result.py specificially
 \|                                            |  
 \|                                            |  
 \|--------------------------------------------|  
+</pre>
 
 
 
