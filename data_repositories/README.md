@@ -133,7 +133,7 @@ elif(dataportal == your_dataportal):
 
 ```www.your_dataportal.org/oai/request?verb=ListRecords&metadataPrefix=```.
 
-Now, in the section below (marked with 'else') add at the bottom, again, the line
+Now, in the section below (marked with ```else```) add at the bottom, again, the line
 
 ```python
 elif(dataportal == your_dataportal):
