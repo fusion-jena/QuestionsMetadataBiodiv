@@ -1,8 +1,19 @@
-# Harvest metadata information of digital dataportals
+# Metadata Analysis of Data Repositories with OAI-PMH interfaces
 
-Python scripts for harvesting metadata information of digital dataportals. Works on '''Python3+'''.
+This folder provides the source code to download metadata from OAI-PMHs interfaces of data repositories and additional material. The script '''metadata_harvester.py''' connects to an OAI-PMH interface and harvests all available metadata. Per metadata file we inspect what elements from the metadata standards are used and save its occurence (1) or non-occurence (0). The result is a csv file per metadata schema that contains dataset IDs and their available and used metadata elements.
 
+Works on '''Python3+'''.
 
+# Structure
+
+* [Examples] (contains example files, full metadata files available at iDiv data portal (ToDo: add URL))
+* [Analysis] (Java code to count the metadata data fields used and to generate charts)
+* [Charts] (contains the generated charts per repository and metadata schema)
+* ToDo: list of terminology or annotation service for biodiversity
+
+[Examples]: https://github.com/fusion-jena/QuestionsMetadataBiodiv/tree/master/data_repositories/examples
+[Analysis]: https://github.com/fusion-jena/QuestionsMetadataBiodiv/tree/master/data_repositories/analysis
+[Charts]: https://github.com/fusion-jena/QuestionsMetadataBiodiv/tree/master/data_repositories/charts
 
 # Prerequisites
 

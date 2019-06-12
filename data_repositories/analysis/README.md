@@ -1,20 +1,44 @@
 # ChartCreator
 
-main.ChartCreator
-	-> main-Methode, definiert welche Diagramme geplottet werden sollen und wo die CSVs liegen
-	-> enthält Methoden zum Erzeugen der Charts
-	
-charts -> Paket für die Ablage der verschiedenen Charttypen, im Moment zwei 
-	-> BarChart für Anteil gefüllter Attribute (insgesamt oder pro Jahr) und
-	-> LineChart für Datensätze pro Jahr
-	-> in den Chartklassen können die Chart-Eigenschaften geändert werden
-data -> Paket für Daten-bezogene Aspekte
-	-> Category -> definiert unsere 14 Kategorien
-	-> CategoryToColorMap -> definiert, welche Farbe für welche Kategorie verwendet werden soll
-	-> TermToCategoryMap -> bildet Attributnamen (nur der Teil des Namens nach dem letzten Slash) auf unsere Kategorien ab
-	-> RepositorySummary und DatasetSummary -> interne Datenstrukturen für die Daten aus den CSV-Files
-		-> RepositorySummary -> Repository-Name, verfügbare Metadatenstandards und die eigentlichen Daten in einer DatasetSummary
-		-> DatasetSummary -> speichert Datensatz-IDs, vorhandene Metadatenfelder, Datensatzdatum, Attributstatus (gesetzt/nicht gesetzt)
+This folder contains the source code to analyze the generated metadata csv files. The output are charts that display the elements utilized and how they match the search categories.
 
-processors.io -> Paket für Datenprozessierungsaspekte
-	-> RepositorySummaryReader -> Einlesen der CSV-Dateien in interne Datenstrukturen (RepositorySummary und DatasetSummary)
+# Structure
+
+* main.ChartCreator
+	* main method, contains the location of the CSV files and defines which charts to plot
+	* contains the methods to create the charts
+	
+* charts (contains the files to create BarCharts and LineCharts)
+	* BarChart: metadata elements used per schema
+	* LineChart: timeline of datasets per year
+	* chart characteristics can be changed in the files
+
+* data (folder that contains domain and data specific files)
+	* category - describes the 14 search categories
+	* CategoryToColorMap - defines which color to use for which category
+	* TermToCategoryMap - mapping file that maps metadata elements to search categories
+	* RepositorySummary und DatasetSummary - internal data structure to read csv files
+		* RepositorySummary - Repository-Name, available metadata schemes and the actual data in DatasetSummary
+		* DatasetSummary - saves Dataset-IDs, available elements, publication date, element filling (used/ not used)
+
+* processors.io (package for data processing)
+	* RepositorySummaryReader - loads the CSV files into an internal data structure (RepositorySummary and DatasetSummary)
+
+# Prerequisites
+
+requires Java 8 and Maven
+
+# Usage
+
+resolve all dependencies (chart libraries) and run 
+```
+maven install
+```
+
+set the path to the csv files
+
+```
+public static String path = "C:\\Daten\\data_repositories\\metadata";
+```
+
+then run the main method of ChartCreator.java, a new folder 'charts' is created in the same level where the pom.xml file is located

@@ -30,14 +30,15 @@ import data.TermToCategoryMap;
 
 public class ChartCreator {
 
-	//public static String path="C:\\Users\\klan_fi\\Documents\\Publikationen\\2019-PlosONE\\metadata-test";
-	public static String path = "/home/vw/git/questions/datarepositories/examples";
-	
+	//set path to metadata directory
+	public static String metadataPath = "C:\\Daten\\phd\\fusionBiodivQuestions\\data_repositories\\metadata";
+	//set path to output directory
+	public static String outputPath = "C:\\Daten\\phd\\questions\\analysis-metadata-friederike\\DataRepositoryAnalyzer\\charts";
 	
 	public static void main(String[] args) {
 		
 		//read repository statistics from CSV-file
-		ArrayList<RepositorySummary> repositorySummaries = RepositorySummaryReader.readRepositorySummaries(path);
+		ArrayList<RepositorySummary> repositorySummaries = RepositorySummaryReader.readRepositorySummaries(metadataPath);
 		System.out.println("REPOSITORIES RED ...");
 		
 		/**
@@ -92,11 +93,11 @@ public class ChartCreator {
 					
 					//CHANGE HERE, IF YOU WANT TO RESTRICT DATES, also necessary to remove unusually high or low years due to wrong date entries
 //					if(year>=1500 && year<2020) {
-					if(year>=2020 || year<1000) {
+					if(year>=2000 || year<1000) {
 						numOfDatsetsWithErroneousDates++;
 					}
 					
-					if(year>=1500 && year<2020) {
+					if(year>=2000 && year<2020) {
 						if(year<minYear) { minYear = year; }
 						if(year>maxYear) { maxYear = year; }
 						
@@ -143,19 +144,21 @@ public class ChartCreator {
 		
 //		System.out.println("ySeriesCompleted: " + ySeriesCompleted.toString());
 		
-		//plot datasets per year
+		//plot datasets per year	
 		String firstRepositoryName = repositorySummaries.get(0).getRepositoryName();
+		
 		ExampleChart<XYChart> exampleChart = new LineChart(firstRepositoryName + ": number of datasets per year", x, ySeriesCompleted);
 		XYChart chart = exampleChart.getChart();
 		try {
 //		    BitmapEncoder.saveBitmapWithDPI(chart, "./Sample_Chart_300_DPI", BitmapFormat.PNG, 300);
 //	    	VectorGraphicsEncoder.saveVectorGraphic(chart, "./Sample_Chart", VectorGraphicsFormat.SVG);
 			System.out.println("plotting ...");
-			VectorGraphicsEncoder.saveVectorGraphic(chart, "./charts/DatasetsPerYear", VectorGraphicsFormat.EPS);
-		    BitmapEncoder.saveBitmapWithDPI(chart, "./charts/" + firstRepositoryName + "-datasets-per-year", BitmapFormat.PNG, 300);
+			VectorGraphicsEncoder.saveVectorGraphic(chart, outputPath + "/DatasetsPerYear", VectorGraphicsFormat.EPS);
+		    BitmapEncoder.saveBitmapWithDPI(chart, outputPath + "/" + firstRepositoryName + "-datasets-per-year", BitmapFormat.PNG, 300);
 		} catch (IOException e) {
 			e.printStackTrace();
 		}
+		
 	}
 	
 	/**
@@ -187,12 +190,21 @@ public class ChartCreator {
 					String term = splittedTerm[splittedTerm.length-1];
 					
 					
-					// in ISO use the last two preceding terms
-					if((standard.equals("iso19139") || standard.equals("iso19139.iodp")) && (splittedTerm.length-2)>0){
-						//System.out.println(standard);
-						String precedingTerm1 = splittedTerm[splittedTerm.length-2];
-						String precedingTerm2= splittedTerm[splittedTerm.length-3];
-						attributesShort.add(precedingTerm2+"/"+precedingTerm1+"/"+term);
+					// in ISO use the last two preceding terms (usually long path length)
+					if(standard.equals("iso19139") || standard.equals("iso19139.iodp")){
+						if ((splittedTerm.length-2)>0){
+							//System.out.println(standard);
+							String precedingTerm1 = splittedTerm[splittedTerm.length-2];
+							//String precedingTerm2= splittedTerm[splittedTerm.length-3];
+							//attributesShort.add(precedingTerm2+"/"+precedingTerm1+"/"+term);
+							attributesShort.add(precedingTerm1+"/"+term);
+						}else{
+							attributesShort.add(term);
+						}
+						
+					}
+					else if(standard.equals("rdf") || standard.equals("oai_dc") || standard.equals("qdc")|| standard.equals("ore")){
+						attributesShort.add(term);
 					}
 					else if((splittedTerm.length-2)>0){
 						String precedingTerm = splittedTerm[splittedTerm.length-2];
@@ -233,9 +245,6 @@ public class ChartCreator {
 					TreeMap<Category, ArrayList<Double>> paddedSeries = new TreeMap<Category, ArrayList<Double>>();
 					for(int i=0; i<x.size(); i++) {
 						
-//						String termLong = x.get(i);
-//						String[] splittedTerm = termLong.split("/");
-//						String term = splittedTerm[splittedTerm.length-1];
 						Category category = TermToCategoryMap.getCategory(repositoryName + "." + standard, x.get(i));
 						
 						if( paddedSeries.containsKey(category) ) {
@@ -268,8 +277,8 @@ public class ChartCreator {
 					if(datasetSummary.getCreationDates().size()==0) {
 						System.out.println("NO (ACCURATE) DATASETS IN REPOSITORY LEFT. WILL NOT CREATE PLOT!");
 					} else {
-						VectorGraphicsEncoder.saveVectorGraphic(chart, "./charts/" + repositoryName + "-" + standard + "-attributes-set", VectorGraphicsFormat.EPS);
-					    BitmapEncoder.saveBitmapWithDPI(chart, "./charts/" + repositoryName + "-" + standard + "-attributes-set", BitmapFormat.PNG, 300);						
+						VectorGraphicsEncoder.saveVectorGraphic(chart, outputPath + "/" + repositoryName + "-" + standard + "-attributes-set", VectorGraphicsFormat.EPS);
+					    BitmapEncoder.saveBitmapWithDPI(chart, outputPath + "/" + repositoryName + "-" + standard + "-attributes-set", BitmapFormat.PNG, 300);						
 					}
 
 				} catch (IOException e) {
@@ -332,24 +341,14 @@ public class ChartCreator {
 						portionsByYear.replace(year.toString(), portionsOfYear);
 					}	
 				}
-				
-//				//remove attributes never filled
-//				ArrayList<String> x = new ArrayList<String>();
-//				ArrayList<Double> y = new ArrayList<Double>();
-//				for(int i=0; i<attributes.size(); i++) {
-//					if(portions.get(i)!=0.0) {
-//						x.add(attributes.get(i));
-//						y.add(portions.get(i));
-//					}
-//				}
-				
+			
 				//plot
 				ExampleChart<CategoryChart> exampleChart = new BarChart("Portion of attributes set by year", "attributes", "% of attributes filled", attributes, portionsByYear, createIncreasingColorScheme(1));
 				CategoryChart chart = exampleChart.getChart();
 				try {
 					System.out.println("plotting ...");
-//					VectorGraphicsEncoder.saveVectorGraphic(chart, "./charts/" + repositoryName + "-" + standard + "-attributes-set-by-year", VectorGraphicsFormat.PDF);
-				    BitmapEncoder.saveBitmapWithDPI(chart, "./charts/" + repositoryName + "-" + standard + "-attributes-set-by-year", BitmapFormat.PNG, 300);
+//					VectorGraphicsEncoder.saveVectorGraphic(chart, outputPath + "/" + repositoryName + "-" + standard + "-attributes-set-by-year", VectorGraphicsFormat.PDF);
+				    BitmapEncoder.saveBitmapWithDPI(chart, outputPath + "/" + repositoryName + "-" + standard + "-attributes-set-by-year", BitmapFormat.PNG, 300);
 				} catch (IOException e) {
 					e.printStackTrace();
 				}

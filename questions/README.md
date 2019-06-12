@@ -1,4 +1,4 @@
-# Supplementary Material for XXX
+# Supplementary Material for the Creation of the Biodiversity Question Corpus
 
 ## Overview
 This repository contains scripts and example files for setting up an online survey where annotators assign textual phrases in a corpus of questions to information categories. This will result in an annotated question corpus that can be used as training data in research fields such as question answering or semantic search.  
@@ -27,7 +27,7 @@ python analyze_result.py -f first.csv second.csv third.csv -o out -c 9 -ct evalu
 
 ```
 
-The result file lsg____first__second__third.csv will contain the statistics including the overall inter-rater-agreement determined with Fleiss-Kappa and GWET's AC.
+The result file lsg____first__second__third.csv will contain the statistics including the overall inter-rater-agreement determined with Fleiss-Kappa and GWET's AC. 
 
 ## How to use it for a new domain?
 
@@ -45,6 +45,4 @@ In order to use these scripts for a new domain, you would need to
 10. run the analyze_result.py script to generate the statistics and the inter-rater-agreement
 
 ## How to further use these results?
-As you can see from our 'lsg____first__second__third.csv' file, the artifacts have different *P(i)* values, which is the observed agreement over all raters. It is up to you to define a threshold at which agreement you consider a rating as a valid category assignment. Usually, a *P(i)* > 0,6 can be considered as a good agreement.
-
-## Citation
+As you can see from our 'lsg____first__second__third.csv' file, the artifacts have different *P(i)* values, which is the observed agreement over all raters. It is up to you to define a threshold at which agreement you consider a rating as a valid category assignment. Usually, a *P(i)* > 0,6 can be considered as a good agreement. Our analysis script produces an xml file with all questions and annotations above a certain agreement threshold. By default, all annotations per question with an agreement above 0.6 will be returned.

@@ -34,12 +34,23 @@ public class TermToCategoryMap {
         //Datacite (datacite, datacite3, datacite4, oai_datacite, oai_datacite3)
         HashMap<String, Category> dciteMap = new HashMap<String, Category>();
         dciteMap.put("creator/creatorName", Category.PERSON);
-        dciteMap.put("resourceTypeGeneral", Category.TYPE);
+        dciteMap.put("creator/givenName", Category.PERSON);
+        dciteMap.put("creator/familyName", Category.PERSON);
+        dciteMap.put("creator/affiliation", Category.PERSON);
+        
         dciteMap.put("geoLocation/contributorType", Category.PERSON);
         dciteMap.put("contributor/contributorName", Category.PERSON);
+        dciteMap.put("contributors/contributor", Category.PERSON);
+        dciteMap.put("contributor/affiliation", Category.PERSON);
         dciteMap.put("formats/format", Category.TYPE);
+        dciteMap.put("resource/resourceType", Category.TYPE);
+        dciteMap.put("resourceType", Category.TYPE);
+        dciteMap.put("resourceTypeGeneral", Category.TYPE);
+        
         dciteMap.put("geoLocation/geoLocationPoint", Category.LOCATION);
         dciteMap.put("geoLocation/geoLocationBox", Category.LOCATION);
+        dciteMap.put("dates/date", Category.TIME);
+        
         termMap.put("figshare.oai_datacite", dciteMap);
         termMap.put("pangaea.datacite3", dciteMap);
         termMap.put("zenodo.datacite", dciteMap);
@@ -85,26 +96,29 @@ public class TermToCategoryMap {
         //ISO 19139 (iso19139)
         //https://inspire.ec.europa.eu/file/1705/download?token=iSTwpRWd
         HashMap<String, Category> isoMap = new HashMap<String, Category>();
-        isoMap.put("CI_Address/electronicMailAddress/gco:CharacterString", Category.PERSON);
-        isoMap.put("CI_ResponsibleParty/individualName/gco:CharacterString", Category.PERSON);
-        isoMap.put("CI_ResponsibleParty/organizationName/gco:CharacterString", Category.PERSON);
-        isoMap.put("CI_Date/date/gco:DateTime", Category.TIME);
-        isoMap.put("CI_Date/date/gco:Date", Category.TIME);
-        isoMap.put("extent/gml:TimePeriod/gml:beginPosition", Category.TIME);
-        isoMap.put("extent/gml:TimePeriod/gml:endPosition", Category.TIME);
         
-        isoMap.put("EX_GeographicBoundingBox/gmd:westBoundLongitude/gco:Decimal", Category.LOCATION);
-        isoMap.put("EX_GeographicBoundingBox/gmd:eastBoundLongitude/gco:Decimal", Category.LOCATION);
-        isoMap.put("EX_GeographicBoundingBox/gmd:southBoundLatidue/gco:Decimal", Category.LOCATION);
-        isoMap.put("EX_GeographicBoundingBox/gmd:northBoundLatidue/gco:Decimal", Category.LOCATION);
+        isoMap.put("electronicMailAddress/gco:CharacterString", Category.PERSON);
+        isoMap.put("individualName/gco:CharacterString", Category.PERSON);
+        isoMap.put("organizationName/gco:CharacterString", Category.PERSON);
+        isoMap.put("date/gco:DateTime", Category.TIME);
+        isoMap.put("date/gco:Date", Category.TIME);
+        isoMap.put("gml:TimePeriod/gml:beginPosition", Category.TIME);
+        isoMap.put("gml:TimePeriod/gml:endPosition", Category.TIME);
         
-        isoMap.put("MD_Format/name/gco:CharacterString", Category.TYPE);
+        isoMap.put("gmd:westBoundLongitude/gco:Decimal", Category.LOCATION);
+        isoMap.put("gmd:eastBoundLongitude/gco:Decimal", Category.LOCATION);
+        isoMap.put("gmd:southBoundLatidue/gco:Decimal", Category.LOCATION);
+        isoMap.put("gmd:northBoundLatidue/gco:Decimal", Category.LOCATION);
+        
+        isoMap.put("name/gco:CharacterString", Category.TYPE); //MD_Format/name/gco:CharacterString
         
         
-        isoMap.put("MD_CoverageDescription/attributeDescription/gco:RecordType", Category.QUALITY);
-        isoMap.put("units/gml:UnitDefinition/gml:name", Category.QUALITY);
+        isoMap.put("attributeDescription/gco:RecordType", Category.QUALITY);
+        isoMap.put("gml:UnitDefinition/gml:name", Category.QUALITY);
         
-        isoMap.put("MD_Band/descriptor/gco:CharacterString", Category.METHOD);
+        isoMap.put("descriptor/gco:CharacterString", Category.METHOD); //MD_Band/descriptor/gco:CharacterString
+        
+        
         
         termMap.put("pangaea.iso19139", isoMap);
         termMap.put("pangaea.iso19139.iodp", isoMap);
@@ -122,9 +136,7 @@ public class TermToCategoryMap {
         panMap.put("md:PI/md:firstName", Category.PERSON);
         panMap.put("md:PI/md:URI", Category.PERSON);
         panMap.put("md:PI/md:orcid", Category.PERSON);
-        //panMap.put("md:year", Category.TIME); citation
-        //panMap.put("md:dateTime", Category.TIME); citation
-        
+               
         panMap.put("md:temporal/md:minDateTime", Category.TIME);
         panMap.put("md:temporal/md:maxDateTime", Category.TIME);
         panMap.put("md:event/md:dateTime", Category.TIME);
@@ -145,7 +157,7 @@ public class TermToCategoryMap {
         panMap.put("md:elevation/md:min", Category.LOCATION);
         panMap.put("md:elevation/md:max", Category.LOCATION);
         
-        panMap.put("format", Category.TYPE);
+        panMap.put("md:technicalInfo/md:entry", Category.TYPE);
         
         panMap.put("md:parameter/md:name", Category.QUALITY);
         panMap.put("md:parameter/md:shortName", Category.QUALITY);
@@ -195,8 +207,8 @@ public class TermToCategoryMap {
         emlMap.put("taxonomicClassification/taxonRankValue", Category.ORGANISM);
         emlMap.put("taxonomicClassification/commonName", Category.ORGANISM);
         emlMap.put("dataset/methods", Category.METHOD);
-        emlMap.put("description/para", Category.METHOD); // sometimes also ENVIRONMENT information
-        emlMap.put("samplingDescription/para", Category.METHOD);      // sometimes also ENVIRONMENT information
+        emlMap.put("description/para", Category.METHOD); // methods/sampling/studyExtent/description/para (also ENVIRONMENT?) | methods/methodStep/description/para
+        emlMap.put("samplingDescription/para", Category.METHOD);      // methods/sampling/samplingDescription/para (description of one sample)
         emlMap.put("gbif/specimenPreservationMethod", Category.METHOD);
         emlMap.put("coverage", Category.LOCATION);
         emlMap.put("externallyDefinedFormat/formatName", Category.TYPE);
@@ -204,20 +216,13 @@ public class TermToCategoryMap {
         emlMap.put("physical/characterEncoding", Category.TYPE);
         emlMap.put("gbif/livingTimePeriod", Category.TIME);
         emlMap.put("jgtiCuratorialUnit/beginRange", Category.TIME);
-        emlMap.put("jgtiCuratorialUnit/endRange", Category.TIME);
+        emlMap.put("jgtiCuratorialUnit/endRange", Category.TIME);     
+        emlMap.put("studyAreaDescription/descriptor", Category.ENVIRONMENT); //(description of the entire study area, e.g., climate, samples are part of that)
         emlMap.put("descriptor/descriptorValue", Category.ENVIRONMENT);
-        
+             
         termMap.put("gbif.eml", emlMap);
         
-        //Common European Research Information Format (cerif)
-        //http://www.dcc.ac.uk/resources/metadata-standards/cerif-common-european-research-information-format
-        //https://www.eurocris.org/Uploads/Web%20pages/CERIF-1.3/Specifications/CERIF1.3_FDM.pdf
-        HashMap<String, Category> cerifMap = new HashMap<String, Category>();
-        cerifMap.put("cerif:cfPersId", Category.PERSON);
-        cerifMap.put("cerif:cfPersName", Category.PERSON);
-        cerifMap.put("cerif:cfName", Category.PERSON);
-        termMap.put("figshare.cerif", cerifMap);
-        
+         
         //Figshare Resource Description Framework (rdf)
         HashMap<String, Category> rdfMap = new HashMap<String, Category>();
         rdfMap.put("rdf:about", Category.PERSON);
@@ -225,21 +230,6 @@ public class TermToCategoryMap {
         rdfMap.put("vcard:familyName", Category.PERSON);
         termMap.put("figshare.rdf", rdfMap);
         
-        //Metadata Object Description Schema (mods)
-        //http://www.loc.gov/standards/mods/
-        HashMap<String, Category> modsMap = new HashMap<String, Category>();
-        modsMap.put("mods:publisher", Category.PERSON);
-        modsMap.put("mods:geographic", Category.LOCATION);
-        modsMap.put("mods:temporal", Category.TIME);
-        termMap.put("dryad.mets", modsMap);
-        
-        //Dryad ore (ore)
-        //Zenodo marc21
-        //Zenodo marcxml
-        HashMap<String, Category> oreMap = new HashMap<String, Category>();
-        termMap.put("dryad.ore", oreMap);
-        termMap.put("zenodo.marc21", oreMap);        
-        termMap.put("zenodo.marcxml", oreMap);        
     }
 	
 	/**
@@ -248,7 +238,6 @@ public class TermToCategoryMap {
 	 * @param term	the given term
 	 */
 	public static Category getCategory(String standard, String term) {
-		//System.out.println(term);
 		Category category = termMap.get(standard).get(term);
 		if(category==null) {
 			return Category.NONE;
