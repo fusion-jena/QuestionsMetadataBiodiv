@@ -80,9 +80,9 @@ py -m pip install pandas
 
 ```create_survey.py``` is a simple Command Line Interface (CLI) tool to read and extract data from a semicolon-separated CSV file and to
 write it into the ```LimeSurvey-XML-format```. The script has three options as input, ```-f```, ```-d``` and ```-ct```.
-The ```-f``` option takes the path to the CSV file as input. A folder named ```lsg_files``` - in which all LimeSurvey-XML files are saved - is automatically created in the same directory as the CSV file during the process.
-The ```-d``` option deletes this ```lsg_files``` folder if it already exist. If a folder named ```lsg_files``` already exists but the ```-d``` option isn't set, the program will print an error message to remove this folder from this directory or set the ```-d``` option and abort.
-The ```-ct``` option takes the path to a simple text file containing the categories and their descriptions. Each line has one category and its description separated by a vertical line ```|```. For more information see
+* The ```-f``` option takes the path to the CSV file as input. A folder named ```lsg_files``` - in which all LimeSurvey-XML files are saved - is automatically created in the same directory as the CSV file during the process.
+ * The ```-d``` option deletes this ```lsg_files``` folder if it already exist. If a folder named ```lsg_files``` already exists but the ```-d``` option isn't set, the program will print an error message to remove this folder from this directory or set the ```-d``` option and abort.
+ * The ```-ct``` option takes the path to a simple text file containing the categories and their descriptions. Each line has one category and its description separated by a vertical line ```|```. For more information see
 the ```Example categories files``` section.
 
 ### Example usage:

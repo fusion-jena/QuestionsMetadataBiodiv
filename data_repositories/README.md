@@ -90,15 +90,15 @@ python -m pip install xmltodict
 ## metadata_harvester.py
 
 ```metadata_harvester.py``` is a simple to use Command Line Interface (CLI) tool to harvest and extract metadata information from the five digital dataportals Dryad, GBIF, Pangaea, Zenodo and Figshare. By default the script returns a CSV that shows which record (one line) used which metadata information (marked by ```1``` (used) or ```0``` (not used)) and their corresponding dates. If now date was specified or a record didn't have a date, no date was taken (marked with ```None```). The script has nine options as input, ```-dp```, ```-mf```, ```-fs```, ```-lm```, ```-fl```, ```-hx```, ```-sf```, ```-sw``` and ```-ew```.
-```-dp``` specifies from which dataportal the metadata should be harvested. If a dataportal is specified that isn't part of the list of dataportals, an error is thrown.
-```-mf``` specifies from which metadata format of the corresponding dataportal the metadata information will be harvested. If a metadata format is specified that isn't part of the specified dataportal, an error is thrown. If no metadata format is specified, the metadata information of all metadata formats of the corresponding dataportal will be harvested.
-```-fs``` specifies whether the content of specific fields should be saved in an extra CSV file or not. Multiple fields are separated by commas. See the website of the corresponding dataportal for information about avaiable fields. Every field that was specified but did not appear in at least one record is printed at the end of the harvest.
-```-lm``` specifies the maximum number of harvested records. For example if set to 200, only the metadata information of the first 200 records are harvested. If set to 0, all records will be harvested (default).
-```-fl``` specifies if the full path to each metadata field should be saved instead of just the field itself.
-```-hx``` specifies a file in which the raw metadata from the dataportal is saved in XML format.
-```-sf``` prints the avaiable metadata formats for the specified dataportal. The results are saved in a directory called ```metadata``` that is automatically created in the directory from which the script is called.
-```-sw``` specifies how long the program will wait between the harvesting of each metadata format in seconds. By default it is set to 60 seconds.
-```-ew``` specifies how long the program will before it restarts if an exception occurs. By default it is set to 30 seconds.
+ * ```-dp``` specifies from which dataportal the metadata should be harvested. If a dataportal is specified that isn't part of the list of dataportals, an error is thrown.
+ * ```-mf``` specifies from which metadata format of the corresponding dataportal the metadata information will be harvested. If a metadata format is specified that isn't part of the specified dataportal, an error is thrown. If no metadata format is specified, the metadata information of all metadata formats of the corresponding dataportal will be harvested.
+ * ```-fs``` specifies whether the content of specific fields should be saved in an extra CSV file or not. Multiple fields are separated by commas. See the website of the corresponding dataportal for information about avaiable fields. Every field that was specified but did not appear in at least one record is printed at the end of the harvest.
+ * ```-lm``` specifies the maximum number of harvested records. For example if set to 200, only the metadata information of the first 200 records are harvested. If set to 0, all records will be harvested (default).
+ * ```-fl``` specifies if the full path to each metadata field should be saved instead of just the field itself.
+ * ```-hx``` specifies a file in which the raw metadata from the dataportal is saved in XML format.
+ * ```-sf``` prints the avaiable metadata formats for the specified dataportal. The results are saved in a directory called ```metadata``` that is automatically created in the directory from which the script is called.
+ * ```-sw``` specifies how long the program will wait between the harvesting of each metadata format in seconds. By default it is set to 60 seconds.
+ * ```-ew``` specifies how long the program will before it restarts if an exception occurs. By default it is set to 30 seconds.
 The name of the resulting CSV files are the date the harvest finished. An example of the first 550 records for each dataportal and metadata format can be found in the 'examples' directory.
 
 
@@ -152,7 +152,7 @@ def downloadMetadata():
 This is the ```main``` method that starts the harvest. There are two dictionaries, ```prefixDic``` and ```dateDic```. ```prefixDic``` contains the name of the dataportals and their corresponding metadata formats. ```dateDic``` contains the used date field for each metadata format and dataportal. Now, add at the bottom of the ```prefixDic``` dictionary the line
 
 ```python
-prefixDic[your_dataportal] = (metadataformat1, metadataformat2, metadataformat3, ...)
+prefixDic[your_dataportal] = (metadataformat1, metadataformat2, metadataformat3)
 ```
 
 (replace metadataformat1/2/3 with the metadata formats of your dataportal; the dataportal and metadata formats have to be in parentheses and separated by commas). After that, go to the bottom of the ```dateDic``` dictionary and add the line for each of your metadata formats:
