@@ -129,7 +129,7 @@ elif(dataportal == your_dataportal):
   metadata_url = "dataportal_url" + prefix
 ```
 
-(replace 'your_dataportal' with the name of your dataportal and 'dataportal_url' with the OAI-PMH URL of your dataportal without the metadata format). Your dataportal URL should look something like this:
+(replace ```your_dataportal``` with the name of your dataportal and ```dataportal_url``` with the OAI-PMH URL of your dataportal without the metadata format). Your dataportal URL should look something like this:
 
 ```www.your_dataportal.org/oai/request?verb=ListRecords&metadataPrefix=```.
 
@@ -140,7 +140,7 @@ elif(dataportal == your_dataportal):
   metadata_url = "dataportal_url_resumption_token" + prefix
 ```
 
-(replace 'dataportal_url_resumption_token' with the OAI-PMH resumption URL of your dataportal without the resumption token). Your dataportal resumption URL should look something like this:
+(replace ```dataportal_url_resumption_token``` with the OAI-PMH resumption URL of your dataportal without the resumption token). Your dataportal resumption URL should look something like this:
 
 ```www.your_dataportal.org/oai/request?verb=ListRecords&resumptionToken=```.
 
@@ -156,7 +156,7 @@ This is the ```main``` method that starts the harvest. There are two dictionarie
 prefixDic[your_dataportal] = (metadataformat1, metadataformat2, metadataformat3, ...)
 ```
 
-(replace metadataformat1/2/3 with the metadata formats of your dataportal; the dataportal and metadata formats have to be in parentheses and separated by commas). After that, go to the bottom of the ```dateDic``` dictionary and add the line for each of your metadata formats:
+(replace ```metadataformat1/2/3``` with the metadata formats of your dataportal; the dataportal and metadata formats have to be in parentheses and separated by commas). After that, go to the bottom of the ```dateDic``` dictionary and add the line for each of your metadata formats:
 
 ```python
 dateDic[your_dataportal][metadataformat] = "no_date"
