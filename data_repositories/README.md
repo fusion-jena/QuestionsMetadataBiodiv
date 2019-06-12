@@ -99,6 +99,7 @@ python -m pip install xmltodict
  * ```-sf``` prints the avaiable metadata formats for the specified dataportal. The results are saved in a directory called ```metadata``` that is automatically created in the directory from which the script is called.
  * ```-sw``` specifies how long the program will wait between the harvesting of each metadata format in seconds. By default it is set to 60 seconds.
  * ```-ew``` specifies how long the program will before it restarts if an exception occurs. By default it is set to 30 seconds.
+
 The name of the resulting CSV files are the date the harvest finished. An example of the first 550 records for each dataportal and metadata format can be found in the 'examples' directory.
 
 
@@ -152,13 +153,13 @@ def downloadMetadata():
 This is the ```main``` method that starts the harvest. There are two dictionaries, ```prefixDic``` and ```dateDic```. ```prefixDic``` contains the name of the dataportals and their corresponding metadata formats. ```dateDic``` contains the used date field for each metadata format and dataportal. Now, add at the bottom of the ```prefixDic``` dictionary the line
 
 ```python
-prefixDic[your_dataportal] = (metadataformat1, metadataformat2, metadataformat3)
+prefixDic[your_dataportal] = (metadataformat1, metadataformat2, metadataformat3, ...)
 ```
 
 (replace metadataformat1/2/3 with the metadata formats of your dataportal; the dataportal and metadata formats have to be in parentheses and separated by commas). After that, go to the bottom of the ```dateDic``` dictionary and add the line for each of your metadata formats:
 
 ```python
-dateDic[your_dataportal][metadataformat] = "no_date
+dateDic[your_dataportal][metadataformat] = "no_date"
 ```
 
 If you want to use a specific field for the date, just replace ```no_date``` with the field of your choice. If you want to add a new metadata format to an existing dataportal, follow the previous instructions starting after adding the dataportal URLs. However, instead of creating a new dictionary, just add your metadata format to the existing list. The same goes if you want to change the date field of an existing metadata format. Simply go to the ```dateDic``` dictionary and replace the currently used date field with yours.
