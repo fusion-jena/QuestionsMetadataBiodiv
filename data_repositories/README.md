@@ -38,7 +38,7 @@ or
 py
 ```
 
-and check the displayed version in the [Python] shell. Type:
+and check the displayed version in the ```Python``` shell. Type:
 
 ```shell
 exit()
@@ -64,7 +64,7 @@ or
 python -m pip install requests
 ```
 
-(whichever uses the correct [Python] version).
+(whichever uses the correct ```Python``` version).
 
 
 ### XmlToDict
@@ -81,7 +81,7 @@ or
 python -m pip install xmltodict
 ```
 
-(again, whichever uses the correct [Python] version).
+(again, whichever uses the correct ```Python``` version).
 
 
 
