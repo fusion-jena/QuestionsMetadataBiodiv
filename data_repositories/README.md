@@ -98,7 +98,7 @@ python -m pip install xmltodict
  * ```-hx``` specifies a file in which the raw metadata from the dataportal is saved in XML format.
  * ```-sf``` prints the avaiable metadata formats for the specified dataportal. The results are saved in a directory called ```metadata``` that is automatically created in the directory from which the script is called.
  * ```-sw``` specifies how long the program will wait between the harvesting of each metadata format in seconds. By default it is set to 60 seconds.
- * ```-ew``` specifies how long the program will wait before it restarts if an exception occurs. By default it is set to 30 seconds.
+ * ```-ew``` specifies how long the program will wait before it restarts if an exception occurs in seconds. By default it is set to 30 seconds.
 
 The name of the resulting CSV files are the date the harvest finished. An example of the first 550 records for each dataportal and metadata format can be found in the 'examples' directory.
 
