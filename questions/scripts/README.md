@@ -155,45 +155,45 @@ py analyze_result.py -f first.csv second.csv third.csv -o result_folder -c 9 -ct
 
 or for the analyze_result.py specificially
 
-```evaluation_categories.txt```
-\|-----------------------------|
-\|category1                    |
-\|category2                    |
-\|category3                    |
-\|category4                    |
-\|category5                    |
-\|category6                    |
-\|category7                    |
-\|category8                    |
-\|category9                    |
-\|category10                   |
-\|                             |
-\|                             |
-\|                             |
-\|                             |
-\|-----------------------------|
+```evaluation_categories.txt```  
+\|-----------------------------|  
+\|category1                    |  
+\|category2                    |  
+\|category3                    |  
+\|category4                    |  
+\|category5                    |  
+\|category6                    |  
+\|category7                    |  
+\|category8                    |  
+\|category9                    |  
+\|category10                   |  
+\|                             |  
+\|                             |  
+\|                             |  
+\|                             |  
+\|-----------------------------|  
 
 
 
 # Example 'custom' file
 
 ```custom.txt```
-\|--------------------------------------------|
-\|category1=keyword1_1,keyword1_2             |
-\|category2=keyword2_1,keyword2_2,keyword2_3  |
-\|category3=keyword3_1                        |
-\|category4=keyword4_1,keyword4_2             |
-\|                                            |
-\|                                            |
-\|                                            |
-\|                                            |
-\|                                            |
-\|                                            |
-\|                                            |
-\|                                            |
-\|                                            |
-\|                                            |
-\|--------------------------------------------|
+\|--------------------------------------------|  
+\|category1=keyword1_1,keyword1_2             |  
+\|category2=keyword2_1,keyword2_2,keyword2_3  |  
+\|category3=keyword3_1                        |  
+\|category4=keyword4_1,keyword4_2             |  
+\|                                            |  
+\|                                            |  
+\|                                            |  
+\|                                            |  
+\|                                            |  
+\|                                            |  
+\|                                            |  
+\|                                            |  
+\|                                            |  
+\|                                            |  
+\|--------------------------------------------|  
 
 
 
