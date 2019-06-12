@@ -50,7 +50,7 @@ to exit the ```Python``` shell.
 ```Pip``` is used in this instruction to install the ```Requests``` and ```XmlToDict``` packages.
 
 
-### Requests: HTTP for Humans™
+### Requests: HTTP for Humans
 
 ```Requests: HTTP for Humans``` is a third party ```Python``` tool with which you can easily POST and GET data of HTTP connections without the need for manual labor. To install the ```Requests``` module, simple type:
 
