@@ -137,44 +137,44 @@ py analyze_result.py -f first.csv second.csv third.csv -o result_folder -c 9 -ct
 
 ```creation_categories.txt```  
 <pre>
-\|-----------------------------|  
-\|category1\|description1      |  
-\|category2\|description2      |  
-\|category3\|description3      |  
-\|category4\|description4      |  
-\|category5\|description5      |  
-\|category6\|description6      |  
-\|category7\|description7      |  
-\|category8\|description8      |  
-\|category9\|description9      |  
-\|category10\|description10    |  
-\|                             |  
-\|                             |  
-\|                             |  
-\|                             |  
-\|-----------------------------|  
+|-----------------------------|  
+|category1|description1      |  
+|category2|description2      |  
+|category3|description3      |  
+|category4|description4      |  
+|category5|description5      |  
+|category6|description6      |  
+|category7|description7      |  
+|category8|description8      |  
+|category9|description9      |  
+|category10|description10    |  
+|                             |  
+|                             |  
+|                             |  
+|                             |  
+|-----------------------------|  
 </pre>
 
 or for the analyze_result.py specificially
 
 ```evaluation_categories.txt```  
 <pre>
-\|-----------------------------|  
-\|category1                    |  
-\|category2                    |  
-\|category3                    |  
-\|category4                    |  
-\|category5                    |  
-\|category6                    |  
-\|category7                    |  
-\|category8                    |  
-\|category9                    |  
-\|category10                   |  
-\|                             |  
-\|                             |  
-\|                             |  
-\|                             |  
-\|-----------------------------|  
+|-----------------------------|  
+|category1                    |  
+|category2                    |  
+|category3                    |  
+|category4                    |  
+|category5                    |  
+|category6                    |  
+|category7                    |  
+|category8                    |  
+|category9                    |  
+|category10                   |  
+|                             |  
+|                             |  
+|                             |  
+|                             |  
+|-----------------------------|  
 </pre>
 
 
@@ -183,22 +183,22 @@ or for the analyze_result.py specificially
 
 ```custom.txt```  
 <pre>
-\|--------------------------------------------|  
-\|category1=keyword1_1,keyword1_2             |  
-\|category2=keyword2_1,keyword2_2,keyword2_3  |  
-\|category3=keyword3_1                        |  
-\|category4=keyword4_1,keyword4_2             |  
-\|                                            |  
-\|                                            |  
-\|                                            |  
-\|                                            |  
-\|                                            |  
-\|                                            |  
-\|                                            |  
-\|                                            |  
-\|                                            |  
-\|                                            |  
-\|--------------------------------------------|  
+|--------------------------------------------|  
+|category1=keyword1_1,keyword1_2             |  
+|category2=keyword2_1,keyword2_2,keyword2_3  |  
+|category3=keyword3_1                        |  
+|category4=keyword4_1,keyword4_2             |  
+|                                            |  
+|                                            |  
+|                                            |  
+|                                            |  
+|                                            |  
+|                                            |  
+|                                            |  
+|                                            |  
+|                                            |  
+|                                            |  
+|--------------------------------------------|  
 </pre>
 
 
