@@ -171,8 +171,8 @@ kp.calculateFleissKappa_GWET(p_value, pei_value)
 ```
 
 Depending on the second parameter the method calculates the Fleiss' Kappa or GWET value:
- * Fleiss' Kappa: kp.calculateFleissKappa_GWET(p_value, pe_value)
- * GWET: kp.calculateFleissKappa_GWET(p_value, peI_value)
+ * Fleiss' Kappa: ```kp.calculateFleissKappa_GWET(p_value, pe_value)```
+ * GWET: ```kp.calculateFleissKappa_GWET(p_value, peI_value)```
 
 
 -----------------------------
@@ -187,4 +187,4 @@ The method returns a list containing the Fleiss' Kappa and GWET values:
  * GWET: ```calculateFleissKappa_GWET_Matrix(dataMatrix)[1]```
 
 Example matrix with five categories, three nouns and four participants:
- * dataMatrix = [[2,2,0,0,0],[1,0,1,1,1],[0,1,0,1,2]]
+ * ```dataMatrix = [[2,2,0,0,0],[1,0,1,1,1],[0,1,0,1,2]]```
