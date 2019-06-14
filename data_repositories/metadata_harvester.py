@@ -30,6 +30,8 @@ dateDic = {}
 dateFound = None
 #variable counting the number of parsed records for the 'limit' option
 limit_counter = None
+#list saving the raw metadata
+xmlList = list()
 
 
 #method for getting the command line arguments
@@ -49,13 +51,16 @@ def commandLine():
     global showformats
 
     #command line arguments
-    parser = argparse.ArgumentParser(description="Download and check metadata of datasets from a dataportal.")
-    parser.add_argument("-dp", "--dataportal", help="Choose from what dataportal the metadata will be downloaded (options: dryad, gbif, pangaea, zenodo, figshare)", required=True)
-    parser.add_argument("-mf", "--metadataformat", help="Specify from which metadata format the metadata will be downloaded (default: metadata from all formats will be downloaded)")
+    parser = argparse.ArgumentParser(description="Harvest and check metadata of datasets from a dataportal.")
+    parser.add_argument("-dp", "--dataportal", help="Choose from what dataportal the metadata will be harvested (options: dryad, gbif, pangaea, zenodo, figshare)", required=True)
+    parser.add_argument("-mf", "--metadataformat", help="Specify from which metadata format the metadata will be harvested (default: metadata from all formats will be downloaded)")
     parser.add_argument("-fs", "--fields", help="Set whether the content of specific fields should also be saved in an extra CSV file (see the website of the respective datarepositories for avaiable fields; multiple fields are separated by comma; default: the content of no field will be saved)")
-    parser.add_argument("-lm", "--limit", help="Only the first <limit> metadata sets will be downloaded (default: 0 {= all metadata sets})", type=int, default=0)
+    parser.add_argument("-lm", "--limit", help="Only the first <limit> metadata sets will be harvested (default: 0 {= all metadata sets})", type=int, default=0)
     parser.add_argument("-fl", "--full", help="Save the whole path of a field", action="store_true")
+    parser.add_argument("-hx", "--harvestxml", help="Save the raw metadata in an extra XML file")
     parser.add_argument("-sf", "--showformats", help="Show metadata format for the given dataportal", action="store_true")
+    parser.add_argument("-sw", "--startwait", help="Set the time the program waits between the harvesting of each metadata format in seconds (default: 60)", type=int, default=60)
+    parser.add_argument("-ew", "--errorwait", help="Set the time the program waits if an exception occurs in seconds (default: 30)", type=int, default=30)
 
     args = parser.parse_args()
 
@@ -64,16 +69,27 @@ def commandLine():
     fields = args.fields
     limit = args.limit
     full = args.full
+    harvestxml = args.harvestxml
     showformats = args.showformats
+    startwait = args.startwait
+    errorwait = args.errorwait
 
     #set the list of fields which contents will be saved (if specified by the user)
     if(fields != None):
         fields_list = fields.split(",")
 
+    if(startwait < 0):
+        startwait = 60
+
+    if(errorwait < 0):
+        errorwait = 30
+
 
 
 #method for download the metadata of a given dataportal and, optionally, a given metadata format
 def downloadMetadata():
+
+    global xmlList
 
     #dictionary containing the fields of the given metadata format
     global metadataDic
@@ -161,6 +177,7 @@ def downloadMetadata():
 
     #loop over each metadata format of the given dataportal
     for prefix in prefixDic[dataportal]:
+        del xmlList[:]
         #set index for counting resumption token to 0
         tokenIndex = 0
         #set count for 'limit' option to 0
@@ -183,7 +200,7 @@ def downloadMetadata():
                 fieldsDic[prefix] = {}
 
             #wait 60 seconds between each download of a metadata format to prevent connection issues
-            for timer in range(60, 0, -1):
+            for timer in range(startwait, 0, -1):
                 time.sleep(1)
                 print("\033[K -- Sleep for " + str(timer) + " second(s)", end="\r")
 
@@ -205,7 +222,7 @@ def downloadMetadata():
                     #and then resume from the last resumption token and try again
                     print()
                     print(" -> Exception was thrown. <-")
-                    for timer in range(30, 0, -1):
+                    for timer in range(errorwait, 0, -1):
                         time.sleep(1)
                         print("\033[K  --- Restarting in " + str(timer) + " second(s)", end="\r")
 
@@ -225,6 +242,8 @@ def downloadMetadata():
 
 
 def requestMetadata(prefix, resumptionToken, firstPage=False):
+
+    global xmlList
 
     #dictionary containing the fields of the given metadata format
     global metadataDic
@@ -290,6 +309,7 @@ def requestMetadata(prefix, resumptionToken, firstPage=False):
 
             #request the records of each following page (each page contains 100 records)
             metadata_request = requests.get(metadata_url).text
+            xmlList.append(metadata_request)
             #transform the requested xml tree to a dictionary
             metadata_content = xmltodict.parse(metadata_request.encode("utf-8"))
 
@@ -623,6 +643,10 @@ def saveMetadata(prefix):
     #write the results to the CSV file
     with open("metadata/" + dataportal + "/" + prefix + "/" + today + ".csv", "w") as metadataWriter:
         metadataWriter.write("\n".join(metadata_str_list))
+
+    if(harvestxml != None):
+        with open(harvestxml, "w") as harvestWriter:
+            harvestWriter.write("\n".join(xmlList))
 
 
 
