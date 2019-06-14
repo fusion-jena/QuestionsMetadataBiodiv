@@ -208,3 +208,4 @@ or for the analyze_result.py specificially
 On some systems the analyze_result.py script has to be in ```modules``` folder to find and use the fleisskappa module, else it will throw
 an error that the fleisskappa module can't be found. If that's the case, simply drag the analyze_result.py script in the ```modules``` folder
 and run the program as usual.
+
