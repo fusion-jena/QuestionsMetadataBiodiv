@@ -55,7 +55,7 @@ def commandLine():
     categories = args.category
     custom = args.custom
     threshold = args.threshold
-    output = args.out + "/"
+    output = (args.out + "/").replace("//", "/")
 
     if(custom != None):
         customCheck = True
@@ -82,7 +82,7 @@ def commandLine():
             #increase the number of participants by the number of lines in the CSV file (excluding the first line)
             participants = participants + len(surveys[csv_file]["id. Response ID"])
     except:
-        raise KeyError("The program couldn't process the survey file '" + csv_file + "'. Please make sure to input the right survey files and that each file contain the field 'id. Response ID'.")
+        raise KeyError("The program couldn't process the survey file '" + csv_file + "'. Please make sure to input the right survey files and that each file contains the field 'id. Response ID'.")
 
     with open(categories, "r") as cfile:
         content = cfile.readlines()
@@ -236,22 +236,24 @@ def parseResults(surveys):
 
                                answer = str(answer)
                                #if the answer is not empty, save the other/custom category
+                               #the custom category will only be saved if the other cateory isn't already 0
                                if(customCheck and answer != "nan"):
                                     checked = False
                                     for customCat in customDic.keys():
 
                                         if any(custom.rstrip("\n").lower() in answer.lower() for custom in customDic[customCat]):
-                                            checked = True
-                                            try:
-                                               #increase the local and overall score of the given category by 1
-                                                points[customCat] = points[customCat] + 1
-                                                allpoints[customCat] = allpoints[customCat] + 1
-                                                #decrease the local and overall score of the OTHER category by 1
-                                                points["Other"] = points["Other"] - 1
-                                                allpoints["Other"] = allpoints["Other"] - 1
-                                                break
-                                            except:
-                                                raise IndexError("The program couldn't evaluate the category '" + customCat + "'. Please make sure that this category is contained in the 'categories' file.")
+                                            if(points["Other"] != 0):
+                                                checked = True
+                                                try:
+                                                    #increase the local and overall score of the custom category by 1
+                                                    points[customCat] = points[customCat] + 1
+                                                    allpoints[customCat] = allpoints[customCat] + 1
+                                                    #decrease the local and overall score of the other category by 1
+                                                    points["Other"] = points["Other"] - 1
+                                                    allpoints["Other"] = allpoints["Other"] - 1
+                                                    break
+                                                except:
+                                                    raise IndexError("The program couldn't evaluate the category '" + customCat + "'. Please make sure that this category is contained in the 'categories' file.")
                                     if(not checked):
                                         others = others + answer + "::"
                                elif(answer != "nan"):
