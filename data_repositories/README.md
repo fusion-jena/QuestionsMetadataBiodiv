@@ -95,7 +95,7 @@ python -m pip install xmltodict
  * ```-fs``` specifies whether the content of specific fields should be saved in an extra CSV file or not. Multiple fields are separated by commas. See the website of the corresponding dataportal for information about avaiable fields. Every field that was specified but did not appear in at least one record is printed at the end of the harvest.
  * ```-lm``` specifies the maximum number of harvested records. For example if set to 200, only the metadata information of the first 200 records are harvested. If set to 0, all records will be harvested (default).
  * ```-fl``` specifies if the full path to each metadata field should be saved instead of just the field itself.
- * ```-hx``` specifies a file in which the raw metadata from the dataportal is saved in XML format.
+ * ```-hx``` specifies a directory in which the raw metadata from the dataportal is saved in XML format.
  * ```-sf``` prints the avaiable metadata formats for the specified dataportal. The results are saved in a directory called ```metadata``` that is automatically created in the directory from which the script is called.
  * ```-sw``` specifies how long the program will wait between the harvesting of each metadata format in seconds. By default it is set to 60 seconds.
  * ```-ew``` specifies how long the program will wait before it restarts if an exception occurs in seconds. By default it is set to 30 seconds.
