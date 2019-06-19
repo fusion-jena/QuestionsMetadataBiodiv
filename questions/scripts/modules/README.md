@@ -11,7 +11,7 @@ Based on the caluclations by [Joseph L. Fleiss](https://en.wikipedia.org/wiki/Fl
 To install this module successfully, you need a ```Python3+``` distribution and an other third-party tool, called ```NumPy```.
 How to install these tools, will be explained in the following lines:
 
-## Instructions for Windows
+## Instructions for Windows and Linux
 
 ### Python
 
@@ -44,50 +44,6 @@ to exit the ```Python``` shell.
 ### NumPy
 
 ```NumPy``` is a [Python] package for efficiently computing array objects and other algebra calculations. To install ```NumPy```, type:
-
-```shell
-python -m pip install numpy
-```
-
-or
-
-```shell
-py -m pip install numpy
-```
-
-(whichever uses the correct ```Python``` version).
-
-
-
-## Instructions for Linux
-
-### Python
-
-To install ```Python3+```, open your Command Prompt (called ```shell``` from now on) and type:
-
-```shell
-sudo apt-get install python3
-```
-
-To check if ```Python``` was successfully installed, type:
-
-```shell
-python
-```
-
-or
-
-```shell
-py
-```
-
-```Pip``` - a package management system used to install ```Python``` software packages - is already installed in all ```Python``` versions >= 3.4.
-```Pip``` is used in this instruction to install the ```NumPy``` package.
-
-
-### NumPy
-
-```NumPy``` is a ```Python``` package for efficiently computing array objects and other algebra calculations. To install ```NumPy```, type:
 
 ```shell
 python -m pip install numpy
