@@ -97,7 +97,7 @@ kp.calculatePI(participantNumber, sumN)
 
 
 -----------------------------
-Caluclation of the P value given a list of ```P(i)``` values and the number of nouns used in the survey, run:
+Caluclation of the ```P``` value given a list of ```P(i)``` values and the number of nouns used in the survey, run:
 
 ```python
 kp.caluclateP(pi_value_list, nounNumber)
@@ -105,7 +105,7 @@ kp.caluclateP(pi_value_list, nounNumber)
 
 
 -----------------------------
-Calculation of the Pe value, the ```Pe(I)``` value, the ```p(j)``` values for each category and the ```p(j)(I)``` values for each category given a list or dictionary containing the overall scores of each category for all nouns, the number of nouns, the number of categories and the number of participants, run:
+Calculation of the ```Pe``` value, the ```Pe(I)``` value, the ```p(j)``` values for each category and the ```p(j)(I)``` values for each category given a list or dictionary containing the overall scores of each category for all nouns, the number of nouns, the number of categories and the number of participants, run:
 
 ```python
 kp.calculatePE_PEI(overall_score_list, participantNumber, nounNumber, categoryNumber)
@@ -126,7 +126,7 @@ Non-matrix calculation of the ```Fleiss' Kappa``` and ```GWET``` values given th
 kp.calculateFleissKappa_GWET(p_value, pei_value)
 ```
 
-Depending on the second parameter the method calculates the Fleiss' Kappa or GWET value:
+Depending on the second parameter the method calculates the ```Fleiss' Kappa``` or ```GWET``` value:
  * ```Fleiss' Kappa```: ```kp.calculateFleissKappa_GWET(p_value, pe_value)```
  * ```GWET```: ```kp.calculateFleissKappa_GWET(p_value, peI_value)```
 
@@ -138,7 +138,7 @@ Matrix calculation for the ```Fleiss' Kappa``` and ```GWET``` values given a two
 kp.calculateFleissKappa_GWET_Matrix(dataMatrix)
 ```
 
-The method returns a list containing the Fleiss' Kappa and GWET values:
+The method returns a list containing the ```Fleiss' Kappa``` and ```GWET``` values:
  * ```Fleiss' Kappa```: ```calculateFleissKappa_GWET_Matrix(dataMatrix)[0]```
  * ```GWET```: ```calculateFleissKappa_GWET_Matrix(dataMatrix)[1]```
 
