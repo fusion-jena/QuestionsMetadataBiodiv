@@ -4,6 +4,7 @@ import xmltodict
 import datetime
 import time
 import os
+import xml.dom.minidom
 
 
 #variable specifying the dataportal
@@ -32,6 +33,10 @@ dateFound = None
 limit_counter = None
 #list saving the raw metadata
 xmlList = list()
+#variable specifying the waiting time for a metadata format
+startwait = None
+#variable specifying the waiting time if an exception occurs
+errorwait = None
 
 
 #method for getting the command line arguments
@@ -47,8 +52,14 @@ def commandLine():
     global limit
     #variable specifying if the full path to the field should be saved
     global full
+    #variable specifying the path to the output XML file
+    global harvestxml
     #variable specifying if the metadata formats for the given data portal should be printed
     global showformats
+    #variable specifying the waiting time for a metadata format
+    global startwait
+    #variable specifying the waiting time if an exception occurs
+    global errorwait
 
     #command line arguments
     parser = argparse.ArgumentParser(description="Harvest and check metadata of datasets from a dataportal.")
@@ -57,7 +68,7 @@ def commandLine():
     parser.add_argument("-fs", "--fields", help="Set whether the content of specific fields should also be saved in an extra CSV file (see the website of the respective datarepositories for avaiable fields; multiple fields are separated by comma; default: the content of no field will be saved)")
     parser.add_argument("-lm", "--limit", help="Only the first <limit> metadata sets will be harvested (default: 0 {= all metadata sets})", type=int, default=0)
     parser.add_argument("-fl", "--full", help="Save the whole path of a field", action="store_true")
-    parser.add_argument("-hx", "--harvestxml", help="Save the raw metadata in an extra XML file")
+    parser.add_argument("-hx", "--harvestxml", help="Path to output directory to save the raw metadata in an extra XML file")
     parser.add_argument("-sf", "--showformats", help="Show metadata format for the given dataportal", action="store_true")
     parser.add_argument("-sw", "--startwait", help="Set the time the program waits between the harvesting of each metadata format in seconds (default: 60)", type=int, default=60)
     parser.add_argument("-ew", "--errorwait", help="Set the time the program waits if an exception occurs in seconds (default: 30)", type=int, default=30)
@@ -69,7 +80,7 @@ def commandLine():
     fields = args.fields
     limit = args.limit
     full = args.full
-    harvestxml = args.harvestxml
+    harvestxml = (args.harvestxml + "/").replace("//", "/")
     showformats = args.showformats
     startwait = args.startwait
     errorwait = args.errorwait
@@ -77,6 +88,9 @@ def commandLine():
     #set the list of fields which contents will be saved (if specified by the user)
     if(fields != None):
         fields_list = fields.split(",")
+
+    if(harvestxml != None and not os.path.exists(harvestxml)):
+        os.makedirs(harvestxml)
 
     if(startwait < 0):
         startwait = 60
@@ -309,7 +323,9 @@ def requestMetadata(prefix, resumptionToken, firstPage=False):
 
             #request the records of each following page (each page contains 100 records)
             metadata_request = requests.get(metadata_url).text
-            xmlList.append(metadata_request)
+            xmlFormatter = xml.dom.minidom.parseString(metadata_request)
+            prettyXML = xmlFormatter.toprettyxml()
+            xmlList.append(prettyXML)
             #transform the requested xml tree to a dictionary
             metadata_content = xmltodict.parse(metadata_request.encode("utf-8"))
 
@@ -645,7 +661,13 @@ def saveMetadata(prefix):
         metadataWriter.write("\n".join(metadata_str_list))
 
     if(harvestxml != None):
-        with open(harvestxml, "w") as harvestWriter:
+        if(not os.path.exists(harvestxml + dataportal)):
+            os.makedirs(harvestxml + dataportal)
+
+        if(not os.path.exists(harvestxml + dataportal + "/" + prefix)):
+            os.makedirs(harvestxml + dataportal + "/" + prefix)
+
+        with open(harvestxml + dataportal + "/" + prefix + "/" + today + ".xml", "w") as harvestWriter:
             harvestWriter.write("\n".join(xmlList))
 
 
