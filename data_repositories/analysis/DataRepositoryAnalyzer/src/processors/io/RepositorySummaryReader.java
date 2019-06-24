@@ -89,7 +89,7 @@ public class RepositorySummaryReader {
 			int rowsWithoutDate = 0;
 			int row = 0;
 			int rowsWithZeroEntriesOnly = 0;
-			int rowsWithNoneInDate = 0;
+			int rowsWith_HeaderInDate = 0;
 			
 			int countValid =0;
 			int countTotal =0;
@@ -140,12 +140,12 @@ public class RepositorySummaryReader {
 						//datasets with no attribute set are ignored
 						if(!allEntriesZero) {
 							
-							if(!dateString.contains("None")) {
+							if(!dateString.contains("_header")) {
 								boolean success = datasetSummary.addEntry(datasetId, setDatasetAttributes, creationDate);
 								countValid++;
 								if(!success) { return null; }
 							} else {
-								rowsWithNoneInDate++;
+								rowsWith_HeaderInDate++;
 							}
 					
 						} else {
@@ -161,7 +161,7 @@ public class RepositorySummaryReader {
 			System.out.println("valid entries: " + countValid + " out of " + countTotal+ " total entries");
 			System.out.println("Entries without date: " + rowsWithoutDate);
 			System.out.println("Entries with all values set 0: " + rowsWithZeroEntriesOnly);
-			System.out.println("Entries with None in date: " + rowsWithNoneInDate);
+			System.out.println("Entries with _header in date: " + rowsWith_HeaderInDate);
 			return datasetSummary;
 			
 		} catch (IOException e) {

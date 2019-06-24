@@ -46,6 +46,7 @@ public class ChartCreator {
 		 */
 		plotDatasetsPerYear(repositorySummaries);
 		
+		
 		/**
 		 * PORTION OF ATTRIBUTES FILLED
 		 */
@@ -153,7 +154,7 @@ public class ChartCreator {
 //		    BitmapEncoder.saveBitmapWithDPI(chart, "./Sample_Chart_300_DPI", BitmapFormat.PNG, 300);
 //	    	VectorGraphicsEncoder.saveVectorGraphic(chart, "./Sample_Chart", VectorGraphicsFormat.SVG);
 			System.out.println("plotting ...");
-			VectorGraphicsEncoder.saveVectorGraphic(chart, outputPath + "/DatasetsPerYear", VectorGraphicsFormat.EPS);
+			VectorGraphicsEncoder.saveVectorGraphic(chart, outputPath + "/" + firstRepositoryName + "-datasets-per-year", VectorGraphicsFormat.EPS);
 		    BitmapEncoder.saveBitmapWithDPI(chart, outputPath + "/" + firstRepositoryName + "-datasets-per-year", BitmapFormat.PNG, 300);
 		} catch (IOException e) {
 			e.printStackTrace();
@@ -245,6 +246,9 @@ public class ChartCreator {
 					TreeMap<Category, ArrayList<Double>> paddedSeries = new TreeMap<Category, ArrayList<Double>>();
 					for(int i=0; i<x.size(); i++) {
 						
+//						String termLong = x.get(i);
+//						String[] splittedTerm = termLong.split("/");
+//						String term = splittedTerm[splittedTerm.length-1];
 						Category category = TermToCategoryMap.getCategory(repositoryName + "." + standard, x.get(i));
 						
 						if( paddedSeries.containsKey(category) ) {
@@ -341,7 +345,17 @@ public class ChartCreator {
 						portionsByYear.replace(year.toString(), portionsOfYear);
 					}	
 				}
-			
+				
+//				//remove attributes never filled
+//				ArrayList<String> x = new ArrayList<String>();
+//				ArrayList<Double> y = new ArrayList<Double>();
+//				for(int i=0; i<attributes.size(); i++) {
+//					if(portions.get(i)!=0.0) {
+//						x.add(attributes.get(i));
+//						y.add(portions.get(i));
+//					}
+//				}
+				
 				//plot
 				ExampleChart<CategoryChart> exampleChart = new BarChart("Portion of attributes set by year", "attributes", "% of attributes filled", attributes, portionsByYear, createIncreasingColorScheme(1));
 				CategoryChart chart = exampleChart.getChart();
@@ -349,6 +363,7 @@ public class ChartCreator {
 					System.out.println("plotting ...");
 //					VectorGraphicsEncoder.saveVectorGraphic(chart, outputPath + "/" + repositoryName + "-" + standard + "-attributes-set-by-year", VectorGraphicsFormat.PDF);
 				    BitmapEncoder.saveBitmapWithDPI(chart, outputPath + "/" + repositoryName + "-" + standard + "-attributes-set-by-year", BitmapFormat.PNG, 300);
+				    VectorGraphicsEncoder.saveVectorGraphic(chart, outputPath + "/" + repositoryName + "-" + standard + "-attributes-set-by-year", VectorGraphicsFormat.EPS);
 				} catch (IOException e) {
 					e.printStackTrace();
 				}

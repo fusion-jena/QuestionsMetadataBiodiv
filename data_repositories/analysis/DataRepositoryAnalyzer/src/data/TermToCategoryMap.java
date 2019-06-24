@@ -97,6 +97,29 @@ public class TermToCategoryMap {
         //https://inspire.ec.europa.eu/file/1705/download?token=iSTwpRWd
         HashMap<String, Category> isoMap = new HashMap<String, Category>();
         
+        /*  three levels of hierarchy is too much!!! */
+        /*isoMap.put("CI_Address/electronicMailAddress/gco:CharacterString", Category.PERSON);
+        isoMap.put("CI_ResponsibleParty/individualName/gco:CharacterString", Category.PERSON);
+        isoMap.put("CI_ResponsibleParty/organizationName/gco:CharacterString", Category.PERSON);
+        isoMap.put("CI_Date/date/gco:DateTime", Category.TIME);
+        isoMap.put("CI_Date/date/gco:Date", Category.TIME);
+        isoMap.put("extent/gml:TimePeriod/gml:beginPosition", Category.TIME);
+        isoMap.put("extent/gml:TimePeriod/gml:endPosition", Category.TIME);
+        
+        isoMap.put("EX_GeographicBoundingBox/gmd:westBoundLongitude/gco:Decimal", Category.LOCATION);
+        isoMap.put("EX_GeographicBoundingBox/gmd:eastBoundLongitude/gco:Decimal", Category.LOCATION);
+        isoMap.put("EX_GeographicBoundingBox/gmd:southBoundLatidue/gco:Decimal", Category.LOCATION);
+        isoMap.put("EX_GeographicBoundingBox/gmd:northBoundLatidue/gco:Decimal", Category.LOCATION);
+        
+        isoMap.put("MD_Format/name/gco:CharacterString", Category.TYPE);
+        
+        
+        isoMap.put("MD_CoverageDescription/attributeDescription/gco:RecordType", Category.QUALITY);
+        isoMap.put("units/gml:UnitDefinition/gml:name", Category.QUALITY);
+        
+        isoMap.put("MD_Band/descriptor/gco:CharacterString", Category.METHOD);
+        
+        */
         isoMap.put("electronicMailAddress/gco:CharacterString", Category.PERSON);
         isoMap.put("individualName/gco:CharacterString", Category.PERSON);
         isoMap.put("organizationName/gco:CharacterString", Category.PERSON);
@@ -136,7 +159,10 @@ public class TermToCategoryMap {
         panMap.put("md:PI/md:firstName", Category.PERSON);
         panMap.put("md:PI/md:URI", Category.PERSON);
         panMap.put("md:PI/md:orcid", Category.PERSON);
-               
+        
+        //panMap.put("md:year", Category.TIME); citation (publication date, not collection date!)
+        //panMap.put("md:dateTime", Category.TIME); citation (publication date, not collection date!)
+        
         panMap.put("md:temporal/md:minDateTime", Category.TIME);
         panMap.put("md:temporal/md:maxDateTime", Category.TIME);
         panMap.put("md:event/md:dateTime", Category.TIME);
@@ -219,17 +245,67 @@ public class TermToCategoryMap {
         emlMap.put("jgtiCuratorialUnit/endRange", Category.TIME);     
         emlMap.put("studyAreaDescription/descriptor", Category.ENVIRONMENT); //(description of the entire study area, e.g., climate, samples are part of that)
         emlMap.put("descriptor/descriptorValue", Category.ENVIRONMENT);
-             
-        termMap.put("gbif.eml", emlMap);
         
          
+        
+        termMap.put("gbif.eml", emlMap);
+        
+        //Common European Research Information Format (cerif) (NOT CONSIDERED!)
+        //http://www.dcc.ac.uk/resources/metadata-standards/cerif-common-european-research-information-format
+        //https://www.eurocris.org/Uploads/Web%20pages/CERIF-1.3/Specifications/CERIF1.3_FDM.pdf
+  
+        /*     HashMap<String, Category> cerifMap = new HashMap<String, Category>();
+        cerifMap.put("cerif:cfPersId", Category.PERSON);
+        cerifMap.put("cerif:cfPersName", Category.PERSON);
+        cerifMap.put("cerif:cfName", Category.PERSON);
+        termMap.put("figshare.cerif", cerifMap);*/
+        
         //Figshare Resource Description Framework (rdf)
         HashMap<String, Category> rdfMap = new HashMap<String, Category>();
         rdfMap.put("rdf:about", Category.PERSON);
+        rdfMap.put("vcard:Name", Category.PERSON);
         rdfMap.put("vcard:givenName", Category.PERSON);
         rdfMap.put("vcard:familyName", Category.PERSON);
+        rdfMap.put("vivo:Authorship", Category.PERSON);
+        
+        rdfMap.put("vivo:dateCreated", Category.TIME);
+        
+        
+        rdfMap.put("AudioVisualDocument", Category.TYPE);
+        rdfMap.put("ConferencePoster", Category.TYPE);
+        rdfMap.put("Slideshow", Category.TYPE);
+        rdfMap.put("Image", Category.TYPE);
+        rdfMap.put("ConferencePaper", Category.TYPE);
+        rdfMap.put("Collection", Category.TYPE);
+        rdfMap.put("Thesis", Category.TYPE);
+        rdfMap.put("Book", Category.TYPE);
+        rdfMap.put("Webpage", Category.TYPE);
+     
         termMap.put("figshare.rdf", rdfMap);
         
+        //Metadata Object Description Schema (mods) (NOT CONSIDERED!)
+        //http://www.loc.gov/standards/mods/
+        /*HashMap<String, Category> modsMap = new HashMap<String, Category>();
+        modsMap.put("mods:publisher", Category.PERSON);
+        modsMap.put("mods:geographic", Category.LOCATION);
+        modsMap.put("mods:temporal", Category.TIME);
+        termMap.put("dryad.mets", modsMap);*/
+        
+        //Dryad ore (ore) (NOT CONSIDERED!)
+        //Zenodo marc21
+        //Zenodo marcxml
+       /* HashMap<String, Category> oreMap = new HashMap<String, Category>();
+        oreMap.put("atom:published", Category.TIME);
+        oreMap.put("atom:updated", Category.TIME);
+        oreMap.put("atom:name", Category.PERSON);
+        
+        oreMap.put("rdf:type", Category.TYPE);
+        
+        termMap.put("dryad.ore", oreMap);*/
+        
+        
+      //  termMap.put("zenodo.marc21", oreMap);        
+      //  termMap.put("zenodo.marcxml", oreMap);       
     }
 	
 	/**
@@ -238,6 +314,7 @@ public class TermToCategoryMap {
 	 * @param term	the given term
 	 */
 	public static Category getCategory(String standard, String term) {
+		//System.out.println(term);
 		Category category = termMap.get(standard).get(term);
 		if(category==null) {
 			return Category.NONE;
