@@ -672,7 +672,7 @@ def saveMetadata(prefix):
         if(not os.path.exists(harvestxml + dataportal + "/" + prefix)):
             os.makedirs(harvestxml + dataportal + "/" + prefix)
 
-        with open(harvestxml + dataportal + "/" + prefix + "/" + today + ".xml", "w") as harvestWriter:
+        with open(harvestxml + dataportal + "/" + prefix + "/" + today + ".xml", "w", encoding="utf-8") as harvestWriter:
             harvestWriter.write("\n".join(xmlList))
 
 
