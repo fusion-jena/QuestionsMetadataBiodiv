@@ -80,7 +80,7 @@ def commandLine():
     fields = args.fields
     limit = args.limit
     full = args.full
-    harvestxml = (args.harvestxml + "/").replace("//", "/")
+    harvestxml = None
     showformats = args.showformats
     startwait = args.startwait
     errorwait = args.errorwait
@@ -89,8 +89,10 @@ def commandLine():
     if(fields != None):
         fields_list = fields.split(",")
 
-    if(harvestxml != None and not os.path.exists(harvestxml)):
-        os.makedirs(harvestxml)
+    if(args.harvestxml != None):
+        harvestxml = (args.harvestxml + "/").replace("//", "/")
+        if(not os.path.exists(harvestxml)):
+            os.makedirs(harvestxml)
 
     if(startwait < 0):
         startwait = 60
