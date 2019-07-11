@@ -374,8 +374,7 @@ def requestMetadata(prefix, resumptionToken, firstPage=False):
                                 #if yes, check if the next field contains further metadata fields (get to last field of the 'branch')
                                 #if no, save the field (and, optionally, the full path to the field)
                                 if(isinstance(metadata_format[metadata], dict)):
-                                    if(full):
-                                        checkKey(metadata_format[metadata], identifier, prefix, metadata)
+                                    checkKey(metadata_format[metadata], identifier, prefix, metadata)
                                 else:
                                     #get the metadata date stamp for the given metadata format
                                     #in case of Dryad, the first one
@@ -466,6 +465,8 @@ def checkKey(dictionary, identifier, prefix, path):
         if(isinstance(value, dict)):
             if(full):
                 checkKey(value, identifier, prefix, path + "/" + key)
+            else:
+                checkKey(value, identifier, prefix, key)
         elif(isinstance(value, list)):
             #loop over each elements of the value list
             for element in value:
@@ -475,6 +476,8 @@ def checkKey(dictionary, identifier, prefix, path):
                 if(isinstance(element, dict)):
                     if(full):
                         checkKey(element, identifier, prefix, path + "/" + key)
+                    else:
+                        checkKey(element, identifier, prefix, key)
                 else:
                     #get the metadata date stamp for the given metadata format
                     #in case of Dryad, the first one
