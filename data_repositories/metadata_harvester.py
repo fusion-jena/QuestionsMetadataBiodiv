@@ -275,10 +275,10 @@ def requestMetadata(prefix, resumptionToken, firstPage=False):
     global tokenIndex
     #variable counting the number of parsed records for the 'limit' option
     global limit_counter
-
+    
     try:
         #variable specifying the metadata url that will be requested
-        metadata_content = None
+        metadata_url = None
         #dataportal urls
         #get the metadata url of the first page
         if(firstPage):
@@ -298,14 +298,6 @@ def requestMetadata(prefix, resumptionToken, firstPage=False):
                 #figshare url
                 elif(dataportal == "figshare"):
                     metadata_url = "https://api.figshare.com/v2/oai?verb=ListRecords&metadataPrefix=" + prefix
-
-                #request the records of the first page (contains 100 records)
-                metadata_request = requests.get(metadata_url).text
-                xmlFormatter = xml.dom.minidom.parseString(metadata_request)
-                prettyXML = xmlFormatter.toprettyxml()
-                xmlList.append(prettyXML)
-                #transform the requested xml tree to a dictionary
-                metadata_content = xmltodict.parse(metadata_request.encode("utf-8"))
             except:
                 raise Exception("Unexpected error for the first page request! See message below:\n\n" + metadata_request)
         #get the metadata url of all following pages with the resumption token
@@ -325,15 +317,15 @@ def requestMetadata(prefix, resumptionToken, firstPage=False):
             #figshare url
             elif(dataportal == "figshare"):
                 metadata_url = "https://api.figshare.com/v2/oai?verb=ListRecords&resumptionToken=" + resumptionToken
-
-            #request the records of each following page (each page contains 100 records)
-            metadata_request = requests.get(metadata_url).text
-            xmlFormatter = xml.dom.minidom.parseString(metadata_request)
-            prettyXML = xmlFormatter.toprettyxml()
-            xmlList.append(prettyXML)
-            #transform the requested xml tree to a dictionary
-            metadata_content = xmltodict.parse(metadata_request.encode("utf-8"))
-
+        
+        #request the records of the first page (contains 100 records)
+        metadata_request = requests.get(metadata_url).text
+        xmlFormatter = xml.dom.minidom.parseString(metadata_request)
+        prettyXML = xmlFormatter.toprettyxml()
+        xmlList.append(prettyXML)
+        #transform the requested xml tree to a dictionary
+        metadata_content = xmltodict.parse(metadata_request.encode("utf-8"))
+                
         #set the resumption token to None
         resumptionToken = None
         if("ListRecords" in metadata_content["OAI-PMH"].keys()):
