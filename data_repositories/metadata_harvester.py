@@ -301,6 +301,9 @@ def requestMetadata(prefix, resumptionToken, firstPage=False):
 
                 #request the records of the first page (contains 100 records)
                 metadata_request = requests.get(metadata_url).text
+                xmlFormatter = xml.dom.minidom.parseString(metadata_request)
+                prettyXML = xmlFormatter.toprettyxml()
+                xmlList.append(prettyXML)
                 #transform the requested xml tree to a dictionary
                 metadata_content = xmltodict.parse(metadata_request.encode("utf-8"))
             except:
