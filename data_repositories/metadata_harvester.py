@@ -234,11 +234,11 @@ def downloadMetadata():
                 try:
                     #download the following pages and get the following resumption tokens
                     resumptionToken = requestMetadata(prefix, resumptionToken)
-                except SystemError:
+                except SystemError as se:
                     #if an error is thrown (error page, connection lost, etc.), wait 10 seconds
                     #and then resume from the last resumption token and try again
                     print()
-                    print(" -> Exception was thrown. <-")
+                    print(" -> Exception was thrown. <-\n" + str(se))
                     for timer in range(errorwait, 0, -1):
                         time.sleep(1)
                         print("\033[K  --- Restarting in " + str(timer) + " second(s)", end="\r")
@@ -415,7 +415,7 @@ def requestMetadata(prefix, resumptionToken, firstPage=False):
                                         if(not metadata in fieldsDic[prefix][identifier].keys()):
                                             fieldsDic[prefix][identifier][metadata] = list()
 
-                                        field_value = metadata_format[metadata]
+                                        field_value = str(metadata_format[metadata])
                                         if(isinstance(metadata_format[metadata], list)):
                                             field_value = "|".join(metadata_format[metadata])
 
@@ -437,8 +437,8 @@ def requestMetadata(prefix, resumptionToken, firstPage=False):
                     continue
 
     #if another error is thrown (for example connection errors), throw a SystemError and restart
-    except:
-        raise SystemError()
+    except Exception as ex:
+        raise SystemError(ex)
 
     #return the next resumnption token
     return resumptionToken
@@ -553,7 +553,7 @@ def checkKey(dictionary, identifier, prefix, path):
                         if(not key in fieldsDic[prefix][identifier].keys()):
                             fieldsDic[prefix][identifier][key] = list()
 
-                        field_value = value
+                        field_value = str(value)
                         if(isinstance(value, list)):
                             field_value = "|".join(value)
 
@@ -628,7 +628,7 @@ def checkKey(dictionary, identifier, prefix, path):
                 if(not key in fieldsDic[prefix][identifier].keys()):
                     fieldsDic[prefix][identifier][key] = list()
 
-                field_value = value
+                field_value = str(value)
                 if(isinstance(value, list)):
                     field_value = "|".join(value)
 
