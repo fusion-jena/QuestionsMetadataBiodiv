@@ -279,7 +279,7 @@ def requestMetadata(prefix, resumptionToken, firstPage=False):
 
     try:
         #variable specifying the metadata url that will be requested
-        metadata_content = None
+        metadata_url = None
         #dataportal urls
         #get the metadata url of the first page
         if(firstPage):
@@ -299,11 +299,6 @@ def requestMetadata(prefix, resumptionToken, firstPage=False):
                 #figshare url
                 elif(dataportal == "figshare"):
                     metadata_url = "https://api.figshare.com/v2/oai?verb=ListRecords&metadataPrefix=" + prefix
-
-                #request the records of the first page (contains 100 records)
-                metadata_request = requests.get(metadata_url).text
-                #transform the requested xml tree to a dictionary
-                metadata_content = xmltodict.parse(metadata_request.encode("utf-8"))
             except:
                 raise Exception("Unexpected error for the first page request! See message below:\n\n" + metadata_request)
         #get the metadata url of all following pages with the resumption token
@@ -324,13 +319,13 @@ def requestMetadata(prefix, resumptionToken, firstPage=False):
             elif(dataportal == "figshare"):
                 metadata_url = "https://api.figshare.com/v2/oai?verb=ListRecords&resumptionToken=" + resumptionToken
 
-            #request the records of each following page (each page contains 100 records)
-            metadata_request = requests.get(metadata_url).text
-            xmlFormatter = xml.dom.minidom.parseString(metadata_request)
-            prettyXML = xmlFormatter.toprettyxml()
-            xmlList.append(prettyXML)
-            #transform the requested xml tree to a dictionary
-            metadata_content = xmltodict.parse(metadata_request.encode("utf-8"))
+        #request the records of the first page (contains 100 records)
+        metadata_request = requests.get(metadata_url).text
+        xmlFormatter = xml.dom.minidom.parseString(metadata_request)
+        prettyXML = xmlFormatter.toprettyxml()
+        xmlList.append(prettyXML)
+        #transform the requested xml tree to a dictionary
+        metadata_content = xmltodict.parse(metadata_request.encode("utf-8"))
 
         #set the resumption token to None
         resumptionToken = None
@@ -470,6 +465,8 @@ def checkKey(dictionary, identifier, prefix, path):
         if(isinstance(value, dict)):
             if(full):
                 checkKey(value, identifier, prefix, path + "/" + key)
+            else:
+                checkKey(value, identifier, prefix, key)
         elif(isinstance(value, list)):
             #loop over each elements of the value list
             for element in value:
@@ -479,6 +476,8 @@ def checkKey(dictionary, identifier, prefix, path):
                 if(isinstance(element, dict)):
                     if(full):
                         checkKey(element, identifier, prefix, path + "/" + key)
+                    else:
+                        checkKey(element, identifier, prefix, key)
                 else:
                     #get the metadata date stamp for the given metadata format
                     #in case of Dryad, the first one
@@ -680,7 +679,7 @@ def saveMetadata(prefix):
         if(not os.path.exists(harvestxml + dataportal + "/" + prefix)):
             os.makedirs(harvestxml + dataportal + "/" + prefix)
 
-        with open(harvestxml + dataportal + "/" + prefix + "/" + today + ".xml", "w") as harvestWriter:
+        with open(harvestxml + dataportal + "/" + prefix + "/" + today + ".xml", "w", encoding="utf-8") as harvestWriter:
             harvestWriter.write("\n".join(xmlList))
 
 

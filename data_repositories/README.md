@@ -1,15 +1,17 @@
 # Metadata Analysis of Data Repositories with OAI-PMH interfaces
 
-This folder provides the source code to download metadata from OAI-PMHs interfaces of data repositories and additional material. The script ```metadata_harvester.py``` connects to an OAI-PMH interface and harvests all available metadata. Per metadata file we inspect what elements from the metadata standards are used and save its occurence (1) or non-occurence (0). The result is a csv file per metadata schema that contains dataset IDs and their available and used metadata elements.
+This folder provides the source code to harvest and parse metadata from OAI-PMHs interfaces of data repositories and additional material. The script ```metadata_harvester.py``` connects to an OAI-PMH interface and harvests all available metadata. Per metadata file we inspect what elements from the metadata standards are used and save its occurence (1) or non-occurence (0). The result is a csv file per metadata schema that contains the dataset IDs and their available and used metadata elements.
 
 Works on ```Python3+```.
 
 # Structure
 
-* [Examples] (contains example files, full metadata files available at iDiv data portal (ToDo: add URL))
+* [Examples] (contains example files)
 * [Analysis] (Java code to count the metadata data fields used and to generate charts)
 * [Charts] (contains the generated charts per repository and metadata schema)
-* ToDo: list of terminology or annotation service for biodiversity
+* metadata.tar.gz (compressed full parsed metadata)
+* metadata_harvester.py - source fill to harvest and parse metadata (see detailed descriptions below)
+
 
 [Examples]: https://github.com/fusion-jena/QuestionsMetadataBiodiv/tree/master/data_repositories/examples
 [Analysis]: https://github.com/fusion-jena/QuestionsMetadataBiodiv/tree/master/data_repositories/analysis
@@ -18,14 +20,13 @@ Works on ```Python3+```.
 # Prerequisites
 
 To start each script in this package successfully, you need a ```Python3+``` distribution and some other third-party tools.
-How to install these tools, will be explained in the following lines:
+How to install these tools will be explained in the following:
 
 ## Instructions for Windows and Linux
 
 ### Python
 
-To install ```Python3+```, go to the [Python website](https://www.python.org/), go to the ```Downloads``` button and install
-the current ```Python``` version.
+To install ```Python3+```, go to the [Python website](https://www.python.org/), go to the ```Downloads``` button and install the current ```Python``` version.
 To check if ```Python``` was successfully installed, open your Command Prompt (called ```shell``` from now on) and type:
 
 ```shell
