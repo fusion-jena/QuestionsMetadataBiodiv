@@ -540,20 +540,24 @@ def checkKey(dictionary, identifier, prefix, path):
                         if(not identifier in fieldsDic[prefix].keys()):
                             fieldsDic[prefix][identifier] = {}
 
-                        if(full):
+                        '''if(full):
                             if(not path + "/" + key in fieldsDic[prefix][identifier].keys()):
                                 fieldsDic[prefix][identifier][path + "/" + key] = list()
-
-                            fieldsDic[prefix][identifier][path + "/" + key].append(value.replace(";", ",").replace("\n", " "))
-                        else:
-                            if(not key in fieldsDic[prefix][identifier].keys()):
-                                fieldsDic[prefix][identifier][key] = list()
 
                             field_value = value
                             if(isinstance(value, list)):
                                 field_value = "|".join(value)
 
-                            fieldsDic[prefix][identifier][key].append(field_value.replace(";", ",").replace("\n", " "))
+                            fieldsDic[prefix][identifier][path + "/" + key].append(field_value.replace(";", ",").replace("\n", " "))
+                        else:'''
+                        if(not key in fieldsDic[prefix][identifier].keys()):
+                            fieldsDic[prefix][identifier][key] = list()
+
+                        field_value = value
+                        if(isinstance(value, list)):
+                            field_value = "|".join(value)
+
+                        fieldsDic[prefix][identifier][key].append(field_value.replace(";", ",").replace("\n", " "))
 
         else:
             #get the metadata date stamp for the given metadata format
@@ -611,20 +615,24 @@ def checkKey(dictionary, identifier, prefix, path):
                 if(not identifier in fieldsDic[prefix].keys()):
                     fieldsDic[prefix][identifier] = {}
 
-                if(full):
+                '''if(full):
                     if(not path + "/" + key in fieldsDic[prefix][identifier].keys()):
                         fieldsDic[prefix][identifier][path + "/" + key] = list()
-
-                    fieldsDic[prefix][identifier][path + "/" + key].append(value.replace(";", ",").replace("\n", " "))
-                else:
-                    if(not key in fieldsDic[prefix][identifier].keys()):
-                        fieldsDic[prefix][identifier][key] = list()
 
                     field_value = value
                     if(isinstance(value, list)):
                         field_value = "|".join(value)
 
-                    fieldsDic[prefix][identifier][key].append(field_value.replace(";", ",").replace("\n", " "))
+                    fieldsDic[prefix][identifier][path + "/" + key].append(field_value.replace(";", ",").replace("\n", " "))
+                else:'''
+                if(not key in fieldsDic[prefix][identifier].keys()):
+                    fieldsDic[prefix][identifier][key] = list()
+
+                field_value = value
+                if(isinstance(value, list)):
+                    field_value = "|".join(value)
+
+                fieldsDic[prefix][identifier][key].append(field_value.replace(";", ",").replace("\n", " "))
 
 
 
