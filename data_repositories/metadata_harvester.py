@@ -17,6 +17,8 @@ fields_list = None
 limit = None
 #variable specifying if the full path to the field should be saved
 full = None
+#variable specifying the path to the output XML file
+harvestxml = None
 #variable specifying the if the metadata formats for the given data portal should be printed
 showformats = None
 #dictionary containing the fields of the given metadata format
@@ -80,7 +82,6 @@ def commandLine():
     fields = args.fields
     limit = args.limit
     full = args.full
-    harvestxml = (args.harvestxml + "/").replace("//", "/")
     showformats = args.showformats
     startwait = args.startwait
     errorwait = args.errorwait
@@ -89,8 +90,10 @@ def commandLine():
     if(fields != None):
         fields_list = fields.split(",")
 
-    if(harvestxml != None and not os.path.exists(harvestxml)):
-        os.makedirs(harvestxml)
+    if(args.harvestxml != None):
+        harvestxml = (args.harvestxml + "/").replace("//", "/")
+        if(not os.path.exists(harvestxml)):
+            os.makedirs(harvestxml)
 
     if(startwait < 0):
         startwait = 60
@@ -372,8 +375,7 @@ def requestMetadata(prefix, resumptionToken, firstPage=False):
                                 #if yes, check if the next field contains further metadata fields (get to last field of the 'branch')
                                 #if no, save the field (and, optionally, the full path to the field)
                                 if(isinstance(metadata_format[metadata], dict)):
-                                    if(full):
-                                        checkKey(metadata_format[metadata], identifier, prefix, metadata)
+                                    checkKey(metadata_format[metadata], identifier, prefix, metadata)
                                 else:
                                     #get the metadata date stamp for the given metadata format
                                     #in case of Dryad, the first one
@@ -418,7 +420,11 @@ def requestMetadata(prefix, resumptionToken, firstPage=False):
                                         if(not metadata in fieldsDic[prefix][identifier].keys()):
                                             fieldsDic[prefix][identifier][metadata] = list()
 
-                                        fieldsDic[prefix][identifier][metadata].append(metadata_format[metadata].replace(",", ";").replace("\n", " "))
+                                        field_value = metadata_format[metadata]
+                                        if(isinstance(metadata_format[metadata], list)):
+                                            field_value = "|".join(metadata_format[metadata])
+
+                                        fieldsDic[prefix][identifier][metadata].append(field_value.replace(";", ",").replace("\n", " "))
 
                             #if no date stamp was found in the metadata section, set the Date to None
                             if(not dateFound or metadataDic[prefix]["date"][identifier] == None):
@@ -539,12 +545,16 @@ def checkKey(dictionary, identifier, prefix, path):
                             if(not path + "/" + key in fieldsDic[prefix][identifier].keys()):
                                 fieldsDic[prefix][identifier][path + "/" + key] = list()
 
-                            fieldsDic[prefix][identifier][path + "/" + key].append(value.replace(",", ";").replace("\n", " "))
+                            fieldsDic[prefix][identifier][path + "/" + key].append(value.replace(";", ",").replace("\n", " "))
                         else:
                             if(not key in fieldsDic[prefix][identifier].keys()):
                                 fieldsDic[prefix][identifier][key] = list()
 
-                            fieldsDic[prefix][identifier][key].append(value.replace(",", ";").replace("\n", " "))
+                            field_value = value
+                            if(isinstance(value, list)):
+                                field_value = "|".join(value)
+
+                            fieldsDic[prefix][identifier][key].append(field_value.replace(";", ",").replace("\n", " "))
 
         else:
             #get the metadata date stamp for the given metadata format
@@ -599,7 +609,6 @@ def checkKey(dictionary, identifier, prefix, path):
 
             #optionally, save the content of the metadata value if it it isn't already saved
             if(fields_list != None and key in fields_list):
-
                 if(not identifier in fieldsDic[prefix].keys()):
                     fieldsDic[prefix][identifier] = {}
 
@@ -607,12 +616,16 @@ def checkKey(dictionary, identifier, prefix, path):
                     if(not path + "/" + key in fieldsDic[prefix][identifier].keys()):
                         fieldsDic[prefix][identifier][path + "/" + key] = list()
 
-                    fieldsDic[prefix][identifier][path + "/" + key].append(value.replace(",", ";").replace("\n", " "))
+                    fieldsDic[prefix][identifier][path + "/" + key].append(value.replace(";", ",").replace("\n", " "))
                 else:
                     if(not key in fieldsDic[prefix][identifier].keys()):
                         fieldsDic[prefix][identifier][key] = list()
 
-                    fieldsDic[prefix][identifier][key].append(value.replace(",", ";").replace("\n", " "))
+                    field_value = value
+                    if(isinstance(value, list)):
+                        field_value = "|".join(value)
+
+                    fieldsDic[prefix][identifier][key].append(field_value.replace(";", ",").replace("\n", " "))
 
 
 
@@ -694,34 +707,40 @@ def saveFields(prefix):
     if(not os.path.exists("fields/" + dataportal + "/" + prefix)):
         os.makedirs("fields/" + dataportal + "/" + prefix)
 
+    fields = list()
+    for identifier in fieldsDic[prefix]:
+        for field in fieldsDic[prefix][identifier]:
+            if(not field in fields):
+                fields.append(field)
+
     #set the first line of the fields CSV file
     fields_str = "id"
     #loop over each metadata field in the metadata fields list
     #and add it to the fields string if the fields list contains it
-    for field in metadataDic[prefix]["metadataList"]:
-        if(field in fields_list):
-            fields_str += "," + field
+    for field in fields:
+        fields_str += ";" + field
 
     #add the first line with ID, all metadata fields and date to the metadata string list
     fields_str_list.append(fields_str)
     #loop over each ID in the fields dictionary
     for identifier in fieldsDic[prefix]:
+        fields_str = list()
         #set the ID of the record
-        fields_str = identifier
+        fields_str.append(identifier)
         #loop over each field in the fields list
-        for field in fields_list:
+        for field in fields:
             #add the contents of the field to the fields string if the current record contains the field
             #else, add an empty string
             try:
-                if(field in fields_list):
-                    fields_str += "," + "<-->".join(fieldsDic[prefix][identifier][field])
+                if(field in fieldsDic[prefix][identifier]):
+                    fields_str.append("<-->".join(fieldsDic[prefix][identifier][field]))
                 else:
-                    fields_str += ","
+                    fields_str.append("")
             except KeyError as ke:
                 pass
 
-            #add the fields string (one line in the CSV file) to the fields string list
-            fields_str_list.append(fields_str)
+        #add the fields string (one line in the CSV file) to the fields string list
+        fields_str_list.append(";".join(fields_str))
 
     #set the current date and time
     today = str(now.day) + "_" + str(now.month) + "_" + str(now.year)
@@ -732,7 +751,7 @@ def saveFields(prefix):
     #loop over all fields in the fields list and print every field that didn't appear in at least one record
     notFound = False
     for field in fields_list:
-        if(not field in metadataDic[prefix]["metadataList"]):
+        if(not field in fields):
             if(not notFound):
                 print(" -- the following fields are not in the metadata format: '" + prefix + "':")
                 notFound = True
