@@ -677,8 +677,9 @@ def saveMetadata(prefix):
     #set the current date and time
     today = str(now.day) + "_" + str(now.month) + "_" + str(now.year)
     #write the results to the CSV file
-    with open("metadata/" + dataportal + "/" + prefix + "/" + today + ".csv", "w") as metadataWriter:
-        metadataWriter.write("\n".join(metadata_str_list))
+    with open("metadata/" + dataportal + "/" + prefix + "/" + today + ".csv", "a+", encoding="utf-8") as metadataWriter:
+        for metadata_line in metadata_str_list:
+            metadataWriter.write(metadata_line)
 
     if(harvestxml != None):
         if(not os.path.exists(harvestxml + dataportal)):
@@ -687,8 +688,9 @@ def saveMetadata(prefix):
         if(not os.path.exists(harvestxml + dataportal + "/" + prefix)):
             os.makedirs(harvestxml + dataportal + "/" + prefix)
 
-        with open(harvestxml + dataportal + "/" + prefix + "/" + today + ".xml", "w", encoding="utf-8") as harvestWriter:
-            harvestWriter.write("\n".join(xmlList))
+        with open(harvestxml + dataportal + "/" + prefix + "/" + today + ".xml", "a+", encoding="utf-8") as harvestWriter:
+            for xml_line in xmlList:
+                harvestWriter.write(xml_line)
 
 
 
@@ -752,8 +754,9 @@ def saveFields(prefix):
     #set the current date and time
     today = str(now.day) + "_" + str(now.month) + "_" + str(now.year)
     #write the results to the CSV file
-    with open("fields/" + dataportal + "/" + prefix + "/" + today + ".csv", "w") as fieldsWriter:
-        fieldsWriter.write("\n".join(fields_str_list))
+    with open("fields/" + dataportal + "/" + prefix + "/" + today + ".csv", "a+") as fieldsWriter:
+        for field_line in fields_str_list:
+            fieldsWriter.write(field_line)
 
     #loop over all fields in the fields list and print every field that didn't appear in at least one record
     notFound = False
