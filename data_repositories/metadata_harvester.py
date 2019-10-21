@@ -677,7 +677,7 @@ def saveMetadata(prefix):
     #set the current date and time
     today = str(now.day) + "_" + str(now.month) + "_" + str(now.year)
     #write the metadata results to the CSV file
-    with open("metadata/" + dataportal + "/" + prefix + "/" + today + ".csv", "w") as metadataWriter:
+    with open("metadata/" + dataportal + "/" + prefix + "/" + today + ".csv", "w", encoding="utf-8") as metadataWriter:
         metadataWriter.write("")
 
     for metadata_line in metadata_str_list:
@@ -694,9 +694,15 @@ def saveMetadata(prefix):
         if(not os.path.exists(harvestxml + dataportal + "/" + prefix)):
             os.makedirs(harvestxml + dataportal + "/" + prefix)
 
-        with open(harvestxml + dataportal + "/" + prefix + "/" + today + ".xml", "a+", encoding="utf-8") as harvestWriter:
+        with open(harvestxml + dataportal + "/" + prefix + "/" + today + ".xml", "w", encoding="utf-8") as harvestWriter:
+            harvestWriter.write("")
+
+        for xml_line in xmlList:
+            os.system("echo \"" + xmlList + "\n\"" + " >> " + harvestxml + dataportal + "/" + prefix + "/" + today + ".xml")
+
+        '''with open(harvestxml + dataportal + "/" + prefix + "/" + today + ".xml", "a+", encoding="utf-8") as harvestWriter:
             for xml_line in xmlList:
-                harvestWriter.write(xml_line)
+                harvestWriter.write(xml_line)'''
 
 
 
@@ -760,7 +766,7 @@ def saveFields(prefix):
     #set the current date and time
     today = str(now.day) + "_" + str(now.month) + "_" + str(now.year)
     #write the results to the CSV file
-    with open("fields/" + dataportal + "/" + prefix + "/" + today + ".csv", "w") as fieldsWriter:
+    with open("fields/" + dataportal + "/" + prefix + "/" + today + ".csv", "w", encoding="utf-8") as fieldsWriter:
         fieldsWriter.write("")
 
     for field_line in fields_str_list:
