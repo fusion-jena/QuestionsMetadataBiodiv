@@ -419,7 +419,7 @@ def requestMetadata(prefix, resumptionToken, firstPage=False):
                                         if(isinstance(metadata_format[metadata], list)):
                                             field_value = "|".join(metadata_format[metadata])
 
-                                        fieldsDic[prefix][identifier][metadata].append(field_value.replace(";", ",").replace("\n", " "))
+                                        fieldsDic[prefix][identifier][metadata].append(field_value.replace(",", ";").replace("\n", ""))
 
                             #if no date stamp was found in the metadata section, set the Date to None
                             if(not dateFound or metadataDic[prefix]["date"][identifier] == None):
@@ -548,7 +548,7 @@ def checkKey(dictionary, identifier, prefix, path):
                             if(isinstance(value, list)):
                                 field_value = "|".join(value)
 
-                            fieldsDic[prefix][identifier][path + "/" + key].append(field_value.replace(";", ",").replace("\n", " "))
+                            fieldsDic[prefix][identifier][path + "/" + key].append(field_value.replace(",", ";").replace("\n", ""))
                         else:'''
                         if(not key in fieldsDic[prefix][identifier].keys()):
                             fieldsDic[prefix][identifier][key] = list()
@@ -557,7 +557,7 @@ def checkKey(dictionary, identifier, prefix, path):
                         if(isinstance(value, list)):
                             field_value = "|".join(value)
 
-                        fieldsDic[prefix][identifier][key].append(field_value.replace(";", ",").replace("\n", " "))
+                        fieldsDic[prefix][identifier][key].append(field_value.replace(",", ";").replace("\n", ""))
 
         else:
             #get the metadata date stamp for the given metadata format
@@ -623,7 +623,7 @@ def checkKey(dictionary, identifier, prefix, path):
                     if(isinstance(value, list)):
                         field_value = "|".join(value)
 
-                    fieldsDic[prefix][identifier][path + "/" + key].append(field_value.replace(";", ",").replace("\n", " "))
+                    fieldsDic[prefix][identifier][path + "/" + key].append(field_value.replace(",", ";"").replace("\n", ""))
                 else:'''
                 if(not key in fieldsDic[prefix][identifier].keys()):
                     fieldsDic[prefix][identifier][key] = list()
@@ -632,7 +632,7 @@ def checkKey(dictionary, identifier, prefix, path):
                 if(isinstance(value, list)):
                     field_value = "|".join(value)
 
-                fieldsDic[prefix][identifier][key].append(field_value.replace(";", ",").replace("\n", " "))
+                fieldsDic[prefix][identifier][key].append(field_value.replace(",", ";").replace("\n", ""))
 
 
 
@@ -678,14 +678,7 @@ def saveMetadata(prefix):
     today = str(now.day) + "_" + str(now.month) + "_" + str(now.year)
     #write the metadata results to the CSV file
     with open("metadata/" + dataportal + "/" + prefix + "/" + today + ".csv", "w", encoding="utf-8") as metadataWriter:
-        metadataWriter.write("")
-
-    for metadata_line in metadata_str_list:
-        os.system("echo \"" + metadata_line + "\n\"" + " >> metadata/" + dataportal + "/" + prefix + "/" + today + ".csv")
-
-    '''with open("metadata/" + dataportal + "/" + prefix + "/" + today + ".csv", "a+", encoding="utf-8") as metadataWriter:
-        for metadata_line in metadata_str_list:
-            metadataWriter.write(metadata_line)'''
+        metadataWriter.write("\n".join(metadata_str_list))
 
     if(harvestxml != None):
         if(not os.path.exists(harvestxml + dataportal)):
@@ -695,15 +688,7 @@ def saveMetadata(prefix):
             os.makedirs(harvestxml + dataportal + "/" + prefix)
 
         with open(harvestxml + dataportal + "/" + prefix + "/" + today + ".xml", "w", encoding="utf-8") as harvestWriter:
-            harvestWriter.write("")
-
-        for xml_line in xmlList:
-            os.system("echo \"" + xmlList + "\n\"" + " >> " + harvestxml + dataportal + "/" + prefix + "/" + today + ".xml")
-
-        '''with open(harvestxml + dataportal + "/" + prefix + "/" + today + ".xml", "a+", encoding="utf-8") as harvestWriter:
-            for xml_line in xmlList:
-                harvestWriter.write(xml_line)'''
-
+            harvestWriter.write("\n".join(xmlList))
 
 
 #method for saving the content of each metadata field in a CSV file
@@ -739,8 +724,9 @@ def saveFields(prefix):
     #loop over each metadata field in the metadata fields list
     #and add it to the fields string if the fields list contains it
     for field in fields:
-        fields_str += ";" + field
+        fields_str += "," + field
 
+    fields_str += ",date"
     #add the first line with ID, all metadata fields and date to the metadata string list
     fields_str_list.append(fields_str)
     #loop over each ID in the fields dictionary
@@ -752,29 +738,20 @@ def saveFields(prefix):
         for field in fields:
             #add the contents of the field to the fields string if the current record contains the field
             #else, add an empty string
-            try:
-                if(field in fieldsDic[prefix][identifier]):
-                    fields_str.append("<-->".join(fieldsDic[prefix][identifier][field]))
-                else:
-                    fields_str.append("")
-            except KeyError as ke:
-                pass
+            if(field in fieldsDic[prefix][identifier]):
+                fields_str.append("<-->".join(fieldsDic[prefix][identifier][field]))
+            else:
+                fields_str.append("")
 
+        fields_str.append(str(metadataDic[prefix]["date"][identifier]))
         #add the fields string (one line in the CSV file) to the fields string list
-        fields_str_list.append(";".join(fields_str))
+        fields_str_list.append(",".join(fields_str))
 
     #set the current date and time
     today = str(now.day) + "_" + str(now.month) + "_" + str(now.year)
     #write the results to the CSV file
     with open("fields/" + dataportal + "/" + prefix + "/" + today + ".csv", "w", encoding="utf-8") as fieldsWriter:
-        fieldsWriter.write("")
-
-    for field_line in fields_str_list:
-        os.system("echo \"" + field_line + "\n\"" + " >> fields/" + dataportal + "/" + prefix + "/" + today + ".csv")
-
-    '''with open("fields/" + dataportal + "/" + prefix + "/" + today + ".csv", "a+") as fieldsWriter:
-        for field_line in fields_str_list:
-            fieldsWriter.write(field_line)'''
+        fieldsWriter.write("\n".join(fields_str_list))
 
     #loop over all fields in the fields list and print every field that didn't appear in at least one record
     notFound = False
