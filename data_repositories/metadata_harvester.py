@@ -739,7 +739,8 @@ def saveFields(prefix):
             #add the contents of the field to the fields string if the current record contains the field
             #else, add an empty string
             if(field in fieldsDic[prefix][identifier]):
-                fields_str.append("<-->".join(fieldsDic[prefix][identifier][field]))
+                #fields_str.append("<-->".join(fieldsDic[prefix][identifier][field]))
+                fields_str.append(fieldsDic[prefix][identifier][field][0])
             else:
                 fields_str.append("")
 
