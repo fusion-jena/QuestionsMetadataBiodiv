@@ -512,52 +512,47 @@ def checkKey(dictionary, identifier, prefix, path):
                     #else, save the previous key
                     #optionally, save the path to the (previous) key
                     if(not (key.startswith("@") or key.startswith("#"))):
+                        path_key = None
                         if(full):
-                            if(not path + "/" + key in metadataDic[prefix]["metadata"][identifier]):
-                                metadataDic[prefix]["metadata"][identifier].append(path + "/" + key)
-                                if(not path + "/" + key in metadataDic[prefix]["metadataList"]):
-                                    metadataDic[prefix]["metadataList"].append(path + "/" + key)
+                            path_key = path + "/" + key
                         else:
-                            if(not key in metadataDic[prefix]["metadata"][identifier]):
-                                metadataDic[prefix]["metadata"][identifier].append(key)
-                                if(not key in metadataDic[prefix]["metadataList"]):
-                                    metadataDic[prefix]["metadataList"].append(key)
+                            path_key = key
+
+                        if(not path_key in metadataDic[prefix]["metadata"][identifier]):
+                            metadataDic[prefix]["metadata"][identifier].append(path_key)
+                            if(not path_key in metadataDic[prefix]["metadataList"]):
+                                metadataDic[prefix]["metadataList"].append(path_key)
                     else:
+                        path_key = None
                         if(full):
-                            if(not path in metadataDic[prefix]["metadata"][identifier]):
-                                metadataDic[prefix]["metadata"][identifier].append(path)
-                                if(not path in metadataDic[prefix]["metadataList"]):
-                                    metadataDic[prefix]["metadataList"].append(path)
+                            path_key = path
                         else:
-                            previousKey = path.split("/")[-1]
-                            if(not previousKey in metadataDic[prefix]["metadata"][identifier]):
-                                metadataDic[prefix]["metadata"][identifier].append(previousKey)
-                                if(not previousKey in metadataDic[prefix]["metadataList"]):
-                                    metadataDic[prefix]["metadataList"].append(previousKey)
+                            path_key = previousKey
+
+                        if(not path_key in metadataDic[prefix]["metadata"][identifier]):
+                            metadataDic[prefix]["metadata"][identifier].append(path_key)
+                            if(not path_key in metadataDic[prefix]["metadataList"]):
+                                metadataDic[prefix]["metadataList"].append(path_key)
 
                     #optionally, save the content of the metadata element if it it isn't already saved
-                    if(fields_list != None and key in fields_list):
+                    if(fields_list != None and (key in fields_list or path + "/" + key in fields_list)):
                         if(not identifier in fieldsDic[prefix].keys()):
                             fieldsDic[prefix][identifier] = {}
 
-                        '''if(full):
-                            if(not path + "/" + key in fieldsDic[prefix][identifier].keys()):
-                                fieldsDic[prefix][identifier][path + "/" + key] = list()
+                        path_key = None
+                        if(full):
+                            path_key = path + "/" + key
+                        else:
+                            path_key = key
 
-                            field_value = value
-                            if(isinstance(value, list)):
-                                field_value = "|".join(value)
-
-                            fieldsDic[prefix][identifier][path + "/" + key].append(field_value.replace(",", ";").replace("\n", ""))
-                        else:'''
-                        if(not key in fieldsDic[prefix][identifier].keys()):
-                            fieldsDic[prefix][identifier][key] = list()
+                        if(not path_key in fieldsDic[prefix][identifier].keys()):
+                            fieldsDic[prefix][identifier][path_key] = list()
 
                         field_value = str(value)
                         if(isinstance(value, list)):
                             field_value = "|".join(value)
 
-                        fieldsDic[prefix][identifier][key].append(field_value.replace(",", ";").replace("\n", ""))
+                        fieldsDic[prefix][identifier][path_key].append(field_value.replace(",", ";").replace("\n", ""))
 
         else:
             #get the metadata date stamp for the given metadata format
@@ -588,51 +583,47 @@ def checkKey(dictionary, identifier, prefix, path):
             #else, save the previous key
             #optionally, save the path to the (previous) key
             if(not (key.startswith("@") or key.startswith("#"))):
+                path_key = None
                 if(full):
-                    if(not path + "/" + key in metadataDic[prefix]["metadata"][identifier]):
-                        metadataDic[prefix]["metadata"][identifier].append(path + "/" + key)
-                        if(not path + "/" + key in metadataDic[prefix]["metadataList"]):
-                            metadataDic[prefix]["metadataList"].append(path + "/" + key)
+                    path_key = path + "/" + key
                 else:
-                    if(not key in metadataDic[prefix]["metadata"][identifier]):
-                        metadataDic[prefix]["metadata"][identifier].append(key)
-                        if(not key in metadataDic[prefix]["metadataList"]):
-                            metadataDic[prefix]["metadataList"].append(key)
+                    path_key = key
+
+                if(not path_key in metadataDic[prefix]["metadata"][identifier]):
+                    metadataDic[prefix]["metadata"][identifier].append(path_key)
+                    if(not path_key in metadataDic[prefix]["metadataList"]):
+                        metadataDic[prefix]["metadataList"].append(path_key)
             else:
+                path_key = None
                 if(full):
-                    if(not path in metadataDic[prefix]["metadata"][identifier]):
-                        metadataDic[prefix]["metadata"][identifier].append(path)
-                        if(not path in metadataDic[prefix]["metadataList"]):
-                            metadataDic[prefix]["metadataList"].append(path)
+                    path_key = path
                 else:
-                    if(not previousKey in metadataDic[prefix]["metadata"][identifier]):
-                        metadataDic[prefix]["metadata"][identifier].append(previousKey)
-                        if(not previousKey in metadataDic[prefix]["metadataList"]):
-                            metadataDic[prefix]["metadataList"].append(previousKey)
+                    path_key = previousKey
+
+                if(not path_key in metadataDic[prefix]["metadata"][identifier]):
+                    metadataDic[prefix]["metadata"][identifier].append(path_key)
+                    if(not path_key in metadataDic[prefix]["metadataList"]):
+                        metadataDic[prefix]["metadataList"].append(path_key)
 
             #optionally, save the content of the metadata value if it it isn't already saved
-            if(fields_list != None and key in fields_list):
+            if(fields_list != None and (key in fields_list or path + "/" + key in fields_list)):
                 if(not identifier in fieldsDic[prefix].keys()):
                     fieldsDic[prefix][identifier] = {}
 
-                '''if(full):
-                    if(not path + "/" + key in fieldsDic[prefix][identifier].keys()):
-                        fieldsDic[prefix][identifier][path + "/" + key] = list()
+                path_key = None
+                if(full):
+                    path_key = path + "/" + key
+                else:
+                    path_key = key
 
-                    field_value = value
-                    if(isinstance(value, list)):
-                        field_value = "|".join(value)
-
-                    fieldsDic[prefix][identifier][path + "/" + key].append(field_value.replace(",", ";"").replace("\n", ""))
-                else:'''
-                if(not key in fieldsDic[prefix][identifier].keys()):
-                    fieldsDic[prefix][identifier][key] = list()
+                if(not path_key in fieldsDic[prefix][identifier].keys()):
+                    fieldsDic[prefix][identifier][path_key] = list()
 
                 field_value = str(value)
                 if(isinstance(value, list)):
                     field_value = "|".join(value)
 
-                fieldsDic[prefix][identifier][key].append(field_value.replace(",", ";").replace("\n", ""))
+                fieldsDic[prefix][identifier][path_key].append(field_value.replace(",", ";").replace("\n", ""))
 
 
 
