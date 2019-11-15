@@ -13,6 +13,8 @@ import xml.etree.ElementTree as ET
 import sys
 import xml.dom.minidom
 
+csv.field_size_limit(100000000)
+
 # path to csv files
 #root = 'test'
 
@@ -37,8 +39,8 @@ for subdir, dirs, filenames in os.walk(path):
 			#print(xmlTags)
 			# for each line in the csv file
 			reader = csv.reader(csvFile, delimiter=',')
-			try:
-				for row in reader:
+			for row in reader:
+				try:
 					if not row[0].startswith('id'):
 						try:
 							#print(row[0])
@@ -65,11 +67,11 @@ for subdir, dirs, filenames in os.walk(path):
 						except IndexError as ex:
 							maxColumn = str(len(xmlTags))
 							print("ERROR: file %s doesn't contain %s colums" % (row[0],maxColumn))
-			except Exception: #catch all other exceptions
-				e = sys.exc_info()[0]
-				print( "ERROR: %s" % e )
-				print( row[0])
-				pass
+				except Exception: #catch all other exceptions
+					e = sys.exc_info()[0]
+					print( row[0])
+					print( "ERROR: %s" % e )
+					
 			csvFile.close()
 
 
