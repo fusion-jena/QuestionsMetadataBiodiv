@@ -12,11 +12,13 @@ args = parser.parse_args()
 
 try:
     file_list = []
+    print("\rLoading files...", end="")
     for dirpath, dirnames, filenames in os.walk(args.files):
         for file in filenames:
             if(file.endswith(".xml")):
                 file_list.append(file)
 
+    print("\rLoading files -> done")
     if(not len(file_list)):
         raise Exception("No XML file found in path '" + args.files + "'.")
 
@@ -27,14 +29,17 @@ try:
         args.seed = str(random.randrange(sys.maxsize))
 
     random.seed(args.seed)
+    print("\rSelecting randomly " + str(args.population)  + " files...", end="")
     selected_files = random.sample(file_list, args.population)
-    if(not os.path.exists(args.files + "/selected_files")):
-        os.mkdir(args.files + "/selected_files")
-
+    print("\rSelecting randomly " + str(args.population) + " files -> done")
+    os.mkdir(args.files + "/selected_files")
+    progress = 0
     for file in selected_files:
-        print(file)
         shutil.copyfile(args.files + "/" + file, args.files + "/selected_files/" + file)
+        progress += 1
+        print("\rCopy progress: " + str(int((progress/len(selected_files))*100)) + "%", end="")
 
+    print("\rCopy progress: finished")
     with open(args.files + "/selected_files/seed.txt", "w") as seedWriter:
         print("Seed: " + args.seed)
         seedWriter.write(str(args.seed))
