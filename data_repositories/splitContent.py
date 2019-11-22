@@ -1,7 +1,7 @@
 #
-# Split the content of a csv file 
+# Split the content of a csv file
 # input: expects a file in csv format (xml based column headers, comma-separated) in a dataportal/metadataformat folder
-#  
+#
 # output: xml files per <FileID>, header columns are used as xml tags
 #
 # @author: Felicitas Loeffler, 2019
@@ -28,10 +28,12 @@ dataportal = args.dataportal
 metadataFormat = args.metadataFormat
 path = dataportal+'/'+metadataFormat
 
+subject_counts = {}
+subject_index = -1
 for subdir, dirs, filenames in os.walk(path):
 	for file in filenames:
 		#consider only csv files
-		if file.endswith('.csv'):
+		if file.endswith('.csv') and not file.endswith('_subject_counts.csv'):
 			# open file
 			csvFile = open(os.path.join(path,file), encoding="utf8")
 			headers = csvFile.readline()
@@ -39,6 +41,12 @@ for subdir, dirs, filenames in os.walk(path):
 			#print(xmlTags)
 			# for each line in the csv file
 			reader = csv.reader(csvFile, delimiter=',')
+			for tag in xmlTags:
+				inner_tag = tag.split("/")[-1]
+				if("subject" in inner_tag):
+					subject_index = xmlTags.index(tag)
+					break
+
 			for row in reader:
 				try:
 					if not row[0].startswith('id'):
@@ -51,6 +59,13 @@ for subdir, dirs, filenames in os.walk(path):
 								item = ET.SubElement(data, entry.strip() )
 								text = row[i].replace(';', ',')
 								item.text = text
+								if(subject_index == i):
+									subjects = row[i].split("|")
+									for subject in subjects:
+										if(not subject in subject_counts):
+											subject_counts[subject] = 1
+										else:
+											subject_counts[subject] += 1
 
 							# create a new XML file with the results
 							mydata = ET.tostring(data)
@@ -60,7 +75,7 @@ for subdir, dirs, filenames in os.walk(path):
 								filename = filenameSplit[1]
 							if ':' in filename:
 								filenameSplit = row[0].split(':')
-								filename = filenameSplit[2] 
+								filename = filenameSplit[2]
 							tree = ET.ElementTree(data)
 							tree.write(dataportal+'/'+metadataFormat+'/'+filename+".xml")
 							print(filename +'.xml')
@@ -71,7 +86,13 @@ for subdir, dirs, filenames in os.walk(path):
 					e = sys.exc_info()[0]
 					print( row[0])
 					print( "ERROR: %s" % e )
-					
+
 			csvFile.close()
+			with open(path + "/" + file.split(".csv")[0] + "_subject_counts.csv", "w") as subject_writer:
+				subject_list = []
+				for subject, count in subject_counts.items():
+					subject_list.append(subject + "," + str(count))
 
-
+				subject_writer.write("subject,count" + "\n" + "\n".join(subject_list))
+				del subject_list[:]
+				written = True
