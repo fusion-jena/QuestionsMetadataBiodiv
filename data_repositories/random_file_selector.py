@@ -3,22 +3,47 @@ import os
 import random
 import argparse
 import sys
+from xml.dom import minidom
 
 parser = argparse.ArgumentParser(description="Choose a random number of individual files from a data repository")
 parser.add_argument("-fs", "--files", help="Set the path to the directory with the XML files", required=True)
 parser.add_argument("-p", "--population", help="Set the number of files that will be selected", type=int, required=True)
 parser.add_argument("-s", "--seed", help="Set the seed to obtain previous results", default=None)
+parser.add_argument("-f", "--filter", help="Specify keywords to filter out specific files; the first element is the field to filter, all following elements are the keywords", nargs="*")
+parser.add_argument("-d", "--delete", help="Delete the output folder 'selected_files' if it already exists", action="store_true")
 args = parser.parse_args()
 
 try:
+    if(args.filter != None and len(args.filter) < 2):
+        raise Exception("The '-f/--filter' option needs at least two elements")
+
+    if(os.path.exists(args.files + "/selected_files")):
+        if(args.delete):
+            shutil.rmtree(args.files + "/selected_files")
+        else:
+            raise Exception("The output folder 'selected_files' in the directory '" + args.files + "' already exists. Delete it manually or use the '-d/--delete' option.")
+
     file_list = []
     print("\rLoading files...", end="")
+    number_of_files = 0
     for dirpath, dirnames, filenames in os.walk(args.files):
         for file in filenames:
             if(file.endswith(".xml")):
-                file_list.append(file)
+                if(args.filter != None):
+                    xml_doc = minidom.parse(args.files + "/" + file)
+                    items = xml_doc.getElementsByTagName(args.filter[0]).split("|")
+                    for item in items:
+                        if(item.strip() in args.filter[1:]):
+                            file_list.append(file)
+                            number_of_files += 1
+                            print("\rLoaded " + number_of_files + " file(s)", end="")
+                            break
+                else:
+                    file_list.append(file)
+                    number_of_files += 1
+                    print("\rLoaded " + number_of_files + " file(s)", end="")
 
-    print("\rLoading files -> done")
+    print("Loading files -> done")
     if(not len(file_list)):
         raise Exception("No XML file found in path '" + args.files + "'.")
 
