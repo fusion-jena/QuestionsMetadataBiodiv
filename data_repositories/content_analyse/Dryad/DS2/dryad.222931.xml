@@ -1,0 +1,3 @@
+<data><id>oai:v1.datadryad.org:10255/dryad.222931</id><oai_dc:dc/dc:title>Drop_seq_references</oai_dc:dc/dc:title><oai_dc:dc/dc:description>This archive contains fasta files for the genome (Hydra 2.0 assembly available at https://research.nhgri.nih.gov/hydra/) and the de novo Hydra vulgaris (AEP) transcriptome (aepLRv2) as well as scripts to create bowtie2 references. It also holds .dict and .refFlat files used by the Drop-seq pipeline.</oai_dc:dc/dc:description><oai_dc:dc/dc:subject>Hydra|Drop-seq|single-cell Seq|transcriptome reference|genome reference</oai_dc:dc/dc:subject><date
+>2019-07-25T18:17:30Z</date
+></data>

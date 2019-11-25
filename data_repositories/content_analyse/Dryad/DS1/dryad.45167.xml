@@ -1,0 +1,3 @@
+<data><id>oai:v1.datadryad.org:10255/dryad.45167</id><oai_dc:dc/dc:title>birds-matches-of-probes-to-contigs.sqlite.gz</oai_dc:dc/dc:title><oai_dc:dc/dc:description>SQLITE database of LASTZ matches between assembled contigs in birds-contigs-assembled-from-uce-loci.fasta.gz and the UCE probes. This database is used to construct data sets containing loci that are shared across taxa and prep data for alignment.  These data are derived from birds-lastz-matches-of-probes-to-contigs.lastz.tar.gz.</oai_dc:dc/dc:description><oai_dc:dc/dc:subject>ultraconserved elements|phylogenomics|phylogenetics|birds</oai_dc:dc/dc:subject><date
+>2013-01-30T17:24:41Z</date
+></data>

@@ -1,0 +1,3 @@
+<data><id>oai:v1.datadryad.org:10255/dryad.146593</id><oai_dc:dc/dc:title>Fisher Detections</oai_dc:dc/dc:title><oai_dc:dc/dc:description>The binary detection history of fisher via camera at non-invasive detection stations.  Fisher detections were used as a covariate for the probability of falsely detecting American marten, the dimensions of the file represent the number of detection stations (238 rows) and the maximum number of sampling occasions (9 columns) for any given station, 0 indicates no fisher detection, 1 indicates fisher detection, and NA indicates the station was not active for a particular check.</oai_dc:dc/dc:description><oai_dc:dc/dc:subject>occupancy|distribution|density|American marten</oai_dc:dc/dc:subject><date
+>2017-05-22T13:34:58Z</date
+></data>

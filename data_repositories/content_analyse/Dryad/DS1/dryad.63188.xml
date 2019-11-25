@@ -1,0 +1,3 @@
+<data><id>oai:v1.datadryad.org:10255/dryad.63188</id><oai_dc:dc/dc:title>transposable elements_repeatmasker_kmer70-v2-min200-scaffolds.fa</oai_dc:dc/dc:title><oai_dc:dc/dc:description>################################## RepeatMasker ###################################### RepeatMasker version 4.0.2## RepeatMaskerLibrary-20130422 version## command:RepeatMasker -nolow -no_is -norna -dir .  \-lib RepeatMaskerLib.embl.lib \kmer70-v2-min200-scaffolds.fa## output files:repeatmasker_kmer70-v2-min200-scaffolds.fa.maskedrepeatmasker_kmer70-v2-min200-scaffolds.fa.tbl</oai_dc:dc/dc:description><oai_dc:dc/dc:subject>avian genome|eagle conservation|genetic markers|raptor|transposable elements</oai_dc:dc/dc:subject><date
+>2014-04-24T18:36:54Z</date
+></data>

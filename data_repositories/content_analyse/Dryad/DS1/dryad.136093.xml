@@ -1,0 +1,3 @@
+<data><id>oai:v1.datadryad.org:10255/dryad.136093</id><oai_dc:dc/dc:title>Code used in the analysis of the data</oai_dc:dc/dc:title><oai_dc:dc/dc:description>R code files used to process the raw data to generate the data files in this submission as well as the code used to generate figures and datasets used for the statistics. These files must be in the same directory as the CSV files in this submission in order to run. HTML links in the README file to R code will also only work if these files are in the same folder as the HTML file.</oai_dc:dc/dc:description><oai_dc:dc/dc:subject>Phenotypic Plasticity|Selection - Experimental|Bet Hedging|Synthetic Biology</oai_dc:dc/dc:subject><date
+>2017-01-23T21:09:38Z</date
+></data>

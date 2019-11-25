@@ -1,0 +1,3 @@
+<data><id>oai:v1.datadryad.org:10255/dryad.121316</id><oai_dc:dc/dc:title>EC-BILT NA Climates 21ka-0ka, TIFS</oai_dc:dc/dc:title><oai_dc:dc/dc:description>Downscaled and debiased paleoclimatic simulations from CCSM3 (Liu et al. 2009). Downscaled to 0.5deg lat/lon and 500-year resolution for North America for 21,000 years ago to the 20th century. These TIFS were generated from the decadal-scale NetCDF data, and extracted as climatic summaries comprising 200-year bins and spaced 500 years apart.  They are formatted for direct input into species distribution models.</oai_dc:dc/dc:description><oai_dc:dc/dc:subject>climate data|paleoclimatology|climate downscaling|climate debiasing|climate change</oai_dc:dc/dc:subject><date
+>2016-07-14T17:22:46Z</date
+></data>

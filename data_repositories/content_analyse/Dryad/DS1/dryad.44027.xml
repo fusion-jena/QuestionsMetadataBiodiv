@@ -1,0 +1,3 @@
+<data><id>oai:v1.datadryad.org:10255/dryad.44027</id><oai_dc:dc/dc:title>state_matrix</oai_dc:dc/dc:title><oai_dc:dc/dc:description>State matrix (nsite x nyear) of observations. 0 = non visited site or missing data, 1 = species not detected (i.e., either dry or wet site), 2 = species detected (i.e., necessarily a wet site).</oai_dc:dc/dc:description><oai_dc:dc/dc:subject>Community: dynamics|Demography|Ecology: population|Fragmentation|Life history: ecology|Metacommunities|Metapopulations|Modeling: ecological|Modeling: population ecology|Population: dynamics</oai_dc:dc/dc:subject><date
+>2012-11-07T18:13:07Z</date
+></data>

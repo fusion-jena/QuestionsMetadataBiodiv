@@ -1,0 +1,3 @@
+<data><id>oai:v1.datadryad.org:10255/dryad.44066</id><oai_dc:dc/dc:title>Ranked SVM for all conditions</oai_dc:dc/dc:title><oai_dc:dc/dc:description>Ranked accuracies from the support vector machine analysis described in the paper for all of the classification analyses. The first column of each tab contains the subject number (1-8), the second column the number of voxels selected from each region (1 - 250), and the remaining columns give the proportion of accuracy for each region of interest.</oai_dc:dc/dc:description><oai_dc:dc/dc:subject>motion|visual cortex|motion streaks|MVPA</oai_dc:dc/dc:subject><date
+>2013-03-05T17:58:08Z</date
+></data>

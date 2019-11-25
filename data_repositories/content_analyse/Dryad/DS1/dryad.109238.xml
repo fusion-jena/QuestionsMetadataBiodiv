@@ -1,0 +1,3 @@
+<data><id>oai:v1.datadryad.org:10255/dryad.109238</id><oai_dc:dc/dc:title>R script for fig 4D</oai_dc:dc/dc:title><oai_dc:dc/dc:description>This R program runs a stochastic simulation of the FLP in 100 populations for 500 generations and then plots results at generation 500 (fig. 4D).  See Appendix A for the equations used in this program. See Table 2 for parameter values used in this and other figures.</oai_dc:dc/dc:description><oai_dc:dc/dc:subject>Adaptive radiation|Coevolution|Genetics: quantitative|Macroevolution|Methods: computer simulations|Phylogenetics: comparative|Selection: sexual|Vertebrates</oai_dc:dc/dc:subject><date
+>2016-02-12T21:13:20Z</date
+></data>

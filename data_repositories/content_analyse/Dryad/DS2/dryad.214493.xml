@@ -1,0 +1,3 @@
+<data><id>oai:v1.datadryad.org:10255/dryad.214493</id><oai_dc:dc/dc:title>Data used in survival analysis</oai_dc:dc/dc:title><oai_dc:dc/dc:description>This file contains the data used in the survival analysis. There are 6 variables and 51 observations, corresponding to the 51 study participants included in this analysis. The variable 'Delay' represents the time to infection detection. The variable 'Infection' has value 1 if the study participant had infection detected during follow-up. The other variables represent results of immunological assays.</oai_dc:dc/dc:description><oai_dc:dc/dc:subject>malaria|sporozoites|antibodies|immunity|sterilizing|pre-erythrocytic|liver-stage</oai_dc:dc/dc:subject><date
+>2019-04-23T13:26:43Z</date
+></data>

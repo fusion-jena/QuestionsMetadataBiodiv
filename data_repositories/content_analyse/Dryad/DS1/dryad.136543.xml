@@ -1,0 +1,3 @@
+<data><id>oai:v1.datadryad.org:10255/dryad.136543</id><oai_dc:dc/dc:title>Allele sepecific read counts</oai_dc:dc/dc:title><oai_dc:dc/dc:description>This file contains the allele specific read counts for the aspen data. Each row contains the data for one SNP and each pair of columns has the data for an individual. These two columns contain the number of reads of each allele (one allele per column) if the individual was heterozygous at that SNP. Otherwise there is a NA for each column.</oai_dc:dc/dc:description><oai_dc:dc/dc:subject>Bioinfomatics|Population Genetics - Theoretical|Bayesian inference|Ploidy|Phyloinfomatics</oai_dc:dc/dc:subject><date
+>2017-01-30T16:38:49Z</date
+></data>

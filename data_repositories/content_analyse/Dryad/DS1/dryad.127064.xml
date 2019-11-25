@@ -1,0 +1,3 @@
+<data><id>oai:v1.datadryad.org:10255/dryad.127064</id><oai_dc:dc/dc:title>smartPCA_Admixture</oai_dc:dc/dc:title><oai_dc:dc/dc:description>These two programs are grouped together because they share a common data format. Admixture was described by Alexander et al. (2009), smartPCA by Patterson et al. (2006). There is a folder with the R script used to create the input files, and separate folders for each analysis, R scripts for visualizing results are also provided.</oai_dc:dc/dc:description><oai_dc:dc/dc:subject>coalescent|conservation|gene flow|RADseq|species trees|species delimitation</oai_dc:dc/dc:subject><date
+>2016-09-23T22:06:36Z</date
+></data>

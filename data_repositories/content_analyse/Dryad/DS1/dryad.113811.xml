@@ -1,0 +1,3 @@
+<data><id>oai:v1.datadryad.org:10255/dryad.113811</id><oai_dc:dc/dc:title>Bash command to remove potential chimeras</oai_dc:dc/dc:title><oai_dc:dc/dc:description>These bash commands were used to search for and remove any read containing the EcoRI and MspI recognition sites, which are potential chimeric sites formed during ligation.</oai_dc:dc/dc:description><oai_dc:dc/dc:subject>ddRADseq|broadcast spawner|genetic diversity|species resilience</oai_dc:dc/dc:subject><date
+>2016-07-20T05:25:05Z</date
+></data>

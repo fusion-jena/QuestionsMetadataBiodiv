@@ -1,0 +1,3 @@
+<data><id>oai:v1.datadryad.org:10255/dryad.164905</id><oai_dc:dc/dc:title>Mean Census Dates for 200 litter traps located on Barro Colorado Island, Panama.</oai_dc:dc/dc:title><oai_dc:dc/dc:description>CensusMeanDates.txt holds three variables. The variable "census" is an integer representing a weekly census of 200 litter traps. The variable "date.mean" is the average date the 200 traps were visited in YYYY-MM-DD HH:MM:SS format. The variable "ndays" is the same average date expressed as the integer number of days since 1 January 1980.</oai_dc:dc/dc:description><oai_dc:dc/dc:subject>flowering times|moisture availability|phenology|rainfall|solar insolation.</oai_dc:dc/dc:subject><date
+>2017-11-30T16:51:25Z</date
+></data>

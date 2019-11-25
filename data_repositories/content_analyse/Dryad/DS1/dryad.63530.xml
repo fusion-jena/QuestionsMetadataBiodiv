@@ -1,0 +1,3 @@
+<data><id>oai:v1.datadryad.org:10255/dryad.63530</id><oai_dc:dc/dc:title>Nicotine Resistance Phenotypes (B population)</oai_dc:dc/dc:title><oai_dc:dc/dc:description>This file contains nicotine resistance measures for a large number of B lines from the Drosophila Synthetic Population Resource (DSPR, www.FlyRILs.org). Line identifiers are presented in the "patRIL" column, and phenotypes are presented in the "NicotineViability" column. Together with genotype data and analytical R code this file allows users to generate the QTL mapping results presented in Marriage et al. for the B population of DSPR RILs.</oai_dc:dc/dc:description><oai_dc:dc/dc:subject>DSPR|QTL mapping|nicotine|complex traits</oai_dc:dc/dc:subject><date
+>2014-09-22T17:55:02Z</date
+></data>

@@ -1,0 +1,3 @@
+<data><id>oai:v1.datadryad.org:10255/dryad.210941</id><oai_dc:dc/dc:title>WFABC-const source code</oai_dc:dc/dc:title><oai_dc:dc/dc:description>This compressed directory contains the C++ source code for the ABC simulations for the L1, L2 and L3 lines. This programs first simulates evolution in genetic drift backwards in time to obtain ancestral allele frequencies for the forward in time simulations of evolution by drift and selection in the lentil lines. This code requires the Gnu Scientific Library.</oai_dc:dc/dc:description><oai_dc:dc/dc:subject /><date
+>2019-04-26T13:17:13Z</date
+></data>
