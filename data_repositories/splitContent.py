@@ -19,23 +19,17 @@ csv.field_size_limit(100000000)
 #root = 'test'
 
 parser = argparse.ArgumentParser(description="Splits the csv content file of a data repository into individual files.")
-parser.add_argument("-dp", "--dataportal", help="Select a dataportal(options: dryad, gbif, pangaea, zenodo, figshare)", required=True)
-parser.add_argument("-mf", "--metadataFormat", help="Select a format(options: oai_dc, eml, pan_md, datacite)", required=True)
-
+parser.add_argument("-c", "--csv", help="Set path to folder containing data repository CSV file(s)", required=True)
 args = parser.parse_args()
-
-dataportal = args.dataportal
-metadataFormat = args.metadataFormat
-path = dataportal+'/'+metadataFormat
 
 subject_counts = {}
 subject_index = -1
-for subdir, dirs, filenames in os.walk(path):
+for subdir, dirs, filenames in os.walk(args.csv):
 	for file in filenames:
 		#consider only csv files
-		if file.endswith('.csv') and not file.endswith('_subject_counts.csv'):
+		if(file.endswith('.csv') and not file.endswith('_subject_counts.csv')):
 			# open file
-			csvFile = open(os.path.join(path,file), encoding="utf8")
+			csvFile = open(os.path.join(args.csv, file), encoding="utf8")
 			headers = csvFile.readline()
 			xmlTags = headers.split(',')
 			#print(xmlTags)
@@ -49,7 +43,7 @@ for subdir, dirs, filenames in os.walk(path):
 
 			for row in reader:
 				try:
-					if not row[0].startswith('id'):
+					if(not row[0].startswith('id')):
 						try:
 							#print(row[0])
 							# create the file structure
@@ -77,14 +71,14 @@ for subdir, dirs, filenames in os.walk(path):
 							# create a new XML file with the results
 							mydata = ET.tostring(data)
 							filename = row[0]
-							if '/' in filename:
+							if('/' in filename):
 								filenameSplit = row[0].split('/')
 								filename = filenameSplit[1]
-							if ':' in filename:
+							if(':' in filename):
 								filenameSplit = row[0].split(':')
 								filename = filenameSplit[2]
 							tree = ET.ElementTree(data)
-							tree.write(dataportal+'/'+metadataFormat+'/'+filename+".xml")
+							tree.write(args.csv+'/'+filename+".xml")
 							print(filename +'.xml')
 						except IndexError as ex:
 							maxColumn = str(len(xmlTags))
@@ -95,7 +89,7 @@ for subdir, dirs, filenames in os.walk(path):
 					print( "ERROR: %s" % e )
 
 			csvFile.close()
-			with open(path + "/" + file.split(".csv")[0] + "_subject_counts.csv", "w") as subject_writer:
+			with open(args.csv + "/" + file.split(".csv")[0] + "_subject_counts.csv", "w") as subject_writer:
 				subject_list = []
 				for subject, count in subject_counts.items():
 					subject_list.append(subject + "," + str(count))
