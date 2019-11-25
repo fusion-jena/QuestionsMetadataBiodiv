@@ -12,6 +12,7 @@ import argparse
 import xml.etree.ElementTree as ET
 import sys
 import xml.dom.minidom
+import traceback
 
 csv.field_size_limit(100000000)
 
@@ -50,14 +51,14 @@ for subdir, dirs, filenames in os.walk(args.csv):
 							data = ET.Element('data')
 							for i, entry in enumerate(xmlTags):
 								#print(row[i])
-								tag_structure = entry.strip().split("/")
+								'''tag_structure = entry.strip().split("/")
 								parent_tag = data
 								item = None
 								for tag in tag_structure:
 									item = ET.SubElement(parent_tag, tag)
-									parent_tag = tag
+									parent_tag = ET.Element(tag)'''
 
-								#item = ET.SubElement(data, entry.strip())
+								item = ET.SubElement(data, entry.strip())
 								text = row[i].replace(';', ',')
 								item.text = text
 								if(subject_index == i):
@@ -86,14 +87,15 @@ for subdir, dirs, filenames in os.walk(args.csv):
 				except Exception: #catch all other exceptions
 					e = sys.exc_info()[0]
 					print( row[0])
-					print( "ERROR: %s" % e )
+					print("ERROR: %s" % e)
+					print(traceback.format_exc())
 
 			csvFile.close()
-			with open(args.csv + "/" + file.split(".csv")[0] + "_subject_counts.csv", "w") as subject_writer:
+			with open(args.csv + "/" + file.split(".csv")[0] + "_subject_counts.csv", "w", encoding="utf-8") as subject_writer:
 				subject_list = []
 				for subject, count in subject_counts.items():
 					subject_list.append(subject + "," + str(count))
 
 				subject_writer.write("subject,count" + "\n" + "\n".join(subject_list))
-				del subject_list[:]
-				written = True
+
+			del subject_list[:]
