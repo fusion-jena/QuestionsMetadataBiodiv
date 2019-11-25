@@ -42,7 +42,7 @@ for subdir, dirs, filenames in os.walk(path):
 			# for each line in the csv file
 			reader = csv.reader(csvFile, delimiter=',')
 			for tag in xmlTags:
-				inner_tag = tag.split("/")[-1]
+				inner_tag = tag.strip().split("/")[-1]
 				if("subject" in inner_tag):
 					subject_index = xmlTags.index(tag)
 					break
@@ -56,7 +56,14 @@ for subdir, dirs, filenames in os.walk(path):
 							data = ET.Element('data')
 							for i, entry in enumerate(xmlTags):
 								#print(row[i])
-								item = ET.SubElement(data, entry.strip() )
+								tag_structure = entry.strip().split("/")
+								parent_tag = data
+								item = None
+								for tag in tag_structure:
+									item = ET.SubElement(parent_tag, tag)
+									parent_tag = tag
+
+								#item = ET.SubElement(data, entry.strip())
 								text = row[i].replace(';', ',')
 								item.text = text
 								if(subject_index == i):
