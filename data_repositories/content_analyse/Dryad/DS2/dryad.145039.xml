@@ -1,0 +1,3 @@
+<data><id>oai:v1.datadryad.org:10255/dryad.145039</id><oai_dc:dc/dc:title>Scenario codes and priors for simulations Torunament#1</oai_dc:dc/dc:title><oai_dc:dc/dc:description>In this file we report the scenario codes to reproduce, using the software DIY-ABC, the reference table which can then be analyzed by the R package "abcrf" to produce the results from the first random forest tournament we carried out.This reproduces the results which are reported in the Table S6 in the supplementary materials, i.e. the tournament aimed at identifying the main divergence scenario.</oai_dc:dc/dc:description><oai_dc:dc/dc:subject>Ecological Speciation|Genomics|Rapid Speciation|Selection</oai_dc:dc/dc:subject><date
+>2017-05-24T13:09:46Z</date
+></data>

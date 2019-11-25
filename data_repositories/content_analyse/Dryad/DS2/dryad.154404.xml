@@ -1,0 +1,3 @@
+<data><id>oai:v1.datadryad.org:10255/dryad.154404</id><oai_dc:dc/dc:title>Simulations code</oai_dc:dc/dc:title><oai_dc:dc/dc:description>matlab simulations code used to obtain all the results of the current studies. Running the script does not require external dependencies. To run all the simulations in sequence and reproduce the figures of the paper open the add to path the script folder and run the script 'runAllSims9.m'.</oai_dc:dc/dc:description><oai_dc:dc/dc:subject>motor control|cerebellum|active inference|perceptual learning|computational model</oai_dc:dc/dc:subject><date
+>2017-11-27T13:42:13Z</date
+></data>

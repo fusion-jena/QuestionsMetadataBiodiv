@@ -1,0 +1,3 @@
+<data><id>oai:v1.datadryad.org:10255/dryad.172757</id><oai_dc:dc/dc:title>valan2018_SUPPLEMENT.tar</oai_dc:dc/dc:title><oai_dc:dc/dc:description>This directory contains: 	* metadata to obtain images from the three novel datasets we designed for our study	* notebooks with thorough evaluation of off-the-shelf approach for image classification based on a feature extraction with a single feed forward pass trough pretrained VGG16 	* script to run on your own dataset with what we found to be optimal settings. You can also access it here https://github.com/valanm/off-the-shelf-insect-identification</oai_dc:dc/dc:description><oai_dc:dc/dc:subject /><date
+>2019-03-04T07:44:24Z</date
+></data>

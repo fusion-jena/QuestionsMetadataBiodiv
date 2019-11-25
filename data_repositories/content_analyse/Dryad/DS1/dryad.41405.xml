@@ -1,0 +1,3 @@
+<data><id>oai:v1.datadryad.org:10255/dryad.41405</id><oai_dc:dc/dc:title>Dataset S3 - Genome assemblies in fasta format</oai_dc:dc/dc:title><oai_dc:dc/dc:description>Genome assemblies of six halophilic archaea. Organisms were obtained from culture collections, grown, and then each genome was shotgun sequenced using 454 pyrosequencing. The genomes were then assembled into contigs and scaffolds. Data for each organism is in a separate file in fasta format. Each scafold is labelled with a header delineated by the '&gt;' character.</oai_dc:dc/dc:description><oai_dc:dc/dc:subject>halophilic archaea|archaea|phylogenomics|genomics|evolution</oai_dc:dc/dc:subject><date
+>2012-08-08T18:47:01Z</date
+></data>

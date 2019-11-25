@@ -1,0 +1,3 @@
+<data><id>oai:v1.datadryad.org:10255/dryad.52952</id><oai_dc:dc/dc:title>SEM analysis scripts for North Carolina data</oai_dc:dc/dc:title><oai_dc:dc/dc:description>This file contains the R scripts used for structural equation model (SEM) analysis of the F2 data from the NC field site.  Use of the various scripts is described in comment lines within the file.  Scripts require loading the sem package for R, and prior generation of the R/qtl object for these data.</oai_dc:dc/dc:description><oai_dc:dc/dc:subject>resource allocation|quantitative trait locus|structural equation model|trait network|pleiotropy</oai_dc:dc/dc:subject><date
+>2013-12-12T14:59:22Z</date
+></data>

@@ -1,0 +1,3 @@
+<data><id>oai:v1.datadryad.org:10255/dryad.187022</id><oai_dc:dc/dc:title>Duplicate read removal script</oai_dc:dc/dc:title><oai_dc:dc/dc:description>This scripts identifies all reads with identical sequences andonly writes the first occurence of a read to the output.</oai_dc:dc/dc:description><oai_dc:dc/dc:subject>killer whale|microbiome|diatom</oai_dc:dc/dc:subject><date
+>2018-11-13T17:15:25Z</date
+></data>

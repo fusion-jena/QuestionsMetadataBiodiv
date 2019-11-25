@@ -1,0 +1,3 @@
+<data><id>oai:v1.datadryad.org:10255/dryad.39658</id><oai_dc:dc/dc:title>Individual simulations, 1 week after perturbation</oai_dc:dc/dc:title><oai_dc:dc/dc:description>This RData file contains a table of all the simulations, 1 week after the perturbation. The columns encompass all parameters (prefixed with "p_") and all variables (prefixed with "v_"). The odd-numbered rows record the state of the model prior to the perturbation, and the even-numbered rows record the state of the model after the perturbation.</oai_dc:dc/dc:description><oai_dc:dc/dc:subject /><date
+>2012-07-30T16:11:18Z</date
+></data>

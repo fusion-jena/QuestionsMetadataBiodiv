@@ -1,0 +1,3 @@
+<data><id>oai:v1.datadryad.org:10255/dryad.58474</id><oai_dc:dc/dc:title>GARLI configuration file for best tree</oai_dc:dc/dc:title><oai_dc:dc/dc:description>Settings used to generate the best ML tree in GARLI.  This example is for cytb, but the settings were the same for each of the three datasets analysed except the number of attachments (which was twice the number of OTUs), outgroup and the model of sequence evolution.</oai_dc:dc/dc:description><oai_dc:dc/dc:subject>conservation|cryptic species|drainage divides|ESU|phylogeography|sea level changes</oai_dc:dc/dc:subject><date
+>2014-01-13T17:18:43Z</date
+></data>

@@ -1,0 +1,3 @@
+<data><id>oai:v1.datadryad.org:10255/dryad.114572</id><oai_dc:dc/dc:title>Bistable task behavioural data</oai_dc:dc/dc:title><oai_dc:dc/dc:description>Percept duration data (in seconds) for all subjects (patients and controls) on the bistable tasks is provided in .csv spreadsheet and .mat formats. The accompanying example Matlab script loads the duration data and calculates descriptive statistics for the rotating sphere task, which are plotted similarly to Figures 5 and 6 of the paper.</oai_dc:dc/dc:description><oai_dc:dc/dc:subject>Neuropsychology|psychophysics|depth perception|binocular vision|structure-from-motion|bistable|parietal lesion</oai_dc:dc/dc:subject><date
+>2016-06-06T14:42:18Z</date
+></data>

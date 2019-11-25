@@ -1,0 +1,3 @@
+<data><id>oai:v1.datadryad.org:10255/dryad.119271</id><oai_dc:dc/dc:title>Repeat filtered VCF file</oai_dc:dc/dc:title><oai_dc:dc/dc:description>Subset of a previously published SNP dataset available from doi: 10.5061/dryad.qk22t. Two loci were removed due to being in a gene putatively evolving under selection. A further 1,360 SNPs were removed due to being in regions of know repetitive elements, excessive or low coverage, or low mappability in the killer whale genome. This VCF file contains the genotypes of 115 individuals at 2,316 sites.</oai_dc:dc/dc:description><oai_dc:dc/dc:subject>RADseq|SNP|killer whale</oai_dc:dc/dc:subject><date
+>2016-06-23T17:02:14Z</date
+></data>

@@ -1,0 +1,3 @@
+<data><id>oai:v1.datadryad.org:10255/dryad.201035</id><oai_dc:dc/dc:title>Topology weightings from Twisst (42 files)</oai_dc:dc/dc:title><oai_dc:dc/dc:description>Twisst data underlying figures 2 &amp; 3 and supplementary figures S1-S4. 42 files are provided, two for each chromosome. Files ending in ".weights.tsv.gz" give the topology weightings for the fifteen possible topologies (see Figure 2). Each line represents a different 50 SNP window. Files ending in ".data.tsv" give the chromosome and coordinates of each window.</oai_dc:dc/dc:description><oai_dc:dc/dc:subject>Speciation|Recombination|Introgression</oai_dc:dc/dc:subject><date
+>2019-02-15T15:21:01Z</date
+></data>

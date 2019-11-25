@@ -1,0 +1,3 @@
+<data><id>oai:v1.datadryad.org:10255/dryad.64545</id><oai_dc:dc/dc:title>cd_hit_data</oai_dc:dc/dc:title><oai_dc:dc/dc:description>A compressed file consisting of 10 cd hit files (2 for each of the 5 anchialine shrimp species) files used to generate orthologous clusters from the five anchialine shrimp species. One file (ending in .cd-hit_filtered) contains the putative ORFs used to generate clusters while the other file (ending in .cd-hit_filtered.clstr) contains statistics and information on the clusters.</oai_dc:dc/dc:description><oai_dc:dc/dc:subject>Anchialine|transcriptomics|crustacean|ecological genomics</oai_dc:dc/dc:subject><date
+>2014-10-27T17:50:24Z</date
+></data>

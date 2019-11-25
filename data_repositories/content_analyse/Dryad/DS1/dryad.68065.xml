@@ -1,0 +1,3 @@
+<data><id>oai:v1.datadryad.org:10255/dryad.68065</id><oai_dc:dc/dc:title>Files for CMR analysis using POPAN model</oai_dc:dc/dc:title><oai_dc:dc/dc:description>This folder contains the raw capture records for the Crundale and Hollingbury Serotine bats population (females only), they are formatted to be read in MARK and RMark (in R) and modelled using a POPAN approach. In addition, the folder also contains the R scripts for analysing the two datasets in R using the RMark package.</oai_dc:dc/dc:description><oai_dc:dc/dc:subject>individual-based model|capture-mark-recapture|serotine bat|modelling</oai_dc:dc/dc:subject><date
+>2014-09-20T16:53:19Z</date
+></data>

@@ -1,0 +1,3 @@
+<data><id>oai:v1.datadryad.org:10255/dryad.122375</id><oai_dc:dc/dc:title>Heliconius melpomene RSEM mapped count data</oai_dc:dc/dc:title><oai_dc:dc/dc:description>File is count data (expression level) output of Trinity contigs from RSEM for Heliconius melpomene. Column headers contain sex (M or F), tissue type ("ant" = antennae, "leg" = legs, and "mou" = mouthparts), and sample number. See Table S1 for specimen IDs. Samples labelled "1" are the result of merging two technical replicates (see Methods section of paper for details).</oai_dc:dc/dc:description><oai_dc:dc/dc:subject>proteolysis|trypsin-like serine protease|luciferin 4-monooxygenase|lipase|proboscipedia</oai_dc:dc/dc:subject><date
+>2016-08-04T06:50:32Z</date
+></data>

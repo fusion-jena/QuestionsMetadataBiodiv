@@ -1,0 +1,3 @@
+<data><id>oai:v1.datadryad.org:10255/dryad.83189</id><oai_dc:dc/dc:title>CCA input file</oai_dc:dc/dc:title><oai_dc:dc/dc:description>Environmental data for each population was extracted from a shapefile provided in the Canadian EcoAtlas (available at: http://www.data.gc.ca/data/en/dataset/9099a060-77ea-57f6-b1b9-50f9eeef435b)and pollen data were downloaded from the Neotoma Database (http://www.neotomadb.org/). CCA was performed using the Vegan package 2.0 in R 3.0.</oai_dc:dc/dc:description><oai_dc:dc/dc:subject>chloroplast DNA|conifers|gene flow|hybrid zone|introgression|mitochondrial DNA|pollen analysis|species delimitation</oai_dc:dc/dc:subject><date
+>2015-04-09T16:14:47Z</date
+></data>

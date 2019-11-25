@@ -1,0 +1,3 @@
+<data><id>oai:v1.datadryad.org:10255/dryad.47852</id><oai_dc:dc/dc:title>Bee microbiome paired-end, part F</oai_dc:dc/dc:title><oai_dc:dc/dc:description>The paired-end deep-sequence data from this paper was generated as a single lane of Illumina data, but was split up into 6 parts (A-F) for Dryad submission.  This is part F.  The file will unzip into two files containing the paired-end reads for the last less-than-5.5M sequenced clusters.  Phred+64 quality score encoding.  Library prep details can be found in the Methods of the linked manuscript.</oai_dc:dc/dc:description><oai_dc:dc/dc:subject /><date
+>2013-03-21T15:02:57Z</date
+></data>

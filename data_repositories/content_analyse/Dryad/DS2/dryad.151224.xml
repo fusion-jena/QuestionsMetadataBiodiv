@@ -1,0 +1,3 @@
+<data><id>oai:v1.datadryad.org:10255/dryad.151224</id><oai_dc:dc/dc:title>Functional annotation of the Sericostoma genome assembly</oai_dc:dc/dc:title><oai_dc:dc/dc:description>Gene functions were assigned to the Geneset using BLASTp (cutoff: 10-5) against KEGG (release 58), non-redundant protein sequences (NCBI release 20150222), Swiss-Prot, and TrEMBL (Uniprot release 201203). Conserved protein domains were assessed by InterPro and InterProScan. Separate files are provided for each database.</oai_dc:dc/dc:description><oai_dc:dc/dc:subject>Speciation|Population genetics|Freshwater|mito-nuclear discordance|caddisfly</oai_dc:dc/dc:subject><date
+>2018-02-20T20:53:11Z</date
+></data>

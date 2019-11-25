@@ -1,0 +1,3 @@
+<data><id>oai:v1.datadryad.org:10255/dryad.197075</id><oai_dc:dc/dc:title>sort_oysterdata_IPM</oai_dc:dc/dc:title><oai_dc:dc/dc:description>This file converts the raw data in Actual_Size_Data.csv into a size distribution for each site and year, standardizing for survey area and survey effort in each year.  See GitHub link for further meta-data and any updates.  https://github.com/jwilsonwhite/IPM_statespace/tree/master/Kimbro_etal_Oikos</oai_dc:dc/dc:description><oai_dc:dc/dc:subject>Predation|Primary production|Integral Projection Model|Larval recruitment|Environmental gradients</oai_dc:dc/dc:subject><date
+>2018-11-01T21:36:45Z</date
+></data>

@@ -1,0 +1,3 @@
+<data><id>oai:v1.datadryad.org:10255/dryad.65264</id><oai_dc:dc/dc:title>final_soap_GNV129007</oai_dc:dc/dc:title><oai_dc:dc/dc:description>final_soap_GNV129007.fa: Assembly of Urodus parvula from Genbank SRA accession #SRR1299750, using multiple kmers (13,23,33,43,63) with SOAPdenovo-Trans v1.01. Different Kmer assemblies were combined with cd-hit-est and processed with the fastx toolkit. See Kawahara and Breinholt (2014) for more details.</oai_dc:dc/dc:description><oai_dc:dc/dc:subject>butterfly|moth|ortholog|phylogeny|transcriptome</oai_dc:dc/dc:subject><date
+>2014-06-05T18:52:10Z</date
+></data>

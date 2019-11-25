@@ -1,0 +1,3 @@
+<data><id>oai:v1.datadryad.org:10255/dryad.139203</id><oai_dc:dc/dc:title>Variant Effect Predictor related files</oai_dc:dc/dc:title><oai_dc:dc/dc:description>This is a gzip/tar compressed data archive containing the input and output files for the Variant Effect Predictor (VEP) related analyses. It also has a RepeatMasker results file, based on the sacCer3 reference genome, and a perl script "mask.repeatmasker.pl" to mask/exclude the VEP results</oai_dc:dc/dc:description><oai_dc:dc/dc:subject>wine yeast domestication|comparative population genomics|microbe adaptive evolution|introgression|Divergent selection</oai_dc:dc/dc:subject><date
+>2017-02-28T18:28:15Z</date
+></data>

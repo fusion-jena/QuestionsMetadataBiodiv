@@ -1,0 +1,3 @@
+<data><id>oai:v1.datadryad.org:10255/dryad.85937</id><oai_dc:dc/dc:title>IAL_gen_diversity_bootstrap</oai_dc:dc/dc:title><oai_dc:dc/dc:description>R script using the bootstrap to estimate three measures of genetic diversity (allelic diversity, Shannon diversity, and expected heterozygosity). Requires IAL_popsim.R and an input file of microsatellite genotypes (IAL_RWBL_genotypes.csv). Written by J. Johndrow.</oai_dc:dc/dc:description><oai_dc:dc/dc:subject>red-winged blackbird|indirect benefits|population structure|genetic variation|polyandry|mating systems</oai_dc:dc/dc:subject><date
+>2015-04-22T14:12:14Z</date
+></data>

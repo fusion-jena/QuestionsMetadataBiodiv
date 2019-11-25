@@ -1,0 +1,3 @@
+<data><id>oai:v1.datadryad.org:10255/dryad.206130</id><oai_dc:dc/dc:title>Exp1_gene.rct</oai_dc:dc/dc:title><oai_dc:dc/dc:description>It contains the data of relative expression for SFP genes in Exp. 1. r.ID: randomly assigned sample identity to mask the true identity of each sample during qPCR. Treatment: assigned treatment for each replicate (isolated, paired or iso-paired). log(2dct_Lhis): relative expression of SFP genes, normalized by a house-keeping gene (Lhis).</oai_dc:dc/dc:description><oai_dc:dc/dc:subject>Ejaculate investment|Gene expression|Mate availability|Sexual selection|Sperm competition|Seminal fluid</oai_dc:dc/dc:subject><date
+>2019-02-04T20:18:04Z</date
+></data>

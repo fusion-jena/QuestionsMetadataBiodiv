@@ -1,0 +1,3 @@
+<data><id>oai:v1.datadryad.org:10255/dryad.41538</id><oai_dc:dc/dc:title>Simulate raw sequencing data - Step 2</oai_dc:dc/dc:title><oai_dc:dc/dc:description>The 2b_gnrCounts.R script generates per gene and per library expression levels for 2x10 libraries with differential expression among them. These read count files are used along with the fastq files simulated in previous step by 2c_drawreads.pl to create 2x10 libraries with differential expression among them.</oai_dc:dc/dc:description><oai_dc:dc/dc:subject>Bioinfomatics/Phyloinfomatics|Transcriptomics|Ecological Genetics|Gene Structure and Function|Genomics/Proteomics|Molecular Evolution</oai_dc:dc/dc:subject><date
+>2012-08-13T16:07:37Z</date
+></data>

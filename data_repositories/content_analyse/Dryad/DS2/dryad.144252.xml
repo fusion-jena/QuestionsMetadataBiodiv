@@ -1,0 +1,3 @@
+<data><id>oai:v1.datadryad.org:10255/dryad.144252</id><oai_dc:dc/dc:title>Weekly MODIS Aqua NDVI at 2.5 arc-minutes</oai_dc:dc/dc:title><oai_dc:dc/dc:description>Raster brick of weekly average NDVI from NASA's Aqua satellite and MODIS sensor (a total of 143 weeks between Jan 5, 2014 and Oct 1, 2016), in GRI format, at a resolution of 2.5 arc-minutes. Layer names indicate the date each week starts on. For example, the layer named ndvi_modis_aqua_wk151025 has average NDVI for the week starting on October 25, 2015.</oai_dc:dc/dc:description><oai_dc:dc/dc:subject>Zika|Arbovirus|environmental data|epidemic data|demographics</oai_dc:dc/dc:subject><date
+>2018-04-20T17:30:20Z</date
+></data>

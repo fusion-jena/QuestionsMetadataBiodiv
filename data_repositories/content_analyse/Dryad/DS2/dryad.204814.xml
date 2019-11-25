@@ -1,0 +1,3 @@
+<data><id>oai:v1.datadryad.org:10255/dryad.204814</id><oai_dc:dc/dc:title>Electrophysiology and Photo-uncaging Experiments</oai_dc:dc/dc:title><oai_dc:dc/dc:description>This compressed folder contains raw time-series recordings for all electrophysiology and photo-uncaging experiments included in the paper. Recordings are the .abf format (acquired with Clampex software (Axon Instruments) and can be opened and viewed with either Clampfit Software (Axon Instruments) or another computing platform (e.g. MATLAB (Mathworks) using the AbfLoad function, see the Marder Lab GitHub).</oai_dc:dc/dc:description><oai_dc:dc/dc:subject>Stomatogastric Ganglion|Cancer borealis|Variability|Electrotonus|Voltage Integration</oai_dc:dc/dc:subject><date
+>2019-02-01T16:46:00Z</date
+></data>

@@ -1,0 +1,3 @@
+<data><id>oai:v1.datadryad.org:10255/dryad.106783</id><oai_dc:dc/dc:title>Alfalfa genetic data</oai_dc:dc/dc:title><oai_dc:dc/dc:description>Filtered genetic data for population samples of alfalfa. The file is in vcf format and was produced using GATK's UnifiedGenotyper with ploidy set to 4 (i.e., assuming tertraploids). Only variants with a mean of 2X coverage were retained in this file. IDs provide population information as described in the paper.</oai_dc:dc/dc:description><oai_dc:dc/dc:subject>oviposition preference|larval performance|host quality|host shift|population genomics</oai_dc:dc/dc:subject><date
+>2016-10-08T01:45:41Z</date
+></data>

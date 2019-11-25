@@ -1,0 +1,3 @@
+<data><id>oai:v1.datadryad.org:10255/dryad.100534</id><oai_dc:dc/dc:title>entropy_variants0.6</oai_dc:dc/dc:title><oai_dc:dc/dc:description>Input file for analysis with the "entropy" model. This file is a filtered version of the VCF file, including genotype likelihoods for loci with MAF&gt;1%. Additionally, we randomly selected 1 SNP per contig for contigs with multiple variant sites, to ensure independence of SNPs.</oai_dc:dc/dc:description><oai_dc:dc/dc:subject>Burbot|Metapopulation|Genetic structure|Genotyping by sequencing</oai_dc:dc/dc:subject><date
+>2015-10-16T15:09:40Z</date
+></data>

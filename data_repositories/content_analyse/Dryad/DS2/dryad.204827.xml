@@ -1,0 +1,3 @@
+<data><id>oai:v1.datadryad.org:10255/dryad.204827</id><oai_dc:dc/dc:title>Source data</oai_dc:dc/dc:title><oai_dc:dc/dc:description>This folder has four matlab .mat files. This should contain raw data for Figs. 1, 2, 4, 5, 6, 7. It isn't all data for all the figures, but there is example data for those.                                                                          flash_responses.mat has data from all of Fig 1 and parts of Figs. 2 and 5, sbc_examples.mat has data for figure 6, cellular_noise.mat has data for figure 7, cone_linear_filters.mat has data from figure 4. Readme file is in the folder.</oai_dc:dc/dc:description><oai_dc:dc/dc:subject /><date
+>2019-01-25T14:53:36Z</date
+></data>

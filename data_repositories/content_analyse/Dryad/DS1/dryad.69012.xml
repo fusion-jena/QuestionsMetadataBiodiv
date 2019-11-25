@@ -1,0 +1,3 @@
+<data><id>oai:v1.datadryad.org:10255/dryad.69012</id><oai_dc:dc/dc:title>f_est</oai_dc:dc/dc:title><oai_dc:dc/dc:description>State estimation for four day time window. First column is the running day of year since January 1st 2002, second column is the prior estimate value for that time window, third column is the posterior estimate, fourth column is the prior uncertainty and fifth column is the posterior uncertainty.</oai_dc:dc/dc:description><oai_dc:dc/dc:subject>Leaf-phenology|data assimilation</oai_dc:dc/dc:subject><date
+>2015-05-19T20:53:34Z</date
+></data>

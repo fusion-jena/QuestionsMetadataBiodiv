@@ -1,0 +1,3 @@
+<data><id>oai:v1.datadryad.org:10255/dryad.181852</id><oai_dc:dc/dc:title>Source R-file including speedy odeintr code</oai_dc:dc/dc:title><oai_dc:dc/dc:description>This r-file contains the negative likelihood functions plus some underlying functions needed to perform functional response fitting using the faster differential equation solver &#8220;odeintr&#8221; compared to the one used in &#8220;source_fr_manual.r&#8221;. Please see the supplemental "manual" published along with the main paper in MEE for further and in-depth instructions.</oai_dc:dc/dc:description><oai_dc:dc/dc:subject /><date
+>2018-06-22T15:39:22Z</date
+></data>

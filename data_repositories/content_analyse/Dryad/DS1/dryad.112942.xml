@@ -1,0 +1,3 @@
+<data><id>oai:v1.datadryad.org:10255/dryad.112942</id><oai_dc:dc/dc:title>Diffusion MRI data from a physical phantom with three orthogonal fiber directions. Data was acquired at 9.4T.</oai_dc:dc/dc:title><oai_dc:dc/dc:description>This zip file contains raw dMRI data in a matlab (.mat) file (phantom_data), corresponding b-values (effective_b), gradient table (DWI_encoding_directions), and structural scan (structural_data). The data is also included as dicom and nifti.</oai_dc:dc/dc:description><oai_dc:dc/dc:subject>MRI|Brain|Diffusion|Kurtosis</oai_dc:dc/dc:subject><date
+>2016-08-25T16:15:16Z</date
+></data>

@@ -1,0 +1,3 @@
+<data><id>oai:v1.datadryad.org:10255/dryad.130399</id><oai_dc:dc/dc:title>Nucleotide mutation matrix</oai_dc:dc/dc:title><oai_dc:dc/dc:description>This matrix provides the mutation state for each snake species (NA for missing data), but here the two different resistance mutations (A to G vs. A to C) at codon 120 are considered separately. Specifically, resistance mutations are encoded with 1 or 2 (2 only applies to codon 120), and the non-resistant mutation with 0. The two data columns give the two mutations in order</oai_dc:dc/dc:description><oai_dc:dc/dc:subject>Na&lt;sup&gt;+&lt;/sup&gt;/K&lt;sup&gt;+&lt;/sup&gt;-ATPase|cardiotonic steroids|chemical ecology|toxin resistance|bufadienolides</oai_dc:dc/dc:subject><date
+>2016-11-03T15:04:57Z</date
+></data>
