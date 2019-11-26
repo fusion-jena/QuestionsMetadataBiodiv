@@ -51,14 +51,15 @@ for subdir, dirs, filenames in os.walk(args.csv):
 							data = ET.Element('data')
 							for i, entry in enumerate(xmlTags):
 								#print(row[i])
-								'''tag_structure = entry.strip().split("/")
+								tag_structure = entry.strip().split("/")
 								parent_tag = data
-								item = None
-								for tag in tag_structure:
-									item = ET.SubElement(parent_tag, tag)
-									parent_tag = ET.Element(tag)'''
+								for tag in tag_structure[:-1]:
+									if(data.find(tag) == None):
+										parent_tag = ET.SubElement(parent_tag, tag)
+									else:
+										parent_tag = data.find(tag)
 
-								item = ET.SubElement(data, entry.strip())
+								item = ET.SubElement(parent_tag, tag_structure[-1])
 								text = row[i].replace(';', ',')
 								item.text = text
 								if(subject_index == i):
@@ -89,6 +90,7 @@ for subdir, dirs, filenames in os.walk(args.csv):
 					print( row[0])
 					print("ERROR: %s" % e)
 					print(traceback.format_exc())
+					break
 
 			csvFile.close()
 			with open(args.csv + "/" + file.split(".csv")[0] + "_subject_counts.csv", "w", encoding="utf-8") as subject_writer:
