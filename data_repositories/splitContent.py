@@ -53,15 +53,14 @@ for subdir, dirs, filenames in os.walk(args.csv):
 								#print(row[i])
 								tag_structure = entry.strip().split("/")
 								parent_tag = data
-								for tag in tag_structure[:-1]:
+								for tag in tag_structure:
 									if(data.find(tag) == None):
 										parent_tag = ET.SubElement(parent_tag, tag)
 									else:
 										parent_tag = data.find(tag)
 
-								item = ET.SubElement(parent_tag, tag_structure[-1])
 								text = row[i].replace(';', ',')
-								item.text = text
+								parent_tag.text = text
 								if(subject_index == i):
 									subjects = row[i].split("|")
 									for subject in subjects:
@@ -90,7 +89,6 @@ for subdir, dirs, filenames in os.walk(args.csv):
 					print( row[0])
 					print("ERROR: %s" % e)
 					print(traceback.format_exc())
-					break
 
 			csvFile.close()
 			with open(args.csv + "/" + file.split(".csv")[0] + "_subject_counts.csv", "w", encoding="utf-8") as subject_writer:

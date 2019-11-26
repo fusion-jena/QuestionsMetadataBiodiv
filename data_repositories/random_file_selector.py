@@ -4,6 +4,7 @@ import random
 import argparse
 import sys
 from xml.dom import minidom
+import traceback
 
 parser = argparse.ArgumentParser(description="Choose a random number of individual files from a data repository")
 parser.add_argument("-fs", "--files", help="Set the path to the directory with the XML files", required=True)
@@ -36,14 +37,14 @@ try:
                         if(item.strip() in args.filter[1:]):
                             file_list.append(file)
                             number_of_files += 1
-                            print("\rLoaded " + number_of_files + " file(s)", end="")
+                            print("\rLoaded " + str(number_of_files) + " file(s)", end="")
                             break
                 else:
                     file_list.append(file)
                     number_of_files += 1
-                    print("\rLoaded " + number_of_files + " file(s)", end="")
+                    print("\rLoaded " + str(number_of_files) + " file(s)", end="")
 
-    print("Loading files -> done")
+    print("\rLoading files -> done")
     if(not len(file_list)):
         raise Exception("No XML file found in path '" + args.files + "'.")
 
@@ -69,5 +70,5 @@ try:
         print("Seed: " + args.seed)
         seedWriter.write(str(args.seed))
 except Exception as ex:
-    print(sys.exc_info()[0])
     print(ex)
+    print(traceback.format_exc())
