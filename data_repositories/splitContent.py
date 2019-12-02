@@ -64,10 +64,13 @@ for subdir, dirs, filenames in os.walk(args.csv):
 								if(subject_index == i):
 									subjects = row[i].split("|")
 									for subject in subjects:
-										if(not subject in subject_counts):
-											subject_counts[subject] = 1
-										else:
-											subject_counts[subject] += 1
+										subject = subject.split(";")
+										for sub_subject in subject:
+											stripped_sub_subject = sub_subject.strip()
+											if(not stripped_sub_subject in subject_counts):
+												subject_counts[stripped_sub_subject] = 1
+											else:
+												subject_counts[stripped_sub_subject] += 1
 
 							# create a new XML file with the results
 							mydata = ET.tostring(data)
