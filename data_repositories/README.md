@@ -107,7 +107,7 @@ python -m pip install yaml
 
 ## metadata_harvester.py
 
-```metadata_harvester.py``` is a simple to use Command Line Interface (CLI) tool to harvest and extract metadata information from the digital data portals. The scripts is able to read the settings for a data portal from a [YAML]-file (YAML Ain't Markup Language) and are commonly used for configuration. This way new data portals can be added with little effort. For more information see section 'Adding new data portals'. By default the script returns a CSV that shows which record (one line) used which metadata information (marked by ```1``` (used) or ```0``` (not used)) and their corresponding dates. If now date was specified or a record didn't have a date, no date was taken (marked with ```None```). The script has ten options as input, ```-cf```, ```-dp```, ```-mf```, ```-fs```, ```-lm```, ```-fl```, ```-hx```, ```-sf```, ```-sw``` and ```-ew```.
+```metadata_harvester.py``` is a simple to use Command Line Interface (CLI) tool to harvest and extract metadata information from the digital data portals. The scripts is able to read the settings for a data portal from a [YAML]-file (YAML Ain't Markup Language) and are commonly used for configuration. This way new data portals can be added with little effort. For more information see section 'Configuring data portal(s)/Adding new dataportal(s)'. By default the script returns a CSV that shows which record (one line) used which metadata information (marked by ```1``` (used) or ```0``` (not used)) and their corresponding dates. If now date was specified or a record didn't have a date, no date was taken (marked with ```None```). The script has ten options as input, ```-cf```, ```-dp```, ```-mf```, ```-fs```, ```-lm```, ```-fl```, ```-hx```, ```-sf```, ```-sw``` and ```-ew```.
  * ```-cf``` specifies the path to the config.yaml file that contains the settings for the data portals
  * ```-dp``` specifies from which dataportal the metadata should be harvested. If a dataportal is specified that isn't part of the list of data portals, an error is thrown.
  * ```-mf``` specifies from which metadata format of the corresponding dataportal the metadata information will be harvested. If a metadata format is specified that isn't part of the specified dataportal, an error is thrown. If no metadata format is specified, the metadata information of all metadata formats of the corresponding dataportal will be harvested.
@@ -127,25 +127,25 @@ The results are saved in a directory called ```metadata``` that is automatically
 All five data portals use the ```Open Archives Initiative Protocol for Metadata Harvesting``` (```OAI-PMH```) service to manage their metadata information. Records can't be harvested all at once but are structured in pages. Each page contains 100 records and an index, called a resumption token, that is used to access the next page. Therefore, it is to note that each page has to be accessed individually which can take a long time if no or a high limit for the number of records is specified. The script also waits for several seconds (specified by ```-sw```) between each harvest of a metadata format to prevent connection issues. Furthermore, if a connection issue (or similiar) happens during the harvest, the script will wait for several seconds (specified by ```-ew```) and resume from the last resumption token.
 
 
-### Adding new dataportal
+### Configuring data portal(s)/Adding new dataportal(s)
 
-New data portals can easily be added by configuring the 'config.yaml' file in a few steps. The format of the file is as follows:
+Data portals can easily be configured or added by accessing the 'config.yaml' file in a few steps. The format of the file is as follows:
 
 ```
 {dataportal_1}
   url: {dataportal_url}
   resumption_url: {dataportal_resumption_url}
   metadata_formats:
-    {metadata_format_1}: {data_field}
-    {metadata_format_2}: {data_field}
-    {metadata_format_3}: {data_field}
+    {metadata_format_1}: {date_field}
+    {metadata_format_2}: {date_field}
+    {metadata_format_3}: {date_field}
 {dataportal_2}
   url: {dataportal_url}
   resumption_url: {dataportal_resumption_url}
   metadata_formats:
-    {metadata_format_1}: {data_field}
-    {metadata_format_2}: {data_field}
-    {metadata_format_3}: {data_field}
+    {metadata_format_1}: {date_field}
+    {metadata_format_2}: {date_field}
+    {metadata_format_3}: {date_field}
     ...
     ...
     ...
