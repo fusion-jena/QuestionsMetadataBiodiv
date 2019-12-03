@@ -160,7 +160,8 @@ It is important that the 'metadataPrefix=' token is be empty. The metadata forma
 
 www.your_dataportal.org/oai/request?verb=ListRecords&resumptionToken=
 
-Again, it is important that the 'resumptionToken=' is empty since the script will later add it to the string. For more information see the 'Resumption tokens' section for more information. The {metadata_format_*} specifies the metadata formats for the given data portal and is ised by the ```-mf``` option. Each line is a new metadata format. Lastly, {date_field} specifies the the field containing the desired date that should be saved for each record for the given metadata format.
+Again, it is important that the 'resumptionToken=' is empty since the script will later add it to the string. For more information see the 'Resumption tokens' section for more information. The {metadata_format_*} specifies the metadata formats for the given data portal and is is used by the ```-mf``` option. Each line is a new metadata format. Lastly, {date_field} specifies the field containing the desired date that should be saved for each record for the given metadata format.
+
 Important to note is that the given URLs are able to use the OAI-PMH protocol or else the data harvesting won't work. For examples see the 'config.yaml' file containing the five data repositories 'Dryad', 'GBIF', 'Pangaea', 'Zenodo' and 'Figshare'.
 
 
