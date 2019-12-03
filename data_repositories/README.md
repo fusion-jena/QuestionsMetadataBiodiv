@@ -131,7 +131,7 @@ All five dataportals use the ```Open Archives Initiative Protocol for Metadata H
 
 New dataportals can easily be added by configuring the 'config.yaml' file in a few steps. The format of the file is as follows:
 
-{dataportal_1}
+```{dataportal_1}
   url: {dataportal_url}
   resumption_url: {dataportal_resumption_url}
   metadata_formats:
@@ -147,7 +147,7 @@ New dataportals can easily be added by configuring the 'config.yaml' file in a f
     {metadata_format_3}: {data_field}
     ...
     ...
-    ...
+    ...```
 
 
 Strings surrounded by '{}' are user-specific. {dataportal} specifies the name of each data portal and is used by the ```-dp``` option of the script. This can be any string the user wants but has to be specific for the each data portal. {dataportal_url] specifies the 'first' page of the harvesting and should look something like this:
