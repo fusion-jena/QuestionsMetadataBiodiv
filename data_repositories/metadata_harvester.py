@@ -5,8 +5,11 @@ import datetime
 import time
 import os
 import xml.dom.minidom
+import yaml
 
 
+#dictionary containing the settings for the repositories
+repository_data = None
 #variable specifying the dataportal
 dataportal = None
 #variable specifying the metadata format (if given)
@@ -19,16 +22,14 @@ limit = None
 full = None
 #variable specifying the path to the output XML file
 harvestxml = None
+#variable specifying if the avaiable data portals should be printed
+showportals = None
 #variable specifying the if the metadata formats for the given data portal should be printed
 showformats = None
 #dictionary containing the fields of the given metadata format
 metadataDic = {}
 #dictionary containing the contents of the fields of the given metadata format
 fieldsDic = {}
-#dictionary containing the metadata format for the given dataportal
-prefixDic = {}
-#dictionary containing the used dates for the given dataportal and metadata format
-dateDic = {}
 #variable specifying if a metadata date for the record was found
 dateFound = None
 #variable counting the number of parsed records for the 'limit' option
@@ -44,6 +45,8 @@ errorwait = None
 #method for getting the command line arguments
 def commandLine():
 
+    #dictionary containing the settings for the repositories
+    global repository_data
     #variable specifying the dataportal
     global dataportal
     #variable specifying the metadata format (if given)
@@ -56,6 +59,8 @@ def commandLine():
     global full
     #variable specifying the path to the output XML file
     global harvestxml
+    #variable specifying if the avaiable data portals should be printed
+    global showportals
     #variable specifying if the metadata formats for the given data portal should be printed
     global showformats
     #variable specifying the waiting time for a metadata format
@@ -63,126 +68,88 @@ def commandLine():
     #variable specifying the waiting time if an exception occurs
     global errorwait
 
-    #command line arguments
-    parser = argparse.ArgumentParser(description="Harvest and check metadata of datasets from a dataportal.")
-    parser.add_argument("-dp", "--dataportal", help="Choose from what dataportal the metadata will be harvested (options: dryad, gbif, pangaea, zenodo, figshare)", required=True)
-    parser.add_argument("-mf", "--metadataformat", help="Specify from which metadata format the metadata will be harvested (default: metadata from all formats will be downloaded)")
-    parser.add_argument("-fs", "--fields", help="Set whether the content of specific fields should also be saved in an extra CSV file (see the website of the respective datarepositories for avaiable fields; multiple fields are separated by comma; default: the content of no field will be saved)")
-    parser.add_argument("-lm", "--limit", help="Only the first <limit> metadata sets will be harvested (default: 0 {= all metadata sets})", type=int, default=0)
-    parser.add_argument("-fl", "--full", help="Save the whole path of a field", action="store_true")
-    parser.add_argument("-hx", "--harvestxml", help="Path to output directory to save the raw metadata in an extra XML file")
-    parser.add_argument("-sf", "--showformats", help="Show metadata format for the given dataportal", action="store_true")
-    parser.add_argument("-sw", "--startwait", help="Set the time the program waits between the harvesting of each metadata format in seconds (default: 60)", type=int, default=60)
-    parser.add_argument("-ew", "--errorwait", help="Set the time the program waits if an exception occurs in seconds (default: 30)", type=int, default=30)
+    try:
+        #command line arguments
+        parser = argparse.ArgumentParser(description="Harvest and check metadata of datasets from a dataportal.")
+        parser.add_argument("-cf", "--config", help="Set path to the config.yaml file", required=True)
+        parser.add_argument("-dp", "--dataportal", help="Choose from what dataportal the metadata will be harvested", required=True)
+        parser.add_argument("-mf", "--metadataformat", help="Specify from which metadata format the metadata will be harvested (default: metadata from all formats will be downloaded)")
+        parser.add_argument("-fs", "--fields", help="Set whether the content of specific fields should also be saved in an extra CSV file (see the website of the respective datarepositories for avaiable fields; multiple fields are separated by comma; default: the content of no field will be saved)")
+        parser.add_argument("-lm", "--limit", help="Only the first <limit> metadata sets will be harvested (default: 0 {= all metadata sets})", type=int, default=0)
+        parser.add_argument("-fl", "--full", help="Save the whole path of a field", action="store_true")
+        parser.add_argument("-hx", "--harvestxml", help="Path to output directory to save the raw metadata in an extra XML file")
+        parser.add_argument("-sp", "--showportals", help="Show avaiable data portals", action="store_true")
+        parser.add_argument("-sf", "--showformats", help="Show metadata format for the given dataportal", action="store_true")
+        parser.add_argument("-sw", "--startwait", help="Set the time the program waits between the harvesting of each metadata format in seconds (default: 60)", type=int, default=60)
+        parser.add_argument("-ew", "--errorwait", help="Set the time the program waits if an exception occurs in seconds (default: 30)", type=int, default=30)
 
-    args = parser.parse_args()
+        args = parser.parse_args()
 
-    dataportal = args.dataportal
-    metadataformat = args.metadataformat
-    fields = args.fields
-    limit = args.limit
-    full = args.full
-    showformats = args.showformats
-    startwait = args.startwait
-    errorwait = args.errorwait
+        config = args.config
+        dataportal = args.dataportal
+        metadataformat = args.metadataformat
+        fields = args.fields
+        limit = args.limit
+        full = args.full
+        showportals = args.showportals
+        showformats = args.showformats
+        startwait = args.startwait
+        errorwait = args.errorwait
 
-    #set the list of fields which contents will be saved (if specified by the user)
-    if(fields != None):
-        fields_list = fields.split(",")
+        with open(config) as config_loader:
+            repository_data = yaml.safe_load(config_loader)
 
-    if(args.harvestxml != None):
-        harvestxml = (args.harvestxml + "/").replace("//", "/")
-        if(not os.path.exists(harvestxml)):
-            os.makedirs(harvestxml)
+        #set the list of fields which contents will be saved (if specified by the user)
+        if(fields != None):
+            fields_list = fields.split(",")
 
-    if(startwait < 0):
-        startwait = 60
+        if(args.harvestxml != None):
+            harvestxml = (args.harvestxml + "/").replace("//", "/")
+            if(not os.path.exists(harvestxml)):
+                os.makedirs(harvestxml)
 
-    if(errorwait < 0):
-        errorwait = 30
+        if(startwait < 0):
+            startwait = 60
+
+        if(errorwait < 0):
+            errorwait = 30
+    except:
+        raise Exception("")
 
 
 
 #method for download the metadata of a given dataportal and, optionally, a given metadata format
 def downloadMetadata():
 
+    #dictionary containing the settings for the repositories
+    global repository_data
+    #list saving the raw metadata
     global xmlList
-
     #dictionary containing the fields of the given metadata format
     global metadataDic
     #dictionary containing the contents of the fields of the given metadata format
     global fieldsDic
-    #dictionary containing the metadata format for the given dataportal
-    global prefixDic
-    #dictionary containing the used dates for the given dataportal and metadata format
-    global dateDic
     #variable counting the number of the parsed resumption tokens for console output
     global tokenIndex
     #variable counting the number of parsed records for the 'limit' option
     global limit_counter
 
-    #metadata formats
-    #dictionary of the avaiable metadata formats of each dataportal
-    prefixDic["dryad"] = ("oai_dc", "rdf", "ore")
-    prefixDic["gbif"] = ("oai_dc", "eml")
-    prefixDic["pangaea"] = ("oai_dc", "pan_md", "dif", "iso19139", "iso19139.iodp", "datacite3")
-    prefixDic["zenodo"] = ("oai_dc", "oai_datacite", "datacite", "datacite3", "datacite4", "oai_datacite3")
-    prefixDic["figshare"] = ("oai_dc", "oai_datacite", "rdf", "qdc")
-
-    #date fields
-    #dictionary of the used dates for each dataportal
-    #dryad
-    dateDic["dryad"] = dict()
-    dateDic["dryad"]["oai_dc"] = "dc:date"
-    dateDic["dryad"]["rdf"] = "dc:date"
-    dateDic["dryad"]["ore"] = "atom:published"
-    #gbif
-    dateDic["gbif"] = dict()
-    dateDic["gbif"]["oai_dc"] = "dc:date"
-    dateDic["gbif"]["eml"] = "pubDate"
-    #pangaea
-    dateDic["pangaea"] = dict()
-    dateDic["pangaea"]["oai_dc"] = "dc:date"
-    dateDic["pangaea"]["pan_md"] = "md:dateTime"
-    dateDic["pangaea"]["dif"] = "DIF_Creation_Date"
-    dateDic["pangaea"]["iso19139"] = "gco:DateTime"
-    dateDic["pangaea"]["iso19139.iodp"] = "gco:DateTime"
-    dateDic["pangaea"]["datacite3"] = "publicationYear"
-    #zenodo
-    dateDic["zenodo"] = dict()
-    dateDic["zenodo"]["oai_dc"] = "dc:date"
-    dateDic["zenodo"]["oai_datacite"] = "publicationYear"
-    dateDic["zenodo"]["oai_datacite3"] = "publicationYear"
-    dateDic["zenodo"]["datacite"] = "publicationYear"
-    dateDic["zenodo"]["datacite3"] = "publicationYear"
-    dateDic["zenodo"]["datacite4"] = "publicationYear"
-    #figshare
-    dateDic["figshare"] = dict()
-    dateDic["figshare"]["oai_dc"] = "dc:date"
-    dateDic["figshare"]["oai_datacite"] = "publicationYear"
-    dateDic["figshare"]["rdf"] = "vivo:datePublished"
-    dateDic["figshare"]["qdc"] = "dc:date"
-
     #check if the given dataportal is avaiable
-    if(not dataportal in prefixDic):
+    if(not dataportal in repository_data.keys()):
         print(" -> Unknown dataportal: " + dataportal)
         return
 
     #print all metadata formats of the given dataportal
     if(showformats):
-        for mformat in prefixDic[dataportal]:
+        for mformat in repository_data[dataportal]["metadata_formats"].keys():
             print(" -- " + mformat)
 
         return
 
     #check if the given metadata format is avaiable
-    if(metadataformat != None and not metadataformat in prefixDic[dataportal]):
+    if(metadataformat != None and not metadataformat in repository_data[dataportal]["metadata_formats"].keys()):
         print(" -> Unknown metadata format '" + metadataformat + "' of dataportal: " + dataportal)
         return
-
-    #create the metadata directory is it doesn't exist
-    if(not os.path.exists("metadata")):
-        os.makedirs("metadata")
 
     #create the dataportal directory in the metadata directory if it doesn't exist
     if(not os.path.exists("metadata/" + dataportal)):
@@ -193,7 +160,7 @@ def downloadMetadata():
         logWriter.write("")
 
     #loop over each metadata format of the given dataportal
-    for prefix in prefixDic[dataportal]:
+    for prefix in repository_data[dataportal]["metadata_formats"]:
         del xmlList[:]
         #set index for counting resumption token to 0
         tokenIndex = 0
@@ -260,16 +227,12 @@ def downloadMetadata():
 
 def requestMetadata(prefix, resumptionToken, firstPage=False):
 
+    #list saving the raw metadata
     global xmlList
-
     #dictionary containing the fields of the given metadata format
     global metadataDic
     #dictionary containing the contents of the fields of the given metadata format
     global fieldsDic
-    #dictionary containing the metadata format for the given dataportal
-    global prefixDic
-    #dictionary containing the used dates for the given dataportal and metadata format
-    global dateDic
     #variable  specifying if a metadata date for the record was found
     global dateFound
     #variable counting the number of the parsed resumption tokens for console output
@@ -283,41 +246,10 @@ def requestMetadata(prefix, resumptionToken, firstPage=False):
         #dataportal urls
         #get the metadata url of the first page
         if(firstPage):
-            try:
-                #dryad url
-                if(dataportal == "dryad"):
-                    metadata_url = "http://api.datadryad.org/oai/request?verb=ListRecords&metadataPrefix=" + prefix
-                #gbif url
-                elif(dataportal == "gbif"):
-                    metadata_url = "http://api.gbif.org/v1/oai-pmh/registry?verb=ListRecords&metadataPrefix=" + prefix
-                #pangaea url
-                elif(dataportal == "pangaea"):
-                    metadata_url = "http://ws.pangaea.de/oai/provider?verb=ListRecords&metadataPrefix=" + prefix
-                #zenodo url
-                elif(dataportal == "zenodo"):
-                    metadata_url = "https://zenodo.org/oai2d?verb=ListRecords&metadataPrefix=" + prefix
-                #figshare url
-                elif(dataportal == "figshare"):
-                    metadata_url = "https://api.figshare.com/v2/oai?verb=ListRecords&metadataPrefix=" + prefix
-            except:
-                raise Exception("Unexpected error for the first page request! See message below:\n\n" + metadata_request)
+            metadata_url = repository_data[dataportal]["url"] + prefix
         #get the metadata url of all following pages with the resumption token
         else:
-            #dryad url
-            if(dataportal == "dryad"):
-                metadata_url = "http://api.datadryad.org/oai/request?verb=ListRecords&resumptionToken=" + resumptionToken
-            #gbf url
-            elif(dataportal == "gbif"):
-                metadata_url = "http://api.gbif.org/v1/oai-pmh/registry?verb=ListRecords&resumptionToken=" + resumptionToken
-            #pangaea url
-            elif(dataportal == "pangaea"):
-                metadata_url = "http://ws.pangaea.de/oai/provider?verb=ListRecords&resumptionToken=" + resumptionToken
-            #zenodo url
-            elif(dataportal == "zenodo"):
-                metadata_url = "https://zenodo.org/oai2d?verb=ListRecords&resumptionToken=" + resumptionToken
-            #figshare url
-            elif(dataportal == "figshare"):
-                metadata_url = "https://api.figshare.com/v2/oai?verb=ListRecords&resumptionToken=" + resumptionToken
+            metadata_url = repository_data[dataportal]["resumption_url"] + resumptionToken
 
         #request the records of the first page (contains 100 records)
         metadata_request = requests.get(metadata_url).text
@@ -377,7 +309,7 @@ def requestMetadata(prefix, resumptionToken, firstPage=False):
                                     #in case of Pangaea ISO19139 and ISO19139.iodp, the date that contains the path
                                     ##'identificationInfo/MD_DataIdentification/citation/CI_Citation/date/CI_Date/date'
                                     #in case of Figshare RDF, the attribute with the key 'vivo:datePublished'
-                                    if(not dateFound and metadata == dateDic[dataportal][prefix]):
+                                    if(not dateFound and metadata == repository_data[dataportal]["metadata_formats"][prefix]):
                                         if(isinstance(metadata_format[metadata], list)):
                                             metadataDic[prefix]["date"][identifier] = metadata_format[metadata][0]
                                             #set that the metadata date was found
@@ -485,7 +417,7 @@ def checkKey(dictionary, identifier, prefix, path):
                     ##'identificationInfo/MD_DataIdentification/citation/CI_Citation/date/CI_Date/date'
                     #in case of Figshare RDF, the attribute with the key 'vivo:datePublished'
                     previousKey = path.split("/")[-1]
-                    if(not dateFound and (key == dateDic[dataportal][prefix] or previousKey == dateDic[dataportal][prefix])):
+                    if(not dateFound and (key == repository_data[dataportal]["metadata_formats"][prefix] or previousKey == repository_data[dataportal]["metadata_formats"][prefix])):
                         if(isinstance(value, list)):
                             metadataDic[prefix]["date"][identifier] = value[0]
                             #set that the metadata date was found
@@ -561,7 +493,7 @@ def checkKey(dictionary, identifier, prefix, path):
             ##'identificationInfo/MD_DataIdentification/citation/CI_Citation/date/CI_Date/date'
             #in case of Figshare RDF, the attribute with the key 'vivo:datePublished'
             previousKey = path.split("/")[-1]
-            if(not dateFound and (key == dateDic[dataportal][prefix] or previousKey == dateDic[dataportal][prefix])):
+            if(not dateFound and (key == repository_data[dataportal]["metadata_formats"][prefix] or previousKey == repository_data[dataportal]["metadata_formats"][prefix])):
                 if(isinstance(value, list)):
                     metadataDic[prefix]["date"][identifier] = value[0]
                 else:
@@ -672,9 +604,6 @@ def saveMetadata(prefix):
         metadataWriter.write("\n".join(metadata_str_list))
 
     if(harvestxml != None):
-        if(not os.path.exists(harvestxml + dataportal)):
-            os.makedirs(harvestxml + dataportal)
-
         if(not os.path.exists(harvestxml + dataportal + "/" + prefix)):
             os.makedirs(harvestxml + dataportal + "/" + prefix)
 
@@ -686,14 +615,6 @@ def saveMetadata(prefix):
 def saveFields(prefix):
     #list containing each line of the metadata CSV file
     fields_str_list = list()
-
-    #create the fields dictionaryit it doesn't already exist
-    if(not os.path.exists("fields")):
-        os.makedirs("fields")
-
-    #create the fields dictionary of the dataportal it it doesn't already exist
-    if(not os.path.exists("fields/" + dataportal)):
-        os.makedirs("fields/" + dataportal)
 
     #get the current date and time
     now = datetime.datetime.now()
@@ -763,8 +684,18 @@ if __name__ == '__main__':
         now = datetime.datetime.now()
         print("\nProgram started " + str(now) + ".\n")
         commandLine()
-        print("- download metadata from dataportal '" + dataportal + "'")
-        downloadMetadata()
-        print("- download metadata from dataportal '" + dataportal + "' finished\n")
+        #print all metadata formats of the given dataportal
+        if(showportals):
+            print("- avaiable data portals")
+            for dportal in repository_data.keys():
+                print(" -- " + dportal)
+
+            print()
+        else:
+            print("- download metadata from dataportal '" + dataportal + "'")
+            downloadMetadata()
+            print("- download metadata from dataportal '" + dataportal + "' finished\n")
     except requests.exceptions.ConnectionError:
         print("Unable to connect to the '" + dataportal + "' portal.")
+    except Exception as ex:
+        print(ex)

@@ -85,12 +85,33 @@ python -m pip install xmltodict
 (again, whichever uses the correct ```Python``` version).
 
 
+### YAML
+
+```YAML``` is a third party [Python] that is able to load and read so called [YAML]-files and transform its content into a dictionary for easy parsing. To install the ```YAML``` module, simple type:
+
+```shell
+python -m pip install yaml
+```
+
+or
+
+```shell
+python -m pip install yaml
+```
+
+(again, whichever uses the correct ```Python``` version).
+
+
 
 # Script
 
 ## metadata_harvester.py
 
-```metadata_harvester.py``` is a simple to use Command Line Interface (CLI) tool to harvest and extract metadata information from the five digital dataportals Dryad, GBIF, Pangaea, Zenodo and Figshare. By default the script returns a CSV that shows which record (one line) used which metadata information (marked by ```1``` (used) or ```0``` (not used)) and their corresponding dates. If now date was specified or a record didn't have a date, no date was taken (marked with ```None```). The script has nine options as input, ```-dp```, ```-mf```, ```-fs```, ```-lm```, ```-fl```, ```-hx```, ```-sf```, ```-sw``` and ```-ew```.
+```metadata_harvester.py``` is a simple to use Command Line Interface (CLI) tool to harvest and extract metadata information from the digital data portals. The scripts is able to read the settings for a data portal from a
+[YAML]-file (YAML Ain't Markup Language) and are commonly used for configuration. This way new data portals
+can be added with little effort. For more information see section 'Adding new dataportals'.
+By default the script returns a CSV that shows which record (one line) used which metadata information (marked by ```1``` (used) or ```0``` (not used)) and their corresponding dates. If now date was specified or a record didn't have a date, no date was taken (marked with ```None```). The script has ten options as input, ```-cf```, ```-dp```, ```-mf```, ```-fs```, ```-lm```, ```-fl```, ```-hx```, ```-sf```, ```-sw``` and ```-ew```.
+ * ```-cf``` specifies the path to the config.yaml file that contains the settings for the data portals
  * ```-dp``` specifies from which dataportal the metadata should be harvested. If a dataportal is specified that isn't part of the list of dataportals, an error is thrown.
  * ```-mf``` specifies from which metadata format of the corresponding dataportal the metadata information will be harvested. If a metadata format is specified that isn't part of the specified dataportal, an error is thrown. If no metadata format is specified, the metadata information of all metadata formats of the corresponding dataportal will be harvested.
  * ```-fs``` specifies whether the content of specific fields should be saved in an extra CSV file or not. Multiple fields are separated by commas. See the website of the corresponding dataportal for information about avaiable fields. Every field that was specified but did not appear in at least one record is printed at the end of the harvest.
@@ -109,67 +130,15 @@ The results are saved in a directory called ```metadata``` that is automatically
 All five dataportals use the ```Open Archives Initiative Protocol for Metadata Harvesting``` (```OAI-PMH```) service to manage their metadata information. Records can't be harvested all at once but are structured in pages. Each page contains 100 records and an index, called a resumption token, that is used to access the next page. Therefore, it is to note that each page has to be accessed individually which can take a long time if no or a high limit for the number of records is specified. The script also waits for several seconds (specified by ```-sw```) between each harvest of a metadata format to prevent connection issues. Furthermore, if a connection issue (or similiar) happens during the harvest, the script will wait for several seconds (specified by ```-ew```) and resume from the last resumption token.
 
 
-### Adding new dataportals, metadata formats or dates
+### Adding new dataportal
 
-New dataportals, metadata formats or metadata dates can easily be added to the script with a few steps. If a new dataportal should be added, open the python script with an text editor of your choice, and go to the line
+New dataportals can easily be added by configuring the 'config.yaml' file in a few steps. The format of the file
+is as follows:
 
-```'python
-def requestMetadata(prefix, resumptionToken, firstPage=False):
-```
-
-This method specifies the URLs from which the metadata will be harvested. Now, go to the line
-
-```python
-if(firstpage):
-```
-
-and add at the bottom of that section the line
-
-```python
-elif(dataportal == your_dataportal):
-  metadata_url = "dataportal_url" + prefix
-```
-
-(replace ```your_dataportal``` with the name of your dataportal and ```dataportal_url``` with the OAI-PMH URL of your dataportal without the metadata format). Your dataportal URL should look something like this:
-
-```www.your_dataportal.org/oai/request?verb=ListRecords&metadataPrefix=```.
-
-Now, in the section below (marked with ```else```) add at the bottom, again, the line
-
-```python
-elif(dataportal == your_dataportal):
-  metadata_url = "dataportal_url_resumption_token" + prefix
-```
-
-(replace ```dataportal_url_resumption_token``` with the OAI-PMH resumption URL of your dataportal without the resumption token). Your dataportal resumption URL should look something like this:
-
-```www.your_dataportal.org/oai/request?verb=ListRecords&resumptionToken=```.
-
-Important to note is that your dataportal needs to use the ```OAI-PMH``` service or else it will not work. The necessary URLs are now added but the script still needs to be told to actually use the dataportal. Go to the line
-
-```python
-def downloadMetadata():
-```
-
-This is the ```main``` method that starts the harvest. There are two dictionaries, ```prefixDic``` and ```dateDic```. ```prefixDic``` contains the name of the dataportals and their corresponding metadata formats. ```dateDic``` contains the used date field for each metadata format and dataportal. Now, add at the bottom of the ```prefixDic``` dictionary the line
-
-```python
-prefixDic[your_dataportal] = (metadataformat1, metadataformat2, metadataformat3, ...)
-```
-
-(replace ```metadataformat1/2/3``` with the metadata formats of your dataportal; the dataportal and metadata formats have to be in parentheses and separated by commas). After that, go to the bottom of the ```dateDic``` dictionary and add the line for each of your metadata formats:
-
-```python
-dateDic[your_dataportal][metadataformat] = "no_date"
-```
-
-If you want to use a specific field for the date, just replace ```no_date``` with the field of your choice. If you want to add a new metadata format to an existing dataportal, follow the previous instructions starting after adding the dataportal URLs. However, instead of creating a new dictionary, just add your metadata format to the existing list. The same goes if you want to change the date field of an existing metadata format. Simply go to the ```dateDic``` dictionary and replace the currently used date field with yours.
-
-
+{dataportal}
 
 ### Example usage:
 
 ```shell
 python metadata_harvester.py -dp dryad -lm 550 -fl
 ```
-

@@ -1,0 +1,41 @@
+dryad:
+  url: http://api.datadryad.org/oai/request?verb=ListRecords&metadataPrefix=
+  resumption_url: http://api.datadryad.org/oai/request?verb=ListRecords&resumptionToken=
+  metadata_formats:
+    oai_dc: dc:date
+    rdf: dc:date
+    ore: atom:published
+gbif:
+  url: http://api.gbif.org/v1/oai-pmh/registry?verb=ListRecords&metadataPrefix=
+  resumption_url: http://api.gbif.org/v1/oai-pmh/registry?verb=ListRecords&resumptionToken=
+  metadata_formats:
+    oai_dc: dc:date
+    eml: pubDate
+pangaea:
+  url: http://ws.pangaea.de/oai/provider?verb=ListRecords&metadataPrefix=
+  resumption_url: http://ws.pangaea.de/oai/provider?verb=ListRecords&resumptionToken=
+  metadata_formats:
+    oai_dc: dc:date
+    pan_md: md:dateTime
+    dif: DIF_Creation_Date
+    iso19139: gco:DateTime
+    iso19139.iodp: gco:DateTime
+    datacite3: publicationYear
+zenodo:
+  url: https://zenodo.org/oai2d?verb=ListRecords&metadataPrefix=
+  resumption_url: https://zenodo.org/oai2d?verb=ListRecords&resumptionToken=
+  metadata_formats:
+    oai_dc: dc:date
+    oai_datacite: publicationYear
+    oai_datacite3: publicationYear
+    datacite: publicationYear
+    datacite3: publicationYear
+    datacite4: publicationYear
+figshare:
+  url: https://api.figshare.com/v2/oai?verb=ListRecords&metadataPrefix=
+  resumption_url: https://api.figshare.com/v2/oai?verb=ListRecords&resumptionToken=
+  metadata_formats:
+    oai_dc: dc:date
+    oai_datacite: publicationYear
+    rdf: vivo:datePublished
+    qdc: dc:date
