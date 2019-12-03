@@ -127,7 +127,7 @@ The results are saved in a directory called ```metadata``` that is automatically
 All five data portals use the ```Open Archives Initiative Protocol for Metadata Harvesting``` (```OAI-PMH```) service to manage their metadata information. Records can't be harvested all at once but are structured in pages. Each page contains 100 records and an index, called a resumption token, that is used to access the next page. Therefore, it is to note that each page has to be accessed individually which can take a long time if no or a high limit for the number of records is specified. The script also waits for several seconds (specified by ```-sw```) between each harvest of a metadata format to prevent connection issues. Furthermore, if a connection issue (or similiar) happens during the harvest, the script will wait for several seconds (specified by ```-ew```) and resume from the last resumption token.
 
 
-### Configuring data portal(s)/Adding new dataportal(s)
+### Configuring/Adding data portal(s)
 
 Data portals can easily be configured or added by accessing the 'config.yaml' file in a few steps. The format of the file is as follows:
 
