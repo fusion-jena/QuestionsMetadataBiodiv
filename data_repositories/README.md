@@ -10,7 +10,10 @@ Works on ```Python3+```.
 * [Analysis] (Java code to count the metadata data fields used and to generate charts)
 * [Charts] (contains the generated charts per repository and metadata schema)
 * metadata.tar.gz (compressed full parsed metadata)
-* metadata_harvester.py - source fill to harvest and parse metadata (see detailed descriptions below)
+* metadata_harvester.py - source file to harvest and parse metadata (see detailed descriptions below)
+* splitContent.py - source file to split each line of the harvested metadata into individual XML files and, optionally, count keywords in the 'subject' field (see detailed descriptions below)
+* random_file_selector.py - source file to randomly selected a specified number of files from the pool of XML files created by splitContent.py script (see detailed descriptions below)
+* get_topN.py - source file to get the top <N> number of keywords (sorted by number of counts) in the optional CSV created by splitContent.py (see detailed descriptions below)
 
 
 [Examples]: https://github.com/fusion-jena/QuestionsMetadataBiodiv/tree/master/data_repositories/examples
@@ -87,7 +90,7 @@ python -m pip install xmltodict
 
 ### YAML
 
-```YAML``` is a third party [Python] that is able to load and read so called [YAML]-files and transform its content into a dictionary for easy parsing. To install the ```YAML``` module, simple type:
+```YAML``` is a third party [Python] tool that is able to load and read so called [YAML]-files and transform its content into a dictionary for easy parsing. To install the ```YAML``` module, simple type:
 
 ```shell
 python -m pip install yaml
@@ -101,6 +104,21 @@ python -m pip install yaml
 
 (again, whichever uses the correct ```Python``` version).
 
+### pandas
+
+```pandas``` is a third party [Python] tool that is able to efficiently load and access data in CSV files. to install the ```pandas``` module, simple type:
+
+```shell
+python -m pip install pandas
+```
+
+or
+
+```shell
+python -m pip install pandas
+```
+
+(again, whichever uses the correct ```Python``` version).
 
 
 # Script
@@ -154,11 +172,11 @@ Data portals can easily be configured or added by accessing the 'config.yaml' fi
 
 Strings surrounded by '{}' are user-specific. {dataportal} specifies the name of each data portal and is used by the ```-dp``` option of the script. This can be any string the user wants but has to be specific for the each data portal. {dataportal_url] specifies the 'first' page of the harvesting and should look something like this:
 
-www.your_dataportal.org/oai/request?verb=ListRecords&metadataPrefix=
+```www.your_dataportal.org/oai/request?verb=ListRecords&metadataPrefix=```
 
 It is important that the 'metadataPrefix=' token is be empty. The metadata format is later added to it by the script. {dataportal_resumption_url} specifies all following pages of the harvesting and shoud look something like this:
 
-www.your_dataportal.org/oai/request?verb=ListRecords&resumptionToken=
+```www.your_dataportal.org/oai/request?verb=ListRecords&resumptionToken=```
 
 Again, it is important that the 'resumptionToken=' is empty since the script will later add it to the string. For more information see the 'Resumption tokens' section for more information. The {metadata_format_*} specifies the metadata formats for the given data portal and is is used by the ```-mf``` option. Each line is a new metadata format. Lastly, {date_field} specifies the field containing the desired date that should be saved for each record for the given metadata format.
 
