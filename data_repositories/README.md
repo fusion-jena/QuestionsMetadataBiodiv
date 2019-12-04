@@ -170,7 +170,7 @@ Data portals can easily be configured or added by accessing the 'config.yaml' fi
 ```
 
 
-Strings surrounded by '{}' are user-specific. {dataportal} specifies the name of each data portal and is used by the ```-dp``` option of the script. This can be any string the user wants but has to be specific for the each data portal. {dataportal_url] specifies the 'first' page of the harvesting and should look something like this:
+Strings surrounded by '{}' are specified by the user. {dataportal} specifies the name of each data portal and is used by the ```-dp``` option of the script. This can be any string the user wants but has to be specific for the each data portal. {dataportal_url] specifies the 'first' page of the harvesting and should look something like this:
 
 ```www.your_dataportal.org/oai/request?verb=ListRecords&metadataPrefix=```
 
