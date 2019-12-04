@@ -13,7 +13,7 @@ Works on ```Python3+```.
 * ```metadata_harvester.py``` - source file to harvest and parse metadata (see detailed descriptions below)
 * ```split_content.py``` - source file to split each line of the metadata file prodcued by the ```-fs/--fields```- option of ```metadata_harvester.py``` script the  into individual XML files and, optionally, counts used keywords in a specified field (see detailed descriptions below)
 * ```random_file_selector.py``` - source file to randomly selected a specified number of files from the pool of XML files created by ```split_content.py script``` (see detailed descriptions below)
-* get_topN.py - source file to get the top <N> number of keywords (sorted by number of counts, descending) in the optional CSV created by ```split_content.py``` (see detailed descriptions below)
+* get_topN.py - source file to get the top N number of keywords (sorted by number of counts, descending) in the optional CSV created by ```split_content.py``` (see detailed descriptions below)
 
 
 [Examples]: https://github.com/fusion-jena/QuestionsMetadataBiodiv/tree/master/data_repositories/examples
@@ -178,7 +178,7 @@ It is important that the 'metadataPrefix=' token is be empty. The metadata forma
 
 ```www.your_dataportal.org/oai/request?verb=ListRecords&resumptionToken=```
 
-Again, it is important that the 'resumptionToken=' is empty since the script will later add it to the string. For more information see the 'Resumption tokens' section for more information. The {metadata_format_*} specifies the metadata formats for the given data portal and is used by the ```-mf``` option. Each line is a new metadata format. Lastly, {date_field} specifies the field containing the desired date that should be saved for each record for the given metadata format.
+Again, it is important that the 'resumptionToken=' is empty since the script will later add it to the string. For more information see the 'Resumption tokens' section for more information. The {metadata_format_} specifies the metadata formats for the given data portal and is used by the ```-mf``` option. Each line is a new metadata format. Lastly, {date_field} specifies the field containing the desired date that should be saved for each record for the given metadata format.
 
 Important to note is that the given URLs are able to use the OAI-PMH protocol or else the data harvesting won't work. For examples see the 'config.yaml' file containing the five data repositories 'Dryad', 'GBIF', 'Pangaea', 'Zenodo' and 'Figshare'.
 
