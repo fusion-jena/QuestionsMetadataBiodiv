@@ -121,7 +121,7 @@ py -m pip install pandas
 (again, whichever uses the correct ```Python``` version).
 
 
-# Script
+# Scripts
 
 ## metadata_harvester.py
 
