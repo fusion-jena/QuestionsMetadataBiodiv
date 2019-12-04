@@ -20,85 +20,83 @@ csv.field_size_limit(100000000)
 #root = 'test'
 
 parser = argparse.ArgumentParser(description="Splits the csv content file of a data repository into individual files.")
-parser.add_argument("-c", "--csv", help="Set path to folder containing data repository CSV file(s)", required=True)
+parser.add_argument("-c", "--csv", help="Set path to the data repository fields CSV file", required=True)
+parser.add_argument("-f", "--field", help="Specify what field should be counted", type=str)
 args = parser.parse_args()
 
-subject_counts = {}
-subject_index = -1
-for subdir, dirs, filenames in os.walk(args.csv):
-	for file in filenames:
-		#consider only csv files
-		if(file.endswith('.csv') and not file.endswith('_subject_counts.csv')):
-			# open file
-			csvFile = open(os.path.join(args.csv, file), encoding="utf8")
-			headers = csvFile.readline()
-			xmlTags = headers.split(',')
-			#print(xmlTags)
-			# for each line in the csv file
-			reader = csv.reader(csvFile, delimiter=',')
-			for tag in xmlTags:
-				inner_tag = tag.strip().split("/")[-1]
-				if("subject" in inner_tag):
-					subject_index = xmlTags.index(tag)
-					break
+keyword_counts = {}
+field_index = -1
+# open file
+csvFile = open(args.csv, encoding="utf8")
+headers = csvFile.readline()
+xmlTags = headers.split(',')
+#print(xmlTags)
+# for each line in the csv file
+reader = csv.reader(csvFile, delimiter=',')
+for tag in xmlTags:
+	inner_tag = tag.strip().split("/")[-1]
+	if(args.field != None and field in inner_tag):
+		field_index = xmlTags.index(tag)
+		break
 
-			for row in reader:
-				try:
-					if(not row[0].startswith('id')):
-						try:
-							#print(row[0])
-							# create the file structure
-							data = ET.Element('data')
-							for i, entry in enumerate(xmlTags):
-								#print(row[i])
-								tag_structure = entry.strip().split("/")
-								parent_tag = data
-								for tag in tag_structure:
-									if(data.find(tag) == None):
-										parent_tag = ET.SubElement(parent_tag, tag)
-									else:
-										parent_tag = data.find(tag)
+for row in reader:
+	try:
+		if(not row[0].startswith('id')):
+			try:
+				#print(row[0])
+				# create the file structure
+				data = ET.Element('data')
+				for i, entry in enumerate(xmlTags):
+					#print(row[i])
+					tag_structure = entry.strip().split("/")
+					parent_tag = data
+					for tag in tag_structure:
+						if(data.find(tag) == None):
+							parent_tag = ET.SubElement(parent_tag, tag)
+						else:
+							parent_tag = data.find(tag)
 
-								text = row[i].replace(';', ',')
-								parent_tag.text = text
-								if(subject_index == i):
-									subjects = row[i].split("|")
-									for subject in subjects:
-										subject = subject.split(";")
-										for sub_subject in subject:
-											stripped_sub_subject = sub_subject.strip()
-											if(not stripped_sub_subject in subject_counts):
-												subject_counts[stripped_sub_subject] = 1
-											else:
-												subject_counts[stripped_sub_subject] += 1
+					text = row[i].replace(';', ',')
+					parent_tag.text = text
+					if(args.field != None and field_index == i):
+						content = row[i].split("|")
+						for sub_content in content:
+							sub_content = sub_content.split(";")
+							for sub_sub_content in sub_content:
+								stripped_sub_sub_content = sub_sub_content.strip()
+								if(not stripped_sub_sub_content in keyword_counts):
+									keyword_counts[stripped_sub_sub_content] = 1
+								else:
+									keyword_counts[stripped_sub_sub_content] += 1
 
-							# create a new XML file with the results
-							mydata = ET.tostring(data)
-							filename = row[0]
-							if('/' in filename):
-								filenameSplit = row[0].split('/')
-								filename = filenameSplit[1]
-							if(':' in filename):
-								filenameSplit = row[0].split(':')
-								filename = filenameSplit[2]
-							tree = ET.ElementTree(data)
-							tree.write(args.csv+'/'+filename+".xml")
-							print(filename +'.xml')
-						except IndexError as ex:
-							maxColumn = str(len(xmlTags))
-							print("ERROR: file %s doesn't contain %s colums" % (row[0],maxColumn))
-				except Exception: #catch all other exceptions
-					e = sys.exc_info()[0]
-					print( row[0])
-					print("ERROR: %s" % e)
-					print(traceback.format_exc())
+				# create a new XML file with the results
+				mydata = ET.tostring(data)
+				filename = row[0]
+				if('/' in filename):
+					filenameSplit = row[0].split('/')
+					filename = filenameSplit[1]
+				if(':' in filename):
+					filenameSplit = row[0].split(':')
+					filename = filenameSplit[2]
+				tree = ET.ElementTree(data)
+				tree.write(args.csv+'/'+filename+".xml")
+				print(filename +'.xml')
+			except IndexError as ex:
+				maxColumn = str(len(xmlTags))
+				print("ERROR: file %s doesn't contain %s colums" % (row[0],maxColumn))
+	except Exception: #catch all other exceptions
+		e = sys.exc_info()[0]
+		print( row[0])
+		print("ERROR: %s" % e)
+		print(traceback.format_exc())
 
-			csvFile.close()
-			with open(args.csv + "/" + file.split(".csv")[0] + "_subject_counts.csv", "w", encoding="utf-8") as subject_writer:
-				subject_list = []
-				for subject, count in subject_counts.items():
-					subject_list.append(subject + "," + str(count))
+csvFile.close()
+if(args.field != None):
+	with open(args.csv + "/" + file.split(".csv")[0] + "_keyword_counts.csv", "w", encoding="utf-8") as keyword_writer:
+		keyword_list = []
+		for sub_content, count in keyword_counts.items():
+			keyword_list.append(sub_content + "," + str(count))
 
-				subject_writer.write("subject,count" + "\n" + "\n".join(subject_list))
+		keyword_writer.write(args.field + ",count" + "\n" + "\n".join(keyword_list))
 
-			del subject_list[:]
+del keyword_list[:]
