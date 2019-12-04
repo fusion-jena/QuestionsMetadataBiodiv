@@ -62,10 +62,7 @@ for subdir, dirs, filenames in os.walk(args.csv):
 								text = row[i].replace(';', ',')
 								parent_tag.text = text
 								if(subject_index == i):
-									if('|' in row[i])
-										subjects = row[i].split("|")
-									if(';' in row[i])
-										subjects = row[i].split(";")
+									subjects = row[i].split("|")
 									for subject in subjects:
 										subject = subject.split(";")
 										for sub_subject in subject:
