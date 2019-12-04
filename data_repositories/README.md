@@ -220,7 +220,7 @@ python metadata_harvester.py -dp dryad -lm 550 -fl
  
  ## get_topN.py
  
- ```get_topN.py``` is an easy to use Command Line Interface (CLI) tool to get the top N number of keywords in the 'keyword_counts' CSV-file produced by the ```-f``` option of the ```split_content.py``` script. This can be helpful if you want ,for example, only the top 50 used keywords and the 'keyword_counts' CSV-file is very large and can't be opened/takes to long to open with an ordinary program (i.e. Excel or LibreOffice). The results will be saved in a CSV-file called 'getTopN' in the same directory as the 'keyword_counts' CSV-file. The script has two options as input, ```-c``` and ```-n```.
+ ```get_topN.py``` is an easy to use Command Line Interface (CLI) tool to get the top N number of keywords in the 'keyword_counts' CSV-file produced by the ```-f``` option of the ```split_content.py``` script. This can be helpful if you want ,for example, only the top 50 used keywords and the 'keyword_counts' CSV-file is very large and can't be opened/takes to long to open with an ordinary program (i.e. Excel or LibreOffice). The results will be saved in a CSV-file with the added string 'getTopN' in the same directory as the 'keyword_counts' CSV-file. The script has two options as input, ```-c``` and ```-n```.
  * ```-c``` specifies the path to the 'keyword_counts' CSV-file
  * ```-n``` specifies the top <n> number of used keywords you want to extract; set <n> to -1 to retrieve all keywords sorted by counts in descending order
  
