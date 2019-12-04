@@ -126,7 +126,7 @@ py -m pip install pandas
 ## metadata_harvester.py
 
 ```metadata_harvester.py``` is an easy to use Command Line Interface (CLI) tool to harvest and extract metadata information from the digital data portals. The scripts is able to read the settings for a data portal from a [YAML]-file (YAML Ain't Markup Language) and are commonly used for configuration. This way new data portals can be added with little effort. For more information see section 'Configuring data portal(s)/Adding new dataportal(s)'. By default the script returns a CSV-file that shows which record (one line) used which metadata information (marked by ```1``` (used) or ```0``` (not used)) and their corresponding dates. If now date was specified or a record didn't have a date, no date was taken (marked with ```None```). The script has ten options as input, ```-cf```, ```-dp```, ```-mf```, ```-fs```, ```-lm```, ```-fl```, ```-hx```, ```-sf```, ```-sw``` and ```-ew```.
- * ```-cf``` specifies the path to the config.yaml file that contains the settings for the data portals
+ * ```-cf``` specifies the path to the config.yaml file that contains the settings for the data portals.
  * ```-dp``` specifies from which dataportal the metadata should be harvested. If a dataportal is specified that isn't part of the list of data portals, an error is thrown.
  * ```-mf``` specifies from which metadata format of the corresponding dataportal the metadata information will be harvested. If a metadata format is specified that isn't part of the specified dataportal, an error is thrown. If no metadata format is specified, the metadata information of all metadata formats of the corresponding dataportal will be harvested.
  * ```-fs``` specifies whether the content of specific fields should be saved in an extra CSV file or not. Multiple fields are separated by commas. See the website of the corresponding dataportal for information about avaiable fields. Every field that was specified but did not appear in at least one record is printed at the end of the harvest.
@@ -192,8 +192,8 @@ python metadata_harvester.py -dp dryad -lm 550 -fl
 ## split_content.py
 
 ```split_content.py``` is an easy to use Command Line Interface (CLI) tool that splits each line of the CSV-file created by the ```-fs/--fields```- option of ```metadata_harvester.py``` into individual (pseudo-)XML-files. Furthermore, it also can count the used keywords in the first field that contains a specified string and saves it in a CSV-file with the added string 'keyword_counts'. The script has two options a input, ```-c``` and ```-f```.
- * ```-c``` specifies the path to the fields CSV file produced by the ```-fs/--fields``` option ```metadata_harvester.py```
- * ```-f``` specifies what field should be counted as a string, i.e. 'subjects'
+ * ```-c``` specifies the path to the fields CSV file produced by the ```-fs/--fields``` option ```metadata_harvester.py```.
+ * ```-f``` specifies what field should be counted as a string, i.e. 'subjects'.
  
  
  ### Example usage
@@ -205,11 +205,11 @@ python metadata_harvester.py -dp dryad -lm 550 -fl
  ## random_file_selector.py
  
  ```random_file_selector.py``` is an easy to use Command Line Interface (CLI) to randomly choose a number of XML-files produced by the ```split_content.py``` script. The results will be saved in a folder in the directory of the XML-files called 'selected_files'. Important to note is that the script can take a long time if the ```-f``` option is used and a lot of XML-files are in the directory since each file has to be access individually to check for the specified filters. The script has five options as input, ```-fs```, ```-p```, ```-s```, ```-f``` and ```-d```.
- * ```-fs``` specifues the path to the directory where the XML-files are
- * ```-p``` specifies the number of files that should be randomly taken from the pool
- * ```-s``` specifies the seed for the ```-p``` option; with the same files and the same seed the same results can be obtained; if no seed is specified, a random one will be chosen between 0 and 2147483647; however,the seed doesn't have to be a number but can also be a string of any kind; at the end of the run the used seed will be saved in a file called 'seed.txt' in the 'selected_files' folder
- * ```-f``` specifies a filter for keywords to only consider files that contain them in a specified field; the input is a list of strings separated by commas; the first string is the field the should be filtered, all following strings are the keywords to filter (i.e. 'subjects,Biodiversity,Temperature,Insetcs')
- * ```-d``` deletes the 'selected_files' folder if it already exists in the directory; f the option wasn't set but the 'selected_files' folder exists, an error is thrown
+ * ```-fs``` specifues the path to the directory where the XML-files are.
+ * ```-p``` specifies the number of files that should be randomly taken from the pool.
+ * ```-s``` specifies the seed for the ```-p``` option. With the same files and the same seed the same results can be obtained. If no seed is specified, a random one will be chosen between 0 and 2147483647. However,the seed doesn't have to be a number but can also be a string of any kind. At the end of the run the used seed will be saved in a file called 'seed.txt' in the 'selected_files' folder.
+ * ```-f``` specifies a filter for keywords to only consider files that contain them in a specified field The input is a list of strings separated by commas. The first string is the field the should be filtered, all following strings are the keywords to filter (i.e. 'subjects,Biodiversity,Temperature,Insetcs').
+ * ```-d``` deletes the 'selected_files' folder if it already exists in the directory. If the option wasn't set but the 'selected_files' folder exists, an error is thrown.
  
  
  ### Example usage
@@ -221,8 +221,8 @@ python metadata_harvester.py -dp dryad -lm 550 -fl
  ## get_topN.py
  
  ```get_topN.py``` is an easy to use Command Line Interface (CLI) tool to get the top N number of keywords in the 'keyword_counts' CSV-file produced by the ```-f``` option of the ```split_content.py``` script. This can be helpful if you want ,for example, only the top 50 used keywords and the 'keyword_counts' CSV-file is very large and can't be opened/takes to long to open with an ordinary program (i.e. Excel or LibreOffice). The results will be saved in a CSV-file with the added string 'getTopN' in the same directory as the 'keyword_counts' CSV-file. The script has two options as input, ```-c``` and ```-n```.
- * ```-c``` specifies the path to the 'keyword_counts' CSV-file
- * ```-n``` specifies the top <n> number of used keywords you want to extract; set <n> to -1 to retrieve all keywords sorted by counts in descending order
+ * ```-c``` specifies the path to the 'keyword_counts' CSV-file.
+ * ```-n``` specifies the top N number of used keywords you want to extract. Set N to -1 to retrieve all keywords sorted by counts in descending order.
  
  
  ### Example usage
