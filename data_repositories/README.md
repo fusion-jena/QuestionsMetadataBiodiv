@@ -65,7 +65,7 @@ python -m pip install requests
 or
 
 ```shell
-python -m pip install requests
+py -m pip install requests
 ```
 
 (whichever uses the correct ```Python``` version).
@@ -82,7 +82,7 @@ python -m pip install xmltodict
 or
 
 ```shell
-python -m pip install xmltodict
+py -m pip install xmltodict
 ```
 
 (again, whichever uses the correct ```Python``` version).
@@ -99,7 +99,7 @@ python -m pip install yaml
 or
 
 ```shell
-python -m pip install yaml
+py -m pip install yaml
 ```
 
 (again, whichever uses the correct ```Python``` version).
@@ -115,7 +115,7 @@ python -m pip install pandas
 or
 
 ```shell
-python -m pip install pandas
+py -m pip install pandas
 ```
 
 (again, whichever uses the correct ```Python``` version).
