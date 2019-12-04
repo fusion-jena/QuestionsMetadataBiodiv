@@ -23,7 +23,7 @@ Works on ```Python3+```.
 # Prerequisites
 
 To start each script in this package successfully, you need a ```Python3+``` distribution and some other third-party tools.
-How to install these tools will be explained in the following:
+How to install these tools will be explained in the following section
 
 ## Instructions for Windows and Linux
 
