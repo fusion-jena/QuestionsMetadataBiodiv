@@ -9,6 +9,7 @@ Works on ```Python3+```.
 * [Examples] (contains example files)
 * [Analysis] (Java code to count the metadata data fields used and to generate charts)
 * [Charts] (contains the generated charts per repository and metadata schema)
+* [Content_analysis] (contains all files, selected files and keyword lists used for the content analysis of descriptive metadata fields)
 * metadata.tar.gz (compressed full parsed metadata)
 * ```metadata_harvester.py``` - source file to harvest and parse metadata (see detailed descriptions below)
 * ```split_content.py``` - source file to split each line of the metadata file prodcued by the ```-fs/--fields```- option of ```metadata_harvester.py``` script the  into individual XML files and, optionally, counts used keywords in a specified field (see detailed descriptions below)
@@ -19,6 +20,7 @@ Works on ```Python3+```.
 [Examples]: https://github.com/fusion-jena/QuestionsMetadataBiodiv/tree/master/data_repositories/examples
 [Analysis]: https://github.com/fusion-jena/QuestionsMetadataBiodiv/tree/master/data_repositories/analysis
 [Charts]: https://github.com/fusion-jena/QuestionsMetadataBiodiv/tree/master/data_repositories/charts
+[Content_analysis]: https://github.com/fusion-jena/QuestionsMetadataBiodiv/tree/master/data_repositories/content_analysis
 
 # Prerequisites
 
