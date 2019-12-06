@@ -13,3 +13,17 @@ The identification of phrases and terms to label require to establish annotation
 <em>Nested Entity</em>: Since noun entities might consist of several words such as "benthic oxygen uptake rate" all nested terms are defined as "nested entities", e.g., "benthic", "oxygen".
 
 
+We used and adapted the annotation guidelines from Kilicoglu et al ().
+
+<em>Part-Of-Speech</em>: We solely focused on noun entities. Adjectives are only considered if they occur as nested entities in a compound noun. All other part-of-speech types are not taken into account. Noun entities can be either proper nouns or common nouns.
+
+<em>Entity Ambiguity</em>: Annotators are only permitted to assign one category to each entity. Based on the given context (the entire question), they need to select the category that is most appropriate. That also corresponds to the search use case where keywords are usually entered with one specific meaning.
+
+<em>Generic Terms</em>: Terms that are too broad and unspecific are neglected, such as "data", "rate" or "change". A list with too broad terms is provided in the supplementary material (\url{https://github.com/fusion-jena/QuestionsMetadataBiodiv/tree/master/questions/annotation_guidelines}).
+
+<em>Nested Entities</em>: Nested entities are often neglected in annotation processes due to practical reasons. In compound nouns usually only the last term that determines the actual artifact is annotated. However, in Life Sciences the nested entities of compound nouns might indicate important information to the search context. In order to avoid multi-labeling, we identified nested entities as follows:
+A nested entity can be either an adjective or a noun that describes or modifies the last word, e.g., "mesopelagic zone". Too generic nouns will be ignored. If a generic term occurs in a compound noun with two words, the compound noun is classified as a whole, e.g., "climate change", "uptake rate". A nested entity is selected for classification if it might refer to a different entity type as the reference word, e.g., benthic [ENVIRONMENT] oxygen [MATERIAL] uptake rate [QUALITY]. In these cases, we provided the full artifact for category assignment as well as the nested entities.
+
+<em>Biodiversity terms</em>: In biodiversity, some compound nouns have propagated. They consist of several words but need to stay together, e.g., "climate change", "cold seep", "marine phages". We created a list of biodiversity terms that occurred in this question corpus and provide the list in this repository.
+
+
