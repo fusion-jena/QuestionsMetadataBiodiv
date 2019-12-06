@@ -121,7 +121,7 @@ py -m pip install pandas
 (again, whichever uses the correct ```Python``` version).
 
 
-# Script
+# Scripts
 
 ## metadata_harvester.py
 
@@ -204,7 +204,7 @@ python metadata_harvester.py -dp dryad -lm 550 -fl
  
  ## random_file_selector.py
  
- ```random_file_selector.py``` is an easy to use Command Line Interface (CLI) to randomly choose a number of XML-files produced by the ```split_content.py``` script. The results will be saved in a folder in the directory of the XML-files called 'selected_files'. Important to note is that the script can take a long time if the ```-f``` option is used and a lot of XML-files are in the directory since each file has to be access individually to check for the specified filters. The script has five options as input, ```-fs```, ```-p```, ```-s```, ```-f``` and ```-d```.
+ ```random_file_selector.py``` is an easy to use Command Line Interface (CLI) to randomly choose a number of XML-files produced by the ```split_content.py``` script. The results will be saved in a folder in the directory of the XML-files called 'selected_files'. Important to note is that the script can take a long time if the ```-f``` option is used and a lot of XML-files are in the directory since each file has to be accessed individually to check for the specified filters. The script has five options as input, ```-fs```, ```-p```, ```-s```, ```-f``` and ```-d```.
  * ```-fs``` specifues the path to the directory where the XML-files are.
  * ```-p``` specifies the number of files that should be randomly taken from the pool.
  * ```-s``` specifies the seed for the ```-p``` option. With the same files and the same seed the same results can be obtained. If no seed is specified, a random one will be chosen between 0 and 2147483647. However, the seed doesn't have to be a number but can also be a string of any kind. At the end of the run the used seed will be saved in a file called 'seed.txt' in the 'selected_files' folder.
