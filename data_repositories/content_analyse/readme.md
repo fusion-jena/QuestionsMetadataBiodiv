@@ -10,4 +10,4 @@ This folder contains supplementary material to the content analysis of selected 
 
 * [NLP_analysis] (contains the results of the NLP analysis in JSON format, created annotations: Organism, Location, Person, Organization)
 
-[NLP_analysis]: https://github.com/fusion-jena/QuestionsMetadataBiodiv/tree/master/data_repositories/NLP_analysis
+[NLP_analysis]: https://github.com/fusion-jena/QuestionsMetadataBiodiv/tree/master/data_repositories/content_analyse/NLP_analysis
