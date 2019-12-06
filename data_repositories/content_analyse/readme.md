@@ -7,3 +7,5 @@ This folder contains supplementary material to the content analysis of selected 
 * [Zip with all keyword lists](https://upload.uni-jena.de/data/5dea5831a14262.49665426/keywords_lists.tar.gz): obtained from dc:subject fields
 
 * selected_files.tar.gz (selected files for NLP analysis)
+
+* [NLP_analysis] (contains the results of the NLP analysis in JSON format, created annotations: Organism, Location, Person, Organization)
