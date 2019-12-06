@@ -1,3 +1,0 @@
-<data><id>oai:v1.datadryad.org:10255/dryad.151571</id><oai_dc:dc/dc:title>nt123 data matrix partitioned by 1st and 2nd positions - NEXUS</oai_dc:dc/dc:title><oai_dc:dc/dc:description>NEXUS file with the concatenated individual orthologous group alignments (406 total), with 40 taxa. This is the nt123 data matrix converted to nexus format, with a block added partitioning by codon position but excluding 3rd positions. Only positions 1 and 2 for each codon were included.</oai_dc:dc/dc:description><oai_dc:dc/dc:subject>phylogenomics|nudibranchs|prey preference|RNA-Seq|diversification</oai_dc:dc/dc:subject><date
->2017-10-17T18:42:18Z</date
-></data>

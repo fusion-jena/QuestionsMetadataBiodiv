@@ -1,3 +1,0 @@
-<data><id>oai:v1.datadryad.org:10255/dryad.84467</id><oai_dc:dc/dc:title>Simulation programs for Gst, Hs and correlations</oai_dc:dc/dc:title><oai_dc:dc/dc:description>This zipped file contains two simulation programs (source code in Fortran 90/95, and Windows executables), user's guides and example input files. The programs can be used to simulate genotype data under different migration and mutation models, and to calculate Gst, Hs, and their correlation from the simulated genotype data.</oai_dc:dc/dc:description><oai_dc:dc/dc:subject>Conservation Genetics|Ecological Genetics|Population Genetics - Theoretical|Inbreeding</oai_dc:dc/dc:subject><date
->2015-04-14T19:48:25Z</date
-></data>

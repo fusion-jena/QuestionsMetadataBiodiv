@@ -1,3 +1,0 @@
-<data><id>oai:v1.datadryad.org:10255/dryad.77621</id><oai_dc:dc/dc:title>Compare_PyRAD_vs_AftrRAD</oai_dc:dc/dc:title><oai_dc:dc/dc:description>Perl script to compare AftrRAD loci to PyRAD loci.  Note that the Compare_Stacks_vs_AftrRAD.pl script must be run prior to running Compare_PyRAD_vs_AftrRAD.pl.  Also note that both of these scripts are starting points for analysis, and that any loci identified as not shared among programs should be double-checked manually.</oai_dc:dc/dc:description><oai_dc:dc/dc:subject>Bioinfomatics/Phyloinfomatics|Genomics/Proteomics</oai_dc:dc/dc:subject><date
->2015-01-29T15:37:33Z</date
-></data>

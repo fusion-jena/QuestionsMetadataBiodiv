@@ -1,3 +1,0 @@
-<data><id>oai:v1.datadryad.org:10255/dryad.155602</id><oai_dc:dc/dc:title>gasmetadata</oai_dc:dc/dc:title><oai_dc:dc/dc:description>Is used to make sense of gasdata.txt in that it holds the timepoints (Time-In) and some metadata on experimental units (mesocosmID, Block). The variable Seconds is the recalculated timepoint on gasdata.txt using the time-in.</oai_dc:dc/dc:description><oai_dc:dc/dc:subject>ecosystem functioning|eutrophication|greenhouse gas|invasive species|macrophyte species|phytoplankton blooms</oai_dc:dc/dc:subject><date
->2017-09-25T11:54:04Z</date
-></data>

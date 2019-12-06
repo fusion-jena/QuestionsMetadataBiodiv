@@ -1,3 +1,0 @@
-<data><id>oai:v1.datadryad.org:10255/dryad.176216</id><oai_dc:dc/dc:title>README</oai_dc:dc/dc:title><oai_dc:dc/dc:description>This file should be replaced by the files uploaded via FTP.They should include two raw fastq files: "Nyssa_GBS_R1.fq.gz" and "Nyssa_GBS_R2.fq.gz", One barcode file: "barcode2.key", 9 parameter files for extracting different matrix via pyRAD software.</oai_dc:dc/dc:description><oai_dc:dc/dc:subject>RAD-seq|LGM|Nyssa|Phylogeography|Refugia|SDM</oai_dc:dc/dc:subject><date
->2018-04-09T15:39:11Z</date
-></data>

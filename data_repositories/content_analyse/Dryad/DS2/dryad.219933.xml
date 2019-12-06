@@ -1,3 +1,0 @@
-<data><id>oai:v1.datadryad.org:10255/dryad.219933</id><oai_dc:dc/dc:title>Sequencing data</oai_dc:dc/dc:title><oai_dc:dc/dc:description>Zipped file containing fastq files for each sample. Files were generated using obitools by pairwise aligning raw read1 and read2 files. Each file contains sequencing reads from the 4 primer sets used for each sample.</oai_dc:dc/dc:description><oai_dc:dc/dc:subject>bird|diet|metabarcoding|morphological identification|overlapping markers|secondary predation</oai_dc:dc/dc:subject><date
->2019-08-15T15:08:32Z</date
-></data>

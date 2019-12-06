@@ -1,3 +1,0 @@
-<data><id>oai:v1.datadryad.org:10255/dryad.181410</id><oai_dc:dc/dc:title>Thalictrum Data</oai_dc:dc/dc:title><oai_dc:dc/dc:description>Paired-end, Illumina MiSeq reads for 6 species of Thalictrum sequenced at two portions of the gene PISTILLATA (PIS_3 and PIS_4). The files present are Thalictrum_R1.fastq.gz and Thalictrum_R2.fastq.gz for paired-end reads 1 and 2. The code to analyze these data using dbcAmplicons and Fluidigm2PURC are in the supplemental materials.</oai_dc:dc/dc:description><oai_dc:dc/dc:subject>bioinformatics|haplotype inference|high-throughput sequencing|microfluidic PCR|phylogenomics|polyploidy</oai_dc:dc/dc:subject><date
->2018-06-29T20:17:03Z</date
-></data>

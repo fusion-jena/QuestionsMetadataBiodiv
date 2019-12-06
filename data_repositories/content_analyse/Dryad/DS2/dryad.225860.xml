@@ -1,3 +1,0 @@
-<data><id>oai:v1.datadryad.org:10255/dryad.225860</id><oai_dc:dc/dc:title>PCR_all_group_read_lens_histo</oai_dc:dc/dc:title><oai_dc:dc/dc:description>A csv file of the read lengths for each PCR-based sample, with length as the row name and the number of reads with specified length for each sample across the columns. Column headers are the names of the samples.</oai_dc:dc/dc:description><oai_dc:dc/dc:subject>Error corrected sequencing|single strand consensus|single strand tag|targeted sequencing|Kras codon 12</oai_dc:dc/dc:subject><date
->2019-08-09T17:33:44Z</date
-></data>

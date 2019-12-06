@@ -1,3 +1,0 @@
-<data><id>oai:v1.datadryad.org:10255/dryad.78255</id><oai_dc:dc/dc:title>RAllPops_D_Gst_MtDNA_PenningsJEB2011</oai_dc:dc/dc:title><oai_dc:dc/dc:description>This is R code to calculate Jost D and Gst and the associated p-values (using a permutation test) for MtDNA sequences. There are two versions. The first one (RPairw_D_MtDna_Penningsjeb2011.r) calculates pairwise values (between all pairs of populations in your data) and the second one (RAllPops_D_MtDNA_PenningsJEB2011.r) calculates one global value.</oai_dc:dc/dc:description><oai_dc:dc/dc:subject>Host-parasite interaction|Insects|Phylogeography|Population genetics</oai_dc:dc/dc:subject><date
->2015-01-09T17:59:48Z</date
-></data>

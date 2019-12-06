@@ -1,3 +1,0 @@
-<data><id>oai:v1.datadryad.org:10255/dryad.195575</id><oai_dc:dc/dc:title>TadPlast.bivariate_models</oai_dc:dc/dc:title><oai_dc:dc/dc:description>Code to run bivariate animal models to calculate genetic correlations between different pairs of aspects of the phenotype of Dendropsophus ebraccatus tadpoles raised in one of three predator treatments for 10 days. The code runs a simple custom function which calculates every pairwise combination of 10 different aspects of the phenotype.</oai_dc:dc/dc:description><oai_dc:dc/dc:subject>Phenotypic Plasticity|Quantitative Genetics|Bayesian|Genetic Variation|Anura|Wild Animal Model</oai_dc:dc/dc:subject><date
->2018-10-18T14:57:10Z</date
-></data>

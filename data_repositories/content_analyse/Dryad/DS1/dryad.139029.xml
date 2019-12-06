@@ -1,3 +1,0 @@
-<data><id>oai:v1.datadryad.org:10255/dryad.139029</id><oai_dc:dc/dc:title>R functions: PGLS correlation</oai_dc:dc/dc:title><oai_dc:dc/dc:description>The first function within this file calculates a phylogenetic generalized least squares (PGLS) correlation between 2 or more variables. The second function calculates the statistical significance of these correlations. The first function was derived from: Rohlf, F. J. 2006. A comment on phylogenetic correction. Evolution 60:1509-1515. See comments within the file for the appropriate use of the functions.</oai_dc:dc/dc:description><oai_dc:dc/dc:subject>Biodiversity|Macroevolution|Phylogenetics: diversification|Species richness|frogs|toads</oai_dc:dc/dc:subject><date
->2017-02-24T14:39:21Z</date
-></data>

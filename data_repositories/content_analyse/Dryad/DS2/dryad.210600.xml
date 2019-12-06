@@ -1,3 +1,0 @@
-<data><id>oai:v1.datadryad.org:10255/dryad.210600</id><oai_dc:dc/dc:title>Model Runs</oai_dc:dc/dc:title><oai_dc:dc/dc:description>Data from model runs in Figure 2 and 3. Each of the five variables, umatFigxxxx, corresponds to a panel in Figure 2 or 3. Use imagesc(umatFigxxxx(:,:,2)) to see the vegetation component (as in the panels) and deduce the correspondence, and imagesc(umatFigxxxx(:,:,1)) for the water component of the Klausmeier model.</oai_dc:dc/dc:description><oai_dc:dc/dc:subject>Climate change|Foraging: theory|Modeling: spatial|Desert</oai_dc:dc/dc:subject><date
->2019-03-13T21:46:59Z</date
-></data>

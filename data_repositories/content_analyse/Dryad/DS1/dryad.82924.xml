@@ -1,3 +1,0 @@
-<data><id>oai:v1.datadryad.org:10255/dryad.82924</id><oai_dc:dc/dc:title>add_genotype-linenumber_file script</oai_dc:dc/dc:title><oai_dc:dc/dc:description>add_genotype-linenumber_file: This python script works on csv files that have been exported from the CLC Genomics Workbench. It adds two columns (genotype and line number) at the beginning of each csv file listed in column 1 of an input file. The input file is a csv file. The first row of the input file is considered as a header row. The script also removes the term "mapping" from the chromosome names.</oai_dc:dc/dc:description><oai_dc:dc/dc:subject>clonality|clonal diversity|invasive species|Poaceae|SNP molecular markers</oai_dc:dc/dc:subject><date
->2015-03-19T18:35:30Z</date
-></data>

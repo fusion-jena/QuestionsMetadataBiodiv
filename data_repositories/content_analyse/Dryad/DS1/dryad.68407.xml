@@ -1,3 +1,0 @@
-<data><id>oai:v1.datadryad.org:10255/dryad.68407</id><oai_dc:dc/dc:title>Anntotated VCF file</oai_dc:dc/dc:title><oai_dc:dc/dc:description>Annotated VCF file containing allele frequency and read depths of the 14 samples described in Bergland et al. Annotations include p- and q-values from models of seasonality and clinality, genic annotations, average frequencies, and, quality filters. This VCF file only contains SNPs with average minor allele frequency &gt; 0.15.</oai_dc:dc/dc:description><oai_dc:dc/dc:subject>Seasonal adaptation|Polygenic adaptation|Balancing selection|Temperate environments|Rapid adaptation|Population genetics|Next-generation sequencing</oai_dc:dc/dc:subject><date
->2014-12-10T20:27:53Z</date
-></data>

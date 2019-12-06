@@ -1,3 +1,0 @@
-<data><id>oai:v1.datadryad.org:10255/dryad.150292</id><oai_dc:dc/dc:title>MERRAclim. 2_5m_max_90s</oai_dc:dc/dc:title><oai_dc:dc/dc:description>MERRAclim Dataset. 19 global bioclimatic variables from the 1990s decade at 2.5 arcminutes resolution in GEOtiff format. The humidity version used is the max. The variables have been built using the same protocol as WorldClim with data from MERRA. Temperature layers (BIO1-BIO11) are in degree Celsius multiplied by 10, humidity layers (BIO12-BIO19) are in kg of water/kg of air multiplied by 100000.</oai_dc:dc/dc:description><oai_dc:dc/dc:subject>bioclimatic|MERRAclim|macroecology|biogeography</oai_dc:dc/dc:subject><date
->2017-06-27T22:42:37Z</date
-></data>

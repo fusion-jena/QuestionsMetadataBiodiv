@@ -1,3 +1,0 @@
-<data><id>oai:v1.datadryad.org:10255/dryad.67670</id><oai_dc:dc/dc:title>Number of spikes vs pulse duration</oai_dc:dc/dc:title><oai_dc:dc/dc:description>Experiment: assessing the number of spikes evoked in ChR2-EYFP-positive dorsal raphe neurons, for light pulses of various duration. This .csv contains the average number of spikes obtained in individual neurons in response to light pulses of different durations (0.1 to 1000 ms, n = 17 neurons). Each row corresponds to one neuron. Each column corresponds to one pulse duration (the duration is indicated in the first row). These data were used to generated Fig. 1J.</oai_dc:dc/dc:description><oai_dc:dc/dc:subject>Serotonin|Optogenetics</oai_dc:dc/dc:subject><date
->2014-09-03T18:24:27Z</date
-></data>

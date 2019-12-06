@@ -1,3 +1,0 @@
-<data><id>oai:v1.datadryad.org:10255/dryad.178460</id><oai_dc:dc/dc:title>Sequenced individuals and corresponding metadata.</oai_dc:dc/dc:title><oai_dc:dc/dc:description>Sequenced individuals and corresponding metadata. Each row is an individual. Columns: ID = individual ID (e.g. used in VCF file), genus = genus of focal individual, species = species of focal individual, abbreviation = abbreviation used for focal species, R1 = name of fastq file with forwards reads, R2 =  = name of fastq file with reverse reads.</oai_dc:dc/dc:description><oai_dc:dc/dc:subject>Hybridization|Population Genetics - Empirical|Speciation|Fish</oai_dc:dc/dc:subject><date
->2018-06-12T19:18:36Z</date
-></data>

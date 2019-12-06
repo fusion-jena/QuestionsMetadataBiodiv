@@ -1,3 +1,0 @@
-<data><id>oai:v1.datadryad.org:10255/dryad.138844</id><oai_dc:dc/dc:title>read_subsets_4</oai_dc:dc/dc:title><oai_dc:dc/dc:description>Files with the subsets of reads used in the studyEach subset is composed of three files. R1 indicates the first read, R2 indicates second read, SE indicates a single read (not paired, due to quality filtering).cp indicates chloroplast readsmt indicates mitochondrial readsnr indicates nuclear ribosomal reads</oai_dc:dc/dc:description><oai_dc:dc/dc:subject>ddRAD|genome skimming|hybridization|introgression|phylogenomics|rapid diversification|reticulate evolution</oai_dc:dc/dc:subject><date
->2017-03-27T16:47:13Z</date
-></data>

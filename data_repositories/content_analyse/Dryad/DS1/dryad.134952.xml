@@ -1,3 +1,0 @@
-<data><id>oai:v1.datadryad.org:10255/dryad.134952</id><oai_dc:dc/dc:title>Binding pocket trajectories for CTX-M9</oai_dc:dc/dc:title><oai_dc:dc/dc:description>Gromacs trajectory files and reference PDB for drug binding pocket atoms, computed using TPR of the full solvated acylenzyme.  These trajectories were used for mutual information feature selection and decision tree calculation.</oai_dc:dc/dc:description><oai_dc:dc/dc:subject>beta lactamase|CTX-M9|molecular dynamics simulation</oai_dc:dc/dc:subject><date
->2017-07-25T06:39:26Z</date
-></data>

@@ -1,3 +1,0 @@
-<data><id>oai:v1.datadryad.org:10255/dryad.167860</id><oai_dc:dc/dc:title>Species Trees</oai_dc:dc/dc:title><oai_dc:dc/dc:description>Species phylogenies for the three assembly methods: consensus (default), ambiguity (iupac), and alleles. For the coalescent-based methods, two types of gene trees were used as input: one with fully bifurcating gene trees, and one where branches were collapsed if they had less than 33% gene tree bootstrap support.</oai_dc:dc/dc:description><oai_dc:dc/dc:subject>phylogenetics|Artocarpus|alleles|incomplete lineage sorting|HybSeq|target enrichment|allele phasing</oai_dc:dc/dc:subject><date
->2018-05-08T19:06:02Z</date
-></data>

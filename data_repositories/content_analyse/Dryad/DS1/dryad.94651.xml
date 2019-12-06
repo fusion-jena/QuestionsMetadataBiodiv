@@ -1,3 +1,0 @@
-<data><id>oai:v1.datadryad.org:10255/dryad.94651</id><oai_dc:dc/dc:title>Reads from HEK293-PGBD5-PBwt mapped to hg19+pb-ef1-neo</oai_dc:dc/dc:title><oai_dc:dc/dc:description>Reads obtained from sequencing FLEA PCR products to amplify transposon reporter insertions in sample HEK293-PGBD5-PBwt, filtered, quality trimmed and mapped to a hybrid genome consisting of hg19 and the reporter plasmid sequence. Reads were mapped with bwa-mem using default parameters.</oai_dc:dc/dc:description><oai_dc:dc/dc:subject>DNA transposition|Genome remodeling|Recombination</oai_dc:dc/dc:subject><date
->2015-09-28T14:31:27Z</date
-></data>

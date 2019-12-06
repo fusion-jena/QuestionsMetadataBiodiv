@@ -1,3 +1,0 @@
-<data><id>oai:v1.datadryad.org:10255/dryad.108116</id><oai_dc:dc/dc:title>cluster_gocats</oai_dc:dc/dc:title><oai_dc:dc/dc:description>Gene ontology (GO) annotations for each orthogroup generated from the masked dataset. The Trinotate transcriptome annotation pipeline was used go assign GO annotations to transcripts using BLASTp searches of the UniProt database and HMM searches of the pfam protein domain database. All unique GO annotations for sequences in an orthogroup are shown.</oai_dc:dc/dc:description><oai_dc:dc/dc:subject>bryophyte</oai_dc:dc/dc:subject><date
->2016-02-09T15:12:52Z</date
-></data>

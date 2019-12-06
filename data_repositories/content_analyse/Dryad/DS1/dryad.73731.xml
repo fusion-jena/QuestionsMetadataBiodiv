@@ -1,3 +1,0 @@
-<data><id>oai:v1.datadryad.org:10255/dryad.73731</id><oai_dc:dc/dc:title>culex_nochoice_assay_data</oai_dc:dc/dc:title><oai_dc:dc/dc:description>File is structured so that there is one individual per line.  Variable "chick.age" represents the age of the chick host used in weeks. "Response" is a binomial variable, where 1 = landing on the host, and 0 = no response.  "time" represents time to landing in seconds.  "landing.site" is a multinomial response, where h = head, b = breast, l = legs, w = wings, and t = tail feathers and rump.  Landing site was only measure in no-choice tests where the chick was used.</oai_dc:dc/dc:description><oai_dc:dc/dc:subject /><date
->2015-01-23T15:26:58Z</date
-></data>

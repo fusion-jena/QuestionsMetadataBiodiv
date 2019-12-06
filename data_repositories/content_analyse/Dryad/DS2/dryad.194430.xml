@@ -1,3 +1,0 @@
-<data><id>oai:v1.datadryad.org:10255/dryad.194430</id><oai_dc:dc/dc:title>Vector transmission from DSF grapevines data set</oai_dc:dc/dc:title><oai_dc:dc/dc:description>Data from vector transmission experiment for Xylella fastidiosa from DSF transgenic grapevines. File is an .rds file for loading directly into R. The file is a list of length 2. The first item in the list is metadata describing each variable of the data set, including total sample size. The second item is the data set itself.</oai_dc:dc/dc:description><oai_dc:dc/dc:subject>disease resistance|plant disease epidemiology|vector ecology|vector-borne pathogens</oai_dc:dc/dc:subject><date
->2018-11-19T14:10:46Z</date
-></data>

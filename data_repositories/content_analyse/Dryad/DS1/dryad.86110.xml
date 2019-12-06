@@ -1,3 +1,0 @@
-<data><id>oai:v1.datadryad.org:10255/dryad.86110</id><oai_dc:dc/dc:title>Variance stabilized gene expression data and p-values</oai_dc:dc/dc:title><oai_dc:dc/dc:description>Variance stabilized gene expression and p-values were generated using the R package DESeq2. Row names are gene names. Column names are either sample names (columns 1-24) or p-values (columns 25-30). The letters following the p-value (pval or padj, for unadjusted and FDR corrected p-values respectively) indicate the contrast used to generate the pvalue: AH = ahead of the lesion to healthy, DA = disease to ahead of the lesion, DH = disease to healthy.</oai_dc:dc/dc:description><oai_dc:dc/dc:subject /><date
->2015-05-12T18:25:35Z</date
-></data>

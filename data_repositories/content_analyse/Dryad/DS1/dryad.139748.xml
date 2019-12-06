@@ -1,3 +1,0 @@
-<data><id>oai:v1.datadryad.org:10255/dryad.139748</id><oai_dc:dc/dc:title>Input file for NDul analysis</oai_dc:dc/dc:title><oai_dc:dc/dc:description>This is the XML file which configures all parameters for the beast2 program for the Bayesian MCMC analysis using the node dating approach including 15 fossils and an uniform calibration prior (NDul). The file was generated in BEAUti 2.3.1.</oai_dc:dc/dc:description><oai_dc:dc/dc:subject>Fossil calibration|Bayesian clock dating|molecular clock calibration|node dating|fossilized birth-death|phylogeny|Pines</oai_dc:dc/dc:subject><date
->2017-03-17T13:07:12Z</date
-></data>

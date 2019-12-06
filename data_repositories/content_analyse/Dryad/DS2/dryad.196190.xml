@@ -1,3 +1,0 @@
-<data><id>oai:v1.datadryad.org:10255/dryad.196190</id><oai_dc:dc/dc:title>Knime workflow to rotate and crop zebrafish images</oai_dc:dc/dc:title><oai_dc:dc/dc:description>This workflow automatically rotates, crop the images and draws a virtual capillary based on a ImageJ macro.The workflow can easily be adapted to accommodate different image properties depending on the source of the image (e.g. intensity, contrast).</oai_dc:dc/dc:description><oai_dc:dc/dc:subject /><date
->2018-10-23T20:40:54Z</date
-></data>

@@ -1,3 +1,0 @@
-<data><id>oai:v1.datadryad.org:10255/dryad.63941</id><oai_dc:dc/dc:title>bgsr.tar</oai_dc:dc/dc:title><oai_dc:dc/dc:description>C++ source code to analyze the transplant experimetns. This program analyzes allele frequency changes in experimental populations. The model assumes a set of experimental populations were founded from a single source population and that a sample of individuals from the source population exist. Further, the model assumes that individuals are sampled from each experimental population after a single generation. This software requires the GSL and HDF5. To compile the software try: h5c++ -O3 -o bgsr main.C mcmc.C func.C -lm -lgsl -lgslcblas</oai_dc:dc/dc:description><oai_dc:dc/dc:subject /><date
->2014-05-19T20:00:47Z</date
-></data>

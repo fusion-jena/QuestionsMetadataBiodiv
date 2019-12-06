@@ -1,3 +1,0 @@
-<data><id>oai:v1.datadryad.org:10255/dryad.158460</id><oai_dc:dc/dc:title>Promiscuity_L3_F100M100_mtDNA_100Iterations</oai_dc:dc/dc:title><oai_dc:dc/dc:description>mtDNA distance matrices for promiscuity (L3) simulations, under restricted dispersal. Geographical (GGD) and Genetic (GD) distance matrices are provided for females and males, for 100 simulation iterations (It1-100). Cell A1= # Loci, A2= # Individuals (the remainder of Row #1 can be ignored). Row #3= Individual IDs, Distance matrix data starts in Row #4. The final column = Individual IDs.</oai_dc:dc/dc:description><oai_dc:dc/dc:subject>Autosome|Mitochondria|Y chromosome|Dispersal|Mating system|Fine-scale genetic structure|Simulation</oai_dc:dc/dc:subject><date
->2017-11-10T04:21:27Z</date
-></data>

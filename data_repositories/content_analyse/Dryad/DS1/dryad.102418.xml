@@ -1,3 +1,0 @@
-<data><id>oai:v1.datadryad.org:10255/dryad.102418</id><oai_dc:dc/dc:title>Black grouse autosome consensus sequence</oai_dc:dc/dc:title><oai_dc:dc/dc:description>Black grouse autosome consensus sequence used as input for PSMC. The file was generated from a filtered bam file using the samtools mpileup, bcftools and vcfutils.pl (vcf2fq) pipeline (downgrading mapping quality for reads containing excessive mismatches (-C) to 50, minimum read depth (-d) set to 1/3 of the mean genome coverage (28) and maximum read depth (-D) set to twice the mean genome coverage (171)). All non-autosomal sites were discarded.</oai_dc:dc/dc:description><oai_dc:dc/dc:subject>Effective population size|Climate hange|PSMC</oai_dc:dc/dc:subject><date
->2015-11-24T16:24:46Z</date
-></data>

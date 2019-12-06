@@ -1,3 +1,0 @@
-<data><id>oai:v1.datadryad.org:10255/dryad.87913</id><oai_dc:dc/dc:title>ns_vs_s</oai_dc:dc/dc:title><oai_dc:dc/dc:description>Divergence statistics for the four species that were de novo assembled (P. trichocarpa, P. balsamifera, P. fremontii, Salix interior). These were calculated using scripts "parse_fasta_to_genes.pl" and "diffs.pl" from https://github.com/daisieh/phylogenomics/releases/tag/v1.01-nph</oai_dc:dc/dc:description><oai_dc:dc/dc:subject>Natural Selection and Contemporary Evolution|Molecular Evolution|Speciation|Genomics/Proteomics</oai_dc:dc/dc:subject><date
->2015-05-18T17:23:18Z</date
-></data>

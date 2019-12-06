@@ -1,3 +1,0 @@
-<data><id>oai:v1.datadryad.org:10255/dryad.76316</id><oai_dc:dc/dc:title>table of samples and barcode IDs used in for genotyping</oai_dc:dc/dc:title><oai_dc:dc/dc:description>Contains rows designating the sample ID numbers and forward and reverse barcode ID numbers used for each sample genotyped in the paper. See barcode_sequences.csv for barcode nucleotide sequences. This file can be used as input for stc.R. Please see README.txt for more information and meta data.</oai_dc:dc/dc:description><oai_dc:dc/dc:subject>MHC|Major Histocompatibility Complex|next-generation sequencing|pyrosequencing</oai_dc:dc/dc:subject><date
->2014-12-09T00:17:38Z</date
-></data>

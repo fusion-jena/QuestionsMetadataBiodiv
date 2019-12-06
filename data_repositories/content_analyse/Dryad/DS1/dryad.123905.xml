@@ -1,3 +1,0 @@
-<data><id>oai:v1.datadryad.org:10255/dryad.123905</id><oai_dc:dc/dc:title>CC56 fat tissue segmentation</oai_dc:dc/dc:title><oai_dc:dc/dc:description>Eared grebe (CC-56) downed in Cedar City, UT, during Fall migration leaving Great Salt Lake. After segmentation in Mimics, jpg files were exported with fat tissue highlighted. Images allowed landmark identification and slice range for each ROI (region of interest) - chest, thorax and abdomen. Also, a txt file with fat area measurement for each slice was generated. Depot fat measurement was calculated by matching ROI slice range and fat values.</oai_dc:dc/dc:description><oai_dc:dc/dc:subject>Migration|Fat mobilization|Grebe</oai_dc:dc/dc:subject><date
->2016-08-23T20:02:23Z</date
-></data>

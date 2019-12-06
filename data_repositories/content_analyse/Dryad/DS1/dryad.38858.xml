@@ -1,3 +1,0 @@
-<data><id>oai:v1.datadryad.org:10255/dryad.38858</id><oai_dc:dc/dc:title>turtles-probe-matches-to-reptiles.sqlite</oai_dc:dc/dc:title><oai_dc:dc/dc:description>SQLITE database of LASTZ matches (from turtles-lastz-matches-to-reptiles.tar.bz2) between assembled contigs in turtle-contigs-enriched-from-taxa.fasta and the UCE probes in turtles-all-probes.fasta. This database is used to construct data sets containing loci that are shared across taxa and prep data for alignment.</oai_dc:dc/dc:description><oai_dc:dc/dc:subject>ultraconserved elements|phylogenomic|phylogenetics|reptiles|turtles</oai_dc:dc/dc:subject><date
->2012-05-18T15:48:08Z</date
-></data>

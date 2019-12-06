@@ -1,3 +1,0 @@
-<data><id>oai:v1.datadryad.org:10255/dryad.197284</id><oai_dc:dc/dc:title>Sighting histories_calf_age CJS models</oai_dc:dc/dc:title><oai_dc:dc/dc:description>This file contains the annual sighting histories of 56 bottlenose dolphin calves sighted off the east coast of Scotland between 1990 and 2015, and used to estimate age specific survival rates up to 3 years of age. The sighting histories are restricted to calves whose mothers were seen in the three years following birth. The file can be imported into RMark, and then converted to an .inp file to fit mark-recapture models (using MARK software) .</oai_dc:dc/dc:description><oai_dc:dc/dc:subject>capture-recapture|sighting histories|MARK</oai_dc:dc/dc:subject><date
->2018-12-19T12:46:13Z</date
-></data>

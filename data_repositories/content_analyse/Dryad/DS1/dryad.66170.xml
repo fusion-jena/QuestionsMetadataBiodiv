@@ -1,3 +1,0 @@
-<data><id>oai:v1.datadryad.org:10255/dryad.66170</id><oai_dc:dc/dc:title>AFLP data</oai_dc:dc/dc:title><oai_dc:dc/dc:description>The file AFLP data.txt includes the binary matrix of AFLP band presence (1) &#8211; absence (0) for 451 AFLP-markers and 422 individuals of Liparis loeselii sampled in 38 populations. The matrix also include the spatial coordinates of each sampled population, given in the two last columns. The markers are numbered M1 to M451. The description of each marker (size in base pairs, primer combination) is given in the file readme.txt.</oai_dc:dc/dc:description><oai_dc:dc/dc:subject>amplified fragment length polymorphism (AFLP)|gene flow|ecotypic divergence|long-distance seed dispersal</oai_dc:dc/dc:subject><date
->2014-07-08T17:42:55Z</date
-></data>

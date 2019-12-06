@@ -1,3 +1,0 @@
-<data><id>oai:v1.datadryad.org:10255/dryad.169598</id><oai_dc:dc/dc:title>Genomic prediction script</oai_dc:dc/dc:title><oai_dc:dc/dc:description>Perl wrapper script (forks to run multiple jobs) to run the genomic prediction option in gemma. This is sued after the standard BSLMM has been fit.</oai_dc:dc/dc:description><oai_dc:dc/dc:subject>Quantitative Genetics|Insects|Ecological Genetics|Genomic prediction|Genome-wide association mapping</oai_dc:dc/dc:subject><date
->2018-02-27T19:39:16Z</date
-></data>

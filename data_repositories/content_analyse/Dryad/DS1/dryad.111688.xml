@@ -1,3 +1,0 @@
-<data><id>oai:v1.datadryad.org:10255/dryad.111688</id><oai_dc:dc/dc:title>Final SNP set.</oai_dc:dc/dc:title><oai_dc:dc/dc:description>This file contains the final SNP set (after several filtering steps detailed at manuscript) in .vcf and .fasta format. Fasta file contains ~80bp sequences of each RADtag loci. After alignment of each sequences from same loci, SNP of each sample can be accessed.</oai_dc:dc/dc:description><oai_dc:dc/dc:subject>Genomics/Proteomics|Ecological Genetics|Insects|Adaptation</oai_dc:dc/dc:subject><date
->2016-08-01T17:03:51Z</date
-></data>

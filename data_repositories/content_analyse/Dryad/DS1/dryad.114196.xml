@@ -1,3 +1,0 @@
-<data><id>oai:v1.datadryad.org:10255/dryad.114196</id><oai_dc:dc/dc:title>C. maculatus allele frequencies</oai_dc:dc/dc:title><oai_dc:dc/dc:description>This compressed directory contains csv text files with allele frequency estimates for each line and generation (one file each). Within each file, rows correspond with different SNVs and the values on each row give the posterior mean, median, and lower and upper bounds of the 95% CIs for the frequency of one of the two alleles at the locus.</oai_dc:dc/dc:description><oai_dc:dc/dc:subject>Adaptation|Selection - Experimental|Population Genetics|Plant-Insect Interaction</oai_dc:dc/dc:subject><date
->2016-06-10T21:12:47Z</date
-></data>

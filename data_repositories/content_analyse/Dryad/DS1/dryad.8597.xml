@@ -1,3 +1,0 @@
-<data><id>oai:v1.datadryad.org:10255/dryad.8597</id><oai_dc:dc/dc:title>con_ens</oai_dc:dc/dc:title><oai_dc:dc/dc:description>C code for the simulation data (constrained ensemble simulations). For random number generations, ran3.c and bnldev.c from "Numerical Recipes in C" are used (these codes are not deposited in Dryad).</oai_dc:dc/dc:description><oai_dc:dc/dc:subject /><date
->2011-02-18T19:43:34Z</date
-></data>

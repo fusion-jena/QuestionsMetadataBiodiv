@@ -1,3 +1,0 @@
-<data><id>oai:v1.datadryad.org:10255/dryad.101573</id><oai_dc:dc/dc:title>Szulkin_Blue_Tit_raw_unfiltered_209K_SNPs_from_Stacks_maf1</oai_dc:dc/dc:title><oai_dc:dc/dc:description>The raw VCF file generated with Stacks, containing 209K SNPs with a global minor allele frequency of at least 0.01. This dataset was then filtered based on quality and population genetic criteria in vcftools to produce the working dataset conatining 12 SNPs.</oai_dc:dc/dc:description><oai_dc:dc/dc:subject>blue tit|population genomics|landscape genetics|RAD sequencing|local adaptation|genetic differentiation</oai_dc:dc/dc:subject><date
->2015-11-19T16:27:33Z</date
-></data>

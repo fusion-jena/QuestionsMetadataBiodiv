@@ -1,3 +1,0 @@
-<data><id>oai:v1.datadryad.org:10255/dryad.223371</id><oai_dc:dc/dc:title>GCFR soil pH</oai_dc:dc/dc:title><oai_dc:dc/dc:description>pH values were obtained from collated data and also AFSP. Data from pH measured in water were corrected to KCl extract values using linear regression of known KCL and water extracts.  The raster layer represents the modeled interpolation of this pH (CRS EPSG:4326 - WGS 84 - Geographic) in GeoTIFF format. Note that there are some voids (NA values) within the geographic area modeled.</oai_dc:dc/dc:description><oai_dc:dc/dc:subject>Cape floristic region|Harmonised World Soils Database|SoilGrids|soil properties|species distribution models|species richness</oai_dc:dc/dc:subject><date
->2019-08-12T13:16:22Z</date
-></data>

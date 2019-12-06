@@ -1,3 +1,0 @@
-<data><id>oai:v1.datadryad.org:10255/dryad.118429</id><oai_dc:dc/dc:title>LTEE point mutation matrix for phylogeny</oai_dc:dc/dc:title><oai_dc:dc/dc:description>This file contains an array in which the presence and absence of point mutations recovered in the LTEE sequenced clones is stored as 0 or 1 respectively for each clone. It is produced by ComputeMutationThroughTimeDryad.pl and is used to produce figure 2.</oai_dc:dc/dc:description><oai_dc:dc/dc:subject>Evolution|experimental evolution|molecular evolution|microbiology|genomic|adaptation|convergence</oai_dc:dc/dc:subject><date
->2016-08-01T15:35:21Z</date
-></data>

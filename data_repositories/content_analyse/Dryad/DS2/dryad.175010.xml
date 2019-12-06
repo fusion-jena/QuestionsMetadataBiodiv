@@ -1,3 +1,0 @@
-<data><id>oai:v1.datadryad.org:10255/dryad.175010</id><oai_dc:dc/dc:title>KNIME workflow to evaluate morphological features using the FishInspector software</oai_dc:dc/dc:title><oai_dc:dc/dc:description>This workflow allows to measure morphological features of zebrafish larvae (48hpf or 96 hpf) using the output file (json format) from the FishInspector software. The file should be imported to the KNIME open source analytical platform.</oai_dc:dc/dc:description><oai_dc:dc/dc:subject /><date
->2018-09-27T21:10:59Z</date
-></data>
