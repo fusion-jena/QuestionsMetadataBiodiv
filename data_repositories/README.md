@@ -10,7 +10,7 @@ Works on ```Python3+```.
 * [Analysis] (Java code to count the metadata data fields used and to generate charts)
 * [Charts] (contains the generated charts per repository and metadata schema)
 * [Content_analysis] (contains all files, selected files and keyword lists used for the content analysis of descriptive metadata fields)
-* [compressed full parsed metadata](https://cloud.uni-jena.de/s/73W2yNgna8AnBat):
+* [compressed full parsed metadata](https://cloud.uni-jena.de/s/73W2yNgna8AnBat) (all harvested and parsed metadata files)
 * ```metadata_harvester.py``` - source file to harvest and parse metadata (see detailed descriptions below)
 * ```split_content.py``` - source file to split each line of the metadata file prodcued by the ```-fs/--fields```- option of ```metadata_harvester.py``` script the  into individual XML files and, optionally, counts used keywords in a specified field (see detailed descriptions below)
 * ```random_file_selector.py``` - source file to randomly selected a specified number of files from the pool of XML files created by ```split_content.py script``` (see detailed descriptions below)
