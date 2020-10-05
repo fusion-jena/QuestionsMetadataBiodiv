@@ -14,7 +14,7 @@ website | the standard's website from which we collected all information |
 Number of repositories using the standard | if the standard is listed in re3data, number of repositories using the standard |
 Use Case Entries  |if the standard is listed in RDA, number of use case entries|
 in RDA Listed under "Sciences" |if the standard is listed in RDA, flag if it has the label "Science"|
-Domain |the standard's domain|
+Domain | the standard's application domain|
 Number of Elements |if available, number of elements|
 Mandatory Elements |if available, number of mandatory elements|
 Semantic Support |information whether the standard supports semantic formats, e.g., RDF, OWL|
