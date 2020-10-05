@@ -7,18 +7,23 @@ In re3data, we filtered  for "Life Sciences" and in RDA, we selecetd all top-lev
 
 column headers:
 
-metadata standards (the name of the metadata standards)
-comment (comment, e.g., reason why the standard was ommitted) 
-website (the standard's website from which we collected all information) 
-Number of repositories using the standard (if the standard is listed in re3data, number of repositories using the standard)
-Use Case Entries  (RDA) (if the standard is listed in RDA, number of use case entries)
-in RDA Listed under "Sciences" (if the standard is listed in RDA, flag if it has the label "Science")
-Domain (the standard's domain)
-Number of Elements (if available, number of elements)
-Mandatory Elements (if available, number of mandatory elements)
-Semantic Support (information whether the standard supports semantic formats, e.g., RDF, OWL)
-Maintenance (information if the standard is still maintained, e.g., when was the last update? dead links? website available?)
-Examples (if present, list some repositories/projects using the standard)
+
+column header | meaning |
+-------- | -------- | 
+metadata standards  | the name of the metadata standard| 
+
+*  ()
+* comment (comment, e.g., reason why the standard was ommitted) 
+* website (the standard's website from which we collected all information) 
+* Number of repositories using the standard (if the standard is listed in re3data, number of repositories using the standard)
+* Use Case Entries  (RDA) (if the standard is listed in RDA, number of use case entries)
+* in RDA Listed under "Sciences" (if the standard is listed in RDA, flag if it has the label "Science")
+* Domain (the standard's domain)
+* Number of Elements (if available, number of elements)
+* Mandatory Elements (if available, number of mandatory elements)
+* Semantic Support (information whether the standard supports semantic formats, e.g., RDF, OWL)
+* Maintenance (information if the standard is still maintained, e.g., when was the last update? dead links? website available?)
+* Examples (if present, list some repositories/projects using the standard)
 
 
 # comparison_standards_categories.csv
