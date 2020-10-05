@@ -2,7 +2,7 @@ This folder contains supplementary material for the metadata standard analysis.
 
 # metadata_standard_2020.csv
 
-This file provides additional information about the selection process. All standards were obtained in September 2020 from re3data |https://www.re3data.org/| and RDA |https://rdamsc.bath.ac.uk/|.
+This file provides additional information about the selection process. All standards were obtained in September 2020 from re3data (https://www.re3data.org/) and RDA (https://rdamsc.bath.ac.uk/).
 In re3data, we filtered  for "Life Sciences" and in RDA, we selecetd all top-level standards labeled with "Science". We merged and cleaned the list according to the following criteria: We ommitted deprecated standards, file formats, standards from clinical trails, astrophysics and astronomy. 
 
 column headers:
@@ -47,5 +47,5 @@ Person |all person related information, e.g., data collector, funding informatio
 
 #### Legend:
 * no match - empty cell
-* general field - if no explicit metadata field represents the category, we marked that with a general field that could be used instead with a surrounding bracket, e.g., |dc:subject|
+* general field - if no explicit metadata field represents the category, we marked that with a general field that could be used instead with a surrounding bracket, e.g., (dc:subject)
 * explicit metadata field - at least one or more fields are mentioned that could be used to describe the respective category
