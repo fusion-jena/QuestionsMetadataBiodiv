@@ -9,7 +9,7 @@ column headers:
 
 metadata standards (the name of the metadata standards)
 comment (comment, e.g., reason why the standard was ommitted) 
-website(the standard's website from which we collected all information) 
+website (the standard's website from which we collected all information) 
 Number of repositories using the standard (if the standard is listed in re3data, number of repositories using the standard)
 Use Case Entries  (RDA) (if the standard is listed in RDA, number of use case entries)
 in RDA Listed under "Sciences" (if the standard is listed in RDA, flag if it has the label "Science")
@@ -21,3 +21,28 @@ Maintenance (information if the standard is still maintained, e.g., when was the
 Examples (if present, list some repositories/projects using the standard)
 
 
+# comparison_standards_categories.csv
+
+This file contains the actual comparision between the standards. Per category we analyzed whether one or more fields are available to describe the respective category.
+
+column headers:
+
+metadata standard (the name of the metadata standards)
+Website (the standard's website from which we collected all information) 
+Environment (environmental information, e.g., biome, habitat)
+Quality (data parameters measured or phenotypes, e.g., growth, length, pH)
+Material (materials and chemicals, e.g., sediments, rocks, sand, CO2, N)
+Organism (species )
+Process (biological and chemical processes a specimen is involved, e.g., carbon cycling, weather)
+Location (geographical location, e.g., Europe, Atlantic Ocean, latitude/longitude information)
+Data Type (result of a research method, e.g., lidar data, genome data)
+Anatomy (anatomical parts, e.g., leaf, root, genes)
+Human Intervention (human intervention, e.g., farming, land use)
+Event (processes at specific times, e.g., a specific earthquake, oil spill)
+Time (temporal information, e.g., collection time)
+Person (all person related information, e.g., data collector, funding information, responsible organization)
+
+Legend:
+no match - empty cell
+general field - if no explicit metadata field represents the category, we marked that with a general field that could be used instead with a surrounding bracket, e.g., (dc:subject)
+explicit metadata field - at least one or more fields are mentioned that could be used to describe the respective category
