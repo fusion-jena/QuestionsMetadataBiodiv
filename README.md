@@ -1,6 +1,6 @@
 # Question Corpus for Biodiversity and Metadata Analysis
 
-This repository contains all source code and supplementary material for publication XXX. We provide a question corpus for the biodiversity domain together with scripts to set up a survey to evaluate main search interests with users and to analyze the surveys results. We also provide scripts and results to analyze metadata from selected data repositories.
+This repository contains all source code and supplementary material for our publication "Dataset search in biodiversity research: Do metadata in data repositories reflect scholarly information needs?". We provide a question corpus for the biodiversity domain together with scripts to set up a survey to evaluate main search interests with users and to analyze the surveys results. We also provide scripts and results to analyze metadata from selected data repositories.
 
 ## Repository Structure
 
@@ -18,8 +18,11 @@ All source code files are distributed under the terms of the GNU LESSER GENERAL 
 ## Citation
 For reusing data (e.g., question corpus, data repositoriy analysis) please use the following DOIs:
 
-Questions: 
+Questions: https://doi.org/10.25829/idiv.1864-15-2987
 
-Data-Repositories:
+Data-Repositories: https://doi.org/10.25829/idiv.1881-12-3202
 
 When reusing the python scripts or the Limesurvey templates please cite the publication.
+
+Dataset search in biodiversity research: Do metadata in data repositories reflect scholarly information needs?
+Löffler F, Wesp V, König-Ries B, Klan F (2021) Dataset search in biodiversity research: Do metadata in data repositories reflect scholarly information needs?. PLOS ONE 16(3): e0246099. https://doi.org/10.1371/journal.pone.0246099 
