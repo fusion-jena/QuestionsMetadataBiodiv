@@ -1,3 +1,4 @@
+<?xml version='1.0' encoding='UTF-8'?>
 <BIODIV-QUESTIONS>
 <BIODIV-QUESTION questionid="geochemicalPara">
 	<QUESTION> What geochemical parameters influence microbial diversity in the groundwater? </QUESTION>
@@ -28,12 +29,12 @@
 		<ARTIFACT subqid="SQ1">
 			<PHRASE>DOC</PHRASE>
 			<AGREEMENT>0.7777777777777777</AGREEMENT>
-			<CATEGORY>Mat & Subst</CATEGORY>
+			<CATEGORY>Mat &amp;amp; Subst</CATEGORY>
 		</ARTIFACT>
 		<ARTIFACT subqid="SQ2">
 			<PHRASE>DIC</PHRASE>
 			<AGREEMENT>0.7777777777777777</AGREEMENT>
-			<CATEGORY>Mat & Subst</CATEGORY>
+			<CATEGORY>Mat &amp;amp; Subst</CATEGORY>
 		</ARTIFACT>
 		<ARTIFACT subqid="SQ3">
 			<PHRASE>year</PHRASE>
@@ -118,12 +119,12 @@
 		<ARTIFACT subqid="SQ1">
 			<PHRASE>carbon</PHRASE>
 			<AGREEMENT>0.5833333333333333</AGREEMENT>
-			<CATEGORY>Mat & Subst</CATEGORY>
+			<CATEGORY>Mat &amp; Subst</CATEGORY>
 		</ARTIFACT>
 	</ARTIFACTS>
 </BIODIV-QUESTION>
 <BIODIV-QUESTION questionid="kindOfPlant">
-	<QUESTION> On what kind of plants do Arthrocladiella mougeotii (Lév</QUESTION>
+	<QUESTION> On what kind of plants do Arthrocladiella mougeotii (L&#232;v.) occur?</QUESTION>
 	<KEYWORDS></KEYWORDS>
 	<ARTIFACTS>
 		<ARTIFACT subqid="SQ1">
@@ -132,7 +133,7 @@
 			<CATEGORY>Organism</CATEGORY>
 		</ARTIFACT>
 		<ARTIFACT subqid="SQ2">
-			<PHRASE>Arthrocladiella mougeotii (Lév.) Vassilkov</PHRASE>
+			<PHRASE>Arthrocladiella mougeotii (L&#232;v.) Vassilkov</PHRASE>
 			<AGREEMENT>1.0</AGREEMENT>
 			<CATEGORY>Organism</CATEGORY>
 		</ARTIFACT>
@@ -220,7 +221,7 @@
 		<ARTIFACT subqid="SQ1">
 			<PHRASE>substances</PHRASE>
 			<AGREEMENT>1.0</AGREEMENT>
-			<CATEGORY>Mat & Subst</CATEGORY>
+			<CATEGORY>Mat &amp; Subst</CATEGORY>
 		</ARTIFACT>
 	</ARTIFACTS>
 </BIODIV-QUESTION>
@@ -278,7 +279,7 @@
 	</ARTIFACTS>
 </BIODIV-QUESTION>
 <BIODIV-QUESTION questionid="conduceInfluences">
-	<QUESTION> Do we see conduce influences in soil & aquifer? </QUESTION>
+	<QUESTION> Do we see conduce influences in soil &amp; aquifer? </QUESTION>
 	<KEYWORDS></KEYWORDS>
 	<ARTIFACTS>
 		<ARTIFACT subqid="SQ2">
@@ -300,7 +301,7 @@
 		<ARTIFACT subqid="SQ2">
 			<PHRASE>oxygen</PHRASE>
 			<AGREEMENT>1.0</AGREEMENT>
-			<CATEGORY>Mat & Subst</CATEGORY>
+			<CATEGORY>Mat &amp; Subst</CATEGORY>
 		</ARTIFACT>
 	</ARTIFACTS>
 </BIODIV-QUESTION>
@@ -461,7 +462,7 @@
 		<ARTIFACT subqid="SQ1">
 			<PHRASE>nutrients</PHRASE>
 			<AGREEMENT>0.7777777777777777</AGREEMENT>
-			<CATEGORY>Mat & Subst</CATEGORY>
+			<CATEGORY>Mat &amp; Subst</CATEGORY>
 		</ARTIFACT>
 		<ARTIFACT subqid="SQ2">
 			<PHRASE>soil</PHRASE>
@@ -585,7 +586,7 @@
 		<ARTIFACT subqid="SQ1">
 			<PHRASE>neonicotinoids</PHRASE>
 			<AGREEMENT>0.7777777777777777</AGREEMENT>
-			<CATEGORY>Mat & Subst</CATEGORY>
+			<CATEGORY>Mat &amp; Subst</CATEGORY>
 		</ARTIFACT>
 		<ARTIFACT subqid="SQ2">
 			<PHRASE>pollinators</PHRASE>
@@ -606,7 +607,7 @@
 		<ARTIFACT subqid="SQ2">
 			<PHRASE>CO2</PHRASE>
 			<AGREEMENT>1.0</AGREEMENT>
-			<CATEGORY>Mat & Subst</CATEGORY>
+			<CATEGORY>Mat &amp; Subst</CATEGORY>
 		</ARTIFACT>
 		<ARTIFACT subqid="SQ3">
 			<PHRASE>groundwater</PHRASE>
@@ -622,7 +623,7 @@
 		<ARTIFACT subqid="SQ4">
 			<PHRASE>oxygen</PHRASE>
 			<AGREEMENT>1.0</AGREEMENT>
-			<CATEGORY>Mat & Subst</CATEGORY>
+			<CATEGORY>Mat &amp; Subst</CATEGORY>
 		</ARTIFACT>
 		<ARTIFACT subqid="SQ5">
 			<PHRASE>Atlantic</PHRASE>
@@ -638,7 +639,7 @@
 		<ARTIFACT subqid="SQ4">
 			<PHRASE>rain water</PHRASE>
 			<AGREEMENT>0.5833333333333333</AGREEMENT>
-			<CATEGORY>Mat & Subst</CATEGORY>
+			<CATEGORY>Mat &amp; Subst</CATEGORY>
 		</ARTIFACT>
 		<ARTIFACT subqid="SQ5">
 			<PHRASE>working area</PHRASE>
@@ -659,12 +660,12 @@
 		<ARTIFACT subqid="SQ2">
 			<PHRASE>CO2 isotopes</PHRASE>
 			<AGREEMENT>1.0</AGREEMENT>
-			<CATEGORY>Mat & Subst</CATEGORY>
+			<CATEGORY>Mat &amp; Subst</CATEGORY>
 		</ARTIFACT>
 		<ARTIFACT subqid="SQ3">
 			<PHRASE>CO2</PHRASE>
 			<AGREEMENT>1.0</AGREEMENT>
-			<CATEGORY>Mat & Subst</CATEGORY>
+			<CATEGORY>Mat &amp; Subst</CATEGORY>
 		</ARTIFACT>
 	</ARTIFACTS>
 </BIODIV-QUESTION>
@@ -691,7 +692,7 @@
 	</ARTIFACTS>
 </BIODIV-QUESTION>
 <BIODIV-QUESTION questionid="seasonalDi">
-	<QUESTION> What are the seasonal differences of nitrogen dry & wet deposition in a template forest? </QUESTION>
+	<QUESTION> What are the seasonal differences of nitrogen dry &amp; wet deposition in a template forest? </QUESTION>
 	<KEYWORDS></KEYWORDS>
 	<ARTIFACTS>
 		<ARTIFACT subqid="SQ3">
@@ -707,7 +708,7 @@
 		<ARTIFACT subqid="SQ5">
 			<PHRASE>nitrogen</PHRASE>
 			<AGREEMENT>1.0</AGREEMENT>
-			<CATEGORY>Mat & Subst</CATEGORY>
+			<CATEGORY>Mat &amp; Subst</CATEGORY>
 		</ARTIFACT>
 	</ARTIFACTS>
 </BIODIV-QUESTION>
@@ -761,12 +762,12 @@
 		<ARTIFACT subqid="SQ1">
 			<PHRASE>water</PHRASE>
 			<AGREEMENT>0.611111111111111</AGREEMENT>
-			<CATEGORY>Mat & Subst</CATEGORY>
+			<CATEGORY>Mat &amp; Subst</CATEGORY>
 		</ARTIFACT>
 		<ARTIFACT subqid="SQ2">
 			<PHRASE>dissolved organic and inorganic</PHRASE>
 			<AGREEMENT>0.7777777777777777</AGREEMENT>
-			<CATEGORY>Mat & Subst</CATEGORY>
+			<CATEGORY>Mat &amp; Subst</CATEGORY>
 		</ARTIFACT>
 		<ARTIFACT subqid="SQ3">
 			<PHRASE>year</PHRASE>
@@ -798,7 +799,7 @@
 		<ARTIFACT subqid="SQ1">
 			<PHRASE>secondary minerals</PHRASE>
 			<AGREEMENT>0.7777777777777777</AGREEMENT>
-			<CATEGORY>Mat & Subst</CATEGORY>
+			<CATEGORY>Mat &amp; Subst</CATEGORY>
 		</ARTIFACT>
 	</ARTIFACTS>
 </BIODIV-QUESTION>
@@ -809,12 +810,12 @@
 		<ARTIFACT subqid="SQ3">
 			<PHRASE>nitrogen</PHRASE>
 			<AGREEMENT>1.0</AGREEMENT>
-			<CATEGORY>Mat & Subst</CATEGORY>
+			<CATEGORY>Mat &amp; Subst</CATEGORY>
 		</ARTIFACT>
 		<ARTIFACT subqid="SQ5">
 			<PHRASE>groundwater</PHRASE>
 			<AGREEMENT>0.611111111111111</AGREEMENT>
-			<CATEGORY>Mat & Subst</CATEGORY>
+			<CATEGORY>Mat &amp; Subst</CATEGORY>
 		</ARTIFACT>
 	</ARTIFACTS>
 </BIODIV-QUESTION>
@@ -841,7 +842,7 @@
 		<ARTIFACT subqid="SQ3">
 			<PHRASE>trace gas</PHRASE>
 			<AGREEMENT>1.0</AGREEMENT>
-			<CATEGORY>Mat & Subst</CATEGORY>
+			<CATEGORY>Mat &amp; Subst</CATEGORY>
 		</ARTIFACT>
 		<ARTIFACT subqid="SQ5">
 			<PHRASE>microbial guilds</PHRASE>
@@ -925,32 +926,32 @@
 		<ARTIFACT subqid="SQ2">
 			<PHRASE>C-/N-isotopes of CH4; N2O; CO2 (GHG's)</PHRASE>
 			<AGREEMENT>0.7777777777777777</AGREEMENT>
-			<CATEGORY>Mat & Subst</CATEGORY>
+			<CATEGORY>Mat &amp; Subst</CATEGORY>
 		</ARTIFACT>
 		<ARTIFACT subqid="SQ3">
 			<PHRASE>C-/N-isotopes</PHRASE>
 			<AGREEMENT>0.7777777777777777</AGREEMENT>
-			<CATEGORY>Mat & Subst</CATEGORY>
+			<CATEGORY>Mat &amp; Subst</CATEGORY>
 		</ARTIFACT>
 		<ARTIFACT subqid="SQ4">
 			<PHRASE>CH4</PHRASE>
 			<AGREEMENT>0.7777777777777777</AGREEMENT>
-			<CATEGORY>Mat & Subst</CATEGORY>
+			<CATEGORY>Mat &amp; Subst</CATEGORY>
 		</ARTIFACT>
 		<ARTIFACT subqid="SQ5">
 			<PHRASE>N2O</PHRASE>
 			<AGREEMENT>0.7777777777777777</AGREEMENT>
-			<CATEGORY>Mat & Subst</CATEGORY>
+			<CATEGORY>Mat &amp; Subst</CATEGORY>
 		</ARTIFACT>
 		<ARTIFACT subqid="SQ6">
 			<PHRASE>CO2</PHRASE>
 			<AGREEMENT>0.7777777777777777</AGREEMENT>
-			<CATEGORY>Mat & Subst</CATEGORY>
+			<CATEGORY>Mat &amp; Subst</CATEGORY>
 		</ARTIFACT>
 		<ARTIFACT subqid="SQ7">
 			<PHRASE>GHG</PHRASE>
 			<AGREEMENT>0.7777777777777777</AGREEMENT>
-			<CATEGORY>Mat & Subst</CATEGORY>
+			<CATEGORY>Mat &amp; Subst</CATEGORY>
 		</ARTIFACT>
 	</ARTIFACTS>
 </BIODIV-QUESTION>
@@ -1178,7 +1179,7 @@
 		<ARTIFACT subqid="SQ3">
 			<PHRASE>sulfate</PHRASE>
 			<AGREEMENT>1.0</AGREEMENT>
-			<CATEGORY>Mat & Subst</CATEGORY>
+			<CATEGORY>Mat &amp; Subst</CATEGORY>
 		</ARTIFACT>
 	</ARTIFACTS>
 </BIODIV-QUESTION>
@@ -1344,7 +1345,7 @@
 		<ARTIFACT subqid="SQ6">
 			<PHRASE>gas</PHRASE>
 			<AGREEMENT>1.0</AGREEMENT>
-			<CATEGORY>Mat & Subst</CATEGORY>
+			<CATEGORY>Mat &amp; Subst</CATEGORY>
 		</ARTIFACT>
 	</ARTIFACTS>
 </BIODIV-QUESTION>
@@ -1413,7 +1414,7 @@
 		<ARTIFACT subqid="SQ2">
 			<PHRASE>metabolite</PHRASE>
 			<AGREEMENT>0.5833333333333333</AGREEMENT>
-			<CATEGORY>Mat & Subst</CATEGORY>
+			<CATEGORY>Mat &amp; Subst</CATEGORY>
 		</ARTIFACT>
 	</ARTIFACTS>
 </BIODIV-QUESTION>
@@ -1429,7 +1430,7 @@
 	</ARTIFACTS>
 </BIODIV-QUESTION>
 <BIODIV-QUESTION questionid="speciesHungary">
-	<QUESTION> What species did Bäumler, J</QUESTION>
+	<QUESTION> What species did B&#228;umler, J.A. collect in Hungary?</QUESTION>
 	<KEYWORDS></KEYWORDS>
 	<ARTIFACTS>
 		<ARTIFACT subqid="SQ1">
@@ -1438,9 +1439,9 @@
 			<CATEGORY>Organism</CATEGORY>
 		</ARTIFACT>
 		<ARTIFACT subqid="SQ2">
-			<PHRASE>Bäumler; J.A.</PHRASE>
+			<PHRASE>B&#228;umler; J.A.</PHRASE>
 			<AGREEMENT>1.0</AGREEMENT>
-			<CATEGORY>Person & Org</CATEGORY>
+			<CATEGORY>Person &amp; Org</CATEGORY>
 		</ARTIFACT>
 		<ARTIFACT subqid="SQ3">
 			<PHRASE>Hungary</PHRASE>
@@ -1450,7 +1451,7 @@
 	</ARTIFACTS>
 </BIODIV-QUESTION>
 <BIODIV-QUESTION questionid="dnaData">
-	<QUESTION> Is there DNA data about Amphimonhystrella sp</QUESTION>
+	<QUESTION> Is there DNA data about Amphimonhystrella sp. (Nematoda)?</QUESTION>
 	<KEYWORDS></KEYWORDS>
 	<ARTIFACTS>
 		<ARTIFACT subqid="SQ2">
@@ -1531,7 +1532,7 @@
 		<ARTIFACT subqid="SQ3">
 			<PHRASE>CO2</PHRASE>
 			<AGREEMENT>0.7777777777777777</AGREEMENT>
-			<CATEGORY>Mat & Subst</CATEGORY>
+			<CATEGORY>Mat &amp; Subst</CATEGORY>
 		</ARTIFACT>
 		<ARTIFACT subqid="SQ4">
 			<PHRASE>anoxic aquifers</PHRASE>
@@ -1611,7 +1612,7 @@
 		<ARTIFACT subqid="SQ5">
 			<PHRASE>seepage water</PHRASE>
 			<AGREEMENT>0.611111111111111</AGREEMENT>
-			<CATEGORY>Mat & Subst</CATEGORY>
+			<CATEGORY>Mat &amp; Subst</CATEGORY>
 		</ARTIFACT>
 	</ARTIFACTS>
 </BIODIV-QUESTION>
@@ -1638,7 +1639,7 @@
 		<ARTIFACT subqid="SQ3">
 			<PHRASE>sulfate</PHRASE>
 			<AGREEMENT>0.7777777777777777</AGREEMENT>
-			<CATEGORY>Mat & Subst</CATEGORY>
+			<CATEGORY>Mat &amp; Subst</CATEGORY>
 		</ARTIFACT>
 		<ARTIFACT subqid="SQ4">
 			<PHRASE>Hainich groundwater</PHRASE>
@@ -1669,12 +1670,12 @@
 		<ARTIFACT subqid="SQ3">
 			<PHRASE>isotopes of carbon</PHRASE>
 			<AGREEMENT>1.0</AGREEMENT>
-			<CATEGORY>Mat & Subst</CATEGORY>
+			<CATEGORY>Mat &amp; Subst</CATEGORY>
 		</ARTIFACT>
 		<ARTIFACT subqid="SQ4">
 			<PHRASE>carbon</PHRASE>
 			<AGREEMENT>1.0</AGREEMENT>
-			<CATEGORY>Mat & Subst</CATEGORY>
+			<CATEGORY>Mat &amp; Subst</CATEGORY>
 		</ARTIFACT>
 		<ARTIFACT subqid="SQ5">
 			<PHRASE>fractimation</PHRASE>
@@ -1711,7 +1712,7 @@
 		<ARTIFACT subqid="SQ5">
 			<PHRASE>sulfate</PHRASE>
 			<AGREEMENT>1.0</AGREEMENT>
-			<CATEGORY>Mat & Subst</CATEGORY>
+			<CATEGORY>Mat &amp; Subst</CATEGORY>
 		</ARTIFACT>
 	</ARTIFACTS>
 </BIODIV-QUESTION>
@@ -1855,7 +1856,7 @@
 		<ARTIFACT subqid="SQ1">
 			<PHRASE>substances X</PHRASE>
 			<AGREEMENT>0.7777777777777777</AGREEMENT>
-			<CATEGORY>Mat & Subst</CATEGORY>
+			<CATEGORY>Mat &amp; Subst</CATEGORY>
 		</ARTIFACT>
 		<ARTIFACT subqid="SQ2">
 			<PHRASE>mammals</PHRASE>
@@ -1931,7 +1932,7 @@
 		<ARTIFACT subqid="SQ2">
 			<PHRASE>organic matter</PHRASE>
 			<AGREEMENT>1.0</AGREEMENT>
-			<CATEGORY>Mat & Subst</CATEGORY>
+			<CATEGORY>Mat &amp; Subst</CATEGORY>
 		</ARTIFACT>
 	</ARTIFACTS>
 </BIODIV-QUESTION>
@@ -2229,7 +2230,7 @@
 		<ARTIFACT subqid="SQ3">
 			<PHRASE>groundwater</PHRASE>
 			<AGREEMENT>0.611111111111111</AGREEMENT>
-			<CATEGORY>Mat & Subst</CATEGORY>
+			<CATEGORY>Mat &amp; Subst</CATEGORY>
 		</ARTIFACT>
 	</ARTIFACTS>
 </BIODIV-QUESTION>
