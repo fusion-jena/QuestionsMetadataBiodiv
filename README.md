@@ -1,5 +1,7 @@
 # Question Corpus for Biodiversity and Metadata Analysis
 
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.7385601.svg)](https://doi.org/10.5281/zenodo.7385601)
+
 This repository contains all source code and supplementary material for our publication "Dataset search in biodiversity research: Do metadata in data repositories reflect scholarly information needs?". We provide a question corpus for the biodiversity domain together with scripts to set up a survey to evaluate main search interests with users and to analyze the surveys results. We also provide scripts and results to analyze metadata from selected data repositories.
 
 ## Repository Structure
